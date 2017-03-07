@@ -1,0 +1,4 @@
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Beacon\MFM.Lbg.Interface\MFM.Lbg.Maps\bin\Debug\MFM.Lbg.Maps.dll
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Beacon\MFM.Lbg.Interface\MFM.Lbg.Maps\bin\Debug\MFM.Lbg.Maps.pdb
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Beacon\MFM.Lbg.Interface\MFM.Lbg.Maps\obj\Debug\MFM.Lbg.Maps.dll
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Beacon\MFM.Lbg.Interface\MFM.Lbg.Maps\obj\Debug\MFM.Lbg.Maps.pdb

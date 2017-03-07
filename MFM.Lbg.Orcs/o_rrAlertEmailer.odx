@@ -1,0 +1,223 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="70e57760-7d2f-4852-9cdb-28fe5d4311b1" LowerBound="1.1" HigherBound="52.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MFM.Lbg.Orcs" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="2684d044-c674-4975-b936-c8ce97dcbf9d" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Dyn_Rr_SMTP_Type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="aea54049-a54d-4445-a864-5d5087f53714" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="07446577-ca6b-4eb8-95f2-39be965098a3" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.52">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.MSSWebServiceAlertEmail" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="53e7a30e-98f0-4e72-8cf0-2b864d225d1d" ParentLink="Module_ServiceDeclaration" LowerBound="11.1" HigherBound="51.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="o_rrAlertEmailer" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="105d2781-f413-46f9-8cc7-a30afd7ee52d" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="18.1" HigherBound="19.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="XmlEmailTemplateTag" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="eb54826b-0bac-40c3-a0b8-22f925fc82a4" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="19.1" HigherBound="20.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="XmlEMailString" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="cf9abbe2-a1fa-4ae8-b1cd-52ad61910517" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="20.1" HigherBound="21.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="XmlEmail" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="264f1b74-b4f8-4f74-aef1-c65a05ac57bc" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="21.1" HigherBound="22.1">
+                <om:Property Name="InitialValue" Value="true" />
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Boolean" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="UseTemplate" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="d20dd3df-9f20-4a30-9c84-05fc7698c68f" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="16.1" HigherBound="17.1">
+                <om:Property Name="Type" Value="MSS.Notification.Service.MSSNotifyEmail" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="NotifyEmailParent" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="e275d41a-6c8f-4f63-b5cf-c7aa186bd8e6" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="17.1" HigherBound="18.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.MSSWebServiceAlertEmail" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="EmailAlertCopy" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="85965367-d0d6-4c39-aae5-cea07238b158" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageDeclaration" OID="ca28992b-d0ef-4d45-b38c-8f55973b8690" ParentLink="ServiceBody_Declaration" LowerBound="22.15" HigherBound="22.73">
+                    <om:Property Name="Type" Value="MFM.Lbg.Schemas.MSSWebServiceAlertEmail" />
+                    <om:Property Name="ParamDirection" Value="In" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="EmailAlert" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="06064b8c-9eb8-428d-9508-222696ff7cc5" ParentLink="ServiceBody_Statement" LowerBound="28.1" HigherBound="36.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Construct_Outbound_Alert" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageRef" OID="be90e264-1f4e-4d68-b870-ceae4ac4ba25" ParentLink="Construct_MessageRef" LowerBound="29.23" HigherBound="29.37">
+                        <om:Property Name="Ref" Value="EmailAlertCopy" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="MessageAssignment" OID="404fe813-b357-43f4-937d-12418c76d6a1" ParentLink="ComplexStatement_Statement" LowerBound="31.1" HigherBound="35.1">
+                        <om:Property Name="Expression" Value="EmailAlertCopy = EmailAlert;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="Message SMTP Variables" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="c818f66d-3296-42f5-b85a-060346b6aa1c" ParentLink="ServiceBody_Statement" LowerBound="36.1" HigherBound="41.1">
+                    <om:Property Name="Expression" Value="XmlEmail = EmailAlertCopy;&#xD;&#xA;XmlEMailString = XmlEmail.OuterXml.ToString();&#xD;&#xA;XmlEmailTemplateTag = &quot;&quot;;&#xD;&#xA;UseTemplate = true;" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="SetupEmail" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="39f000aa-b3aa-44c0-9309-ab864a1f0284" ParentLink="ServiceBody_Statement" LowerBound="41.1" HigherBound="47.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Constructt_Notify" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="dd2897a1-1ec4-40f9-9540-a0fcee3e30ef" ParentLink="ComplexStatement_Statement" LowerBound="44.1" HigherBound="46.1">
+                        <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.LegacyWsEmail_To_NotifyEMail" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="LegacyWsEmail_To_NotifyEMail" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="MessagePartRef" OID="cfa12689-e0e0-43fc-83a9-f9bb1c372fc1" ParentLink="Transform_InputMessagePartRef" LowerBound="45.92" HigherBound="45.106">
+                            <om:Property Name="MessageRef" Value="EmailAlertCopy" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="36e8348f-5853-43e5-86d0-cfbe4da90f6d" ParentLink="Transform_OutputMessagePartRef" LowerBound="45.28" HigherBound="45.45">
+                            <om:Property Name="MessageRef" Value="NotifyEmailParent" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="18080c9e-7c45-4057-a8cd-d3ef704526f1" ParentLink="Construct_MessageRef" LowerBound="42.23" HigherBound="42.40">
+                        <om:Property Name="Ref" Value="NotifyEmailParent" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="a1abeace-de38-4ee6-9d60-2cda04d18ee0" ParentLink="ServiceBody_Statement" LowerBound="47.1" HigherBound="49.1">
+                    <om:Property Name="PortName" Value="PublishNotify" />
+                    <om:Property Name="MessageName" Value="NotifyEmailParent" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_Notify" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="c650b42f-5e62-45c1-b765-5f0244ff5e87" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="14.1" HigherBound="16.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="30" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.PublishNotifyEmailToMbType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PublishNotify" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="DirectBindingAttribute" OID="14cf109a-8314-4cb4-94aa-bc68aab2099e" ParentLink="PortDeclaration_CLRAttribute" LowerBound="14.1" HigherBound="15.1">
+                    <om:Property Name="DirectBindingType" Value="MessageBox" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MFM.Lbg.Orcs
+{
+    internal porttype Dyn_Rr_SMTP_Type
+    {
+        oneway Operation_1
+        {
+            MFM.Lbg.Schemas.MSSWebServiceAlertEmail
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service o_rrAlertEmailer
+    {
+        [Microsoft.XLANGs.BaseTypes.DirectBinding()]
+        port uses PublishNotifyEmailToMbType PublishNotify;
+        message MSS.Notification.Service.MSSNotifyEmail NotifyEmailParent;
+        message MFM.Lbg.Schemas.MSSWebServiceAlertEmail EmailAlertCopy;
+        System.String XmlEmailTemplateTag;
+        System.String XmlEMailString;
+        System.Xml.XmlDocument XmlEmail;
+        System.Boolean UseTemplate;
+        body (message MFM.Lbg.Schemas.MSSWebServiceAlertEmail EmailAlert)
+        {
+            XmlEmailTemplateTag = "";
+            XmlEMailString = "";
+            XmlEmail = new System.Xml.XmlDocument();
+            UseTemplate = true;
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("06064b8c-9eb8-428d-9508-222696ff7cc5")]
+            construct EmailAlertCopy
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("404fe813-b357-43f4-937d-12418c76d6a1")]
+                EmailAlertCopy = EmailAlert;
+                
+                
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("c818f66d-3296-42f5-b85a-060346b6aa1c")]
+            XmlEmail = EmailAlertCopy;
+            XmlEMailString = XmlEmail.OuterXml.ToString();
+            XmlEmailTemplateTag = "";
+            UseTemplate = true;
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("39f000aa-b3aa-44c0-9309-ab864a1f0284")]
+            construct NotifyEmailParent
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("dd2897a1-1ec4-40f9-9540-a0fcee3e30ef")]
+                transform (NotifyEmailParent) = MFM.Lbg.Orcs.LegacyWsEmail_To_NotifyEMail (EmailAlertCopy);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("a1abeace-de38-4ee6-9d60-2cda04d18ee0")]
+            send (PublishNotify.Operation_1, NotifyEmailParent);
+        }
+    }
+}
+

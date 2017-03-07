@@ -1,0 +1,133 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="2d8b1a8f-7733-4b4a-8473-1b6d219ac2bd" LowerBound="1.1" HigherBound="30.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MFM.Lbg.Orcs" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="ServiceDeclaration" OID="75d15fdf-9b53-4444-8299-2a3dc3334225" ParentLink="Module_ServiceDeclaration" LowerBound="4.1" HigherBound="29.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="o_CheckVisionFMLocation" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="MessageDeclaration" OID="ec84c87d-fdda-4126-983e-038a1e5770ee" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="7.1" HigherBound="8.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.MFMWorkItemUpdate" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="LookupResult" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="82918354-094b-4af0-9cab-95a81021edc5" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageDeclaration" OID="6b2efe94-35c8-48f9-a068-477629aaf47d" ParentLink="ServiceBody_Declaration" LowerBound="8.15" HigherBound="8.65">
+                    <om:Property Name="Type" Value="MFM.Lbg.Schemas.MFMWorkItemUpdate" />
+                    <om:Property Name="ParamDirection" Value="In" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="PMUpdate" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableDeclaration" OID="035d9aed-a1ae-491c-9d5a-68a4ce9f6fc6" ParentLink="ServiceBody_Declaration" LowerBound="8.67" HigherBound="8.99">
+                    <om:Property Name="InitialValue" Value="true" />
+                    <om:Property Name="UseDefaultConstructor" Value="False" />
+                    <om:Property Name="Type" Value="System.Boolean" />
+                    <om:Property Name="ParamDirection" Value="Out" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="LocationFound" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="719eeb08-2966-4f1f-a003-4017d79067b1" ParentLink="ServiceBody_Statement" LowerBound="10.1" HigherBound="16.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Construct_Lookup" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="88f74b84-b114-40dc-8e87-b496e50aebb8" ParentLink="ComplexStatement_Statement" LowerBound="13.1" HigherBound="15.1">
+                        <om:Property Name="ClassName" Value="MFM.Lbg.Maps.m_to_locationCheck" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="x_to_lookup" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="MessagePartRef" OID="3ddc1e60-c1fc-4e96-856f-4b3d10be1898" ParentLink="Transform_InputMessagePartRef" LowerBound="14.77" HigherBound="14.85">
+                            <om:Property Name="MessageRef" Value="PMUpdate" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="c821ed8e-d5b2-4da8-9274-b6fd65a1fb32" ParentLink="Transform_OutputMessagePartRef" LowerBound="14.28" HigherBound="14.40">
+                            <om:Property Name="MessageRef" Value="LookupResult" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="ed75723b-6312-4b22-843b-5798f6a472ff" ParentLink="Construct_MessageRef" LowerBound="11.23" HigherBound="11.35">
+                        <om:Property Name="Ref" Value="LookupResult" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Decision" OID="2d594e29-df0c-456b-a3d5-753a5871a28e" ParentLink="ServiceBody_Statement" LowerBound="16.1" HigherBound="27.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Confirm Lookup Result" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DecisionBranch" OID="ad18baa2-f7b7-43e0-95cf-0a6d30aae007" ParentLink="ReallyComplexStatement_Branch" LowerBound="17.13" HigherBound="22.1">
+                        <om:Property Name="Expression" Value="System.Convert.ToInt32(LookupResult.WI_LocationLevel3) &gt; 0" />
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Location Exists" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="VariableAssignment" OID="9fd9e283-de72-44fd-9d39-92b07484be2d" ParentLink="ComplexStatement_Statement" LowerBound="19.1" HigherBound="21.1">
+                            <om:Property Name="Expression" Value="LocationFound = true;" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Location Found" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="DecisionBranch" OID="8c0f66fa-b14b-4c63-9948-b1c5990bd9ac" ParentLink="ReallyComplexStatement_Branch">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Else" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="VariableAssignment" OID="2ffc5edc-45b5-4df3-871d-01700cd59380" ParentLink="ComplexStatement_Statement" LowerBound="24.1" HigherBound="26.1">
+                            <om:Property Name="Expression" Value="LocationFound = false;" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Location Found" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MFM.Lbg.Orcs
+{
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service o_CheckVisionFMLocation
+    {
+        message MFM.Lbg.Schemas.MFMWorkItemUpdate LookupResult;
+        body (message MFM.Lbg.Schemas.MFMWorkItemUpdate PMUpdate, out System.Boolean LocationFound)
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("719eeb08-2966-4f1f-a003-4017d79067b1")]
+            construct LookupResult
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("88f74b84-b114-40dc-8e87-b496e50aebb8")]
+                transform (LookupResult) = MFM.Lbg.Maps.m_to_locationCheck (PMUpdate);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("2d594e29-df0c-456b-a3d5-753a5871a28e")]
+            if (System.Convert.ToInt32(LookupResult.WI_LocationLevel3) > 0)
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("9fd9e283-de72-44fd-9d39-92b07484be2d")]
+                LocationFound = true;
+            }
+            else 
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("2ffc5edc-45b5-4df3-871d-01700cd59380")]
+                LocationFound = false;
+            }
+        }
+    }
+}
+

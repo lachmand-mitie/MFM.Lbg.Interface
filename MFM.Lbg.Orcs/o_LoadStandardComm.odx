@@ -1,0 +1,121 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="3654217f-e301-4d92-8919-5d13f62859d1" LowerBound="1.1" HigherBound="29.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MFM.Lbg.Orcs" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="ServiceDeclaration" OID="587b5964-06f5-45e3-a7ef-84f21208291f" ParentLink="Module_ServiceDeclaration" LowerBound="4.1" HigherBound="28.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="o_LoadStandardComm" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="593700e4-d9a0-42ee-9b90-bc95d78ef190" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="10.1" HigherBound="11.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="xmlDoc" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="969a18b1-769a-4452-820d-d9531f7b16b4" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="9.1" HigherBound="10.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.BizTalk_Comm" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Biz_comm" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="09c8b354-4d5b-45bc-b83a-43559f215cb8" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="VariableDeclaration" OID="590e071a-4f21-417a-acfd-79cc82cc40fe" ParentLink="ServiceBody_Declaration" LowerBound="11.15" HigherBound="11.45">
+                    <om:Property Name="UseDefaultConstructor" Value="False" />
+                    <om:Property Name="Type" Value="System.String" />
+                    <om:Property Name="ParamDirection" Value="In" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="MessageXmlString" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="1214ae64-60c5-40f4-82d6-94d2efee347b" ParentLink="ServiceBody_Statement" LowerBound="14.1" HigherBound="16.1">
+                    <om:Property Name="Expression" Value="xmlDoc.LoadXml(MessageXmlString);" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Load Xml Document" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="e4c7887d-4332-4333-b759-13a6339f1f58" ParentLink="ServiceBody_Statement" LowerBound="16.1" HigherBound="24.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Construct_Comm" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageRef" OID="6e5cd569-c095-40c8-a460-222113726c38" ParentLink="Construct_MessageRef" LowerBound="17.23" HigherBound="17.31">
+                        <om:Property Name="Ref" Value="Biz_comm" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="MessageAssignment" OID="b7c46b2f-2218-479f-87d7-3b08e4aed038" ParentLink="ComplexStatement_Statement" LowerBound="19.1" HigherBound="23.1">
+                        <om:Property Name="Expression" Value="Biz_comm = xmlDoc;&#xD;&#xA;Biz_comm(FILE.ReceivedFileName) = System.String.Format(&quot;COMM=INFO {0}&quot;,System.DateTime.Now.ToString(&quot;yyyyMMddTHHmmss&quot;));&#xD;&#xA;&#xD;&#xA;" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="Assign Com Msg" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="6426a2c5-3e59-401c-acb2-2cb77df69e5f" ParentLink="ServiceBody_Statement" LowerBound="24.1" HigherBound="26.1">
+                    <om:Property Name="PortName" Value="Standard_Comm_Port" />
+                    <om:Property Name="MessageName" Value="Biz_comm" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Queue_Comm" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="c8b6f2d7-5e39-4c35-9b61-092aa8767699" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="7.1" HigherBound="9.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="19" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.Standard_Biz_Comm_Type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Standard_Comm_Port" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="4d183505-d94c-499a-a90b-e2934f7345e7" ParentLink="PortDeclaration_CLRAttribute" LowerBound="7.1" HigherBound="8.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MFM.Lbg.Orcs
+{
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service o_LoadStandardComm
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses Standard_Biz_Comm_Type Standard_Comm_Port;
+        message MFM.Lbg.Schemas.BizTalk_Comm Biz_comm;
+        System.Xml.XmlDocument xmlDoc;
+        body (System.String MessageXmlString)
+        {
+            xmlDoc = new System.Xml.XmlDocument();
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("1214ae64-60c5-40f4-82d6-94d2efee347b")]
+            xmlDoc.LoadXml(MessageXmlString);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("e4c7887d-4332-4333-b759-13a6339f1f58")]
+            construct Biz_comm
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("b7c46b2f-2218-479f-87d7-3b08e4aed038")]
+                Biz_comm = xmlDoc;
+                Biz_comm(FILE.ReceivedFileName) = System.String.Format("COMM=INFO {0}",System.DateTime.Now.ToString("yyyyMMddTHHmmss"));
+                
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("6426a2c5-3e59-401c-acb2-2cb77df69e5f")]
+            send (Standard_Comm_Port.Operation_1, Biz_comm);
+        }
+    }
+}
+

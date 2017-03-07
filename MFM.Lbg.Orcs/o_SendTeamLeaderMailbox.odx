@@ -1,0 +1,294 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="144f0829-8426-4957-94e4-b2170898b47d" LowerBound="1.1" HigherBound="83.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MFM.Lbg.Orcs" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="3c1aca22-eee5-43bf-8a2e-23ef72fe55a7" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Dyn_TL_Mailbox_Type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="a25d0ce8-8ffa-46ec-8b61-da10c4d7f03f" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="b6e95f10-ba71-4e43-96f5-ef465c195243" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.41">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.BizTalk_Comm" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="d87a6393-6319-4b0f-8915-d59c2bece310" ParentLink="Module_ServiceDeclaration" LowerBound="11.1" HigherBound="82.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="o_SendTeamLeaderMailbox" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="ca1a410c-20d3-4194-bd8b-ae6c699997e4" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="18.1" HigherBound="19.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="xmlDoc" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="89efefa0-5635-4d37-81a2-f097f39bb17d" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="19.1" HigherBound="20.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="MFM.Lbg.Helper.Misc" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="hlpObj" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="4bf9feb8-c867-47e0-a80d-01e0a02ce619" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="20.1" HigherBound="21.1">
+                <om:Property Name="InitialValue" Value="true" />
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Boolean" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Sent" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="f47e164b-e650-4d6e-834a-e78784b983ce" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="21.1" HigherBound="22.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Int32" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Attempt" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="8d76082e-7bd9-448a-bf0d-f19eda93c252" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="17.1" HigherBound="18.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.BizTalk_Comm" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="TL_Email" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="eed36ddf-42e6-49ea-84e8-f40a9db9c370" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="VariableDeclaration" OID="9d25c9b6-c57e-41bc-bd3c-1a47b03794c5" ParentLink="ServiceBody_Declaration" LowerBound="22.15" HigherBound="22.48">
+                    <om:Property Name="UseDefaultConstructor" Value="False" />
+                    <om:Property Name="Type" Value="System.String" />
+                    <om:Property Name="ParamDirection" Value="In" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="TeamLeaderXmlString" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="2b6a9a9c-8e93-4e43-af10-1e862125fe4c" ParentLink="ServiceBody_Statement" LowerBound="27.1" HigherBound="29.1">
+                    <om:Property Name="Expression" Value="xmlDoc.LoadXml(TeamLeaderXmlString);" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Load Xml Document" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="8dbd838c-5569-4709-8f52-7c0862b9ae06" ParentLink="ServiceBody_Statement" LowerBound="29.1" HigherBound="33.1">
+                    <om:Property Name="Expression" Value="Attempt = 0;&#xD;&#xA;Sent = false;&#xD;&#xA;TeamLeaderXmlString = TeamLeaderXmlString.Replace(&quot;&lt;br /&gt;&quot;,&quot;&quot;);" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Initialise" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="Construct" OID="fb1546ab-3dc0-4ccc-9555-04da1a7beeeb" ParentLink="ServiceBody_Statement" LowerBound="33.1" HigherBound="48.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Construct_Comm" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageRef" OID="9be5ef24-4054-4986-b7cd-97ff230ba375" ParentLink="Construct_MessageRef" LowerBound="34.23" HigherBound="34.31">
+                        <om:Property Name="Ref" Value="TL_Email" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="MessageAssignment" OID="9abe1478-1e36-4209-9f1a-179a7543f3dc" ParentLink="ComplexStatement_Statement" LowerBound="36.1" HigherBound="47.1">
+                        <om:Property Name="Expression" Value="TL_Email = xmlDoc;&#xD;&#xA;TL_Email(SMTP.CC) = &quot;&quot;;&#xD;&#xA;TL_Email(SMTP.From) = &quot;No.Reply@mitie.com&quot;;&#xD;&#xA;TL_Email(SMTP.SMTPHost) = &quot;mailrelay.mitie.com&quot;;&#xD;&#xA;TL_Email(SMTP.Subject) = &quot;Beacon - Case: &quot; + TL_Email.L3 + &quot; - &quot; + TL_Email.L4;&#xD;&#xA;TL_Email(BTS.RetryCount) = 12;&#xD;&#xA;TL_Email(BTS.RetryInterval) = 1;&#xD;&#xA;Dyn_TL_Mailbox(Microsoft.XLANGs.BaseTypes.Address) = &quot;mailto:&quot; + hlpObj.GetVisionFmTeamLeaderMailbox();&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="Assign Com Msg" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="While" OID="2ba0d761-1486-4f1b-9e27-396c295c2ac4" ParentLink="ServiceBody_Statement" LowerBound="48.1" HigherBound="80.1">
+                    <om:Property Name="Expression" Value="Sent != true" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="Orchestration will retry is port retries are exhausted." />
+                    <om:Property Name="Name" Value="Retry" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="VariableAssignment" OID="a0a7a31c-75ab-4da3-9977-bfbf856e7d27" ParentLink="ComplexStatement_Statement" LowerBound="51.1" HigherBound="53.1">
+                        <om:Property Name="Expression" Value="Attempt = Attempt + 1;" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Track Attempts" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="Scope" OID="bcff0946-fa88-4528-a104-2f817ab19f6b" ParentLink="ComplexStatement_Statement" LowerBound="53.1" HigherBound="79.1">
+                        <om:Property Name="InitializedTransactionType" Value="True" />
+                        <om:Property Name="IsSynchronized" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Scope_Send_Email" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Send" OID="12552fbc-9ac9-48b5-bdaf-66ee6e12158e" ParentLink="ComplexStatement_Statement" LowerBound="58.1" HigherBound="60.1">
+                            <om:Property Name="PortName" Value="Dyn_TL_Mailbox" />
+                            <om:Property Name="MessageName" Value="TL_Email" />
+                            <om:Property Name="OperationName" Value="Operation_1" />
+                            <om:Property Name="OperationMessageName" Value="Request" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Send_Email_To_TL_Mailbox" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="VariableAssignment" OID="64762fa7-60ae-4b00-91cd-e771486efb71" ParentLink="ComplexStatement_Statement" LowerBound="60.1" HigherBound="62.1">
+                            <om:Property Name="Expression" Value="Sent = true;" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Set Sucess" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="Catch" OID="586c7836-a607-4d97-b99b-218700f50212" ParentLink="Scope_Catch" LowerBound="65.1" HigherBound="77.1">
+                            <om:Property Name="ExceptionName" Value="ExDeliveryFailure" />
+                            <om:Property Name="ExceptionType" Value="Microsoft.XLANGs.BaseTypes.DeliveryFailureException" />
+                            <om:Property Name="IsFaultMessage" Value="False" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="CatchAnyException" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Decision" OID="aa603227-0a95-4e3e-9d73-db3bc5f4c905" ParentLink="Catch_Statement" LowerBound="68.1" HigherBound="76.1">
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Retry or Suspend" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="DecisionBranch" OID="53d7d36d-501d-43a6-9c77-6727d372698e" ParentLink="ReallyComplexStatement_Branch" LowerBound="69.29" HigherBound="76.1">
+                                    <om:Property Name="Expression" Value="Attempt == 5" />
+                                    <om:Property Name="IsGhostBranch" Value="True" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Suspend" />
+                                    <om:Property Name="Signal" Value="True" />
+                                    <om:Element Type="Suspend" OID="893ae42a-d71f-4a8b-a7ae-55ec3fa1cd47" ParentLink="ComplexStatement_Statement" LowerBound="71.1" HigherBound="73.1">
+                                        <om:Property Name="ErrorMessage" Value="&quot;The MITIE email server has not provided a delivery notification, port and orchestration retries limits have been reached.  Message can be resumed safely but will suspend again if mail server continues to by unavailable&quot;;" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="Suspend_For_Intervention" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                    <om:Element Type="VariableAssignment" OID="b4cc3fc7-8b97-48fc-b2d0-b5be894492db" ParentLink="ComplexStatement_Statement" LowerBound="73.1" HigherBound="75.1">
+                                        <om:Property Name="Expression" Value="Attempt = 0;" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="Reset Attempts" />
+                                        <om:Property Name="Signal" Value="True" />
+                                    </om:Element>
+                                </om:Element>
+                                <om:Element Type="DecisionBranch" OID="59c75038-4dc5-4a34-8b65-f0c2f4164688" ParentLink="ReallyComplexStatement_Branch">
+                                    <om:Property Name="IsGhostBranch" Value="True" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Else" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="5eafcec9-824f-48bb-9f93-775758cd48e5" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="14.1" HigherBound="17.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="33" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="Transmitted" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.Dyn_TL_Mailbox_Type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Dyn_TL_Mailbox" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="PhysicalBindingAttribute" OID="034a30f9-f2a2-431e-ac83-71ad163c9032" ParentLink="PortDeclaration_CLRAttribute" LowerBound="14.1" HigherBound="15.1">
+                    <om:Property Name="InPipeline" Value="Microsoft.BizTalk.DefaultPipelines.XMLReceive" />
+                    <om:Property Name="OutPipeline" Value="MFM.Lbg.Orcs.Email" />
+                    <om:Property Name="TransportType" Value="HTTP" />
+                    <om:Property Name="URI" Value="http://tempURI" />
+                    <om:Property Name="IsDynamic" Value="True" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MFM.Lbg.Orcs
+{
+    internal porttype Dyn_TL_Mailbox_Type
+    {
+        oneway Operation_1
+        {
+            MFM.Lbg.Schemas.BizTalk_Comm
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service o_SendTeamLeaderMailbox
+    {
+        [Microsoft.XLANGs.BaseTypes.PhysicalBinding(typeof(MFM.Lbg.Orcs.Email))]
+        [Microsoft.XLANGs.BaseTypes.DeliveryNotification(Microsoft.XLANGs.BaseTypes.DeliveryNotification.NotificationLevel.Transmitted)]
+        port uses dynamic Dyn_TL_Mailbox_Type Dyn_TL_Mailbox;
+        message MFM.Lbg.Schemas.BizTalk_Comm TL_Email;
+        System.Xml.XmlDocument xmlDoc;
+        MFM.Lbg.Helper.Misc hlpObj;
+        System.Boolean Sent;
+        System.Int32 Attempt;
+        body (System.String TeamLeaderXmlString)
+        {
+            xmlDoc = new System.Xml.XmlDocument();
+            hlpObj = new MFM.Lbg.Helper.Misc();
+            Sent = true;
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("2b6a9a9c-8e93-4e43-af10-1e862125fe4c")]
+            xmlDoc.LoadXml(TeamLeaderXmlString);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("8dbd838c-5569-4709-8f52-7c0862b9ae06")]
+            Attempt = 0;
+            Sent = false;
+            TeamLeaderXmlString = TeamLeaderXmlString.Replace("<br />","");
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("fb1546ab-3dc0-4ccc-9555-04da1a7beeeb")]
+            construct TL_Email
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("9abe1478-1e36-4209-9f1a-179a7543f3dc")]
+                TL_Email = xmlDoc;
+                TL_Email(SMTP.CC) = "";
+                TL_Email(SMTP.From) = "No.Reply@mitie.com";
+                TL_Email(SMTP.SMTPHost) = "mailrelay.mitie.com";
+                TL_Email(SMTP.Subject) = "Beacon - Case: " + TL_Email.L3 + " - " + TL_Email.L4;
+                TL_Email(BTS.RetryCount) = 12;
+                TL_Email(BTS.RetryInterval) = 1;
+                Dyn_TL_Mailbox(Microsoft.XLANGs.BaseTypes.Address) = "mailto:" + hlpObj.GetVisionFmTeamLeaderMailbox();
+                
+                
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("2ba0d761-1486-4f1b-9e27-396c295c2ac4")]
+            while (Sent != true)
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("a0a7a31c-75ab-4da3-9977-bfbf856e7d27")]
+                Attempt = Attempt + 1;
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("bcff0946-fa88-4528-a104-2f817ab19f6b")]
+                scope synchronized
+                {
+                    body
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("12552fbc-9ac9-48b5-bdaf-66ee6e12158e")]
+                        send (Dyn_TL_Mailbox.Operation_1, TL_Email);
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("64762fa7-60ae-4b00-91cd-e771486efb71")]
+                        Sent = true;
+                    }
+                    exceptions
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("586c7836-a607-4d97-b99b-218700f50212")]
+                        catch (Microsoft.XLANGs.BaseTypes.DeliveryFailureException ExDeliveryFailure)
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("aa603227-0a95-4e3e-9d73-db3bc5f4c905")]
+                            if (Attempt == 5)
+                            {
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("893ae42a-d71f-4a8b-a7ae-55ec3fa1cd47")]
+                                suspend "The MITIE email server has not provided a delivery notification, port and orchestration retries limits have been reached.  Message can be resumed safely but will suspend again if mail server continues to by unavailable";
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("b4cc3fc7-8b97-48fc-b2d0-b5be894492db")]
+                                Attempt = 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

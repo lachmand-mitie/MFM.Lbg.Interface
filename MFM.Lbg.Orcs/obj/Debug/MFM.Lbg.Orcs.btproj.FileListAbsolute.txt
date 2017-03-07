@@ -1,0 +1,4 @@
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Beacon\MFM.Lbg.Interface\MFM.Lbg.Orcs\bin\Debug\MFM.Lbg.Orcs.dll
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Beacon\MFM.Lbg.Interface\MFM.Lbg.Orcs\bin\Debug\MFM.Lbg.Orcs.pdb
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Beacon\MFM.Lbg.Interface\MFM.Lbg.Orcs\obj\Debug\MFM.Lbg.Orcs.dll
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Beacon\MFM.Lbg.Interface\MFM.Lbg.Orcs\obj\Debug\MFM.Lbg.Orcs.pdb

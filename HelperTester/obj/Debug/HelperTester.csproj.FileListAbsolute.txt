@@ -1,0 +1,6 @@
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Beacon\MFM.Lbg.Interface\HelperTester\bin\Debug\HelperTester.exe.config
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Beacon\MFM.Lbg.Interface\HelperTester\bin\Debug\HelperTester.exe
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Beacon\MFM.Lbg.Interface\HelperTester\bin\Debug\HelperTester.pdb
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Beacon\MFM.Lbg.Interface\HelperTester\obj\Debug\HelperTester.csprojResolveAssemblyReference.cache
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Beacon\MFM.Lbg.Interface\HelperTester\obj\Debug\HelperTester.exe
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Beacon\MFM.Lbg.Interface\HelperTester\obj\Debug\HelperTester.pdb

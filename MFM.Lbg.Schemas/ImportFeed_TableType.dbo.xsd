@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ns3="http://schemas.microsoft.com/Sql/2008/05/Types/TableTypes/dbo" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/Sql/2008/05/Types/TableTypes/dbo" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:appinfo>
+      <fileNameHint xmlns="http://schemas.microsoft.com/servicemodel/adapters/metadata/xsd">TableType.dbo</fileNameHint>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:complexType name="biz_Standard_Feed_c2efd5">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="v1" nillable="true">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="100" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="v2" nillable="true">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="100" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="v3" nillable="true">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="100" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="v4" nillable="true">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="100" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="v5" nillable="true">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="100" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="v6" nillable="true">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="100" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="v7" nillable="true">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="100" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="i1" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="i2" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="i3" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="i4" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="i5" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="i6" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="i7" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="m1" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="m2" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="m3" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="m4" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="m5" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="m6" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="m7" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="d1" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="d2" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="d3" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="d4" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="d5" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="d6" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="d7" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="biz_Standard_Feed" nillable="true" type="ns3:biz_Standard_Feed_c2efd5" />
+  <xs:complexType name="ArrayOfbiz_Standard_Feed_c2efd5">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="biz_Standard_Feed" type="ns3:biz_Standard_Feed_c2efd5" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfbiz_Standard_Feed" nillable="true" type="ns3:ArrayOfbiz_Standard_Feed_c2efd5" />
+</xs:schema>

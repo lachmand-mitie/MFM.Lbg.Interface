@@ -1,0 +1,374 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="ffe5d8f5-833e-4270-84e1-a0761be30ed4" LowerBound="1.1" HigherBound="84.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MFM.Lbg.Orcs" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="ServiceDeclaration" OID="77a86bae-eb77-48e8-acf9-d4f97e7cb58f" ParentLink="Module_ServiceDeclaration" LowerBound="4.1" HigherBound="83.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="o_CreateAsset" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="f044c585-6f92-48b1-b682-5bbce6e118db" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="10.1" HigherBound="11.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="AssetSubTypeId" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="8c16e954-d5d5-4bce-85dd-6b05c4d11cba" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="11.1" HigherBound="12.1">
+                <om:Property Name="InitialValue" Value="true" />
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Boolean" />
+                <om:Property Name="ParamDirection" Value="Out" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="AssetCreated" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="a117ad71-3ce6-45c5-b389-ad7d6f4302b5" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="12.1" HigherBound="13.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="AssetXml" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="730f2161-47ca-4b1c-be7a-11e626319174" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="13.1" HigherBound="14.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="MFM.Lbg.Helper.Misc" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="HelperAsset" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="97cd268b-e052-40ff-81ce-4fad54e7e9b6" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="14.1" HigherBound="15.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="LocationId" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="09e5c5e5-34dc-4a66-a851-53e1582644cd" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="15.1" HigherBound="16.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="TemplateId" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="1bfd2c8b-8934-4554-8f52-d9c2f08dc063" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="7.1" HigherBound="8.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.Add_Asset_UdttTableType_ops.ArrayOfudtt_Asset" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Asset_MasterCheck" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="70815038-d66b-4674-a739-39e3fdda63ab" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="8.1" HigherBound="9.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.Add_Asset_UdttTableType_ops.ArrayOfudtt_Asset" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Asset_Lookup" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="d22a7224-728f-400a-9d57-d0ab460b7a89" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="9.1" HigherBound="10.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.Add_Asset_UdttTableType_ops.ArrayOfudtt_Asset" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Asset_Udtt" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="dfc596c5-db9e-4512-b8c5-39ccbeec32da" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Construct" OID="c6db8023-b5f6-4289-b57e-abb3be91e6bc" ParentLink="ServiceBody_Statement" LowerBound="24.1" HigherBound="30.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Construct_Asset_Lookup" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageRef" OID="044844aa-783b-44cd-92aa-f034c9d70604" ParentLink="Construct_MessageRef" LowerBound="25.23" HigherBound="25.35">
+                        <om:Property Name="Ref" Value="Asset_Lookup" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="Transform" OID="6c717c80-b049-4ad1-824b-df4c970aee77" ParentLink="ComplexStatement_Statement" LowerBound="27.1" HigherBound="29.1">
+                        <om:Property Name="ClassName" Value="MFM.Lbg.Maps.m_UdttAsset" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="x_to_Asset_Lookup" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="MessagePartRef" OID="9e33fbfc-a331-4161-b742-fe2b84f4aa45" ParentLink="Transform_OutputMessagePartRef" LowerBound="28.28" HigherBound="28.40">
+                            <om:Property Name="MessageRef" Value="Asset_Lookup" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_4" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="fc3f0885-cb0a-4222-87a1-f41a07a9209b" ParentLink="Transform_InputMessagePartRef" LowerBound="28.70" HigherBound="28.84">
+                            <om:Property Name="MessageRef" Value="PMAssetMessage" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_3" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Decision" OID="316b5e97-5eba-4d68-abca-fe963591014f" ParentLink="ServiceBody_Statement" LowerBound="30.1" HigherBound="81.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Need Asset" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DecisionBranch" OID="ee2a8fc9-cb11-42d7-b323-1ba109d42a5b" ParentLink="ReallyComplexStatement_Branch" LowerBound="31.13" HigherBound="36.1">
+                        <om:Property Name="Expression" Value="Asset_Lookup.udtt_Asset.asst_ForeignSysId == PMAssetMessage.WI_AssetRef" />
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="No" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="VariableAssignment" OID="7dd3cc47-611c-4d1b-b8dc-59997f0ffeaa" ParentLink="ComplexStatement_Statement" LowerBound="33.1" HigherBound="35.1">
+                            <om:Property Name="Expression" Value="AssetExists = true;" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Asset Already Exists" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="DecisionBranch" OID="e7749a71-d091-4e83-b503-a85903788046" ParentLink="ReallyComplexStatement_Branch">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Else" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="Decision" OID="587cfa61-8aab-46ae-9974-bf55b4219c58" ParentLink="ComplexStatement_Statement" LowerBound="38.1" HigherBound="80.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Create Asset Option" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="DecisionBranch" OID="82526171-fc64-47aa-b813-9a49a3ea87c7" ParentLink="ReallyComplexStatement_Branch" LowerBound="39.17" HigherBound="75.1">
+                                <om:Property Name="Expression" Value="MakeAsset == true" />
+                                <om:Property Name="IsGhostBranch" Value="True" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Yes" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="Construct" OID="cc8d7944-a62a-42e3-a254-a4d1997280c0" ParentLink="ComplexStatement_Statement" LowerBound="41.1" HigherBound="47.1">
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="CreateNewAsset" />
+                                    <om:Property Name="Signal" Value="True" />
+                                    <om:Element Type="MessageRef" OID="5bf0bc6a-6e6f-4872-9a6a-9c7bd781f824" ParentLink="Construct_MessageRef" LowerBound="42.31" HigherBound="42.41">
+                                        <om:Property Name="Ref" Value="Asset_Udtt" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                    <om:Element Type="Transform" OID="59f080d1-f9ae-4b03-853a-033772a5825d" ParentLink="ComplexStatement_Statement" LowerBound="44.1" HigherBound="46.1">
+                                        <om:Property Name="ClassName" Value="MFM.Lbg.Maps.m_to_NewUdttAsset" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="x_to_UdttAsset" />
+                                        <om:Property Name="Signal" Value="True" />
+                                        <om:Element Type="MessagePartRef" OID="9cb3570d-68f3-4e41-b8d5-8e82ac58db37" ParentLink="Transform_OutputMessagePartRef" LowerBound="45.36" HigherBound="45.46">
+                                            <om:Property Name="MessageRef" Value="Asset_Udtt" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                                            <om:Property Name="Signal" Value="False" />
+                                        </om:Element>
+                                        <om:Element Type="MessagePartRef" OID="ccce5e05-952a-46e2-8ea2-c3998ccb19ca" ParentLink="Transform_InputMessagePartRef" LowerBound="45.82" HigherBound="45.96">
+                                            <om:Property Name="MessageRef" Value="PMAssetMessage" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                                            <om:Property Name="Signal" Value="False" />
+                                        </om:Element>
+                                    </om:Element>
+                                </om:Element>
+                                <om:Element Type="VariableAssignment" OID="feedb120-e882-4bd1-a2a6-04132117c1b1" ParentLink="ComplexStatement_Statement" LowerBound="47.1" HigherBound="51.1">
+                                    <om:Property Name="Expression" Value="LocationId = System.Convert.ToString(xpath(Asset_Udtt, &quot;string(//*[local-name()='asst_LocationId'])&quot;));&#xD;&#xA;AssetSubTypeId = System.Convert.ToString(xpath(Asset_Udtt, &quot;string(//*[local-name()='asst_SubType'])&quot;));&#xD;&#xA;TemplateId = System.Convert.ToString(xpath(PMAssetMessage, &quot;string(//*[local-name()='Meta_RF01'])&quot;));&#xD;&#xA;" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="AnalystComments" Value="Cast the potentionally non-existant xpath to a string, and use that as a check downstream for non existance." />
+                                    <om:Property Name="Name" Value="Get Properties" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="Decision" OID="0209861a-bd3c-4d56-b7d7-5638dd9fa81b" ParentLink="ComplexStatement_Statement" LowerBound="51.1" HigherBound="72.1">
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Asset Master Data Available" />
+                                    <om:Property Name="Signal" Value="True" />
+                                    <om:Element Type="DecisionBranch" OID="9b486ac3-fe78-48a3-85af-62baf2214506" ParentLink="ReallyComplexStatement_Branch" LowerBound="52.21" HigherBound="58.1">
+                                        <om:Property Name="Expression" Value="LocationId != &quot;&quot; &amp;&amp; AssetSubTypeId != &quot;&quot;" />
+                                        <om:Property Name="IsGhostBranch" Value="True" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="Yes, Load" />
+                                        <om:Property Name="Signal" Value="True" />
+                                        <om:Element Type="VariableAssignment" OID="723774d9-cb15-441f-8ef8-3c1f3407957d" ParentLink="ComplexStatement_Statement" LowerBound="54.1" HigherBound="57.1">
+                                            <om:Property Name="Expression" Value="AssetXml = Asset_Udtt;&#xD;&#xA;AssetCreated = HelperAsset.CreateNewAsset(ref AssetXml);" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="LoadTheAsset" />
+                                            <om:Property Name="Signal" Value="False" />
+                                        </om:Element>
+                                    </om:Element>
+                                    <om:Element Type="DecisionBranch" OID="244ed5e0-8a09-4a49-bb3d-882faa2506f7" ParentLink="ReallyComplexStatement_Branch" LowerBound="58.26" HigherBound="65.1">
+                                        <om:Property Name="Expression" Value="AssetSubTypeId == &quot;&quot;" />
+                                        <om:Property Name="IsGhostBranch" Value="True" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="TemplatId Not recognised" />
+                                        <om:Property Name="Signal" Value="False" />
+                                        <om:Element Type="VariableAssignment" OID="d0e0bad9-8297-499c-b705-a1d0532c43ee" ParentLink="ComplexStatement_Statement" LowerBound="60.1" HigherBound="62.1">
+                                            <om:Property Name="Expression" Value="AssetCreated = false;" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="Set Illegal Data" />
+                                            <om:Property Name="Signal" Value="True" />
+                                        </om:Element>
+                                        <om:Element Type="Suspend" OID="cfc8e287-094f-49d6-be19-11dbe6d66698" ParentLink="ComplexStatement_Statement" LowerBound="62.1" HigherBound="64.1">
+                                            <om:Property Name="ErrorMessage" Value="System.String.Format(&quot;Asset creation suspended. \r\nAsset {0}\r\nSupplier Message id {1}.\r\n\r\nThe Asset template {2} could not be resolved.  Please investigate the missing data before resuming.&quot;,PMAssetMessage.WI_AssetRef,PMAssetMessage.SourceSystemMessageId,TemplateId);" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="Suspend_No_Asset_Template" />
+                                            <om:Property Name="Signal" Value="False" />
+                                        </om:Element>
+                                    </om:Element>
+                                    <om:Element Type="DecisionBranch" OID="e3e4a936-36b6-4a65-893a-1fcd2974b58d" ParentLink="ReallyComplexStatement_Branch">
+                                        <om:Property Name="IsGhostBranch" Value="True" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="AnalystComments" Value="Must be missing location" />
+                                        <om:Property Name="Name" Value="Else" />
+                                        <om:Property Name="Signal" Value="True" />
+                                        <om:Element Type="VariableAssignment" OID="02c91d47-1f94-4f5e-bee5-9f8baf9553e9" ParentLink="ComplexStatement_Statement" LowerBound="67.1" HigherBound="69.1">
+                                            <om:Property Name="Expression" Value="AssetCreated = false;" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="Set Illegal Data" />
+                                            <om:Property Name="Signal" Value="True" />
+                                        </om:Element>
+                                        <om:Element Type="Suspend" OID="ced9e754-fe3d-4d3f-adb8-c310052fbf63" ParentLink="ComplexStatement_Statement" LowerBound="69.1" HigherBound="71.1">
+                                            <om:Property Name="ErrorMessage" Value="System.String.Format(&quot;Asset creation suspended. \r\nAsset {0}\r\nSupplier Message id {1}.\r\n\r\nThe location {3} could not be resolved.  Please investigate the missing data before resuming.&quot;,PMAssetMessage.WI_AssetRef,PMAssetMessage.SourceSystemMessageId,PMAssetMessage.WI_LocationLevel3);" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="Suspend_On_Create_Skipped" />
+                                            <om:Property Name="Signal" Value="False" />
+                                        </om:Element>
+                                    </om:Element>
+                                </om:Element>
+                                <om:Element Type="VariableAssignment" OID="715af96e-add3-415c-9147-694785485a88" ParentLink="ComplexStatement_Statement" LowerBound="72.1" HigherBound="74.1">
+                                    <om:Property Name="Expression" Value="AssetExists = AssetCreated;" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="New Asset Exists" />
+                                    <om:Property Name="Signal" Value="True" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="DecisionBranch" OID="ce506c40-7bc4-42ee-96ef-a8b7c92548b6" ParentLink="ReallyComplexStatement_Branch">
+                                <om:Property Name="IsGhostBranch" Value="True" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Else" />
+                                <om:Property Name="Signal" Value="False" />
+                                <om:Element Type="VariableAssignment" OID="22d44a58-9895-491a-92a7-a33909092b92" ParentLink="ComplexStatement_Statement" LowerBound="77.1" HigherBound="79.1">
+                                    <om:Property Name="Expression" Value="AssetExists = false;" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Asset Already Exists" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="MessageDeclaration" OID="e05d66cc-635e-422f-8203-2ef333dc6fc8" ParentLink="ServiceBody_Declaration" LowerBound="16.15" HigherBound="16.71">
+                    <om:Property Name="Type" Value="MFM.Lbg.Schemas.MFMWorkItemUpdate" />
+                    <om:Property Name="ParamDirection" Value="In" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="PMAssetMessage" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableDeclaration" OID="45a97fd9-8259-44ed-85e7-bcb716201108" ParentLink="ServiceBody_Declaration" LowerBound="16.73" HigherBound="16.103">
+                    <om:Property Name="InitialValue" Value="true" />
+                    <om:Property Name="UseDefaultConstructor" Value="False" />
+                    <om:Property Name="Type" Value="System.Boolean" />
+                    <om:Property Name="ParamDirection" Value="Out" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="AssetExists" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableDeclaration" OID="03323fd5-ec75-4da2-8726-c014529a527f" ParentLink="ServiceBody_Declaration" LowerBound="16.105" HigherBound="16.129">
+                    <om:Property Name="InitialValue" Value="true" />
+                    <om:Property Name="UseDefaultConstructor" Value="False" />
+                    <om:Property Name="Type" Value="System.Boolean" />
+                    <om:Property Name="ParamDirection" Value="In" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="MakeAsset" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MFM.Lbg.Orcs
+{
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service o_CreateAsset
+    {
+        message MFM.Lbg.Schemas.Add_Asset_UdttTableType_ops.ArrayOfudtt_Asset Asset_MasterCheck;
+        message MFM.Lbg.Schemas.Add_Asset_UdttTableType_ops.ArrayOfudtt_Asset Asset_Lookup;
+        message MFM.Lbg.Schemas.Add_Asset_UdttTableType_ops.ArrayOfudtt_Asset Asset_Udtt;
+        System.String AssetSubTypeId;
+        System.Boolean AssetCreated;
+        System.Xml.XmlDocument AssetXml;
+        MFM.Lbg.Helper.Misc HelperAsset;
+        System.String LocationId;
+        System.String TemplateId;
+        body (message MFM.Lbg.Schemas.MFMWorkItemUpdate PMAssetMessage, out System.Boolean AssetExists, System.Boolean MakeAsset)
+        {
+            AssetSubTypeId = "";
+            AssetCreated = true;
+            AssetXml = new System.Xml.XmlDocument();
+            HelperAsset = new MFM.Lbg.Helper.Misc();
+            LocationId = "";
+            TemplateId = "";
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("c6db8023-b5f6-4289-b57e-abb3be91e6bc")]
+            construct Asset_Lookup
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("6c717c80-b049-4ad1-824b-df4c970aee77")]
+                transform (Asset_Lookup) = MFM.Lbg.Maps.m_UdttAsset (PMAssetMessage);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("316b5e97-5eba-4d68-abca-fe963591014f")]
+            if (Asset_Lookup.udtt_Asset.asst_ForeignSysId == PMAssetMessage.WI_AssetRef)
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("7dd3cc47-611c-4d1b-b8dc-59997f0ffeaa")]
+                AssetExists = true;
+            }
+            else 
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("587cfa61-8aab-46ae-9974-bf55b4219c58")]
+                if (MakeAsset == true)
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("cc8d7944-a62a-42e3-a254-a4d1997280c0")]
+                    construct Asset_Udtt
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("59f080d1-f9ae-4b03-853a-033772a5825d")]
+                        transform (Asset_Udtt) = MFM.Lbg.Maps.m_to_NewUdttAsset (PMAssetMessage);
+                    }
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("feedb120-e882-4bd1-a2a6-04132117c1b1")]
+                    LocationId = System.Convert.ToString(xpath(Asset_Udtt, "string(//*[local-name()='asst_LocationId'])"));
+                    AssetSubTypeId = System.Convert.ToString(xpath(Asset_Udtt, "string(//*[local-name()='asst_SubType'])"));
+                    TemplateId = System.Convert.ToString(xpath(PMAssetMessage, "string(//*[local-name()='Meta_RF01'])"));
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("0209861a-bd3c-4d56-b7d7-5638dd9fa81b")]
+                    if (LocationId != "" && AssetSubTypeId != "")
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("723774d9-cb15-441f-8ef8-3c1f3407957d")]
+                        AssetXml = Asset_Udtt;
+                        AssetCreated = HelperAsset.CreateNewAsset(ref AssetXml);
+                    }
+                    else if (AssetSubTypeId == "")
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("d0e0bad9-8297-499c-b705-a1d0532c43ee")]
+                        AssetCreated = false;
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("cfc8e287-094f-49d6-be19-11dbe6d66698")]
+                        suspend System.String.Format("Asset creation suspended. \r\nAsset {0}\r\nSupplier Message id {1}.\r\n\r\nThe Asset template {2} could not be resolved.  Please investigate the missing data before resuming.",PMAssetMessage.WI_AssetRef,PMAssetMessage.SourceSystemMessageId,TemplateId);
+                    }
+                    else 
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("02c91d47-1f94-4f5e-bee5-9f8baf9553e9")]
+                        AssetCreated = false;
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("ced9e754-fe3d-4d3f-adb8-c310052fbf63")]
+                        suspend System.String.Format("Asset creation suspended. \r\nAsset {0}\r\nSupplier Message id {1}.\r\n\r\nThe location {3} could not be resolved.  Please investigate the missing data before resuming.",PMAssetMessage.WI_AssetRef,PMAssetMessage.SourceSystemMessageId,PMAssetMessage.WI_LocationLevel3);
+                    }
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("715af96e-add3-415c-9147-694785485a88")]
+                    AssetExists = AssetCreated;
+                }
+                else 
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("22d44a58-9895-491a-92a7-a33909092b92")]
+                    AssetExists = false;
+                }
+            }
+        }
+    }
+}
+

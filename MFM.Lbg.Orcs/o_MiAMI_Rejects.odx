@@ -1,0 +1,732 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="32dbc949-5826-4e76-858f-d801cfde08de" LowerBound="1.1" HigherBound="152.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MFM.Lbg.Orcs" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="44f99e5e-266e-48c4-a256-830266b964c0" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Incomplete_Miami_Data_Port_Type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="c13149c6-38cb-467b-863e-e588efb8a1cd" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="4c9bf312-ea59-4a40-a1c2-aa7715b0e260" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.48">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.DistibutedWorkItems" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="fa65a91e-bb8f-44d3-99aa-b726fb90c27e" ParentLink="Module_ServiceDeclaration" LowerBound="11.1" HigherBound="151.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="o_MiAMI_Rejects" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="fe786894-1a64-491f-8dd4-b7024d18b23a" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="28.1" HigherBound="29.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="stdXmlCommText" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="7c792685-153b-4dff-81ad-917e3980ca51" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="29.1" HigherBound="30.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Filename" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="a19967d3-a528-453e-8e8b-c0edd262c057" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="30.1" HigherBound="31.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="xmlDoc" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="970b18fe-81f0-4913-b84d-91e1c02414ec" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="31.1" HigherBound="32.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="errMsg" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="8baf5d89-0f94-4883-b102-546e1233b110" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="32.1" HigherBound="33.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="eventLogSource" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="614e9938-65c8-46c8-bd9e-5affb4496b32" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="33.1" HigherBound="34.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="helpdeskref" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="982cd6a4-e5b4-4598-8b8c-72dfc536d452" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="34.1" HigherBound="35.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Contract" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="6319b2ef-5649-43ac-8af5-c4cff8b99aa6" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="35.1" HigherBound="36.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="biz_comm_str" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="060f6bf4-a5e6-4a89-85dd-2069bdb1f4a2" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="36.1" HigherBound="37.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="MFM.Lbg.Helper.Misc" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Helper2" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="5261e69e-54dd-4cee-947b-65f33f08d1d8" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="37.1" HigherBound="38.1">
+                <om:Property Name="InitialValue" Value="true" />
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Boolean" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="UseTranslation" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="e7995dc3-190d-42d1-bcb7-72db4c12ad51" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="38.1" HigherBound="39.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="XslSwitch" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="b0275265-d962-4694-af13-813383e5cad5" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="20.1" HigherBound="21.1">
+                <om:Property Name="Type" Value="MSS.Notification.Service.MSSNotifyEmail" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="NotifyEmailParent" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="62970f91-bebf-49af-b21c-66e29fbdbef1" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="21.1" HigherBound="22.1">
+                <om:Property Name="Type" Value="MSS.Notification.Service.MSSNotifyEmail" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="NotifyEmailOut" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="cf8b71c1-2790-4ec8-b258-3b6e8b29518a" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="22.1" HigherBound="23.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Remove_Case_From_QueueResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="UnblockResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="18bfae47-b7e3-4310-a718-407b98f36aff" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="23.1" HigherBound="24.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Remove_Case_From_QueueResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="DistributedResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="aabca391-3aca-4478-a0c6-6a9c9669aec7" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="24.1" HigherBound="25.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Remove_Case_From_Queue" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Unblock" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="b55bcf33-2ae3-4c24-bc20-fd24609f08e8" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="25.1" HigherBound="26.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Remove_Case_From_Queue" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Distributed" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="a55559dc-db7a-4e6e-b5cc-0191b7db44a5" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="26.1" HigherBound="27.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.BizTalk_Comm" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="biz_comm" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="e8aaca5b-0b31-4fe2-b00a-8a94aa8a4f89" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="27.1" HigherBound="28.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.DistibutedWorkItems" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="DistributedWorkItem" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="e99f6251-4842-4b03-8396-6dc5fea4d825" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="c9f963b2-2525-4dd1-bee7-1b77bee34945" ParentLink="ServiceBody_Statement" LowerBound="41.1" HigherBound="54.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="Incomplete_Miami_Data_Port" />
+                    <om:Property Name="MessageName" Value="DistributedWorkItem" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="Accept any combination of building class 1 or 2 being missing, including both for the MiAMI targeted messages" />
+                    <om:Property Name="Name" Value="Bad Data Msg" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DNFPredicate" OID="01ea2e7f-1cc8-4505-b240-52a48b34f95c" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="BTS.ReceivePortName" />
+                        <om:Property Name="RHS" Value="&quot;CAFM Distributor&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="DNFPredicate" OID="5b7a88ae-9098-42b6-a0b0-03af21540f5b" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="MFM.Lbg.Schemas.VendorSystem" />
+                        <om:Property Name="RHS" Value="&quot;TFMMXO75&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="DNFPredicate" OID="fc6ac3be-52d9-4f66-b0a0-3362ba70e99f" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="MFM.Lbg.Schemas.ServiceLine1" />
+                        <om:Property Name="RHS" Value="&quot;VFX&quot;" />
+                        <om:Property Name="Grouping" Value="OR" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="DNFPredicate" OID="8850daab-50f4-4bc2-8dd4-eda24250c6fd" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="BTS.ReceivePortName" />
+                        <om:Property Name="RHS" Value="&quot;CAFM Distributor&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="DNFPredicate" OID="d9e3ef31-9539-4a35-ae08-623506a5d12d" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="MFM.Lbg.Schemas.VendorSystem" />
+                        <om:Property Name="RHS" Value="&quot;TFMMXO75&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="DNFPredicate" OID="4771ca17-efaf-4c49-a0e0-a4e67fd41d4d" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="MFM.Lbg.Schemas.Property1" />
+                        <om:Property Name="RHS" Value="&quot;VFX&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="983466a2-7a08-49a2-8d5a-10fdff32f7c5" ParentLink="ServiceBody_Statement" LowerBound="54.1" HigherBound="61.1">
+                    <om:Property Name="Expression" Value="helpdeskref = DistributedWorkItem.IssuedWork.Workitem.HelpdeskReference;&#xD;&#xA;eventLogSource = &quot;MFMHelpdeskDistributor&quot;;&#xD;&#xA;Contract = DistributedWorkItem.IssuedWork.MRoute.ContractName;&#xD;&#xA;Filename = System.Convert.ToString(DistributedWorkItem(FILE.ReceivedFileName));&#xD;&#xA;UseTranslation = true;&#xD;&#xA;XslSwitch = &quot;TEAM247&quot;;&#xD;&#xA;" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Init Vars" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="Construct" OID="9e0e91d2-40c9-4190-9bfc-7ea3afdf88c2" ParentLink="ServiceBody_Statement" LowerBound="61.1" HigherBound="67.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="Clone this message for each error" />
+                    <om:Property Name="Name" Value="CreateParentEmailAlert" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="177e028d-4cfb-4dc3-9c0b-9be3000f36cd" ParentLink="ComplexStatement_Statement" LowerBound="64.1" HigherBound="66.1">
+                        <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.Base_Email_Notification" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Base_Email_Notification" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessagePartRef" OID="57f2c7b8-e8c3-4ca2-8683-f86db3e98840" ParentLink="Transform_OutputMessagePartRef" LowerBound="65.28" HigherBound="65.45">
+                            <om:Property Name="MessageRef" Value="NotifyEmailParent" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_4" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="f50a60d0-b0a7-4e86-a5db-44abff31d439" ParentLink="Transform_InputMessagePartRef" LowerBound="65.87" HigherBound="65.106">
+                            <om:Property Name="MessageRef" Value="DistributedWorkItem" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_3" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="314d28e3-9f70-4165-b2b9-b5baffda94f9" ParentLink="Construct_MessageRef" LowerBound="62.23" HigherBound="62.40">
+                        <om:Property Name="Ref" Value="NotifyEmailParent" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Parallel" OID="51e4e6c0-b34c-4e54-a15c-82c044fb9588" ParentLink="ServiceBody_Statement" LowerBound="67.1" HigherBound="89.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Create Case Export Control Messages" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="ParallelBranch" OID="4f1a1519-f636-43d0-875e-7b171f493688" ParentLink="ReallyComplexStatement_Branch" LowerBound="72.1" HigherBound="78.1">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="ParallelBranch_1" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="Construct" OID="d6c3e946-44c0-4954-b7ae-f505e35e70c4" ParentLink="ComplexStatement_Statement" LowerBound="72.1" HigherBound="78.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Construct_Distributed" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="MessageRef" OID="40cfb826-dcc1-47fa-b233-7ca348927d13" ParentLink="Construct_MessageRef" LowerBound="73.31" HigherBound="73.42">
+                                <om:Property Name="Ref" Value="Distributed" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Transform" OID="d436bfbd-9ca0-4112-ab35-db47a3c349a2" ParentLink="ComplexStatement_Statement" LowerBound="75.1" HigherBound="77.1">
+                                <om:Property Name="ClassName" Value="MFM.Lbg.Maps.DistributeMessage_To_RemoveFromQueue" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="x_To_Distributed" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="MessagePartRef" OID="8e8fb99f-a37d-4dc1-b1db-568bcc3f9127" ParentLink="Transform_InputMessagePartRef" LowerBound="76.102" HigherBound="76.121">
+                                    <om:Property Name="MessageRef" Value="DistributedWorkItem" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_1" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="MessagePartRef" OID="9998b6c8-2ed7-4d0d-86b0-51fa8c0100d3" ParentLink="Transform_OutputMessagePartRef" LowerBound="76.36" HigherBound="76.47">
+                                    <om:Property Name="MessageRef" Value="Distributed" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_2" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="ParallelBranch" OID="0824cdb3-cf15-47b1-941a-02b804d67319" ParentLink="ReallyComplexStatement_Branch" LowerBound="81.1" HigherBound="87.1">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="ParallelBranch_2" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="Construct" OID="37341d78-b617-4db6-be94-692fa4e580a3" ParentLink="ComplexStatement_Statement" LowerBound="81.1" HigherBound="87.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Construct_unblock" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="MessageRef" OID="fc6c4ec7-fc1e-40f9-ab07-8c2422f69044" ParentLink="Construct_MessageRef" LowerBound="82.31" HigherBound="82.38">
+                                <om:Property Name="Ref" Value="Unblock" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Transform" OID="2fd88a93-6dcd-4bcd-a79c-7f04985ab1cb" ParentLink="ComplexStatement_Statement" LowerBound="84.1" HigherBound="86.1">
+                                <om:Property Name="ClassName" Value="MFM.Lbg.Maps.DistributeMessage_To_ReQueue" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="x_to_unblock" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="MessagePartRef" OID="e03cb27b-85af-4042-b075-d5484c07223a" ParentLink="Transform_InputMessagePartRef" LowerBound="85.90" HigherBound="85.109">
+                                    <om:Property Name="MessageRef" Value="DistributedWorkItem" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_8" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="MessagePartRef" OID="868f23ec-c4ef-4da5-bd11-b19a6a06fd40" ParentLink="Transform_OutputMessagePartRef" LowerBound="85.36" HigherBound="85.43">
+                                    <om:Property Name="MessageRef" Value="Unblock" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_9" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Decision" OID="c571cb5a-48b0-4627-954b-7ac6c6285251" ParentLink="ServiceBody_Statement" LowerBound="89.1" HigherBound="114.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Set Error" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DecisionBranch" OID="9533921b-f6a4-4c5b-a61c-d50c7107ed68" ParentLink="ReallyComplexStatement_Branch" LowerBound="90.13" HigherBound="95.1">
+                        <om:Property Name="Expression" Value="DistributedWorkItem.IssuedWork.Workitem.Location.linkMitiePropertyCode == &quot;VFX&quot;" />
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Building Class 1" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="VariableAssignment" OID="9cf7e3d7-b438-468b-ac09-b4993d1dfc39" ParentLink="ComplexStatement_Statement" LowerBound="92.1" HigherBound="94.1">
+                            <om:Property Name="Expression" Value="errMsg = &quot;No client property id on VisionFM location.  The case cannot be sent, please contact the relevant provider directly.&quot;;" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Set BC1 Err" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="DecisionBranch" OID="89379de3-5c3d-4426-be74-1afabddc6ea7" ParentLink="ReallyComplexStatement_Branch" LowerBound="95.18" HigherBound="114.1">
+                        <om:Property Name="Expression" Value="DistributedWorkItem.IssuedWork.Workitem.MService.VendorServiceLine == &quot;VFX&quot;" />
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Building Class 2" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Decision" OID="af1d3aeb-9d9e-4826-af4b-362045fc71e8" ParentLink="ComplexStatement_Statement" LowerBound="97.1" HigherBound="113.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Service Line Location" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="DecisionBranch" OID="5f127af7-5b28-49a9-8485-bcc974c5f813" ParentLink="ReallyComplexStatement_Branch" LowerBound="98.17" HigherBound="103.1">
+                                <om:Property Name="Expression" Value="DistributedWorkItem.IssuedWork.MRoute.ServiceLineType == &quot;Location-Area&quot;" />
+                                <om:Property Name="IsGhostBranch" Value="True" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Unit Code" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="VariableAssignment" OID="71d0d901-58ef-4dde-aea0-0e214319678c" ParentLink="ComplexStatement_Statement" LowerBound="100.1" HigherBound="102.1">
+                                    <om:Property Name="Expression" Value="errMsg = &quot;No client unit code on VisionFM location extra tab.  The case cannot be sent, please contact the relevant provider directly.&quot;;" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Set BC2 Err 1" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="DecisionBranch" OID="d6a0abbd-63b5-49f9-8e2d-6d6b6d32d7e2" ParentLink="ReallyComplexStatement_Branch" LowerBound="103.22" HigherBound="108.1">
+                                <om:Property Name="Expression" Value="DistributedWorkItem.IssuedWork.MRoute.ServiceLineType == &quot;Service&quot;" />
+                                <om:Property Name="IsGhostBranch" Value="True" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Package Bundle" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="VariableAssignment" OID="f2ae5236-261a-4efd-8c64-21c57213a836" ParentLink="ComplexStatement_Statement" LowerBound="105.1" HigherBound="107.1">
+                                    <om:Property Name="Expression" Value="errMsg = System.String.Format(&quot;VisionFM work package bundle '{0}' is not mapped to Maximo.  This case can not be sent, please contact the relevant vendor directly.&quot;,DistributedWorkItem.IssuedWork.Workitem.WorkPackageBundle.WorkPackageBundleName);" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Set BC2 Err 2" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="DecisionBranch" OID="ec960254-5b8a-4102-af90-05f50792bf9e" ParentLink="ReallyComplexStatement_Branch">
+                                <om:Property Name="IsGhostBranch" Value="True" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Else" />
+                                <om:Property Name="Signal" Value="False" />
+                                <om:Element Type="VariableAssignment" OID="845f9746-8fa4-4cb0-a7d4-a9d46fd3078d" ParentLink="ComplexStatement_Statement" LowerBound="110.1" HigherBound="112.1">
+                                    <om:Property Name="Expression" Value="errMsg = &quot;Building Class 2 error, undefined BizTalk AreaClass&quot;;" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Set BC2 Err 2" />
+                                    <om:Property Name="Signal" Value="True" />
+                                </om:Element>
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="DecisionBranch" OID="df4816ad-bf54-4150-8280-70fc179af506" ParentLink="ReallyComplexStatement_Branch">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Else" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Task" OID="8a60f7e1-9611-4b6d-a349-52b2e5ead55a" ParentLink="ServiceBody_Statement" LowerBound="114.1" HigherBound="141.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Create Data Error Comm" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="VariableAssignment" OID="8e3fcf14-4185-48b1-883f-da2003603be4" ParentLink="ComplexStatement_Statement" LowerBound="114.1" HigherBound="116.1">
+                        <om:Property Name="Expression" Value="stdXmlCommText = Helper2.getBizTalkComm(&quot;BIZTALK&quot;,&quot;ERROR&quot;,helpdeskref,&quot;Data: Master data unavailable.&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,Contract,errMsg,&quot;VisionFM&quot;);" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="CommWsUnavailable" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="Parallel" OID="9603b431-af94-4f62-b9f7-6a2a221321d9" ParentLink="ComplexStatement_Statement" LowerBound="116.1" HigherBound="141.1">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="ParallelActions_1" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="ParallelBranch" OID="9e8f0112-79de-45d4-a2dd-2721ea646c99" ParentLink="ReallyComplexStatement_Branch" LowerBound="121.1" HigherBound="123.1">
+                            <om:Property Name="IsGhostBranch" Value="True" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="ParallelBranch_3" />
+                            <om:Property Name="Signal" Value="False" />
+                            <om:Element Type="Exec" OID="1fe11ee2-b423-4e04-a061-cb6d354dec35" ParentLink="ComplexStatement_Statement" LowerBound="121.1" HigherBound="123.1">
+                                <om:Property Name="Invokee" Value="MFM.Lbg.Orcs.o_LoadStandardComm" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="StartOrchestration_2" />
+                                <om:Property Name="Signal" Value="False" />
+                                <om:Element Type="Parameter" OID="ed415328-9315-4221-8040-2c0f8249b171" ParentLink="InvokeStatement_Parameter">
+                                    <om:Property Name="Direction" Value="In" />
+                                    <om:Property Name="Name" Value="stdXmlCommText" />
+                                    <om:Property Name="Type" Value="System.String" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="ParallelBranch" OID="2447003d-c03d-45a3-a7ea-b61a8a18da40" ParentLink="ReallyComplexStatement_Branch" LowerBound="126.1" HigherBound="139.1">
+                            <om:Property Name="IsGhostBranch" Value="True" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="ParallelBranch_4" />
+                            <om:Property Name="Signal" Value="False" />
+                            <om:Element Type="Construct" OID="5d245ecb-e695-4e5a-8e3c-0381bc8dac6d" ParentLink="ComplexStatement_Statement" LowerBound="126.1" HigherBound="137.1">
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="ConstructErrorEmail_MDATA_247" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="MessageAssignment" OID="bd9f3c83-4e6a-4631-8c65-90f8c025b369" ParentLink="ComplexStatement_Statement" LowerBound="129.1" HigherBound="136.1">
+                                    <om:Property Name="Expression" Value="NotifyEmailOut = NotifyEmailParent;&#xD;&#xA;NotifyEmailOut.EmailMetaData.Subject =  Helper2.AddEnvironmentToSubjet(System.String.Format(&quot;Beacon - Case: {1} Customer: {0}, Data: Master data unavailable&quot;,Contract,helpdeskref));&#xD;&#xA;NotifyEmailOut.EmailMetaData.To = Helper2.GetVisionFmTeamLeaderMailbox();&#xD;&#xA;xpath(NotifyEmailOut,&quot;/*[local-name()='MSSNotifyEmail' and namespace-uri()='http://MSS.Notification.Service.NotifyEmail/v1']/*[local-name()='EmailContentData' and namespace-uri()='']/*[local-name()='PathToTransform' and namespace-uri()='']&quot;) = Helper2.XslPath(&quot;TEAM247&quot;);&#xD;&#xA;xpath(NotifyEmailOut,&quot;/*[local-name()='MSSNotifyEmail' and namespace-uri()='http://MSS.Notification.Service.NotifyEmail/v1']/*[local-name()='EmailContentData' and namespace-uri()='']/*[local-name()='BodyNonRecurring' and namespace-uri()='']/*[local-name()='P2' and namespace-uri()='']&quot;) = &quot;Data - Master data unavailable&quot;;&#xD;&#xA;xpath(NotifyEmailOut,&quot;/*[local-name()='MSSNotifyEmail' and namespace-uri()='http://MSS.Notification.Service.NotifyEmail/v1']/*[local-name()='EmailContentData' and namespace-uri()='']/*[local-name()='BodyNonRecurring' and namespace-uri()='']/*[local-name()='P4' and namespace-uri()='']&quot;) = errMsg;" />
+                                    <om:Property Name="ReportToAnalyst" Value="False" />
+                                    <om:Property Name="Name" Value="Assign_MDATA_247" />
+                                    <om:Property Name="Signal" Value="True" />
+                                </om:Element>
+                                <om:Element Type="MessageRef" OID="0faaef09-341d-48b3-b0fe-bb97cea09785" ParentLink="Construct_MessageRef" LowerBound="127.31" HigherBound="127.45">
+                                    <om:Property Name="Ref" Value="NotifyEmailOut" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="Send" OID="4d8f8d3c-07e8-47a3-af6b-5a4257941843" ParentLink="ComplexStatement_Statement" LowerBound="137.1" HigherBound="139.1">
+                                <om:Property Name="PortName" Value="PublishNotificationBadData" />
+                                <om:Property Name="MessageName" Value="NotifyEmailOut" />
+                                <om:Property Name="OperationName" Value="Operation_1" />
+                                <om:Property Name="OperationMessageName" Value="Request" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Publish_Notification" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Task" OID="1ce07e85-0b5c-4378-90dd-b5f01834aeca" ParentLink="ServiceBody_Statement" LowerBound="141.1" HigherBound="149.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="The is not able to be exported with these data issues.  the case will be removed from export control, and also marked as handled." />
+                    <om:Property Name="Name" Value="Handle Case" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Send" OID="f9004697-aaf1-443f-abcb-bf931d23829c" ParentLink="ComplexStatement_Statement" LowerBound="141.1" HigherBound="143.1">
+                        <om:Property Name="PortName" Value="Handle_Case_Port" />
+                        <om:Property Name="MessageName" Value="Unblock" />
+                        <om:Property Name="OperationName" Value="biz_Global_Remove_Case_From_Queue" />
+                        <om:Property Name="OperationMessageName" Value="Request" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Unblock" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="Receive" OID="b8127dcf-ec2d-4ba5-9d37-157022eb5458" ParentLink="ComplexStatement_Statement" LowerBound="143.1" HigherBound="145.1">
+                        <om:Property Name="Activate" Value="False" />
+                        <om:Property Name="PortName" Value="Handle_Case_Port" />
+                        <om:Property Name="MessageName" Value="UnblockResponse" />
+                        <om:Property Name="OperationName" Value="biz_Global_Remove_Case_From_Queue" />
+                        <om:Property Name="OperationMessageName" Value="Response" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="UnblockResponse" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="Send" OID="5a09a7c0-f88a-4744-b728-a03d8c85cd4e" ParentLink="ComplexStatement_Statement" LowerBound="145.1" HigherBound="147.1">
+                        <om:Property Name="PortName" Value="Handle_Case_Port" />
+                        <om:Property Name="MessageName" Value="Distributed" />
+                        <om:Property Name="OperationName" Value="biz_Global_Remove_Case_From_Queue" />
+                        <om:Property Name="OperationMessageName" Value="Request" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Mark case handled" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="Receive" OID="1a661666-3bc6-4e2f-a9f7-9db782039cd6" ParentLink="ComplexStatement_Statement" LowerBound="147.1" HigherBound="149.1">
+                        <om:Property Name="Activate" Value="False" />
+                        <om:Property Name="PortName" Value="Handle_Case_Port" />
+                        <om:Property Name="MessageName" Value="DistributedResponse" />
+                        <om:Property Name="OperationName" Value="biz_Global_Remove_Case_From_Queue" />
+                        <om:Property Name="OperationMessageName" Value="Response" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Handled response" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="dbbc5bb7-8c9e-4dfb-ad7e-01a19cb8c68b" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="14.1" HigherBound="16.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.Incomplete_Miami_Data_Port_Type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Incomplete_Miami_Data_Port" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="DirectBindingAttribute" OID="a05a78ea-ad80-49c2-bbc9-e7efeca92961" ParentLink="PortDeclaration_CLRAttribute" LowerBound="14.1" HigherBound="15.1">
+                    <om:Property Name="DirectBindingType" Value="MessageBox" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="77111c05-5c89-4e07-a347-2bdc41b06969" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="16.1" HigherBound="18.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="87" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.Port_biz_Global_Remove_Case_From_Queue_Type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Handle_Case_Port" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="153693ac-ad6e-4155-b8cb-58805a80cd75" ParentLink="PortDeclaration_CLRAttribute" LowerBound="16.1" HigherBound="17.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="1ce7258b-c31d-459c-a78c-4c3bf6349ccf" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="18.1" HigherBound="20.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="98" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.PublishNotifyEmailToMbType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PublishNotificationBadData" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="DirectBindingAttribute" OID="7b73fa8d-23d2-4613-9c5d-3c9eb36f890f" ParentLink="PortDeclaration_CLRAttribute" LowerBound="18.1" HigherBound="19.1">
+                    <om:Property Name="DirectBindingType" Value="MessageBox" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MFM.Lbg.Orcs
+{
+    internal porttype Incomplete_Miami_Data_Port_Type
+    {
+        oneway Operation_1
+        {
+            MFM.Lbg.Schemas.DistibutedWorkItems
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service o_MiAMI_Rejects
+    {
+        [Microsoft.XLANGs.BaseTypes.DirectBinding()]
+        port implements Incomplete_Miami_Data_Port_Type Incomplete_Miami_Data_Port;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses Port_biz_Global_Remove_Case_From_Queue_Type Handle_Case_Port;
+        [Microsoft.XLANGs.BaseTypes.DirectBinding()]
+        port uses PublishNotifyEmailToMbType PublishNotificationBadData;
+        message MSS.Notification.Service.MSSNotifyEmail NotifyEmailParent;
+        message MSS.Notification.Service.MSSNotifyEmail NotifyEmailOut;
+        message MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Remove_Case_From_QueueResponse UnblockResponse;
+        message MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Remove_Case_From_QueueResponse DistributedResponse;
+        message MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Remove_Case_From_Queue Unblock;
+        message MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Remove_Case_From_Queue Distributed;
+        message MFM.Lbg.Schemas.BizTalk_Comm biz_comm;
+        message MFM.Lbg.Schemas.DistibutedWorkItems DistributedWorkItem;
+        System.String stdXmlCommText;
+        System.String Filename;
+        System.Xml.XmlDocument xmlDoc;
+        System.String errMsg;
+        System.String eventLogSource;
+        System.String helpdeskref;
+        System.String Contract;
+        System.String biz_comm_str;
+        MFM.Lbg.Helper.Misc Helper2;
+        System.Boolean UseTranslation;
+        System.String XslSwitch;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("c9f963b2-2525-4dd1-bee7-1b77bee34945")]
+            activate ((BTS.ReceivePortName == "CAFM Distributor") && (MFM.Lbg.Schemas.VendorSystem == "TFMMXO75") && (MFM.Lbg.Schemas.ServiceLine1 == "VFX") || (BTS.ReceivePortName == "CAFM Distributor") && (MFM.Lbg.Schemas.VendorSystem == "TFMMXO75") && (MFM.Lbg.Schemas.Property1 == "VFX"))receive (Incomplete_Miami_Data_Port.Operation_1, DistributedWorkItem);
+            stdXmlCommText = "";
+            Filename = "";
+            xmlDoc = new System.Xml.XmlDocument();
+            errMsg = "";
+            eventLogSource = "";
+            helpdeskref = "";
+            Contract = "";
+            biz_comm_str = "";
+            Helper2 = new MFM.Lbg.Helper.Misc();
+            UseTranslation = true;
+            XslSwitch = "";
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("983466a2-7a08-49a2-8d5a-10fdff32f7c5")]
+            helpdeskref = DistributedWorkItem.IssuedWork.Workitem.HelpdeskReference;
+            eventLogSource = "MFMHelpdeskDistributor";
+            Contract = DistributedWorkItem.IssuedWork.MRoute.ContractName;
+            Filename = System.Convert.ToString(DistributedWorkItem(FILE.ReceivedFileName));
+            UseTranslation = true;
+            XslSwitch = "TEAM247";
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("9e0e91d2-40c9-4190-9bfc-7ea3afdf88c2")]
+            construct NotifyEmailParent
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("177e028d-4cfb-4dc3-9c0b-9be3000f36cd")]
+                transform (NotifyEmailParent) = MFM.Lbg.Orcs.Base_Email_Notification (DistributedWorkItem);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("51e4e6c0-b34c-4e54-a15c-82c044fb9588")]
+            parallel
+            {
+                task
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("d6c3e946-44c0-4954-b7ae-f505e35e70c4")]
+                    construct Distributed
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("d436bfbd-9ca0-4112-ab35-db47a3c349a2")]
+                        transform (Distributed) = MFM.Lbg.Maps.DistributeMessage_To_RemoveFromQueue (DistributedWorkItem);
+                    }
+                }
+                task
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("37341d78-b617-4db6-be94-692fa4e580a3")]
+                    construct Unblock
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("2fd88a93-6dcd-4bcd-a79c-7f04985ab1cb")]
+                        transform (Unblock) = MFM.Lbg.Maps.DistributeMessage_To_ReQueue (DistributedWorkItem);
+                    }
+                }
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("c571cb5a-48b0-4627-954b-7ac6c6285251")]
+            if (DistributedWorkItem.IssuedWork.Workitem.Location.linkMitiePropertyCode == "VFX")
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("9cf7e3d7-b438-468b-ac09-b4993d1dfc39")]
+                errMsg = "No client property id on VisionFM location.  The case cannot be sent, please contact the relevant provider directly.";
+            }
+            else if (DistributedWorkItem.IssuedWork.Workitem.MService.VendorServiceLine == "VFX")
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("af1d3aeb-9d9e-4826-af4b-362045fc71e8")]
+                if (DistributedWorkItem.IssuedWork.MRoute.ServiceLineType == "Location-Area")
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("71d0d901-58ef-4dde-aea0-0e214319678c")]
+                    errMsg = "No client unit code on VisionFM location extra tab.  The case cannot be sent, please contact the relevant provider directly.";
+                }
+                else if (DistributedWorkItem.IssuedWork.MRoute.ServiceLineType == "Service")
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("f2ae5236-261a-4efd-8c64-21c57213a836")]
+                    errMsg = System.String.Format("VisionFM work package bundle '{0}' is not mapped to Maximo.  This case can not be sent, please contact the relevant vendor directly.",DistributedWorkItem.IssuedWork.Workitem.WorkPackageBundle.WorkPackageBundleName);
+                }
+                else 
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("845f9746-8fa4-4cb0-a7d4-a9d46fd3078d")]
+                    errMsg = "Building Class 2 error, undefined BizTalk AreaClass";
+                }
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("8e3fcf14-4185-48b1-883f-da2003603be4")]
+            stdXmlCommText = Helper2.getBizTalkComm("BIZTALK","ERROR",helpdeskref,"Data: Master data unavailable.","","","",Contract,errMsg,"VisionFM");
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("9603b431-af94-4f62-b9f7-6a2a221321d9")]
+            parallel
+            {
+                task
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("1fe11ee2-b423-4e04-a061-cb6d354dec35")]
+                    exec MFM.Lbg.Orcs.o_LoadStandardComm (stdXmlCommText);
+                }
+                task
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("5d245ecb-e695-4e5a-8e3c-0381bc8dac6d")]
+                    construct NotifyEmailOut
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("bd9f3c83-4e6a-4631-8c65-90f8c025b369")]
+                        NotifyEmailOut = NotifyEmailParent;
+                        NotifyEmailOut.EmailMetaData.Subject =  Helper2.AddEnvironmentToSubjet(System.String.Format("Beacon - Case: {1} Customer: {0}, Data: Master data unavailable",Contract,helpdeskref));
+                        NotifyEmailOut.EmailMetaData.To = Helper2.GetVisionFmTeamLeaderMailbox();
+                        xpath(NotifyEmailOut,"/*[local-name()='MSSNotifyEmail' and namespace-uri()='http://MSS.Notification.Service.NotifyEmail/v1']/*[local-name()='EmailContentData' and namespace-uri()='']/*[local-name()='PathToTransform' and namespace-uri()='']") = Helper2.XslPath("TEAM247");
+                        xpath(NotifyEmailOut,"/*[local-name()='MSSNotifyEmail' and namespace-uri()='http://MSS.Notification.Service.NotifyEmail/v1']/*[local-name()='EmailContentData' and namespace-uri()='']/*[local-name()='BodyNonRecurring' and namespace-uri()='']/*[local-name()='P2' and namespace-uri()='']") = "Data - Master data unavailable";
+                        xpath(NotifyEmailOut,"/*[local-name()='MSSNotifyEmail' and namespace-uri()='http://MSS.Notification.Service.NotifyEmail/v1']/*[local-name()='EmailContentData' and namespace-uri()='']/*[local-name()='BodyNonRecurring' and namespace-uri()='']/*[local-name()='P4' and namespace-uri()='']") = errMsg;
+                    }
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("4d8f8d3c-07e8-47a3-af6b-5a4257941843")]
+                    send (PublishNotificationBadData.Operation_1, NotifyEmailOut);
+                }
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("f9004697-aaf1-443f-abcb-bf931d23829c")]
+            send (Handle_Case_Port.biz_Global_Remove_Case_From_Queue, Unblock);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("b8127dcf-ec2d-4ba5-9d37-157022eb5458")]
+            receive (Handle_Case_Port.biz_Global_Remove_Case_From_Queue, UnblockResponse);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("5a09a7c0-f88a-4744-b728-a03d8c85cd4e")]
+            send (Handle_Case_Port.biz_Global_Remove_Case_From_Queue, Distributed);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("1a661666-3bc6-4e2f-a9f7-9db782039cd6")]
+            receive (Handle_Case_Port.biz_Global_Remove_Case_From_Queue, DistributedResponse);
+        }
+    }
+}
+

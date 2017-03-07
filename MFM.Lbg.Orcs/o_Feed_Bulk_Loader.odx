@@ -1,0 +1,571 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="ca8805b5-3cc7-4f5a-b64c-833bdf3aa72d" LowerBound="1.1" HigherBound="125.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MFM.Lbg.Orcs" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="298b4f2c-3a34-4c35-845d-caca14acea63" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Receive_Feeds_port_type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="8a3ef22a-6b4e-4b0e-a00c-3d90a1dad2bd" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="dad3ee92-668b-4c23-be84-197dc958441b" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.38">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.MFMFeedFF" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="779e532a-ee1a-4766-b60d-bbbcc283a8f9" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="biz_import_standard_feed_send_type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="b12a3d22-2972-4c32-be40-b280540b7c35" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="biz_import_standard_feed" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="8afa08e7-b6a1-41f5-8e58-3c9b20063576" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.83">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.ImportFeed_TypedProcedure_dbo.biz_import_standard_feed" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="9ee2b648-84ef-4260-9712-6f5c04bc391b" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="15.85" HigherBound="15.163">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.ImportFeed_TypedProcedure_dbo.biz_import_standard_feedResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="d628ee3f-5668-4c06-9322-359c92e306c3" ParentLink="Module_PortType" LowerBound="18.1" HigherBound="25.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="EmailToFeedAlert_Type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="57988c16-0f44-4ee3-908a-39908e7ef65b" ParentLink="PortType_OperationDeclaration" LowerBound="20.1" HigherBound="24.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="a837c32e-b171-49eb-a399-50b340007f80" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="22.13" HigherBound="22.38">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.MFMFeedFF" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="e1605565-6844-4bfa-8395-fcca95551bea" ParentLink="Module_PortType" LowerBound="25.1" HigherBound="32.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Send_Rejected_File_To_Disk_type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="953a28ee-d9b8-4d53-9c05-e67cd79a920c" ParentLink="PortType_OperationDeclaration" LowerBound="27.1" HigherBound="31.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="71a38cb3-c877-4bcf-bb02-365d2de226f0" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="29.13" HigherBound="29.38">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.MFMFeedFF" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="0d982d8e-7100-487e-b36f-9a76320a5cc7" ParentLink="Module_PortType" LowerBound="32.1" HigherBound="39.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="biz_Process_Feed_Wrapper_port_type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="c57986ac-bfbe-4291-93bd-2d7386199973" ParentLink="PortType_OperationDeclaration" LowerBound="34.1" HigherBound="38.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="biz_Process_Feed_Wrapper" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="ef4a3c2d-1a91-4d5f-be0c-dd96ca65d13c" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="36.13" HigherBound="36.85">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.Import_Feed2_TypedProcedure_dbo.biz_Process_Feed_Wrapper" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="735e51ae-1345-419b-8bab-799acc94cb46" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="36.87" HigherBound="36.167">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.Import_Feed2_TypedProcedure_dbo.biz_Process_Feed_WrapperResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="d1ce2654-3713-463b-b9c6-e1dbd1ac8622" ParentLink="Module_PortType" LowerBound="39.1" HigherBound="46.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Feeds_Archive_Type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="29fb1694-d327-40f4-9ff4-3d876d14ae0d" ParentLink="PortType_OperationDeclaration" LowerBound="41.1" HigherBound="45.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="ea08d8b3-7f49-4e90-8807-933db6fa4324" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="43.13" HigherBound="43.38">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.MFMFeedFF" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="b2acd134-efb9-4885-909e-2bcd4ec36ba9" ParentLink="Module_ServiceDeclaration" LowerBound="46.1" HigherBound="124.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="o_Feed_Bulk_Loader" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="462c4420-5e8b-47f4-96fb-d7aa1b778a6e" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="62.1" HigherBound="63.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="FeedClass" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="398e69eb-d0cd-4e58-9774-238067ca3588" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="63.1" HigherBound="64.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="FileName" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="78c8cedf-fb1b-4335-8e4b-4720e2eb5c42" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="64.1" HigherBound="65.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Body" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="f9ba948c-c018-412f-a30a-b72625bfc2b7" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="65.1" HigherBound="66.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Subject" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="299281fd-19be-48ff-b064-2260e3240d69" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="66.1" HigherBound="67.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="RejectFileName" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="29a9a74b-31c0-4f17-a94c-e579e6f48eab" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="67.1" HigherBound="68.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="MFM.Lbg.Helper.Misc" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="helper" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="7e241807-78d3-46dd-9774-2753c5eb1675" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="68.1" HigherBound="69.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="MFM.Lbg.Helper.Misc" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="hlp" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="8b82b352-1ccb-4862-b0eb-84ab0ff48c3a" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="69.1" HigherBound="70.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="MFM.Lbg.Helper.HelpdeskSqlClient" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="sqlloadhlp" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="332be09a-99e4-4654-9414-342109f80338" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="70.1" HigherBound="71.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Int32" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="rv" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="6c57f33d-db11-4203-bf04-690bda0dba79" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="71.1" HigherBound="72.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="XmlMsg" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="bf5fc6e2-77d2-4898-be1d-e341bbfd7d01" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="53.1" HigherBound="54.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.MFMFeedFF" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="FeedsProcessingResultNotify" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="2aa90331-0e0f-4c28-97b9-8ac63875a79c" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="54.1" HigherBound="55.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.MFMFeedFF" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Feeds_To_Disk" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="0199feae-9829-400a-9732-868601efdfe7" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="55.1" HigherBound="56.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.MFMFeedFF" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="FeedsRejectedOut" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="9f446480-7edd-4b5b-985a-39427231a084" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="56.1" HigherBound="57.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.MFMFeedFF" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="FeedsRejected" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="33830996-b327-473c-8305-b09407885a3d" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="57.1" HigherBound="58.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.MFMFeedFF" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Feeds" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="6c951de0-45e5-47a0-9740-97f8c057ecf2" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="58.1" HigherBound="59.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.ImportFeed_TypedProcedure_dbo.biz_import_standard_feed" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="biz_import_standard_feed" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="43aed7e9-6930-421b-aca9-a78fb7dd400e" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="59.1" HigherBound="60.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.ImportFeed_TypedProcedure_dbo.biz_import_standard_feedResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="biz_import_standard_feed_response" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="1afa8b9d-06fd-4465-b158-15f19d348f7c" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="60.1" HigherBound="61.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.Import_Feed2_TypedProcedure_dbo.biz_Process_Feed_Wrapper" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="biz_Process_Feed_Wrapper" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="df96d4c7-08b1-4ea8-b5aa-bc80e1d776c9" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="61.1" HigherBound="62.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.Import_Feed2_TypedProcedure_dbo.biz_Process_Feed_WrapperResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="biz_Process_Feed_Wrapper_Response" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="a32bd30c-961e-4814-849d-c5dd5ae1504c" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="fa69731e-9b5d-47cf-8354-660fabfd0d77" ParentLink="ServiceBody_Statement" LowerBound="74.1" HigherBound="85.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="Receive_Feeds_port" />
+                    <om:Property Name="MessageName" Value="Feeds" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_Feeds" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="c2b4afaf-c77c-46b9-bc16-e42da8a51d5a" ParentLink="ServiceBody_Statement" LowerBound="85.1" HigherBound="90.1">
+                    <om:Property Name="Expression" Value="FileName = hlp.GetFileName(Feeds(FILE.ReceivedFileName));&#xD;&#xA;RejectFileName = System.String.Format(&quot;fject_&quot;,FileName);&#xD;&#xA;rv = -1;&#xD;&#xA;FeedClass = xpath(Feeds,&quot;string(/*[local-name()='MFMFeed_FF' and namespace-uri()='http://MFM.Lbg.Schemas.MFMFeedFF']/*[local-name()='MFMFeed_FF_Record' and namespace-uri()='']/*[local-name()='Feed' and namespace-uri()=''][1])&quot;);" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Expression_2" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="Construct" OID="a5241185-7475-4bbe-b6b7-74ba526c812c" ParentLink="ServiceBody_Statement" LowerBound="90.1" HigherBound="96.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructMessage_TabIn" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="ea345829-455f-4431-9c61-b43c63a1de06" ParentLink="ComplexStatement_Statement" LowerBound="93.1" HigherBound="95.1">
+                        <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.x_to_feed" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="x_to_feed" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessagePartRef" OID="41545843-376d-468f-92cd-6dd2ab34bf8e" ParentLink="Transform_InputMessagePartRef" LowerBound="94.80" HigherBound="94.85">
+                            <om:Property Name="MessageRef" Value="Feeds" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="32dc59f3-7332-43d6-83ad-fba530cf8a34" ParentLink="Transform_OutputMessagePartRef" LowerBound="94.28" HigherBound="94.52">
+                            <om:Property Name="MessageRef" Value="biz_import_standard_feed" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="a81bc246-505a-4784-b339-e947a626d323" ParentLink="Construct_MessageRef" LowerBound="91.23" HigherBound="91.47">
+                        <om:Property Name="Ref" Value="biz_import_standard_feed" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="While" OID="5cbafb12-aadf-4acf-8518-9a010b81f7b5" ParentLink="ServiceBody_Statement" LowerBound="96.1" HigherBound="120.1">
+                    <om:Property Name="Expression" Value="rv &lt; 0" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Retry" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="VariableAssignment" OID="6078e1b2-1d20-4c44-a1e3-94f6d0290448" ParentLink="ComplexStatement_Statement" LowerBound="99.1" HigherBound="102.1">
+                        <om:Property Name="Expression" Value="XmlMsg = biz_import_standard_feed;&#xD;&#xA;rv = sqlloadhlp.FinanceCaseBulkLoad(XmlMsg,Feeds(FILE.ReceivedFileName));" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="AnalystComments" Value="Notificaton defined in helper class." />
+                        <om:Property Name="Name" Value="Submit_Load_in_Helper" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="Decision" OID="fb155580-405d-4ad2-b797-5cab2f988edc" ParentLink="ComplexStatement_Statement" LowerBound="102.1" HigherBound="119.1">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Decide_Reject" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="DecisionBranch" OID="b5169471-37a1-4907-aa00-a2d4d14c1702" ParentLink="ReallyComplexStatement_Branch" LowerBound="103.17" HigherBound="119.1">
+                            <om:Property Name="Expression" Value="rv &lt; 0" />
+                            <om:Property Name="IsGhostBranch" Value="True" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Rejected" />
+                            <om:Property Name="Signal" Value="False" />
+                            <om:Element Type="Decision" OID="f08a372b-c7a1-4de0-a87f-d94c01999bb2" ParentLink="ComplexStatement_Statement" LowerBound="105.1" HigherBound="118.1">
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Resumable" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="DecisionBranch" OID="e12728e9-b856-4013-8ede-5cf64a345534" ParentLink="ReallyComplexStatement_Branch" LowerBound="106.21" HigherBound="111.1">
+                                    <om:Property Name="Expression" Value="rv == -4|| rv == -3" />
+                                    <om:Property Name="IsGhostBranch" Value="True" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Safe to resume" />
+                                    <om:Property Name="Signal" Value="False" />
+                                    <om:Element Type="Suspend" OID="36343ff6-097b-4465-83cc-a71f089a3dac" ParentLink="ComplexStatement_Statement" LowerBound="108.1" HigherBound="110.1">
+                                        <om:Property Name="ErrorMessage" Value="System.String.Format(&quot;Finance case load {0} suspended.  Resume to retry but check logs to see if fault is temporary.&quot;,Feeds(FILE.ReceivedFileName));" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="AnalystComments" Value="On resume will retry full message" />
+                                        <om:Property Name="Name" Value="Suspend_Import" />
+                                        <om:Property Name="Signal" Value="True" />
+                                    </om:Element>
+                                </om:Element>
+                                <om:Element Type="DecisionBranch" OID="ade16fce-8b4a-4e1e-86ad-940bd8ee931b" ParentLink="ReallyComplexStatement_Branch">
+                                    <om:Property Name="IsGhostBranch" Value="True" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Else" />
+                                    <om:Property Name="Signal" Value="False" />
+                                    <om:Element Type="Suspend" OID="f88da690-ddae-4757-8fab-c97f42352593" ParentLink="ComplexStatement_Statement" LowerBound="113.1" HigherBound="115.1">
+                                        <om:Property Name="ErrorMessage" Value="System.String.Format(&quot;Finance case load {0} suspended.  This is non resumable, if resumed it will complete but the message will not have loaded.&quot;,Feeds(FILE.ReceivedFileName));" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="Suspend_Import" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                    <om:Element Type="VariableAssignment" OID="d4bee6e1-486f-4682-a90e-c55711b9ad7f" ParentLink="ComplexStatement_Statement" LowerBound="115.1" HigherBound="117.1">
+                                        <om:Property Name="Expression" Value="rv = 0;" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="AnalystComments" Value="prevent a retry" />
+                                        <om:Property Name="Name" Value="Cancel error" />
+                                        <om:Property Name="Signal" Value="True" />
+                                    </om:Element>
+                                </om:Element>
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="DecisionBranch" OID="671d3ed8-e7e9-4bae-87d7-4fdf576841d6" ParentLink="ReallyComplexStatement_Branch">
+                            <om:Property Name="IsGhostBranch" Value="True" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="AnalystComments" Value="A OK, continue to complete" />
+                            <om:Property Name="Name" Value="Else" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="9a46193d-b9cd-46bd-80a5-cfce9a9b0873" ParentLink="ServiceBody_Statement" LowerBound="120.1" HigherBound="122.1">
+                    <om:Property Name="PortName" Value="Feeds_Archive" />
+                    <om:Property Name="MessageName" Value="Feeds" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_To_Archive" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="3279825f-e3b8-4f31-b9f2-48c1465c323e" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="49.1" HigherBound="51.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.Receive_Feeds_port_type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Receive_Feeds_port" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="1b00c222-0949-461c-ab09-4be734312837" ParentLink="PortDeclaration_CLRAttribute" LowerBound="49.1" HigherBound="50.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="e7eab313-9a36-445c-bdbd-fa855b62e7cd" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="51.1" HigherBound="53.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="61" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.Feeds_Archive_Type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Feeds_Archive" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="10013c25-d4e1-464d-a86a-72a43598dfba" ParentLink="PortDeclaration_CLRAttribute" LowerBound="51.1" HigherBound="52.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MFM.Lbg.Orcs
+{
+    internal porttype Receive_Feeds_port_type
+    {
+        oneway Operation_1
+        {
+            MFM.Lbg.Schemas.MFMFeedFF
+        };
+    };
+    internal porttype biz_import_standard_feed_send_type
+    {
+        requestresponse biz_import_standard_feed
+        {
+            MFM.Lbg.Schemas.ImportFeed_TypedProcedure_dbo.biz_import_standard_feed, MFM.Lbg.Schemas.ImportFeed_TypedProcedure_dbo.biz_import_standard_feedResponse
+        };
+    };
+    internal porttype EmailToFeedAlert_Type
+    {
+        oneway Operation_1
+        {
+            MFM.Lbg.Schemas.MFMFeedFF
+        };
+    };
+    internal porttype Send_Rejected_File_To_Disk_type
+    {
+        oneway Operation_1
+        {
+            MFM.Lbg.Schemas.MFMFeedFF
+        };
+    };
+    internal porttype biz_Process_Feed_Wrapper_port_type
+    {
+        requestresponse biz_Process_Feed_Wrapper
+        {
+            MFM.Lbg.Schemas.Import_Feed2_TypedProcedure_dbo.biz_Process_Feed_Wrapper, MFM.Lbg.Schemas.Import_Feed2_TypedProcedure_dbo.biz_Process_Feed_WrapperResponse
+        };
+    };
+    internal porttype Feeds_Archive_Type
+    {
+        oneway Operation_1
+        {
+            MFM.Lbg.Schemas.MFMFeedFF
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service o_Feed_Bulk_Loader
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements Receive_Feeds_port_type Receive_Feeds_port;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses Feeds_Archive_Type Feeds_Archive;
+        message MFM.Lbg.Schemas.MFMFeedFF FeedsProcessingResultNotify;
+        message MFM.Lbg.Schemas.MFMFeedFF Feeds_To_Disk;
+        message MFM.Lbg.Schemas.MFMFeedFF FeedsRejectedOut;
+        message MFM.Lbg.Schemas.MFMFeedFF FeedsRejected;
+        message MFM.Lbg.Schemas.MFMFeedFF Feeds;
+        message MFM.Lbg.Schemas.ImportFeed_TypedProcedure_dbo.biz_import_standard_feed biz_import_standard_feed;
+        message MFM.Lbg.Schemas.ImportFeed_TypedProcedure_dbo.biz_import_standard_feedResponse biz_import_standard_feed_response;
+        message MFM.Lbg.Schemas.Import_Feed2_TypedProcedure_dbo.biz_Process_Feed_Wrapper biz_Process_Feed_Wrapper;
+        message MFM.Lbg.Schemas.Import_Feed2_TypedProcedure_dbo.biz_Process_Feed_WrapperResponse biz_Process_Feed_Wrapper_Response;
+        System.String FeedClass;
+        System.String FileName;
+        System.String Body;
+        System.String Subject;
+        System.String RejectFileName;
+        MFM.Lbg.Helper.Misc helper;
+        MFM.Lbg.Helper.Misc hlp;
+        MFM.Lbg.Helper.HelpdeskSqlClient sqlloadhlp;
+        System.Int32 rv;
+        System.Xml.XmlDocument XmlMsg;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("fa69731e-9b5d-47cf-8354-660fabfd0d77")]
+            activate receive (Receive_Feeds_port.Operation_1, Feeds);
+            FeedClass = "";
+            FileName = "";
+            Body = "";
+            Subject = "";
+            RejectFileName = "";
+            helper = new MFM.Lbg.Helper.Misc();
+            hlp = new MFM.Lbg.Helper.Misc();
+            sqlloadhlp = new MFM.Lbg.Helper.HelpdeskSqlClient();
+            XmlMsg = new System.Xml.XmlDocument();
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("c2b4afaf-c77c-46b9-bc16-e42da8a51d5a")]
+            FileName = hlp.GetFileName(Feeds(FILE.ReceivedFileName));
+            RejectFileName = System.String.Format("fject_",FileName);
+            rv = -1;
+            FeedClass = xpath(Feeds,"string(/*[local-name()='MFMFeed_FF' and namespace-uri()='http://MFM.Lbg.Schemas.MFMFeedFF']/*[local-name()='MFMFeed_FF_Record' and namespace-uri()='']/*[local-name()='Feed' and namespace-uri()=''][1])");
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("a5241185-7475-4bbe-b6b7-74ba526c812c")]
+            construct biz_import_standard_feed
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("ea345829-455f-4431-9c61-b43c63a1de06")]
+                transform (biz_import_standard_feed) = MFM.Lbg.Orcs.x_to_feed (Feeds);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("5cbafb12-aadf-4acf-8518-9a010b81f7b5")]
+            while (rv < 0)
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("6078e1b2-1d20-4c44-a1e3-94f6d0290448")]
+                XmlMsg = biz_import_standard_feed;
+                rv = sqlloadhlp.FinanceCaseBulkLoad(XmlMsg,Feeds(FILE.ReceivedFileName));
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("fb155580-405d-4ad2-b797-5cab2f988edc")]
+                if (rv < 0)
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("f08a372b-c7a1-4de0-a87f-d94c01999bb2")]
+                    if (rv == -4|| rv == -3)
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("36343ff6-097b-4465-83cc-a71f089a3dac")]
+                        suspend System.String.Format("Finance case load {0} suspended.  Resume to retry but check logs to see if fault is temporary.",Feeds(FILE.ReceivedFileName));
+                    }
+                    else 
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("f88da690-ddae-4757-8fab-c97f42352593")]
+                        suspend System.String.Format("Finance case load {0} suspended.  This is non resumable, if resumed it will complete but the message will not have loaded.",Feeds(FILE.ReceivedFileName));
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("d4bee6e1-486f-4682-a90e-c55711b9ad7f")]
+                        rv = 0;
+                    }
+                }
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("9a46193d-b9cd-46bd-80a5-cfce9a9b0873")]
+            send (Feeds_Archive.Operation_1, Feeds);
+        }
+    }
+}
+

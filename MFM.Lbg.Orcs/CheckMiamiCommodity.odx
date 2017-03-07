@@ -1,0 +1,255 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="bb93df9c-e86d-46e8-9d47-965a70e3d440" LowerBound="1.1" HigherBound="62.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MFM.Lbg.Orcs" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="ServiceDeclaration" OID="9ccf640a-809a-40db-82ab-ba178c63e63c" ParentLink="Module_ServiceDeclaration" LowerBound="4.1" HigherBound="61.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="CheckMiamiCommodity" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="f2a972c0-6cf8-43ce-b308-dc32d966de6d" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="12.1" HigherBound="13.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Int32" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="RetryCount" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="162a8f1e-1601-4ad0-a32f-16a1b5a5d2fb" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="10.1" HigherBound="11.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.QueryMTFMCOMMODITY_QUERYRequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="WsCommodtyRequest" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="945d503a-71ff-444f-bfa1-32d6a648219b" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="11.1" HigherBound="12.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.QueryMTFMCOMMODITY_QUERYResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="WsCommodtyResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="d39c3cf1-c6e0-4d58-b1c7-9fe8c5d64305" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageDeclaration" OID="70b46b19-de9c-4d23-bb21-041c07f17ffa" ParentLink="ServiceBody_Declaration" LowerBound="13.15" HigherBound="13.78">
+                    <om:Property Name="Type" Value="MFM.Lbg.Schemas.DistibutedWorkItems" />
+                    <om:Property Name="ParamDirection" Value="In" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="DistributedWorkItem" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableDeclaration" OID="4ef76445-9713-4fe5-aced-fa09de93710c" ParentLink="ServiceBody_Declaration" LowerBound="13.80" HigherBound="13.117">
+                    <om:Property Name="InitialValue" Value="true" />
+                    <om:Property Name="UseDefaultConstructor" Value="False" />
+                    <om:Property Name="Type" Value="System.Boolean" />
+                    <om:Property Name="ParamDirection" Value="Out" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="CommodityValidated" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="19ee6e7d-5501-4635-bf51-4dd433c42bd1" ParentLink="ServiceBody_Statement" LowerBound="15.1" HigherBound="17.1">
+                    <om:Property Name="Expression" Value="RetryCount = 0;" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Init" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="873c9c1c-3be5-4970-9ab9-e4e04346b8b1" ParentLink="ServiceBody_Statement" LowerBound="17.1" HigherBound="23.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Construct_Request" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageRef" OID="14c40c28-8507-4c60-a843-3e26327f1ecb" ParentLink="Construct_MessageRef" LowerBound="18.23" HigherBound="18.40">
+                        <om:Property Name="Ref" Value="WsCommodtyRequest" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="Transform" OID="e99c6cfe-6a2c-4727-b65f-8a7dbd330ee0" ParentLink="ComplexStatement_Statement" LowerBound="20.1" HigherBound="22.1">
+                        <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.m_DistributedWorkItem_To_CommodityCheck" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Map_Request" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="MessagePartRef" OID="ac4003ec-447b-45da-b72a-0b123b7c06c9" ParentLink="Transform_InputMessagePartRef" LowerBound="21.114" HigherBound="21.133">
+                            <om:Property Name="MessageRef" Value="DistributedWorkItem" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="33041dcc-904e-4f90-aa86-89c832878e68" ParentLink="Transform_OutputMessagePartRef" LowerBound="21.28" HigherBound="21.56">
+                            <om:Property Name="MessageRef" Value="WsCommodtyRequest" />
+                            <om:Property Name="PartRef" Value="parameters" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="a3eeec4d-cb30-4680-b350-1487444ed691" ParentLink="ServiceBody_Statement" LowerBound="23.1" HigherBound="25.1">
+                    <om:Property Name="Expression" Value="RetryCount = RetryCount + 1;" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Retry Incrementor" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="Scope" OID="d311dc8c-4a35-473a-a452-748f874c5626" ParentLink="ServiceBody_Statement" LowerBound="25.1" HigherBound="59.1">
+                    <om:Property Name="InitializedTransactionType" Value="True" />
+                    <om:Property Name="IsSynchronized" Value="True" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Scope_Web_Query" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Send" OID="e8aa7309-ff43-43b7-a0d7-df74d955b3f5" ParentLink="ComplexStatement_Statement" LowerBound="30.1" HigherBound="32.1">
+                        <om:Property Name="PortName" Value="CommodityValidator" />
+                        <om:Property Name="MessageName" Value="WsCommodtyRequest" />
+                        <om:Property Name="OperationName" Value="QueryMTFMCOMMODITY_QUERY" />
+                        <om:Property Name="OperationMessageName" Value="Request" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Send_Request" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="Receive" OID="b23ede65-4271-475a-8380-03f3ae3d94d5" ParentLink="ComplexStatement_Statement" LowerBound="32.1" HigherBound="34.1">
+                        <om:Property Name="Activate" Value="False" />
+                        <om:Property Name="PortName" Value="CommodityValidator" />
+                        <om:Property Name="MessageName" Value="WsCommodtyResponse" />
+                        <om:Property Name="OperationName" Value="QueryMTFMCOMMODITY_QUERY" />
+                        <om:Property Name="OperationMessageName" Value="Response" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Receive_Response" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="Decision" OID="da574685-455f-4ac5-8322-ca7fd71fb3d7" ParentLink="ComplexStatement_Statement" LowerBound="34.1" HigherBound="46.1">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="CommodityNodeCheck" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="DecisionBranch" OID="0b35480f-7799-4ffd-a877-90551e30aa9d" ParentLink="ReallyComplexStatement_Branch" LowerBound="35.21" HigherBound="41.1">
+                            <om:Property Name="Expression" Value="xpath(WsCommodtyResponse.parameters,&quot;string(/*[local-name()='QueryMTFMCOMMODITY_QUERYResponse' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='MTFMCOMMODITY_QUERYSet' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='COMMODITIES' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='COMMODITY' and namespace-uri()='http://www.ibm.com/maximo'][1])&quot;) != &quot;&quot;" />
+                            <om:Property Name="IsGhostBranch" Value="True" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Exists" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="VariableAssignment" OID="548c1bfd-90ae-4ae4-bf06-94ee2e0a6bf4" ParentLink="ComplexStatement_Statement" LowerBound="38.1" HigherBound="40.1">
+                                <om:Property Name="Expression" Value="CommodityValidated = true;" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="DecisionBranch" OID="55e14527-0b9b-4445-a1f5-af09299f68d1" ParentLink="ReallyComplexStatement_Branch">
+                            <om:Property Name="IsGhostBranch" Value="True" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Else" />
+                            <om:Property Name="Signal" Value="False" />
+                            <om:Element Type="VariableAssignment" OID="fc0e8033-1432-4c2c-896b-e84ab4c888c1" ParentLink="ComplexStatement_Statement" LowerBound="43.1" HigherBound="45.1">
+                                <om:Property Name="Expression" Value="CommodityValidated = false;" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="False" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="Catch" OID="b1ae4395-75f9-4763-ae77-a912ed4903c9" ParentLink="Scope_Catch" LowerBound="49.1" HigherBound="57.1">
+                        <om:Property Name="ExceptionName" Value="SOAPFAULT" />
+                        <om:Property Name="ExceptionType" Value="CommodityValidator.QueryMTFMCOMMODITY_QUERY.Fault_WebQuery_Commodity_Soap" />
+                        <om:Property Name="IsFaultMessage" Value="False" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="WS_Fault" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="VariableAssignment" OID="1f865a77-0797-4e85-8678-88799297d703" ParentLink="Catch_Statement" LowerBound="52.1" HigherBound="54.1">
+                            <om:Property Name="Expression" Value="System.Diagnostics.EventLog.WriteEntry(&quot;MGP.Helpdesk.Distributor&quot;,&quot;SOAP Fault returned from Commodity Web Service&quot;,System.Diagnostics.EventLogEntryType.Error);" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Log Soap Building Error" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="VariableAssignment" OID="5ac594b4-ac3d-4bf1-b9a9-9837e1a7930a" ParentLink="Catch_Statement" LowerBound="54.1" HigherBound="56.1">
+                            <om:Property Name="Expression" Value="CommodityValidated = false;" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="False" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="fe95a01a-94fb-4454-833f-2f0023d75242" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="7.1" HigherBound="10.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="29" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="Transmitted" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.MTFMVISIONFM_MTFMCOMMQUERYPortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CommodityValidator" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="LogicalBindingAttribute" OID="a17c4d8e-edc5-45c6-8010-22325b41e243" ParentLink="PortDeclaration_CLRAttribute" LowerBound="7.1" HigherBound="8.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MFM.Lbg.Orcs
+{
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service CheckMiamiCommodity
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        [Microsoft.XLANGs.BaseTypes.DeliveryNotification(Microsoft.XLANGs.BaseTypes.DeliveryNotification.NotificationLevel.Transmitted)]
+        port uses MTFMVISIONFM_MTFMCOMMQUERYPortType CommodityValidator;
+        message QueryMTFMCOMMODITY_QUERYRequest WsCommodtyRequest;
+        message QueryMTFMCOMMODITY_QUERYResponse WsCommodtyResponse;
+        System.Int32 RetryCount;
+        body (message MFM.Lbg.Schemas.DistibutedWorkItems DistributedWorkItem, out System.Boolean CommodityValidated)
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("19ee6e7d-5501-4635-bf51-4dd433c42bd1")]
+            RetryCount = 0;
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("873c9c1c-3be5-4970-9ab9-e4e04346b8b1")]
+            construct WsCommodtyRequest
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("e99c6cfe-6a2c-4727-b65f-8a7dbd330ee0")]
+                transform (WsCommodtyRequest.parameters) = MFM.Lbg.Orcs.m_DistributedWorkItem_To_CommodityCheck (DistributedWorkItem);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("a3eeec4d-cb30-4680-b350-1487444ed691")]
+            RetryCount = RetryCount + 1;
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("d311dc8c-4a35-473a-a452-748f874c5626")]
+            scope synchronized
+            {
+                body
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("e8aa7309-ff43-43b7-a0d7-df74d955b3f5")]
+                    send (CommodityValidator.QueryMTFMCOMMODITY_QUERY, WsCommodtyRequest);
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("b23ede65-4271-475a-8380-03f3ae3d94d5")]
+                    receive (CommodityValidator.QueryMTFMCOMMODITY_QUERY, WsCommodtyResponse);
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("da574685-455f-4ac5-8322-ca7fd71fb3d7")]
+                    if (xpath(WsCommodtyResponse.parameters,"string(/*[local-name()='QueryMTFMCOMMODITY_QUERYResponse' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='MTFMCOMMODITY_QUERYSet' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='COMMODITIES' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='COMMODITY' and namespace-uri()='http://www.ibm.com/maximo'][1])") != ""
+                        )
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("548c1bfd-90ae-4ae4-bf06-94ee2e0a6bf4")]
+                        CommodityValidated = true;
+                    }
+                    else 
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("fc0e8033-1432-4c2c-896b-e84ab4c888c1")]
+                        CommodityValidated = false;
+                    }
+                }
+                exceptions
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("b1ae4395-75f9-4763-ae77-a912ed4903c9")]
+                    catch (CommodityValidator.QueryMTFMCOMMODITY_QUERY.Fault_WebQuery_Commodity_Soap SOAPFAULT)
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("1f865a77-0797-4e85-8678-88799297d703")]
+                        System.Diagnostics.EventLog.WriteEntry("MGP.Helpdesk.Distributor","SOAP Fault returned from Commodity Web Service",System.Diagnostics.EventLogEntryType.Error);
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("5ac594b4-ac3d-4bf1-b9a9-9837e1a7930a")]
+                        CommodityValidated = false;
+                    }
+                }
+            }
+        }
+    }
+}
+

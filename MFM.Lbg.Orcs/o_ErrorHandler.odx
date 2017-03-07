@@ -1,0 +1,162 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="9e6d3092-6b7c-43d3-b480-52f23e4c0271" LowerBound="1.1" HigherBound="24.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MFM.Lbg.Orcs" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="abbff6c5-c482-4ce4-b574-15133e816354" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Receive_Any_Type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="d743628c-25cb-4eed-b569-606bc920d22f" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="f6c55fff-d4c5-4dc8-b162-7dc30d01d2f7" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.35">
+                    <om:Property Name="Ref" Value="System.Xml.XmlDocument" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="f9f93973-b30d-4a06-bc35-fa42c759fe84" ParentLink="Module_ServiceDeclaration" LowerBound="11.1" HigherBound="23.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="o_ErrorHandler" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="MessageDeclaration" OID="1c353e6b-61bb-42fb-a078-e76a2bd77177" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="16.1" HigherBound="17.1">
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Any" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="54178ed6-52a2-4aa9-ae89-7ccb0852a4d1" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="7664a715-f0e4-45a3-840e-645b8474fbbe" ParentLink="ServiceBody_Statement" LowerBound="19.1" HigherBound="21.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="ReceiveAnyError" />
+                    <om:Property Name="MessageName" Value="Any" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_1" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DNFPredicate" OID="91c6cb78-c4a3-4637-90f7-7ee2a2609adf" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="ErrorReport.ErrorType" />
+                        <om:Property Name="RHS" Value="&quot;FailedMessage&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="DNFPredicate" OID="5d01adac-73e9-4714-9c41-fb7a7507d1a8" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="ErrorReport.MessageType" />
+                        <om:Property Name="RHS" Value="&quot;http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/dbo#biz_create_safe_visit&quot;" />
+                        <om:Property Name="Grouping" Value="OR" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="DNFPredicate" OID="f9ad2bea-1358-4a4d-bb63-5aa64e3b1d4b" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="ErrorReport.ErrorType" />
+                        <om:Property Name="RHS" Value="&quot;FailedMessage&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="DNFPredicate" OID="2da010d8-ad99-4d55-bddd-9394be86730f" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="ErrorReport.MessageType" />
+                        <om:Property Name="RHS" Value="&quot;http://www.ibm.com/maximo#QueryMXVISIONLOCQUERY&quot;" />
+                        <om:Property Name="Grouping" Value="OR" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="DNFPredicate" OID="2b9e6d58-cf1e-4d51-84e1-50943ee3320c" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="ErrorReport.ErrorType" />
+                        <om:Property Name="RHS" Value="&quot;FailedMessage&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="DNFPredicate" OID="32954d8b-932c-4730-b569-d6a6a61b2cbc" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="ErrorReport.MessageType" />
+                        <om:Property Name="RHS" Value="&quot;http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/dbo#biz_Beacon_Fetch_Property_Match&quot;" />
+                        <om:Property Name="Grouping" Value="OR" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="DNFPredicate" OID="fe1a917d-1479-425d-aedc-d3f5dc46e961" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="ErrorReport.ErrorType" />
+                        <om:Property Name="RHS" Value="&quot;FailedMessage&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="DNFPredicate" OID="084a2978-34f9-4db1-bf41-50b3f2ee9a0f" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="ErrorReport.MessageType" />
+                        <om:Property Name="RHS" Value="&quot;http://schemas.xmlsoap.org/soap/envelope/#Fault&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="DNFPredicate" OID="3c3a7f16-d4e2-427f-b1cd-dd87ffd36218" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="ErrorReport.ReceivePortName" />
+                        <om:Property Name="RHS" Value="&quot;MXO75 Location Web Service Query HTTPS&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="e33433b9-7655-4895-b247-81d5f74bfc2a" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="14.1" HigherBound="16.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.Receive_Any_Type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ReceiveAnyError" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="DirectBindingAttribute" OID="9933911a-9ed6-4970-8041-437fad76d4bc" ParentLink="PortDeclaration_CLRAttribute" LowerBound="14.1" HigherBound="15.1">
+                    <om:Property Name="DirectBindingType" Value="MessageBox" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MFM.Lbg.Orcs
+{
+    internal porttype Receive_Any_Type
+    {
+        oneway Operation_1
+        {
+            System.Xml.XmlDocument
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service o_ErrorHandler
+    {
+        [Microsoft.XLANGs.BaseTypes.DirectBinding()]
+        port implements Receive_Any_Type ReceiveAnyError;
+        message System.Xml.XmlDocument Any;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("7664a715-f0e4-45a3-840e-645b8474fbbe")]
+            activate ((ErrorReport.ErrorType == "FailedMessage") && (ErrorReport.MessageType == "http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/dbo#biz_create_safe_visit") || (ErrorReport.ErrorType == "FailedMessage") && (ErrorReport.MessageType == "http://www.ibm.com/maximo#QueryMXVISIONLOCQUERY") || (ErrorReport.ErrorType == "FailedMessage") && (ErrorReport.MessageType == "http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/dbo#biz_Beacon_Fetch_Property_Match") || (ErrorReport.ErrorType == "FailedMessage") && (ErrorReport.MessageType == "http://schemas.xmlsoap.org/soap/envelope/#Fault") && (ErrorReport.ReceivePortName == "MXO75 Location Web Service Query HTTPS"))receive (ReceiveAnyError.Operation_1, Any);
+        }
+    }
+}
+

@@ -1,0 +1,189 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="e3ed7a62-5a7d-47c3-8e6e-f6f9520f6bc9" LowerBound="1.1" HigherBound="44.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MFM.Lbg.Orcs" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="ServiceDeclaration" OID="95176af5-b7df-4a35-8ef3-4a5c9627e039" ParentLink="Module_ServiceDeclaration" LowerBound="4.1" HigherBound="43.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="o_SendEmailHelperBizTalkCommString" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="e105c08a-dbc2-4213-9149-c6345d1e1371" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="8.1" HigherBound="9.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="xmlDoc" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="3a00f1e4-3b71-4017-8438-bf876c068fab" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="9.1" HigherBound="10.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="MFM.Lbg.Helper.Emailer" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="mailHelper" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="1caea55f-b229-4cce-8357-280ce49df94a" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="10.1" HigherBound="11.1">
+                <om:Property Name="InitialValue" Value="true" />
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Boolean" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="DidSendBool" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="f6fa3bd5-2043-4e18-8b07-ac4bc6d20885" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="11.1" HigherBound="12.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="MFM.Lbg.Helper.Misc" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="hlpObj" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="739d4e55-6391-403c-8d80-e45add41b4ab" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="7.1" HigherBound="8.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.BizTalk_Comm" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="EmailMsg" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="edae5e35-906a-4f69-aed1-3e87c39c7e44" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="VariableDeclaration" OID="c168cf8d-e7b9-4094-bae4-95c0d691d083" ParentLink="ServiceBody_Declaration" LowerBound="12.15" HigherBound="12.46">
+                    <om:Property Name="UseDefaultConstructor" Value="False" />
+                    <om:Property Name="Type" Value="System.String" />
+                    <om:Property Name="ParamDirection" Value="In" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="BizTalkCommString" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableDeclaration" OID="38331077-7f50-4480-8907-7d86fa03ab12" ParentLink="ServiceBody_Declaration" LowerBound="12.48" HigherBound="12.77">
+                    <om:Property Name="InitialValue" Value="true" />
+                    <om:Property Name="UseDefaultConstructor" Value="False" />
+                    <om:Property Name="Type" Value="System.Boolean" />
+                    <om:Property Name="ParamDirection" Value="In" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="UseTranslation" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableDeclaration" OID="9133da65-af91-4428-be6a-2e794e7b190b" ParentLink="ServiceBody_Declaration" LowerBound="12.79" HigherBound="12.105">
+                    <om:Property Name="UseDefaultConstructor" Value="False" />
+                    <om:Property Name="Type" Value="System.String" />
+                    <om:Property Name="ParamDirection" Value="In" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="OutputSwitch" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="568fd20a-2078-4c7f-8dc9-b5c47a66317a" ParentLink="ServiceBody_Statement" LowerBound="18.1" HigherBound="21.1">
+                    <om:Property Name="Expression" Value="xmlDoc.LoadXml(BizTalkCommString);&#xD;&#xA;DidSendBool = false;" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Load Xml Document" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="1329d5ba-0647-4ff3-b1cb-2ebc5c991e06" ParentLink="ServiceBody_Statement" LowerBound="21.1" HigherBound="29.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Construct_Comm" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageRef" OID="42c1a1c1-7828-45b6-b5e0-3a2c4b60b950" ParentLink="Construct_MessageRef" LowerBound="22.23" HigherBound="22.31">
+                        <om:Property Name="Ref" Value="EmailMsg" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="MessageAssignment" OID="68afd9d4-ca4e-4e61-b1ce-8113524fc203" ParentLink="ComplexStatement_Statement" LowerBound="24.1" HigherBound="28.1">
+                        <om:Property Name="Expression" Value="EmailMsg = xmlDoc;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="Assign Com Msg" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="While" OID="333e048d-454c-4978-ab2b-2c9e10515bb2" ParentLink="ServiceBody_Statement" LowerBound="29.1" HigherBound="41.1">
+                    <om:Property Name="Expression" Value="DidSendBool != true" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Retry_Until_Success" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="VariableAssignment" OID="d72fe654-e2c1-4595-a4c8-6c7ecdb4297a" ParentLink="ComplexStatement_Statement" LowerBound="32.1" HigherBound="34.1">
+                        <om:Property Name="Expression" Value="DidSendBool = mailHelper.RequestSendTransformedEmail(OutputSwitch,hlpObj.GetVisionFmTeamLeaderMailbox(),&quot;&quot;,System.String.Format(&quot;Beacon - Case: {0} {1}&quot;,EmailMsg.L3,EmailMsg.L4),xmlDoc);" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="TransmitEmail" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="Decision" OID="effe5b7f-9e80-4827-b0f1-e26850de9b9b" ParentLink="ComplexStatement_Statement" LowerBound="34.1" HigherBound="40.1">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Suspend on Fail" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="DecisionBranch" OID="2cc488e1-c505-48a3-a0bf-abed242bdc2f" ParentLink="ReallyComplexStatement_Branch" LowerBound="35.17" HigherBound="40.1">
+                            <om:Property Name="Expression" Value="DidSendBool == false" />
+                            <om:Property Name="IsGhostBranch" Value="True" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Sent False" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Suspend" OID="ff56e2e5-18cf-4623-be32-c41f215e3346" ParentLink="ComplexStatement_Statement" LowerBound="37.1" HigherBound="39.1">
+                                <om:Property Name="ErrorMessage" Value="&quot;Email Helper failed, message can be safely resumed if re-attempt neccessary, see event logs for details&quot;;" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Suspend_Message" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="DecisionBranch" OID="87cd0939-130b-4aab-8f2d-0f23f4d1ce48" ParentLink="ReallyComplexStatement_Branch">
+                            <om:Property Name="IsGhostBranch" Value="True" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Else" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MFM.Lbg.Orcs
+{
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service o_SendEmailHelperBizTalkCommString
+    {
+        message MFM.Lbg.Schemas.BizTalk_Comm EmailMsg;
+        System.Xml.XmlDocument xmlDoc;
+        MFM.Lbg.Helper.Emailer mailHelper;
+        System.Boolean DidSendBool;
+        MFM.Lbg.Helper.Misc hlpObj;
+        body (System.String BizTalkCommString, System.Boolean UseTranslation, System.String OutputSwitch)
+        {
+            xmlDoc = new System.Xml.XmlDocument();
+            mailHelper = new MFM.Lbg.Helper.Emailer();
+            DidSendBool = true;
+            hlpObj = new MFM.Lbg.Helper.Misc();
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("568fd20a-2078-4c7f-8dc9-b5c47a66317a")]
+            xmlDoc.LoadXml(BizTalkCommString);
+            DidSendBool = false;
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("1329d5ba-0647-4ff3-b1cb-2ebc5c991e06")]
+            construct EmailMsg
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("68afd9d4-ca4e-4e61-b1ce-8113524fc203")]
+                EmailMsg = xmlDoc;
+                
+                
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("333e048d-454c-4978-ab2b-2c9e10515bb2")]
+            while (DidSendBool != true)
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("d72fe654-e2c1-4595-a4c8-6c7ecdb4297a")]
+                DidSendBool = mailHelper.RequestSendTransformedEmail(OutputSwitch,hlpObj.GetVisionFmTeamLeaderMailbox(),"",System.String.Format("Beacon - Case: {0} {1}",EmailMsg.L3,EmailMsg.L4),xmlDoc);
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("effe5b7f-9e80-4827-b0f1-e26850de9b9b")]
+                if (DidSendBool == false)
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("ff56e2e5-18cf-4623-be32-c41f215e3346")]
+                    suspend "Email Helper failed, message can be safely resumed if re-attempt neccessary, see event logs for details";
+                }
+            }
+        }
+    }
+}
+

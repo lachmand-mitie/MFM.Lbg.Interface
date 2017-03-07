@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MFM.Lbg.Schemas", "MFM.Lbg.Schemas\MFM.Lbg.Schemas.btproj", "{9AC5A7AC-15FE-474C-A502-2167BAD19934}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MFM.Lbg.Maps", "MFM.Lbg.Maps\MFM.Lbg.Maps.btproj", "{1D7CE001-8CBB-4A67-911C-F0C579E09EAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MFM.Lbg.Orcs", "MFM.Lbg.Orcs\MFM.Lbg.Orcs.btproj", "{53C0CC76-68BF-4A7F-B6F2-7848023E2182}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MFM.Lbg.Helper", "MFM.Lbg.Helper\MFM.Lbg.Helper.csproj", "{6074C94C-F7B5-489F-9586-C5D99EBDDE04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelperTester", "HelperTester\HelperTester.csproj", "{AE51DD2B-009C-4EE2-9D6F-7ACF0E405F9F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deployment", "Deployment", "{E643B5A0-0B51-4A41-8262-550E293F33E2}"
+	ProjectSection(SolutionItems) = preProject
+		Deployment\Deployment.btdfproj = Deployment\Deployment.btdfproj
+		Deployment\InstallWizard.xml = Deployment\InstallWizard.xml
+		Deployment\License.rtf = Deployment\License.rtf
+		Deployment\PortBindingsMaster.xml = Deployment\PortBindingsMaster.xml
+		Deployment\SettingsFileGenerator.xml = Deployment\SettingsFileGenerator.xml
+		Deployment\UnInstallWizard.xml = Deployment\UnInstallWizard.xml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://csvmh01-sv:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = MFM.Lbg.Helper\\MFM.Lbg.Helper.csproj
+		SccProjectName1 = MFM.Lbg.Helper
+		SccLocalPath1 = MFM.Lbg.Helper
+		SccProjectUniqueName2 = MFM.Lbg.Maps\\MFM.Lbg.Maps.btproj
+		SccProjectName2 = MFM.Lbg.Maps
+		SccLocalPath2 = MFM.Lbg.Maps
+		SccProjectUniqueName3 = MFM.Lbg.Orcs\\MFM.Lbg.Orcs.btproj
+		SccProjectName3 = MFM.Lbg.Orcs
+		SccLocalPath3 = MFM.Lbg.Orcs
+		SccProjectUniqueName4 = MFM.Lbg.Schemas\\MFM.Lbg.Schemas.btproj
+		SccProjectName4 = MFM.Lbg.Schemas
+		SccLocalPath4 = MFM.Lbg.Schemas
+		SccProjectUniqueName5 = HelperTester\\HelperTester.csproj
+		SccProjectName5 = HelperTester
+		SccLocalPath5 = HelperTester
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9AC5A7AC-15FE-474C-A502-2167BAD19934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AC5A7AC-15FE-474C-A502-2167BAD19934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AC5A7AC-15FE-474C-A502-2167BAD19934}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9AC5A7AC-15FE-474C-A502-2167BAD19934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AC5A7AC-15FE-474C-A502-2167BAD19934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AC5A7AC-15FE-474C-A502-2167BAD19934}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{1D7CE001-8CBB-4A67-911C-F0C579E09EAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D7CE001-8CBB-4A67-911C-F0C579E09EAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D7CE001-8CBB-4A67-911C-F0C579E09EAA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1D7CE001-8CBB-4A67-911C-F0C579E09EAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D7CE001-8CBB-4A67-911C-F0C579E09EAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D7CE001-8CBB-4A67-911C-F0C579E09EAA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{53C0CC76-68BF-4A7F-B6F2-7848023E2182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53C0CC76-68BF-4A7F-B6F2-7848023E2182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53C0CC76-68BF-4A7F-B6F2-7848023E2182}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{53C0CC76-68BF-4A7F-B6F2-7848023E2182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53C0CC76-68BF-4A7F-B6F2-7848023E2182}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53C0CC76-68BF-4A7F-B6F2-7848023E2182}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6074C94C-F7B5-489F-9586-C5D99EBDDE04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6074C94C-F7B5-489F-9586-C5D99EBDDE04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6074C94C-F7B5-489F-9586-C5D99EBDDE04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6074C94C-F7B5-489F-9586-C5D99EBDDE04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE51DD2B-009C-4EE2-9D6F-7ACF0E405F9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE51DD2B-009C-4EE2-9D6F-7ACF0E405F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE51DD2B-009C-4EE2-9D6F-7ACF0E405F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE51DD2B-009C-4EE2-9D6F-7ACF0E405F9F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

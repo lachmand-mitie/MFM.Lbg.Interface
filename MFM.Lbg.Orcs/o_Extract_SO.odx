@@ -1,0 +1,335 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="b076097a-57a4-4559-a20f-ecf51addaf39" LowerBound="1.1" HigherBound="69.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MFM.Lbg.Orcs" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="eec59c11-f3eb-4fd2-b32c-aefa102754c1" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Receive_polling_SO_AVailable_Type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="96c3b9f2-bba6-4d17-9840-ff26e65d17af" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="8a7a3d8a-dbc1-4116-aeca-defe6e268e7a" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.91">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.biz_SO_Get_PollingTypedPolling_biz_SO_Get_Polling.TypedPolling" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="5a1bdeff-864e-4e8a-8810-b4d7662cef3f" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Fetch_Pending_So_Type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="7865cbb7-c791-46e7-8568-d4d9a0e441a3" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="biz_SO_Get_Pending" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="e0f6af72-18b2-402f-9c2d-b27fa8d2407d" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.87">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.biz_Order_get_PendingTypedProcedure_dbo.biz_SO_Get_Pending" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="2699cf30-508a-4a3e-a528-c37a993faf0e" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="15.89" HigherBound="15.171">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.biz_Order_get_PendingTypedProcedure_dbo.biz_SO_Get_PendingResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="1b83ea61-f263-4250-ab52-a4974a51ecf1" ParentLink="Module_ServiceDeclaration" LowerBound="18.1" HigherBound="68.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="o_Extract_SO" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="614acdae-92f4-4fc4-b864-e55612df9dc7" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="29.1" HigherBound="30.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="StrXpath" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="f5865bef-aba5-47d8-ab72-e5005d1e1bbf" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="30.1" HigherBound="31.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Int32" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Max_Orders" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="cc795d11-fa75-4810-a6e0-fd78ec7719a4" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="31.1" HigherBound="32.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Int32" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Loop_Control" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="b6c1769f-b2db-4578-9f4c-df4e76aa4319" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="25.1" HigherBound="26.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.biz_Order_get_PendingProcedureResultSet_dbo_biz_SO_Get_Pending.StoredProcedureResultSet0" />
+                <om:Property Name="ParamDirection" Value="Out" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Single_Order" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="e4e5fddb-678a-4495-b2b5-d6030d9fa0c7" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="26.1" HigherBound="27.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.biz_Order_get_PendingTypedProcedure_dbo.biz_SO_Get_PendingResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Many_Orders_Response" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="64494172-e2f6-41c0-907a-de0dac363b21" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="27.1" HigherBound="28.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.biz_Order_get_PendingTypedProcedure_dbo.biz_SO_Get_Pending" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Many_orders" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="1b37843c-6335-42f1-8579-5c1e78af4d7e" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="28.1" HigherBound="29.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.biz_SO_Get_PollingTypedPolling_biz_SO_Get_Polling.TypedPolling" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Polling_Result" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="c514fed2-188c-4ad3-a588-2dc93679726e" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="059f7120-c7a9-4757-b0f1-97e21470c010" ParentLink="ServiceBody_Statement" LowerBound="34.1" HigherBound="37.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="Receive_polling_SO_AVailable" />
+                    <om:Property Name="MessageName" Value="Polling_Result" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_polling" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DNFPredicate" OID="db0b994c-5e67-4449-9c4b-f2148de0874b" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="MFM.Lbg.Schemas.SOAvailable" />
+                        <om:Property Name="RHS" Value="1" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Construct" OID="2503ce7c-8814-4dad-8fa6-f67ef901243d" ParentLink="ServiceBody_Statement" LowerBound="37.1" HigherBound="43.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Constuct_Get_pending_SO" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageRef" OID="ac74b9b6-4cdf-4224-bb3e-1e8ba0323ff7" ParentLink="Construct_MessageRef" LowerBound="38.23" HigherBound="38.34">
+                        <om:Property Name="Ref" Value="Many_orders" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="Transform" OID="a5b6df3a-d350-44ba-bcd5-c89c3e285f3f" ParentLink="ComplexStatement_Statement" LowerBound="40.1" HigherBound="42.1">
+                        <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.map_to_SO_Extract" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Initiate_Ref_Fetch" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="MessagePartRef" OID="b2a0b31c-0dbf-444b-89c8-689c563df131" ParentLink="Transform_InputMessagePartRef" LowerBound="41.75" HigherBound="41.89">
+                            <om:Property Name="MessageRef" Value="Polling_Result" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="03a3e2f9-2160-49b5-aaf6-837e1390ad18" ParentLink="Transform_OutputMessagePartRef" LowerBound="41.28" HigherBound="41.39">
+                            <om:Property Name="MessageRef" Value="Many_orders" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="8954260b-3ad2-4547-b309-fae86d728a0d" ParentLink="ServiceBody_Statement" LowerBound="43.1" HigherBound="45.1">
+                    <om:Property Name="PortName" Value="Fetch_Pending_So" />
+                    <om:Property Name="MessageName" Value="Many_orders" />
+                    <om:Property Name="OperationName" Value="biz_SO_Get_Pending" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_get_Pending" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Receive" OID="f752bdac-3b26-4750-8d25-2db5cf2aeea1" ParentLink="ServiceBody_Statement" LowerBound="45.1" HigherBound="47.1">
+                    <om:Property Name="Activate" Value="False" />
+                    <om:Property Name="PortName" Value="Fetch_Pending_So" />
+                    <om:Property Name="MessageName" Value="Many_Orders_Response" />
+                    <om:Property Name="OperationName" Value="biz_SO_Get_Pending" />
+                    <om:Property Name="OperationMessageName" Value="Response" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_get_pending_result" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="b7ff3276-c020-49e2-9b01-7b91c12553bc" ParentLink="ServiceBody_Statement" LowerBound="47.1" HigherBound="50.1">
+                    <om:Property Name="Expression" Value="Loop_Control = 1;&#xD;&#xA;Max_Orders = System.Convert.ToInt32(xpath(Many_Orders_Response,&quot;count(/*[local-name()='biz_SO_Get_PendingResponse' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/dbo']/*[local-name()='StoredProcedureResultSet0' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/dbo']/*[local-name()='StoredProcedureResultSet0' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/ProceduresResultSets/dbo/biz_SO_Get_Pending'])&quot;));" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Debatch control" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="While" OID="b3c14fe1-26ed-4290-9147-f4f175885673" ParentLink="ServiceBody_Statement" LowerBound="50.1" HigherBound="66.1">
+                    <om:Property Name="Expression" Value="Loop_Control &lt;= Max_Orders" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Debatch Pending" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="VariableAssignment" OID="fcf1f65f-85e7-48b7-943d-43ba2001c123" ParentLink="ComplexStatement_Statement" LowerBound="53.1" HigherBound="55.1">
+                        <om:Property Name="Expression" Value="StrXpath = System.String.Format(&quot;/*[local-name()='biz_SO_Get_PendingResponse' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/dbo']/*[local-name()='StoredProcedureResultSet0' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/dbo']/*[local-name()='StoredProcedureResultSet0' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/ProceduresResultSets/dbo/biz_SO_Get_Pending'][{0}]&quot;,Loop_Control);" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Set_Xpath" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="Construct" OID="81bd60a1-6c82-4663-8eca-1994baa0c5b8" ParentLink="ComplexStatement_Statement" LowerBound="55.1" HigherBound="61.1">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Construct_Single_message" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessageRef" OID="557c4056-a1d8-4d41-af61-2fd840a40735" ParentLink="Construct_MessageRef" LowerBound="56.27" HigherBound="56.39">
+                            <om:Property Name="Ref" Value="Single_Order" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessageAssignment" OID="31938dbc-62bf-42e4-aa39-dacb4dc3d1b3" ParentLink="ComplexStatement_Statement" LowerBound="58.1" HigherBound="60.1">
+                            <om:Property Name="Expression" Value="Single_Order = xpath(Many_Orders_Response,StrXpath);" />
+                            <om:Property Name="ReportToAnalyst" Value="False" />
+                            <om:Property Name="Name" Value="Assign_single_msg" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="Exec" OID="2e27879b-dfe7-4474-acd7-b30ecab72588" ParentLink="ComplexStatement_Statement" LowerBound="61.1" HigherBound="63.1">
+                        <om:Property Name="Invokee" Value="MFM.Lbg.Orcs.o_OB_SO" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="StartOrc_Process_SO" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="Parameter" OID="f4f18241-1eb0-4b92-bcc0-84a01c0c9129" ParentLink="InvokeStatement_Parameter">
+                            <om:Property Name="Direction" Value="In" />
+                            <om:Property Name="Name" Value="Single_Order" />
+                            <om:Property Name="Type" Value="MFM.Lbg.Schemas.biz_Order_get_PendingProcedureResultSet_dbo_biz_SO_Get_Pending.StoredProcedureResultSet0" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="VariableAssignment" OID="a78cf47d-b148-4d02-a9ab-0a8898929848" ParentLink="ComplexStatement_Statement" LowerBound="63.1" HigherBound="65.1">
+                        <om:Property Name="Expression" Value="Loop_Control = Loop_Control + 1;" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Loop Control" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="2670d7cd-4efa-4c0c-8c4c-cd66ea70d37f" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="21.1" HigherBound="23.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.Receive_polling_SO_AVailable_Type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Receive_polling_SO_AVailable" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="33433e29-fc57-43f5-9068-d50f32400fbf" ParentLink="PortDeclaration_CLRAttribute" LowerBound="21.1" HigherBound="22.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="e4427c35-dd5d-4d0a-a7ba-6f7c75dabfd4" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="23.1" HigherBound="25.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="12" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.Fetch_Pending_So_Type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Fetch_Pending_So" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="2f0d8832-2213-49c7-8cc5-a3f3fcb5246a" ParentLink="PortDeclaration_CLRAttribute" LowerBound="23.1" HigherBound="24.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MFM.Lbg.Orcs
+{
+    internal porttype Receive_polling_SO_AVailable_Type
+    {
+        oneway Operation_1
+        {
+            MFM.Lbg.Schemas.biz_SO_Get_PollingTypedPolling_biz_SO_Get_Polling.TypedPolling
+        };
+    };
+    internal porttype Fetch_Pending_So_Type
+    {
+        requestresponse biz_SO_Get_Pending
+        {
+            MFM.Lbg.Schemas.biz_Order_get_PendingTypedProcedure_dbo.biz_SO_Get_Pending, MFM.Lbg.Schemas.biz_Order_get_PendingTypedProcedure_dbo.biz_SO_Get_PendingResponse
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service o_Extract_SO
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements Receive_polling_SO_AVailable_Type Receive_polling_SO_AVailable;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses Fetch_Pending_So_Type Fetch_Pending_So;
+        message MFM.Lbg.Schemas.biz_Order_get_PendingProcedureResultSet_dbo_biz_SO_Get_Pending.StoredProcedureResultSet0 Single_Order;
+        message MFM.Lbg.Schemas.biz_Order_get_PendingTypedProcedure_dbo.biz_SO_Get_PendingResponse Many_Orders_Response;
+        message MFM.Lbg.Schemas.biz_Order_get_PendingTypedProcedure_dbo.biz_SO_Get_Pending Many_orders;
+        message MFM.Lbg.Schemas.biz_SO_Get_PollingTypedPolling_biz_SO_Get_Polling.TypedPolling Polling_Result;
+        System.String StrXpath;
+        System.Int32 Max_Orders;
+        System.Int32 Loop_Control;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("059f7120-c7a9-4757-b0f1-97e21470c010")]
+            activate ((MFM.Lbg.Schemas.SOAvailable == 1))receive (Receive_polling_SO_AVailable.Operation_1, Polling_Result);
+            StrXpath = "";
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("2503ce7c-8814-4dad-8fa6-f67ef901243d")]
+            construct Many_orders
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("a5b6df3a-d350-44ba-bcd5-c89c3e285f3f")]
+                transform (Many_orders) = MFM.Lbg.Orcs.map_to_SO_Extract (Polling_Result);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("8954260b-3ad2-4547-b309-fae86d728a0d")]
+            send (Fetch_Pending_So.biz_SO_Get_Pending, Many_orders);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("f752bdac-3b26-4750-8d25-2db5cf2aeea1")]
+            receive (Fetch_Pending_So.biz_SO_Get_Pending, Many_Orders_Response);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("b7ff3276-c020-49e2-9b01-7b91c12553bc")]
+            Loop_Control = 1;
+            Max_Orders = System.Convert.ToInt32(xpath(Many_Orders_Response,"count(/*[local-name()='biz_SO_Get_PendingResponse' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/dbo']/*[local-name()='StoredProcedureResultSet0' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/dbo']/*[local-name()='StoredProcedureResultSet0' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/ProceduresResultSets/dbo/biz_SO_Get_Pending'])"));
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("b3c14fe1-26ed-4290-9147-f4f175885673")]
+            while (Loop_Control <= Max_Orders)
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("fcf1f65f-85e7-48b7-943d-43ba2001c123")]
+                StrXpath = System.String.Format("/*[local-name()='biz_SO_Get_PendingResponse' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/dbo']/*[local-name()='StoredProcedureResultSet0' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/dbo']/*[local-name()='StoredProcedureResultSet0' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/ProceduresResultSets/dbo/biz_SO_Get_Pending'][{0}]",Loop_Control);
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("81bd60a1-6c82-4663-8eca-1994baa0c5b8")]
+                construct Single_Order
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("31938dbc-62bf-42e4-aa39-dacb4dc3d1b3")]
+                    Single_Order = xpath(Many_Orders_Response,StrXpath);
+                }
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("2e27879b-dfe7-4474-acd7-b30ecab72588")]
+                exec MFM.Lbg.Orcs.o_OB_SO (Single_Order);
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("a78cf47d-b148-4d02-a9ab-0a8898929848")]
+                Loop_Control = Loop_Control + 1;
+            }
+        }
+    }
+}
+

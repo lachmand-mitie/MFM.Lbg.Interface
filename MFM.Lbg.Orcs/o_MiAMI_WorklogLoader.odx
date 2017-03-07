@@ -1,0 +1,232 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="87a9d309-be1a-49e5-a690-64ea483e8359" LowerBound="1.1" HigherBound="49.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MFM.Lbg.Orcs" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="ca5630c9-397a-470c-aa28-02b1c83e6715" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="WlForVisionFMType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="fb23c5a4-9a03-4a44-ad38-6fc905038ca4" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="180877f0-ed1e-4657-aa99-6c23733a7910" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.64">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.MTFMWOLOGSService.PublishMTFMWOLOGS" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="eea74f5e-acc6-49b7-8540-55d0b1879b0d" ParentLink="Module_ServiceDeclaration" LowerBound="11.1" HigherBound="48.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="o_MiAMI_WorklogLoader" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="VariableDeclaration" OID="8c20f964-bc13-4004-b087-6ef1b6be04d6" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="18.1" HigherBound="19.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="MFM.Lbg.Helper.HelpdeskSqlClient" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SqlHlpr" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="1378f290-3afa-44c1-b3b2-a5c634d915bd" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="19.1" HigherBound="20.1">
+                <om:Property Name="InitialValue" Value="true" />
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Boolean" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SQLSuccess" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="a6c88f6d-eb45-489d-965a-c9d83e775948" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="16.1" HigherBound="17.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.MFMWorkItemUpdate" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MFMWorkItemUpdate" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="5be99225-2fa6-4abe-a672-92645da1939e" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="17.1" HigherBound="18.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.MTFMWOLOGSService.PublishMTFMWOLOGS" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MiAMIWorkLog" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="53e4578d-f97a-42af-a4d5-a92a07c0ba2f" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="ece4f49f-2385-426b-8b25-019754b16238" ParentLink="ServiceBody_Statement" LowerBound="22.1" HigherBound="26.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="WlForVisionFM" />
+                    <om:Property Name="MessageName" Value="MiAMIWorkLog" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="SubscribeLog" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DNFPredicate" OID="81b8a714-8025-42c6-8c14-baf116fcab0e" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="BTS.ReceivePortName" />
+                        <om:Property Name="RHS" Value="&quot;CAFM FTP Raw Updates&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="DNFPredicate" OID="5bca0545-8a84-49e2-8d20-8ed00772d211" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="MFM.Lbg.Schemas.WL_ROUTING" />
+                        <om:Property Name="RHS" Value="&quot;VISIONFM&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Construct" OID="44d26496-1a42-4e95-a74c-b943aff75a2c" ParentLink="ServiceBody_Statement" LowerBound="26.1" HigherBound="32.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="WI_Update" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="c0390a10-518c-46f4-9a63-ad25ca36cfd1" ParentLink="ComplexStatement_Statement" LowerBound="29.1" HigherBound="31.1">
+                        <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.x_WL_to_WIUpd" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="x_WL_to_WIUpd" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="MessagePartRef" OID="a6f7ba50-7060-4077-bab5-bfa6e3a023ef" ParentLink="Transform_InputMessagePartRef" LowerBound="30.77" HigherBound="30.89">
+                            <om:Property Name="MessageRef" Value="MiAMIWorkLog" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="f684db1a-fefa-48ef-9ca3-f7cdb5e62c12" ParentLink="Transform_OutputMessagePartRef" LowerBound="30.28" HigherBound="30.45">
+                            <om:Property Name="MessageRef" Value="MFMWorkItemUpdate" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="0bf7aa13-92cc-4578-89e1-68caebf5dc66" ParentLink="Construct_MessageRef" LowerBound="27.23" HigherBound="27.40">
+                        <om:Property Name="Ref" Value="MFMWorkItemUpdate" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="e649e15f-a9a2-4792-9318-41c380eeca51" ParentLink="ServiceBody_Statement" LowerBound="32.1" HigherBound="34.1">
+                    <om:Property Name="Expression" Value="SQLSuccess = false;" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Initiate Worklog Control" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="While" OID="bffb97f7-fedb-47f9-82e6-6f2740792e9d" ParentLink="ServiceBody_Statement" LowerBound="34.1" HigherBound="46.1">
+                    <om:Property Name="Expression" Value="SQLSuccess == false" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Process Worklogs" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="VariableAssignment" OID="26f927cf-fabf-4601-8d03-e2260e6f5008" ParentLink="ComplexStatement_Statement" LowerBound="37.1" HigherBound="39.1">
+                        <om:Property Name="Expression" Value="SQLSuccess = SqlHlpr.LoadCommunicationRequest(MFMWorkItemUpdate);" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="SQL Load Worklog" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="Decision" OID="9f5ade2d-ff29-4f91-84f2-d10362d3bb32" ParentLink="ComplexStatement_Statement" LowerBound="39.1" HigherBound="45.1">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Suspend?" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="DecisionBranch" OID="2e77745d-4855-4e62-b864-2f3a73ffe9c6" ParentLink="ReallyComplexStatement_Branch" LowerBound="40.17" HigherBound="45.1">
+                            <om:Property Name="Expression" Value="SQLSuccess == false" />
+                            <om:Property Name="IsGhostBranch" Value="True" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Suspend (resumable)" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Suspend" OID="1c74ae59-d4eb-48da-bc11-79ddde5fdd63" ParentLink="ComplexStatement_Statement" LowerBound="42.1" HigherBound="44.1">
+                                <om:Property Name="ErrorMessage" Value="&quot;Failed to load Worklogs, resume to try again&quot;;" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Suspend_Message_load" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="DecisionBranch" OID="8dc7d2f9-bd11-463e-916e-1826dbbb3652" ParentLink="ReallyComplexStatement_Branch">
+                            <om:Property Name="IsGhostBranch" Value="True" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Else" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="0f1ba6d1-e3db-4934-92a3-8ae2d20bfc44" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="14.1" HigherBound="16.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.WlForVisionFMType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="WlForVisionFM" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="DirectBindingAttribute" OID="398e1834-715a-43bc-82f1-90a394840b47" ParentLink="PortDeclaration_CLRAttribute" LowerBound="14.1" HigherBound="15.1">
+                    <om:Property Name="DirectBindingType" Value="MessageBox" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MFM.Lbg.Orcs
+{
+    internal porttype WlForVisionFMType
+    {
+        oneway Operation_1
+        {
+            MFM.Lbg.Schemas.MTFMWOLOGSService.PublishMTFMWOLOGS
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service o_MiAMI_WorklogLoader
+    {
+        [Microsoft.XLANGs.BaseTypes.DirectBinding()]
+        port implements WlForVisionFMType WlForVisionFM;
+        message MFM.Lbg.Schemas.MFMWorkItemUpdate MFMWorkItemUpdate;
+        message MFM.Lbg.Schemas.MTFMWOLOGSService.PublishMTFMWOLOGS MiAMIWorkLog;
+        MFM.Lbg.Helper.HelpdeskSqlClient SqlHlpr;
+        System.Boolean SQLSuccess;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("ece4f49f-2385-426b-8b25-019754b16238")]
+            activate ((BTS.ReceivePortName == "CAFM FTP Raw Updates") && (MFM.Lbg.Schemas.WL_ROUTING == "VISIONFM"))receive (WlForVisionFM.Operation_1, MiAMIWorkLog);
+            SqlHlpr = new MFM.Lbg.Helper.HelpdeskSqlClient();
+            SQLSuccess = true;
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("44d26496-1a42-4e95-a74c-b943aff75a2c")]
+            construct MFMWorkItemUpdate
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("c0390a10-518c-46f4-9a63-ad25ca36cfd1")]
+                transform (MFMWorkItemUpdate) = MFM.Lbg.Orcs.x_WL_to_WIUpd (MiAMIWorkLog);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("e649e15f-a9a2-4792-9318-41c380eeca51")]
+            SQLSuccess = false;
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("bffb97f7-fedb-47f9-82e6-6f2740792e9d")]
+            while (SQLSuccess == false)
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("26f927cf-fabf-4601-8d03-e2260e6f5008")]
+                SQLSuccess = SqlHlpr.LoadCommunicationRequest(MFMWorkItemUpdate);
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("9f5ade2d-ff29-4f91-84f2-d10362d3bb32")]
+                if (SQLSuccess == false)
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("1c74ae59-d4eb-48da-bc11-79ddde5fdd63")]
+                    suspend "Failed to load Worklogs, resume to try again";
+                }
+            }
+        }
+    }
+}
+

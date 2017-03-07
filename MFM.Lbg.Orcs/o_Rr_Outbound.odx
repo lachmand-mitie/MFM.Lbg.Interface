@@ -1,0 +1,1057 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="1906d50d-99e2-4fdf-94b9-71560789f752" LowerBound="1.1" HigherBound="229.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MFM.Lbg.Orcs" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="b1651474-9e4a-409b-8041-e02c0835ddd1" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="RR_Outbound_MB_Type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="03b6b724-46e1-4ec1-9c4b-d9d6ae3b6237" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="0deeda94-eb44-4fbe-b423-e94f22845a48" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.75">
+                    <om:Property Name="Ref" Value="MTFM.Maximo.RR.RRMIAMIWORKORDERService.PublishRRMIAMIWORKORDER" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="d2382739-4961-4ff6-98c5-c616cd7deac9" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Send_MTFMWOINService_Out_Type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="69cfca24-042f-4e1d-98c4-c9f7f2476e6c" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="75d5d1f1-23cb-4780-9a1d-cac48a8a0883" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.57">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.MTFMWOINService.SyncMTFMWOIN" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="6e633730-d7d6-49d5-80df-3fd7d94eae9c" ParentLink="Module_ServiceDeclaration" LowerBound="18.1" HigherBound="228.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="Does workorder exist already?" />
+            <om:Property Name="Name" Value="o_Rr_Outbound" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="VariableDeclaration" OID="313bffd5-02f3-4798-bc3d-2c8e1074f2c8" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="37.1" HigherBound="38.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MTFMWONum" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="6c3a8a47-0a2e-4d0e-8ebb-d58c686d80a3" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="38.1" HigherBound="39.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="OutFileName" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="2f674f67-c3c9-4a9c-bbbe-3776d7b5d909" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="39.1" HigherBound="40.1">
+                <om:Property Name="InitialValue" Value="true" />
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Boolean" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="RequestRetry" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="749354f2-66d9-4c85-a950-bde99904de20" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="40.1" HigherBound="41.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="RrWonum" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="0f83b5ae-9239-47fc-9a37-198d34b1fb65" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="41.1" HigherBound="42.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="MFM.Lbg.Helper.Misc" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="namehlp" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="c81aa303-1698-49d9-abe4-5afe4365d1be" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="42.1" HigherBound="43.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="MFM.Lbg.Helper.MiAMIWorkorderEnquiryResult" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="WoQueryClass" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="86720369-c2bb-4577-ac52-c7661bc29c92" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="43.1" HigherBound="44.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="MFM.Lbg.Helper.MaximoHelper" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="OutboundHelper" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="fce73cf5-5aae-48c6-9482-9f23139cb03b" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="44.1" HigherBound="45.1">
+                <om:Property Name="InitialValue" Value="true" />
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Boolean" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="NeedsUpdMsg" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="74266f1d-6068-4fac-9a36-fd9324d346c7" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="45.1" HigherBound="46.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="WOQueryResponseStr" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="f3a96b6b-ec1b-43b8-adee-e78fdf493a9f" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="46.1" HigherBound="47.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="WOQueryResponseXml" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="13a1b380-7282-4011-863a-7081a8b84f8d" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="25.1" HigherBound="26.1">
+                <om:Property Name="Type" Value="MTFM.Maximo.RR.UpdateRRMIAMIWOUPDATERequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Rr_Update_Wo_miamiref" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="7d46a3f3-ee71-4848-9c93-e8b498d021f6" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="26.1" HigherBound="27.1">
+                <om:Property Name="Type" Value="MTFM.Maximo.RR.UpdateRRMIAMIWOUPDATERequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Rr_Update_Wo_Duplicate" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="acf19f57-0ab8-410d-ac66-2445c863c72c" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="27.1" HigherBound="28.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.MTFMWOINService.SyncMTFMWOIN" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Miami_MTFMWOINService_Upd_Temp" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="7b80c8ef-044a-467b-b145-71be46dff457" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="28.1" HigherBound="29.1">
+                <om:Property Name="Type" Value="MTFM.Maximo.RR.UpdateRRMIAMIWOUPDATERequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SubmitProcessingUpdate" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="b312a2f7-4210-497e-b64a-89e858c69fcb" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="29.1" HigherBound="30.1">
+                <om:Property Name="Type" Value="MTFM.Maximo.RR.UpdateRRMIAMIWOUPDATERequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Rr_Update_Wo_Sent" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="50452ceb-6383-479d-be8b-50d5b2982e08" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="30.1" HigherBound="31.1">
+                <om:Property Name="Type" Value="MTFM.Maximo.RR.UpdateRRMIAMIWOUPDATERequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Rr_Update_Wo_Loc_Err_Request" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="d7bdb599-66bd-4d90-be00-f265a4567bd9" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="31.1" HigherBound="32.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.MTFMWOINService.SyncMTFMWOIN" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Miami_MTFMWOINService_Out" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="2618b1b0-4a4b-41a1-9e8c-42c823ad04d4" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="32.1" HigherBound="33.1">
+                <om:Property Name="Type" Value="MTFM.Maximo.RR.RRMIAMIWORKORDERService.PublishRRMIAMIWORKORDER" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="RR_PublishRRMIAMIWORKORDER" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="34f74fb9-aef2-4262-9db3-731f87f7d9bb" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="33.1" HigherBound="34.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.MiamiWsQueryLoc.MiamiWsQueryLocRequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Miami_Query_Loc" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="4e4be2ff-40b1-4e39-bb86-ca1fcf01f1e8" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="34.1" HigherBound="35.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.MiamiWsQueryLoc.MiamiWsQueryLocResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Miami_Query_Loc_Response" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="6fc119f1-7231-4da8-b763-46c473085415" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="35.1" HigherBound="36.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.MTFMWOINService.SyncMTFMWOIN" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Miami_MTFMWOINService" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="0d006d55-528b-4ac0-a748-7ce9469b88e6" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="36.1" HigherBound="37.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.MiAMIWOQueryResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MiAMIWOQueryAns" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="089cde1f-87fb-4c4d-bc00-fccebc33a776" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="57a5fe12-c558-4233-bf1c-e8a29a7ad8de" ParentLink="ServiceBody_Statement" LowerBound="49.1" HigherBound="61.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="RR_Outbound_MB" />
+                    <om:Property Name="MessageName" Value="RR_PublishRRMIAMIWORKORDER" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="RR_Outbound" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="e186eb3a-a2d0-4c09-99c3-a66cbbb5e395" ParentLink="ServiceBody_Statement" LowerBound="61.1" HigherBound="67.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Build_Loc_Query" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="00d85438-ec43-4ebd-80ef-e04a14afb283" ParentLink="ComplexStatement_Statement" LowerBound="64.1" HigherBound="66.1">
+                        <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.Map_Loc_Query" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Map_Loc_Query" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="MessagePartRef" OID="93ac9fc7-0c2c-46b2-b422-793a600c248a" ParentLink="Transform_InputMessagePartRef" LowerBound="65.75" HigherBound="65.101">
+                            <om:Property Name="MessageRef" Value="RR_PublishRRMIAMIWORKORDER" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="4c9b5f7d-360d-4cbf-8c82-f6d808e00b09" ParentLink="Transform_OutputMessagePartRef" LowerBound="65.28" HigherBound="65.43">
+                            <om:Property Name="MessageRef" Value="Miami_Query_Loc" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="e839cb52-2e01-4cb1-9534-32acfcf9689d" ParentLink="Construct_MessageRef" LowerBound="62.23" HigherBound="62.38">
+                        <om:Property Name="Ref" Value="Miami_Query_Loc" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="4a078018-e060-479d-a785-e9211b8085ec" ParentLink="ServiceBody_Statement" LowerBound="67.1" HigherBound="72.1">
+                    <om:Property Name="Expression" Value="RrWonum = xpath(RR_PublishRRMIAMIWORKORDER,&quot;string(/*[local-name()='PublishRRMIAMIWORKORDER' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='RRMIAMIWORKORDERSet' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='WORKORDER' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='WONUM' and namespace-uri()='http://www.ibm.com/maximo'])&quot;);&#xD;&#xA;MTFMWONum = xpath(RR_PublishRRMIAMIWORKORDER,&quot;string(/*[local-name()='PublishRRMIAMIWORKORDER' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='RRMIAMIWORKORDERSet' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='WORKORDER' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='MTFMWONUM' and namespace-uri()='http://www.ibm.com/maximo'])&quot;);&#xD;&#xA;OutFileName = System.String.Format(&quot;{0}_{1}_{2}.xml&quot;,&quot;MTFMWOINService&quot;,RrWonum,namehlp.RrFileName(RR_PublishRRMIAMIWORKORDER(FILE.ReceivedFileName)));&#xD;&#xA;NeedsUpdMsg = false;" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Get_Vars" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="Task" OID="6da69cd4-485a-4580-b2a4-ce587aa3b544" ParentLink="ServiceBody_Statement" LowerBound="72.1" HigherBound="130.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Identify duplicates in MiAMI" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="VariableAssignment" OID="9ed64992-9f5e-4b1d-8ad4-cf9ca1bdbb9b" ParentLink="ComplexStatement_Statement" LowerBound="72.1" HigherBound="74.1">
+                        <om:Property Name="Expression" Value="WoQueryClass = OutboundHelper.GetMaximoWorkOrder(RrWonum);" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Check MiAMI" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="Decision" OID="5466a5e2-bf28-47dd-9d2c-7dd04cb2957c" ParentLink="ComplexStatement_Statement" LowerBound="74.1" HigherBound="130.1">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Exists in Miami?" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="DecisionBranch" OID="5f7a56a7-31b4-4b5e-9846-a455a0cbfafb" ParentLink="ReallyComplexStatement_Branch" LowerBound="75.13" HigherBound="130.1">
+                            <om:Property Name="Expression" Value="WoQueryClass.ClientRefExists == true" />
+                            <om:Property Name="IsGhostBranch" Value="True" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Yes" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Decision" OID="5c4246a2-0ba0-448d-a38d-5c139738cad9" ParentLink="ComplexStatement_Statement" LowerBound="77.1" HigherBound="129.1">
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Many Dups" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="DecisionBranch" OID="17e559a2-4902-4e31-9f7b-5e9e0b6287ae" ParentLink="ReallyComplexStatement_Branch" LowerBound="78.17" HigherBound="83.1">
+                                    <om:Property Name="Expression" Value="WoQueryClass.NumberOfResults &gt; 1" />
+                                    <om:Property Name="IsGhostBranch" Value="True" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="&gt; 1" />
+                                    <om:Property Name="Signal" Value="True" />
+                                    <om:Element Type="Terminate" OID="5de38b7d-2fb7-4dba-81cd-bd8c987abd61" ParentLink="ComplexStatement_Statement" LowerBound="80.1" HigherBound="82.1">
+                                        <om:Property Name="ErrorMessage" Value="System.String.Format(&quot;The 1TEAM WO {1} has duplicates in MiAMI.  Number of duplicates {0}.  The message has been terminated.&quot;,WoQueryClass.NumberOfResults.ToString(),RrWonum);" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="Terminate_Duplicate" />
+                                        <om:Property Name="Signal" Value="True" />
+                                    </om:Element>
+                                </om:Element>
+                                <om:Element Type="DecisionBranch" OID="e3caf960-a225-45cc-bc67-2c8340cb0fcb" ParentLink="ReallyComplexStatement_Branch">
+                                    <om:Property Name="IsGhostBranch" Value="True" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Else" />
+                                    <om:Property Name="Signal" Value="False" />
+                                    <om:Element Type="VariableAssignment" OID="1ed9f517-20e6-4be7-8122-990f77c27e8a" ParentLink="ComplexStatement_Statement" LowerBound="85.1" HigherBound="92.1">
+                                        <om:Property Name="Expression" Value="WOQueryResponseStr = System.String.Format(@&quot;&lt;MiAMIWOQueryResponseV1&gt;&#xD;&#xA;  &lt;WONUM&gt;{0}&lt;/WONUM&gt;&#xD;&#xA;  &lt;MTFMCLIENTREF&gt;{1}&lt;/MTFMCLIENTREF&gt;&#xD;&#xA;  &lt;SITEID&gt;{2}&lt;/SITEID&gt;&#xD;&#xA;&lt;/MiAMIWOQueryResponseV1&gt;&quot;,RrWonum,WoQueryClass.MiAMIWOWonum,&quot;&quot;);&#xD;&#xA;WOQueryResponseXml.LoadXml(WOQueryResponseStr);" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="GetMessage" />
+                                        <om:Property Name="Signal" Value="True" />
+                                    </om:Element>
+                                    <om:Element Type="Construct" OID="9a0912ec-5faf-46b1-88b4-f0169a9d75b5" ParentLink="ComplexStatement_Statement" LowerBound="92.1" HigherBound="98.1">
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="ConstructResponseBase" />
+                                        <om:Property Name="Signal" Value="True" />
+                                        <om:Element Type="MessageAssignment" OID="2ae6cf01-7295-43e0-b6c9-252fe9ed679c" ParentLink="ComplexStatement_Statement" LowerBound="95.1" HigherBound="97.1">
+                                            <om:Property Name="Expression" Value="MiAMIWOQueryAns = WOQueryResponseXml;" />
+                                            <om:Property Name="ReportToAnalyst" Value="False" />
+                                            <om:Property Name="Name" Value="AssignFromXml" />
+                                            <om:Property Name="Signal" Value="True" />
+                                        </om:Element>
+                                        <om:Element Type="MessageRef" OID="78ea8247-b02b-41d3-b553-b10cca3b1ec6" ParentLink="Construct_MessageRef" LowerBound="93.31" HigherBound="93.46">
+                                            <om:Property Name="Ref" Value="MiAMIWOQueryAns" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Signal" Value="False" />
+                                        </om:Element>
+                                    </om:Element>
+                                    <om:Element Type="Parallel" OID="53059d2f-cbf5-419e-be63-4cc98a066dd3" ParentLink="ComplexStatement_Statement" LowerBound="98.1" HigherBound="124.1">
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="ParallelActions_1" />
+                                        <om:Property Name="Signal" Value="False" />
+                                        <om:Element Type="ParallelBranch" OID="d1c5c5a3-c3ed-4af5-8fe5-d6a6d58d5ea9" ParentLink="ReallyComplexStatement_Branch" LowerBound="103.1" HigherBound="111.1">
+                                            <om:Property Name="IsGhostBranch" Value="True" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="ParallelBranch_1" />
+                                            <om:Property Name="Signal" Value="False" />
+                                            <om:Element Type="Construct" OID="911eef91-2b84-40fd-9e2f-784e74c373ae" ParentLink="ComplexStatement_Statement" LowerBound="103.1" HigherBound="109.1">
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="Name" Value="Construct_Ref_Upd" />
+                                                <om:Property Name="Signal" Value="True" />
+                                                <om:Element Type="Transform" OID="87232a69-7299-4588-bc8d-5ff6eb6f312a" ParentLink="ComplexStatement_Statement" LowerBound="106.1" HigherBound="108.1">
+                                                    <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.x_to_miami_exists_ref_upd" />
+                                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                                    <om:Property Name="Name" Value="Transform_1" />
+                                                    <om:Property Name="Signal" Value="False" />
+                                                    <om:Element Type="MessagePartRef" OID="cfdfa420-d9f0-44b3-af98-024724693e59" ParentLink="Transform_InputMessagePartRef" LowerBound="107.120" HigherBound="107.135">
+                                                        <om:Property Name="MessageRef" Value="MiAMIWOQueryAns" />
+                                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                                        <om:Property Name="Name" Value="MessagePartReference_14" />
+                                                        <om:Property Name="Signal" Value="False" />
+                                                    </om:Element>
+                                                    <om:Element Type="MessagePartRef" OID="e68dd1bd-4cbb-4891-b37a-deba5802f647" ParentLink="Transform_InputMessagePartRef" LowerBound="107.137" HigherBound="107.163">
+                                                        <om:Property Name="MessageRef" Value="RR_PublishRRMIAMIWORKORDER" />
+                                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                                        <om:Property Name="Name" Value="MessagePartReference_15" />
+                                                        <om:Property Name="Signal" Value="False" />
+                                                    </om:Element>
+                                                    <om:Element Type="MessagePartRef" OID="5f49eb42-8aa6-4bb2-9811-9cb32e0bec02" ParentLink="Transform_OutputMessagePartRef" LowerBound="107.44" HigherBound="107.76">
+                                                        <om:Property Name="MessageRef" Value="Rr_Update_Wo_miamiref" />
+                                                        <om:Property Name="PartRef" Value="parameters" />
+                                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                                        <om:Property Name="Name" Value="MessagePartReference_16" />
+                                                        <om:Property Name="Signal" Value="False" />
+                                                    </om:Element>
+                                                </om:Element>
+                                                <om:Element Type="MessageRef" OID="7319e1bb-b7c7-4b07-8fe3-3142f0501cbb" ParentLink="Construct_MessageRef" LowerBound="104.39" HigherBound="104.60">
+                                                    <om:Property Name="Ref" Value="Rr_Update_Wo_miamiref" />
+                                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                                    <om:Property Name="Signal" Value="False" />
+                                                </om:Element>
+                                            </om:Element>
+                                            <om:Element Type="Exec" OID="8866c4a3-e985-43dd-8d70-0ac2e76a325e" ParentLink="ComplexStatement_Statement" LowerBound="109.1" HigherBound="111.1">
+                                                <om:Property Name="Invokee" Value="MFM.Lbg.Orcs.o_Rr_AddUpdateAsync" />
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="Name" Value="Submit_Upd" />
+                                                <om:Property Name="Signal" Value="False" />
+                                                <om:Element Type="Parameter" OID="3e7b0875-aac3-43b6-9aff-610c8feee88b" ParentLink="InvokeStatement_Parameter">
+                                                    <om:Property Name="Direction" Value="In" />
+                                                    <om:Property Name="Name" Value="Rr_Update_Wo_miamiref" />
+                                                    <om:Property Name="Type" Value="MTFM.Maximo.RR.UpdateRRMIAMIWOUPDATERequest" />
+                                                    <om:Property Name="Signal" Value="False" />
+                                                </om:Element>
+                                            </om:Element>
+                                        </om:Element>
+                                        <om:Element Type="ParallelBranch" OID="073fe7e3-12bb-4426-9ec3-4d1c5e71c467" ParentLink="ReallyComplexStatement_Branch" LowerBound="114.1" HigherBound="122.1">
+                                            <om:Property Name="IsGhostBranch" Value="True" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="ParallelBranch_2" />
+                                            <om:Property Name="Signal" Value="False" />
+                                            <om:Element Type="Construct" OID="8f65fb3a-391f-40d5-aebd-09b8c1708d06" ParentLink="ComplexStatement_Statement" LowerBound="114.1" HigherBound="120.1">
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="Name" Value="Construct_Exists_info" />
+                                                <om:Property Name="Signal" Value="True" />
+                                                <om:Element Type="Transform" OID="545d5036-3cb7-4087-9151-bb9a7ac01fbc" ParentLink="ComplexStatement_Statement" LowerBound="117.1" HigherBound="119.1">
+                                                    <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.x_to_1team_wl_ref_exists" />
+                                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                                    <om:Property Name="Name" Value="Transform_2" />
+                                                    <om:Property Name="Signal" Value="False" />
+                                                    <om:Element Type="MessagePartRef" OID="7f7cdb8b-6d35-4fb9-bf3e-387148bb2d74" ParentLink="Transform_InputMessagePartRef" LowerBound="118.120" HigherBound="118.146">
+                                                        <om:Property Name="MessageRef" Value="RR_PublishRRMIAMIWORKORDER" />
+                                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                                        <om:Property Name="Name" Value="MessagePartReference_17" />
+                                                        <om:Property Name="Signal" Value="False" />
+                                                    </om:Element>
+                                                    <om:Element Type="MessagePartRef" OID="024d8716-4f1a-4490-ab7b-0820383b2662" ParentLink="Transform_InputMessagePartRef" LowerBound="118.148" HigherBound="118.163">
+                                                        <om:Property Name="MessageRef" Value="MiAMIWOQueryAns" />
+                                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                                        <om:Property Name="Name" Value="MessagePartReference_18" />
+                                                        <om:Property Name="Signal" Value="False" />
+                                                    </om:Element>
+                                                    <om:Element Type="MessagePartRef" OID="ba974393-5945-4573-93d1-9c0be834ab8f" ParentLink="Transform_OutputMessagePartRef" LowerBound="118.44" HigherBound="118.77">
+                                                        <om:Property Name="MessageRef" Value="Rr_Update_Wo_Duplicate" />
+                                                        <om:Property Name="PartRef" Value="parameters" />
+                                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                                        <om:Property Name="Name" Value="MessagePartReference_19" />
+                                                        <om:Property Name="Signal" Value="False" />
+                                                    </om:Element>
+                                                </om:Element>
+                                                <om:Element Type="MessageRef" OID="e13aeb11-74e1-40af-a8a1-3a9da31e5d67" ParentLink="Construct_MessageRef" LowerBound="115.39" HigherBound="115.61">
+                                                    <om:Property Name="Ref" Value="Rr_Update_Wo_Duplicate" />
+                                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                                    <om:Property Name="Signal" Value="False" />
+                                                </om:Element>
+                                            </om:Element>
+                                            <om:Element Type="Exec" OID="05e67567-386c-4533-9133-e1e5e937ab75" ParentLink="ComplexStatement_Statement" LowerBound="120.1" HigherBound="122.1">
+                                                <om:Property Name="Invokee" Value="MFM.Lbg.Orcs.o_Rr_AddUpdateAsync" />
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="Name" Value="Submit_WL" />
+                                                <om:Property Name="Signal" Value="False" />
+                                                <om:Element Type="Parameter" OID="b00bb9e8-3e31-4dfc-829b-a562daeaf5c4" ParentLink="InvokeStatement_Parameter">
+                                                    <om:Property Name="Direction" Value="In" />
+                                                    <om:Property Name="Name" Value="Rr_Update_Wo_Duplicate" />
+                                                    <om:Property Name="Type" Value="MTFM.Maximo.RR.UpdateRRMIAMIWOUPDATERequest" />
+                                                    <om:Property Name="Signal" Value="False" />
+                                                </om:Element>
+                                            </om:Element>
+                                        </om:Element>
+                                    </om:Element>
+                                    <om:Element Type="Terminate" OID="abb82bca-3e09-44f5-9322-de6ae49fe5e3" ParentLink="ComplexStatement_Statement" LowerBound="124.1" HigherBound="126.1">
+                                        <om:Property Name="ErrorMessage" Value="System.String.Format(&quot;The 1TEAM WO {1} already exists in MiAMI as WO {0}. Message terminated as updates not yet implemented.  The message has been suspended.&quot;,WoQueryClass.MiAMIWOWonum,RrWonum);" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="Terminate_1" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                    <om:Element Type="VariableAssignment" OID="8ad70878-938c-4097-9254-135929f12374" ParentLink="ComplexStatement_Statement" LowerBound="126.1" HigherBound="128.1">
+                                        <om:Property Name="Expression" Value="NeedsUpdMsg = true;" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="Set Upd Flag" />
+                                        <om:Property Name="Signal" Value="True" />
+                                    </om:Element>
+                                </om:Element>
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="DecisionBranch" OID="b46acbbf-e332-4104-984c-d61fe9ee0f50" ParentLink="ReallyComplexStatement_Branch">
+                            <om:Property Name="IsGhostBranch" Value="True" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Else" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Decision" OID="fda6b1c1-d454-4ae5-84ca-107582e6f1af" ParentLink="ServiceBody_Statement" LowerBound="130.1" HigherBound="224.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Check building class is present" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DecisionBranch" OID="f556ac73-951a-4c3c-8244-4e6d666ea53b" ParentLink="ReallyComplexStatement_Branch" LowerBound="131.13" HigherBound="209.1">
+                        <om:Property Name="Expression" Value="Miami_Query_Loc.BuildingClass1 != &quot;&quot; &amp;&amp; Miami_Query_Loc.BuildingClass2 != &quot;&quot;" />
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Yes - Lookup" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Call" OID="4372edb3-d2d1-452d-8159-628488aa0fab" ParentLink="ComplexStatement_Statement" LowerBound="133.1" HigherBound="135.1">
+                            <om:Property Name="Identifier" Value="Loc_Check" />
+                            <om:Property Name="Invokee" Value="MFM.Lbg.Orcs.o_Miami_Ws_Query_Loc" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="AnalystComments" Value="Go and do a location check against MiAMI" />
+                            <om:Property Name="Name" Value="Loc_Check" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Parameter" OID="a5ea841f-a378-4505-8e29-e5573ad7c0e7" ParentLink="InvokeStatement_Parameter">
+                                <om:Property Name="Direction" Value="In" />
+                                <om:Property Name="Name" Value="Miami_Query_Loc" />
+                                <om:Property Name="Type" Value="MFM.Lbg.Schemas.MiamiWsQueryLoc.MiamiWsQueryLocRequest" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Parameter" OID="b6929a48-1b10-4a13-8db4-7e1524cba601" ParentLink="InvokeStatement_Parameter">
+                                <om:Property Name="Direction" Value="Out" />
+                                <om:Property Name="Name" Value="Miami_Query_Loc_Response" />
+                                <om:Property Name="Type" Value="MFM.Lbg.Schemas.MiamiWsQueryLoc.MiamiWsQueryLocResponse" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Construct" OID="1c1ede43-87ad-43b7-8f26-1f3ca4346e17" ParentLink="ComplexStatement_Statement" LowerBound="135.1" HigherBound="141.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Build_MTFMWOINService" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Transform" OID="5114ecf2-85b8-4203-bf97-53e0f6eb55bb" ParentLink="ComplexStatement_Statement" LowerBound="138.1" HigherBound="140.1">
+                                <om:Property Name="ClassName" Value="MFM.Lbg.Maps.m_PublishRRMIAMIWORKORDER_To_New_SyncMTFMWOINWorkorder" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Map_MTFMWOINService" />
+                                <om:Property Name="Signal" Value="False" />
+                                <om:Element Type="MessagePartRef" OID="f655b290-24c4-4b39-ba4b-d84803ddd123" ParentLink="Transform_InputMessagePartRef" LowerBound="139.126" HigherBound="139.152">
+                                    <om:Property Name="MessageRef" Value="RR_PublishRRMIAMIWORKORDER" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_3" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="MessagePartRef" OID="0ad77174-9faa-44ea-bcaf-24135a86b9b9" ParentLink="Transform_OutputMessagePartRef" LowerBound="139.32" HigherBound="139.53">
+                                    <om:Property Name="MessageRef" Value="Miami_MTFMWOINService" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_4" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="MessageRef" OID="053d04ed-c694-4853-a9d0-00d3952da7c6" ParentLink="Construct_MessageRef" LowerBound="136.27" HigherBound="136.48">
+                                <om:Property Name="Ref" Value="Miami_MTFMWOINService" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Decision" OID="b5c1d083-80bc-4ec6-9371-d4adf5b44ce6" ParentLink="ComplexStatement_Statement" LowerBound="141.1" HigherBound="208.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Location Validation" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="DecisionBranch" OID="79d7e3a6-f058-4c2a-876d-620fc29a408e" ParentLink="ReallyComplexStatement_Branch" LowerBound="142.17" HigherBound="193.1">
+                                <om:Property Name="Expression" Value="xpath(Miami_Query_Loc_Response,&quot;string(/*[local-name()='MiamiWsQueryLocResponse' and namespace-uri()='http://MFM.Lbg.Schemas.MiamiWsQueryLoc']/*[local-name()='SiteId' and namespace-uri()=''])&quot;) != &quot;&quot;" />
+                                <om:Property Name="IsGhostBranch" Value="True" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Yes" />
+                                <om:Property Name="Signal" Value="False" />
+                                <om:Element Type="Decision" OID="c6c3e29e-d632-4321-9ed4-bb29fa6c5e13" ParentLink="ComplexStatement_Statement" LowerBound="145.1" HigherBound="178.1">
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Insert or Update" />
+                                    <om:Property Name="Signal" Value="True" />
+                                    <om:Element Type="DecisionBranch" OID="6ecc7f05-9976-4931-988c-646b24eff079" ParentLink="ReallyComplexStatement_Branch" LowerBound="146.21" HigherBound="158.1">
+                                        <om:Property Name="Expression" Value="NeedsUpdMsg == false" />
+                                        <om:Property Name="IsGhostBranch" Value="True" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="Insert" />
+                                        <om:Property Name="Signal" Value="True" />
+                                        <om:Element Type="Construct" OID="0b2bc52f-e17d-40fe-a478-dfadf1c90c73" ParentLink="ComplexStatement_Statement" LowerBound="148.1" HigherBound="157.1">
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="Assign Location - New" />
+                                            <om:Property Name="Signal" Value="True" />
+                                            <om:Element Type="MessageAssignment" OID="4a3e0ef1-e0c6-4b22-b3ea-f822b0942879" ParentLink="ComplexStatement_Statement" LowerBound="151.1" HigherBound="156.1">
+                                                <om:Property Name="Expression" Value="Miami_MTFMWOINService_Out = Miami_MTFMWOINService;&#xD;&#xA;Miami_MTFMWOINService_Out(FILE.ReceivedFileName) = OutFileName;&#xD;&#xA;xpath(Miami_MTFMWOINService_Out,&quot;/*[local-name()='SyncMTFMWOIN' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='MTFMWOINSet' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='WORKORDER' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='SITEID' and namespace-uri()='http://www.ibm.com/maximo']&quot;) = xpath(Miami_Query_Loc_Response,&quot;string(/*[local-name()='MiamiWsQueryLocResponse' and namespace-uri()='http://MFM.Lbg.Schemas.MiamiWsQueryLoc']/*[local-name()='SiteId' and namespace-uri()=''])&quot;);&#xD;&#xA;xpath(Miami_MTFMWOINService_Out,&quot;/*[local-name()='SyncMTFMWOIN' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='MTFMWOINSet' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='WORKORDER' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='ORGID' and namespace-uri()='http://www.ibm.com/maximo']&quot;) = xpath(Miami_Query_Loc_Response,&quot;string(/*[local-name()='MiamiWsQueryLocResponse' and namespace-uri()='http://MFM.Lbg.Schemas.MiamiWsQueryLoc']/*[local-name()='OrgId' and namespace-uri()=''])&quot;);" />
+                                                <om:Property Name="ReportToAnalyst" Value="False" />
+                                                <om:Property Name="Name" Value="Copy_and_Set" />
+                                                <om:Property Name="Signal" Value="False" />
+                                            </om:Element>
+                                            <om:Element Type="MessageRef" OID="3ea4b01d-2ae4-45a2-a0dc-ae87b7cbbc23" ParentLink="Construct_MessageRef" LowerBound="149.35" HigherBound="149.60">
+                                                <om:Property Name="Ref" Value="Miami_MTFMWOINService_Out" />
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="Signal" Value="False" />
+                                            </om:Element>
+                                        </om:Element>
+                                    </om:Element>
+                                    <om:Element Type="DecisionBranch" OID="2e9a4ee2-74da-4259-9d69-2b74a98a5914" ParentLink="ReallyComplexStatement_Branch">
+                                        <om:Property Name="IsGhostBranch" Value="True" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="AnalystComments" Value="Update" />
+                                        <om:Property Name="Name" Value="Else" />
+                                        <om:Property Name="Signal" Value="True" />
+                                        <om:Element Type="Construct" OID="7b76d915-8fc8-4f42-8261-669f6931ac20" ParentLink="ComplexStatement_Statement" LowerBound="160.1" HigherBound="166.1">
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="Construct_Upd" />
+                                            <om:Property Name="Signal" Value="True" />
+                                            <om:Element Type="Transform" OID="2ffd4b2a-c15c-48ee-b56a-b67b48be684a" ParentLink="ComplexStatement_Statement" LowerBound="163.1" HigherBound="165.1">
+                                                <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.x_to_MiAMI_Upd_Temp" />
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="Name" Value="x_to_MiAMI_Upd_Temp" />
+                                                <om:Property Name="Signal" Value="False" />
+                                                <om:Element Type="MessagePartRef" OID="32c1bb51-c8b8-4413-838a-a3bdc609fc6d" ParentLink="Transform_InputMessagePartRef" LowerBound="164.108" HigherBound="164.129">
+                                                    <om:Property Name="MessageRef" Value="Miami_MTFMWOINService" />
+                                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                                    <om:Property Name="Name" Value="MessagePartReference_12" />
+                                                    <om:Property Name="Signal" Value="False" />
+                                                </om:Element>
+                                                <om:Element Type="MessagePartRef" OID="e2a432f6-20e9-4a0f-a2f2-f3d145588634" ParentLink="Transform_OutputMessagePartRef" LowerBound="164.40" HigherBound="164.70">
+                                                    <om:Property Name="MessageRef" Value="Miami_MTFMWOINService_Upd_Temp" />
+                                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                                    <om:Property Name="Name" Value="MessagePartReference_13" />
+                                                    <om:Property Name="Signal" Value="False" />
+                                                </om:Element>
+                                            </om:Element>
+                                            <om:Element Type="MessageRef" OID="f60dca23-4034-4626-919f-4b77e8c8e3be" ParentLink="Construct_MessageRef" LowerBound="161.35" HigherBound="161.65">
+                                                <om:Property Name="Ref" Value="Miami_MTFMWOINService_Upd_Temp" />
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="Signal" Value="False" />
+                                            </om:Element>
+                                        </om:Element>
+                                        <om:Element Type="Construct" OID="ad6b7a74-bb06-4d5c-8d2f-8ece554a8716" ParentLink="ComplexStatement_Statement" LowerBound="166.1" HigherBound="177.1">
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="Assign Location - Upd" />
+                                            <om:Property Name="Signal" Value="True" />
+                                            <om:Element Type="MessageRef" OID="63930c7e-8059-4b81-a5e4-50dcbd3daf47" ParentLink="Construct_MessageRef" LowerBound="167.35" HigherBound="167.60">
+                                                <om:Property Name="Ref" Value="Miami_MTFMWOINService_Out" />
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="Signal" Value="False" />
+                                            </om:Element>
+                                            <om:Element Type="MessageAssignment" OID="a1f4b361-1762-4887-9312-46d6cc0ce97d" ParentLink="ComplexStatement_Statement" LowerBound="169.1" HigherBound="176.1">
+                                                <om:Property Name="Expression" Value="Miami_MTFMWOINService_Out = Miami_MTFMWOINService_Upd_Temp;&#xD;&#xA;Miami_MTFMWOINService_Out(FILE.ReceivedFileName) = OutFileName.Replace(&quot;MTFMWOINService&quot;,&quot;MTFMWOINServiceUPD&quot;);&#xD;&#xA;xpath(Miami_MTFMWOINService_Out,&quot;/*[local-name()='SyncMTFMWOIN' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='MTFMWOINSet' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='WORKORDER' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='SITEID' and namespace-uri()='http://www.ibm.com/maximo']&quot;) = xpath(Miami_Query_Loc_Response,&quot;string(/*[local-name()='MiamiWsQueryLocResponse' and namespace-uri()='http://MFM.Lbg.Schemas.MiamiWsQueryLoc']/*[local-name()='SiteId' and namespace-uri()=''])&quot;);&#xD;&#xA;xpath(Miami_MTFMWOINService_Out,&quot;/*[local-name()='SyncMTFMWOIN' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='MTFMWOINSet' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='WORKORDER' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='ORGID' and namespace-uri()='http://www.ibm.com/maximo']&quot;) = xpath(Miami_Query_Loc_Response,&quot;string(/*[local-name()='MiamiWsQueryLocResponse' and namespace-uri()='http://MFM.Lbg.Schemas.MiamiWsQueryLoc']/*[local-name()='OrgId' and namespace-uri()=''])&quot;);&#xD;&#xA;xpath(Miami_MTFMWOINService_Out,&quot;/*[local-name()='SyncMTFMWOIN' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='MTFMWOINSet' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='WORKORDER' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='WONUM' and namespace-uri()='http://www.ibm.com/maximo']&quot;) = WoQueryClass.MiAMIWOWonum.ToString();&#xD;&#xA;xpath(Miami_MTFMWOINService_Out,&quot;/*[local-name()='SyncMTFMWOIN' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='MTFMWOINSet' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='WORKORDER' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='STATUS' and namespace-uri()='http://www.ibm.com/maximo']&quot;) = WoQueryClass.MIAMIWOCurrentStatus.ToString();" />
+                                                <om:Property Name="ReportToAnalyst" Value="False" />
+                                                <om:Property Name="Name" Value="Copy_and_Set" />
+                                                <om:Property Name="Signal" Value="True" />
+                                            </om:Element>
+                                        </om:Element>
+                                    </om:Element>
+                                </om:Element>
+                                <om:Element Type="Send" OID="b000b745-b97c-4412-9aff-36f512c9fd4f" ParentLink="ComplexStatement_Statement" LowerBound="178.1" HigherBound="180.1">
+                                    <om:Property Name="PortName" Value="Send_MTFMWOINService_Out" />
+                                    <om:Property Name="MessageName" Value="Miami_MTFMWOINService_Out" />
+                                    <om:Property Name="OperationName" Value="Operation_1" />
+                                    <om:Property Name="OperationMessageName" Value="Request" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Send_MiAMI" />
+                                    <om:Property Name="Signal" Value="True" />
+                                </om:Element>
+                                <om:Element Type="Construct" OID="1eb458f4-cabd-4314-b2b2-0c92384e0d75" ParentLink="ComplexStatement_Statement" LowerBound="180.1" HigherBound="186.1">
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Build_Sent_upd" />
+                                    <om:Property Name="Signal" Value="True" />
+                                    <om:Element Type="MessageRef" OID="35ea7125-76ff-4baa-ac5b-a7728fa3d039" ParentLink="Construct_MessageRef" LowerBound="181.31" HigherBound="181.48">
+                                        <om:Property Name="Ref" Value="Rr_Update_Wo_Sent" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                    <om:Element Type="Transform" OID="97ed7b0d-bef1-45ee-b6ab-b113fac02fcb" ParentLink="ComplexStatement_Statement" LowerBound="183.1" HigherBound="185.1">
+                                        <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.Map_Sent_update" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="Map_Sent_update" />
+                                        <om:Property Name="Signal" Value="True" />
+                                        <om:Element Type="MessagePartRef" OID="99331c81-0f1f-426c-8fbf-55795029ccf3" ParentLink="Transform_InputMessagePartRef" LowerBound="184.98" HigherBound="184.124">
+                                            <om:Property Name="MessageRef" Value="RR_PublishRRMIAMIWORKORDER" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="MessagePartReference_8" />
+                                            <om:Property Name="Signal" Value="False" />
+                                        </om:Element>
+                                        <om:Element Type="MessagePartRef" OID="b99d4624-da99-466d-985b-2affbc1bfd94" ParentLink="Transform_OutputMessagePartRef" LowerBound="184.36" HigherBound="184.64">
+                                            <om:Property Name="MessageRef" Value="Rr_Update_Wo_Sent" />
+                                            <om:Property Name="PartRef" Value="parameters" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="MessagePartReference_9" />
+                                            <om:Property Name="Signal" Value="False" />
+                                        </om:Element>
+                                    </om:Element>
+                                </om:Element>
+                                <om:Element Type="Construct" OID="b152e67c-ffd3-46db-8526-cbcce6c3f586" ParentLink="ComplexStatement_Statement" LowerBound="186.1" HigherBound="192.1">
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="ConstructMessage_1" />
+                                    <om:Property Name="Signal" Value="True" />
+                                    <om:Element Type="MessageRef" OID="0f527814-c410-441e-b561-0ba44dfe6345" ParentLink="Construct_MessageRef" LowerBound="187.31" HigherBound="187.53">
+                                        <om:Property Name="Ref" Value="SubmitProcessingUpdate" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                    <om:Element Type="MessageAssignment" OID="9c1e24b3-3208-488f-b451-e25ea216c93a" ParentLink="ComplexStatement_Statement" LowerBound="189.1" HigherBound="191.1">
+                                        <om:Property Name="Expression" Value="SubmitProcessingUpdate = Rr_Update_Wo_Sent;" />
+                                        <om:Property Name="ReportToAnalyst" Value="False" />
+                                        <om:Property Name="Name" Value="Assign_final_Upd_1" />
+                                        <om:Property Name="Signal" Value="True" />
+                                    </om:Element>
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="DecisionBranch" OID="9adaa1ab-4f59-46f9-9ea2-0c0e5b915643" ParentLink="ReallyComplexStatement_Branch">
+                                <om:Property Name="IsGhostBranch" Value="True" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="AnalystComments" Value="The location was not available for the supplied data. A log will be sent to RR Maximo." />
+                                <om:Property Name="Name" Value="Else" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="Construct" OID="b5d245f3-80ba-4720-a4c8-fc971faf6a71" ParentLink="ComplexStatement_Statement" LowerBound="195.1" HigherBound="201.1">
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Build_Err_Update" />
+                                    <om:Property Name="Signal" Value="True" />
+                                    <om:Element Type="Transform" OID="d7a7055c-6b4b-4aea-b6ed-0287e0a4598c" ParentLink="ComplexStatement_Statement" LowerBound="198.1" HigherBound="200.1">
+                                        <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.Map_RR_Err_Update" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="Map_Err_Update" />
+                                        <om:Property Name="Signal" Value="True" />
+                                        <om:Element Type="MessagePartRef" OID="f156b460-8966-4ab4-9f97-9dfe691fe3bd" ParentLink="Transform_InputMessagePartRef" LowerBound="199.111" HigherBound="199.135">
+                                            <om:Property Name="MessageRef" Value="Miami_Query_Loc_Response" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="MessagePartReference_5" />
+                                            <om:Property Name="Signal" Value="False" />
+                                        </om:Element>
+                                        <om:Element Type="MessagePartRef" OID="9d329319-67ea-4230-86d5-71ddfc5c50ae" ParentLink="Transform_InputMessagePartRef" LowerBound="199.137" HigherBound="199.163">
+                                            <om:Property Name="MessageRef" Value="RR_PublishRRMIAMIWORKORDER" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="MessagePartReference_7" />
+                                            <om:Property Name="Signal" Value="False" />
+                                        </om:Element>
+                                        <om:Element Type="MessagePartRef" OID="7def6fa7-eee0-4ef0-b172-e354479ee04a" ParentLink="Transform_OutputMessagePartRef" LowerBound="199.36" HigherBound="199.75">
+                                            <om:Property Name="MessageRef" Value="Rr_Update_Wo_Loc_Err_Request" />
+                                            <om:Property Name="PartRef" Value="parameters" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="MessagePartReference_6" />
+                                            <om:Property Name="Signal" Value="False" />
+                                        </om:Element>
+                                    </om:Element>
+                                    <om:Element Type="MessageRef" OID="014adf10-6da8-4ff8-8ca8-9e6005bd6d80" ParentLink="Construct_MessageRef" LowerBound="196.31" HigherBound="196.59">
+                                        <om:Property Name="Ref" Value="Rr_Update_Wo_Loc_Err_Request" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                </om:Element>
+                                <om:Element Type="Construct" OID="57b11534-8099-4fa9-931b-694bfe82e5ef" ParentLink="ComplexStatement_Statement" LowerBound="201.1" HigherBound="207.1">
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="ConstructMessage_1" />
+                                    <om:Property Name="Signal" Value="True" />
+                                    <om:Element Type="MessageRef" OID="9698ff19-dbc0-47d9-9ee1-8bde4991cc6f" ParentLink="Construct_MessageRef" LowerBound="202.31" HigherBound="202.53">
+                                        <om:Property Name="Ref" Value="SubmitProcessingUpdate" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                    <om:Element Type="MessageAssignment" OID="1da04786-1958-4237-b7d9-d94d22df238d" ParentLink="ComplexStatement_Statement" LowerBound="204.1" HigherBound="206.1">
+                                        <om:Property Name="Expression" Value="SubmitProcessingUpdate = Rr_Update_Wo_Loc_Err_Request;" />
+                                        <om:Property Name="ReportToAnalyst" Value="False" />
+                                        <om:Property Name="Name" Value="Assign_final_Upd_2" />
+                                        <om:Property Name="Signal" Value="True" />
+                                    </om:Element>
+                                </om:Element>
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="DecisionBranch" OID="fa35c2ee-495e-48c6-86d0-7f3895606547" ParentLink="ReallyComplexStatement_Branch">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Else" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="Construct" OID="f8601cc9-0e47-4482-b40d-4900e608227a" ParentLink="ComplexStatement_Statement" LowerBound="211.1" HigherBound="217.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Build_Not_Configured_Err" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="MessageRef" OID="94c7cf1a-7706-477b-8a57-eb11b76674d4" ParentLink="Construct_MessageRef" LowerBound="212.27" HigherBound="212.55">
+                                <om:Property Name="Ref" Value="Rr_Update_Wo_Loc_Err_Request" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Transform" OID="a8693bb3-8e56-405d-9d8b-a6a4670a89a6" ParentLink="ComplexStatement_Statement" LowerBound="214.1" HigherBound="216.1">
+                                <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.Map_RR_DataFail" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Map_DataFail" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="MessagePartRef" OID="60c277ac-6c2e-4e4e-a891-28a11b7cdc0f" ParentLink="Transform_InputMessagePartRef" LowerBound="215.105" HigherBound="215.131">
+                                    <om:Property Name="MessageRef" Value="RR_PublishRRMIAMIWORKORDER" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_10" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="MessagePartRef" OID="616d30a6-0eb3-4096-b8cc-6cda5ecbe00e" ParentLink="Transform_OutputMessagePartRef" LowerBound="215.32" HigherBound="215.71">
+                                    <om:Property Name="MessageRef" Value="Rr_Update_Wo_Loc_Err_Request" />
+                                    <om:Property Name="PartRef" Value="parameters" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_11" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Construct" OID="eb8b44a3-bb5f-43ce-b56c-e91d8f9d9346" ParentLink="ComplexStatement_Statement" LowerBound="217.1" HigherBound="223.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="ConstructMessage_1" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="MessageRef" OID="5940fa10-0ddf-4886-b349-b8eb0bacd2e1" ParentLink="Construct_MessageRef" LowerBound="218.27" HigherBound="218.49">
+                                <om:Property Name="Ref" Value="SubmitProcessingUpdate" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="MessageAssignment" OID="5d8b9b90-a696-4df5-8f67-e172c962e17e" ParentLink="ComplexStatement_Statement" LowerBound="220.1" HigherBound="222.1">
+                                <om:Property Name="Expression" Value="SubmitProcessingUpdate = Rr_Update_Wo_Loc_Err_Request;" />
+                                <om:Property Name="ReportToAnalyst" Value="False" />
+                                <om:Property Name="Name" Value="Assign_final_Upd_3" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Exec" OID="127e6367-de41-48c5-8e69-953b739ec67b" ParentLink="ServiceBody_Statement" LowerBound="224.1" HigherBound="226.1">
+                    <om:Property Name="Invokee" Value="MFM.Lbg.Orcs.o_Rr_AddUpdateAsync" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="StartOrchestration_1" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Parameter" OID="4ae065b8-a501-4685-9276-b498aa48dc43" ParentLink="InvokeStatement_Parameter">
+                        <om:Property Name="Direction" Value="In" />
+                        <om:Property Name="Name" Value="SubmitProcessingUpdate" />
+                        <om:Property Name="Type" Value="MTFM.Maximo.RR.UpdateRRMIAMIWOUPDATERequest" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="b3c4b9f4-ee4a-431a-ad38-d2e183ed7540" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="21.1" HigherBound="23.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.RR_Outbound_MB_Type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="RR_Outbound_MB" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="DirectBindingAttribute" OID="99cec7a9-9bc9-43b1-83bf-0d4b78892a94" ParentLink="PortDeclaration_CLRAttribute" LowerBound="21.1" HigherBound="22.1">
+                    <om:Property Name="DirectBindingType" Value="MessageBox" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="d0cd2505-c5c5-4d2b-a016-e933b111c27d" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="23.1" HigherBound="25.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="120" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.Send_MTFMWOINService_Out_Type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Send_MTFMWOINService_Out" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="549c004e-f2a1-4179-be76-d91fe4904395" ParentLink="PortDeclaration_CLRAttribute" LowerBound="23.1" HigherBound="24.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MFM.Lbg.Orcs
+{
+    internal porttype RR_Outbound_MB_Type
+    {
+        oneway Operation_1
+        {
+            MTFM.Maximo.RR.RRMIAMIWORKORDERService.PublishRRMIAMIWORKORDER
+        };
+    };
+    internal porttype Send_MTFMWOINService_Out_Type
+    {
+        oneway Operation_1
+        {
+            MFM.Lbg.Schemas.MTFMWOINService.SyncMTFMWOIN
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service o_Rr_Outbound
+    {
+        [Microsoft.XLANGs.BaseTypes.DirectBinding()]
+        port implements RR_Outbound_MB_Type RR_Outbound_MB;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses Send_MTFMWOINService_Out_Type Send_MTFMWOINService_Out;
+        message MTFM.Maximo.RR.UpdateRRMIAMIWOUPDATERequest Rr_Update_Wo_miamiref;
+        message MTFM.Maximo.RR.UpdateRRMIAMIWOUPDATERequest Rr_Update_Wo_Duplicate;
+        message MFM.Lbg.Schemas.MTFMWOINService.SyncMTFMWOIN Miami_MTFMWOINService_Upd_Temp;
+        message MTFM.Maximo.RR.UpdateRRMIAMIWOUPDATERequest SubmitProcessingUpdate;
+        message MTFM.Maximo.RR.UpdateRRMIAMIWOUPDATERequest Rr_Update_Wo_Sent;
+        message MTFM.Maximo.RR.UpdateRRMIAMIWOUPDATERequest Rr_Update_Wo_Loc_Err_Request;
+        message MFM.Lbg.Schemas.MTFMWOINService.SyncMTFMWOIN Miami_MTFMWOINService_Out;
+        message MTFM.Maximo.RR.RRMIAMIWORKORDERService.PublishRRMIAMIWORKORDER RR_PublishRRMIAMIWORKORDER;
+        message MFM.Lbg.Schemas.MiamiWsQueryLoc.MiamiWsQueryLocRequest Miami_Query_Loc;
+        message MFM.Lbg.Schemas.MiamiWsQueryLoc.MiamiWsQueryLocResponse Miami_Query_Loc_Response;
+        message MFM.Lbg.Schemas.MTFMWOINService.SyncMTFMWOIN Miami_MTFMWOINService;
+        message MFM.Lbg.Schemas.MiAMIWOQueryResponse MiAMIWOQueryAns;
+        System.String MTFMWONum;
+        System.String OutFileName;
+        System.Boolean RequestRetry;
+        System.String RrWonum;
+        MFM.Lbg.Helper.Misc namehlp;
+        MFM.Lbg.Helper.MiAMIWorkorderEnquiryResult WoQueryClass;
+        MFM.Lbg.Helper.MaximoHelper OutboundHelper;
+        System.Boolean NeedsUpdMsg;
+        System.String WOQueryResponseStr;
+        System.Xml.XmlDocument WOQueryResponseXml;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("57a5fe12-c558-4233-bf1c-e8a29a7ad8de")]
+            activate receive (RR_Outbound_MB.Operation_1, RR_PublishRRMIAMIWORKORDER);
+            MTFMWONum = "";
+            OutFileName = "";
+            RequestRetry = true;
+            RrWonum = "";
+            namehlp = new MFM.Lbg.Helper.Misc();
+            WoQueryClass = new MFM.Lbg.Helper.MiAMIWorkorderEnquiryResult();
+            OutboundHelper = new MFM.Lbg.Helper.MaximoHelper();
+            NeedsUpdMsg = true;
+            WOQueryResponseStr = "";
+            WOQueryResponseXml = new System.Xml.XmlDocument();
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("e186eb3a-a2d0-4c09-99c3-a66cbbb5e395")]
+            construct Miami_Query_Loc
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("00d85438-ec43-4ebd-80ef-e04a14afb283")]
+                transform (Miami_Query_Loc) = MFM.Lbg.Orcs.Map_Loc_Query (RR_PublishRRMIAMIWORKORDER);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("4a078018-e060-479d-a785-e9211b8085ec")]
+            RrWonum = xpath(RR_PublishRRMIAMIWORKORDER,"string(/*[local-name()='PublishRRMIAMIWORKORDER' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='RRMIAMIWORKORDERSet' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='WORKORDER' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='WONUM' and namespace-uri()='http://www.ibm.com/maximo'])");
+            MTFMWONum = xpath(RR_PublishRRMIAMIWORKORDER,"string(/*[local-name()='PublishRRMIAMIWORKORDER' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='RRMIAMIWORKORDERSet' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='WORKORDER' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='MTFMWONUM' and namespace-uri()='http://www.ibm.com/maximo'])");
+            OutFileName = System.String.Format("{0}_{1}_{2}.xml","MTFMWOINService",RrWonum,namehlp.RrFileName(RR_PublishRRMIAMIWORKORDER(FILE.ReceivedFileName)));
+            NeedsUpdMsg = false;
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("9ed64992-9f5e-4b1d-8ad4-cf9ca1bdbb9b")]
+            WoQueryClass = OutboundHelper.GetMaximoWorkOrder(RrWonum);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("5466a5e2-bf28-47dd-9d2c-7dd04cb2957c")]
+            if (WoQueryClass.ClientRefExists == true)
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("5c4246a2-0ba0-448d-a38d-5c139738cad9")]
+                if (WoQueryClass.NumberOfResults > 1)
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("5de38b7d-2fb7-4dba-81cd-bd8c987abd61")]
+                    terminate System.String.Format("The 1TEAM WO {1} has duplicates in MiAMI.  Number of duplicates {0}.  The message has been terminated.",WoQueryClass.NumberOfResults.ToString(),RrWonum);;
+                }
+                else 
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("1ed9f517-20e6-4be7-8122-990f77c27e8a")]
+                    WOQueryResponseStr = System.String.Format(@"<MiAMIWOQueryResponseV1>
+                      <WONUM>{0}</WONUM>
+                      <MTFMCLIENTREF>{1}</MTFMCLIENTREF>
+                      <SITEID>{2}</SITEID>
+                    </MiAMIWOQueryResponseV1>",RrWonum,WoQueryClass.MiAMIWOWonum,"");
+                    WOQueryResponseXml.LoadXml(WOQueryResponseStr);
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("9a0912ec-5faf-46b1-88b4-f0169a9d75b5")]
+                    construct MiAMIWOQueryAns
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("2ae6cf01-7295-43e0-b6c9-252fe9ed679c")]
+                        MiAMIWOQueryAns = WOQueryResponseXml;
+                    }
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("53059d2f-cbf5-419e-be63-4cc98a066dd3")]
+                    parallel
+                    {
+                        task
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("911eef91-2b84-40fd-9e2f-784e74c373ae")]
+                            construct Rr_Update_Wo_miamiref
+                            {
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("87232a69-7299-4588-bc8d-5ff6eb6f312a")]
+                                transform (Rr_Update_Wo_miamiref.parameters) = MFM.Lbg.Orcs.x_to_miami_exists_ref_upd (MiAMIWOQueryAns, RR_PublishRRMIAMIWORKORDER);
+                            }
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("8866c4a3-e985-43dd-8d70-0ac2e76a325e")]
+                            exec MFM.Lbg.Orcs.o_Rr_AddUpdateAsync (Rr_Update_Wo_miamiref);
+                        }
+                        task
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("8f65fb3a-391f-40d5-aebd-09b8c1708d06")]
+                            construct Rr_Update_Wo_Duplicate
+                            {
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("545d5036-3cb7-4087-9151-bb9a7ac01fbc")]
+                                transform (Rr_Update_Wo_Duplicate.parameters) = MFM.Lbg.Orcs.x_to_1team_wl_ref_exists (RR_PublishRRMIAMIWORKORDER, MiAMIWOQueryAns);
+                            }
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("05e67567-386c-4533-9133-e1e5e937ab75")]
+                            exec MFM.Lbg.Orcs.o_Rr_AddUpdateAsync (Rr_Update_Wo_Duplicate);
+                        }
+                    }
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("abb82bca-3e09-44f5-9322-de6ae49fe5e3")]
+                    terminate System.String.Format("The 1TEAM WO {1} already exists in MiAMI as WO {0}. Message terminated as updates not yet implemented.  The message has been suspended.",WoQueryClass.MiAMIWOWonum,RrWonum);;
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("8ad70878-938c-4097-9254-135929f12374")]
+                    NeedsUpdMsg = true;
+                }
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("fda6b1c1-d454-4ae5-84ca-107582e6f1af")]
+            if (Miami_Query_Loc.BuildingClass1 != "" && Miami_Query_Loc.BuildingClass2 != "")
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("4372edb3-d2d1-452d-8159-628488aa0fab")]
+                call MFM.Lbg.Orcs.o_Miami_Ws_Query_Loc (Miami_Query_Loc, out Miami_Query_Loc_Response);
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("1c1ede43-87ad-43b7-8f26-1f3ca4346e17")]
+                construct Miami_MTFMWOINService
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("5114ecf2-85b8-4203-bf97-53e0f6eb55bb")]
+                    transform (Miami_MTFMWOINService) = MFM.Lbg.Maps.m_PublishRRMIAMIWORKORDER_To_New_SyncMTFMWOINWorkorder (RR_PublishRRMIAMIWORKORDER);
+                }
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("b5c1d083-80bc-4ec6-9371-d4adf5b44ce6")]
+                if (xpath(Miami_Query_Loc_Response,"string(/*[local-name()='MiamiWsQueryLocResponse' and namespace-uri()='http://MFM.Lbg.Schemas.MiamiWsQueryLoc']/*[local-name()='SiteId' and namespace-uri()=''])") != ""
+                    )
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("c6c3e29e-d632-4321-9ed4-bb29fa6c5e13")]
+                    if (NeedsUpdMsg == false)
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("0b2bc52f-e17d-40fe-a478-dfadf1c90c73")]
+                        construct Miami_MTFMWOINService_Out
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("4a3e0ef1-e0c6-4b22-b3ea-f822b0942879")]
+                            Miami_MTFMWOINService_Out = Miami_MTFMWOINService;
+                            Miami_MTFMWOINService_Out(FILE.ReceivedFileName) = OutFileName;
+                            xpath(Miami_MTFMWOINService_Out,"/*[local-name()='SyncMTFMWOIN' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='MTFMWOINSet' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='WORKORDER' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='SITEID' and namespace-uri()='http://www.ibm.com/maximo']") = xpath(Miami_Query_Loc_Response,"string(/*[local-name()='MiamiWsQueryLocResponse' and namespace-uri()='http://MFM.Lbg.Schemas.MiamiWsQueryLoc']/*[local-name()='SiteId' and namespace-uri()=''])");
+                            xpath(Miami_MTFMWOINService_Out,"/*[local-name()='SyncMTFMWOIN' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='MTFMWOINSet' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='WORKORDER' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='ORGID' and namespace-uri()='http://www.ibm.com/maximo']") = xpath(Miami_Query_Loc_Response,"string(/*[local-name()='MiamiWsQueryLocResponse' and namespace-uri()='http://MFM.Lbg.Schemas.MiamiWsQueryLoc']/*[local-name()='OrgId' and namespace-uri()=''])");
+                        }
+                    }
+                    else 
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("7b76d915-8fc8-4f42-8261-669f6931ac20")]
+                        construct Miami_MTFMWOINService_Upd_Temp
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("2ffd4b2a-c15c-48ee-b56a-b67b48be684a")]
+                            transform (Miami_MTFMWOINService_Upd_Temp) = MFM.Lbg.Orcs.x_to_MiAMI_Upd_Temp (Miami_MTFMWOINService);
+                        }
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("ad6b7a74-bb06-4d5c-8d2f-8ece554a8716")]
+                        construct Miami_MTFMWOINService_Out
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("a1f4b361-1762-4887-9312-46d6cc0ce97d")]
+                            Miami_MTFMWOINService_Out = Miami_MTFMWOINService_Upd_Temp;
+                            Miami_MTFMWOINService_Out(FILE.ReceivedFileName) = OutFileName.Replace("MTFMWOINService","MTFMWOINServiceUPD");
+                            xpath(Miami_MTFMWOINService_Out,"/*[local-name()='SyncMTFMWOIN' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='MTFMWOINSet' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='WORKORDER' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='SITEID' and namespace-uri()='http://www.ibm.com/maximo']") = xpath(Miami_Query_Loc_Response,"string(/*[local-name()='MiamiWsQueryLocResponse' and namespace-uri()='http://MFM.Lbg.Schemas.MiamiWsQueryLoc']/*[local-name()='SiteId' and namespace-uri()=''])");
+                            xpath(Miami_MTFMWOINService_Out,"/*[local-name()='SyncMTFMWOIN' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='MTFMWOINSet' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='WORKORDER' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='ORGID' and namespace-uri()='http://www.ibm.com/maximo']") = xpath(Miami_Query_Loc_Response,"string(/*[local-name()='MiamiWsQueryLocResponse' and namespace-uri()='http://MFM.Lbg.Schemas.MiamiWsQueryLoc']/*[local-name()='OrgId' and namespace-uri()=''])");
+                            xpath(Miami_MTFMWOINService_Out,"/*[local-name()='SyncMTFMWOIN' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='MTFMWOINSet' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='WORKORDER' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='WONUM' and namespace-uri()='http://www.ibm.com/maximo']") = WoQueryClass.MiAMIWOWonum.ToString();
+                            xpath(Miami_MTFMWOINService_Out,"/*[local-name()='SyncMTFMWOIN' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='MTFMWOINSet' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='WORKORDER' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='STATUS' and namespace-uri()='http://www.ibm.com/maximo']") = WoQueryClass.MIAMIWOCurrentStatus.ToString();
+                        }
+                    }
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("b000b745-b97c-4412-9aff-36f512c9fd4f")]
+                    send (Send_MTFMWOINService_Out.Operation_1, Miami_MTFMWOINService_Out);
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("1eb458f4-cabd-4314-b2b2-0c92384e0d75")]
+                    construct Rr_Update_Wo_Sent
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("97ed7b0d-bef1-45ee-b6ab-b113fac02fcb")]
+                        transform (Rr_Update_Wo_Sent.parameters) = MFM.Lbg.Orcs.Map_Sent_update (RR_PublishRRMIAMIWORKORDER);
+                    }
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("b152e67c-ffd3-46db-8526-cbcce6c3f586")]
+                    construct SubmitProcessingUpdate
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("9c1e24b3-3208-488f-b451-e25ea216c93a")]
+                        SubmitProcessingUpdate = Rr_Update_Wo_Sent;
+                    }
+                }
+                else 
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("b5d245f3-80ba-4720-a4c8-fc971faf6a71")]
+                    construct Rr_Update_Wo_Loc_Err_Request
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("d7a7055c-6b4b-4aea-b6ed-0287e0a4598c")]
+                        transform (Rr_Update_Wo_Loc_Err_Request.parameters) = MFM.Lbg.Orcs.Map_RR_Err_Update (Miami_Query_Loc_Response, RR_PublishRRMIAMIWORKORDER);
+                    }
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("57b11534-8099-4fa9-931b-694bfe82e5ef")]
+                    construct SubmitProcessingUpdate
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("1da04786-1958-4237-b7d9-d94d22df238d")]
+                        SubmitProcessingUpdate = Rr_Update_Wo_Loc_Err_Request;
+                    }
+                }
+            }
+            else 
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("f8601cc9-0e47-4482-b40d-4900e608227a")]
+                construct Rr_Update_Wo_Loc_Err_Request
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("a8693bb3-8e56-405d-9d8b-a6a4670a89a6")]
+                    transform (Rr_Update_Wo_Loc_Err_Request.parameters) = MFM.Lbg.Orcs.Map_RR_DataFail (RR_PublishRRMIAMIWORKORDER);
+                }
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("eb8b44a3-bb5f-43ce-b56c-e91d8f9d9346")]
+                construct SubmitProcessingUpdate
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("5d8b9b90-a696-4df5-8f67-e172c962e17e")]
+                    SubmitProcessingUpdate = Rr_Update_Wo_Loc_Err_Request;
+                }
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("127e6367-de41-48c5-8e69-953b739ec67b")]
+            exec MFM.Lbg.Orcs.o_Rr_AddUpdateAsync (SubmitProcessingUpdate);
+        }
+    }
+}
+

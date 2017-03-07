@@ -1,0 +1,373 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="f51c529c-f451-47ab-874c-a348f2c47235" LowerBound="1.1" HigherBound="73.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MFM.Lbg.Orcs" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="82ce9d12-88cf-4ddf-a13c-c92597a40f7b" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Receive_Polled_Case_Port_Type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="a23832df-fa98-44fc-ab66-95944ec6d2af" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="8e617f23-3d62-4492-b5e8-ec56324c5121" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.104">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.PollingTypedPolling_biz_Global_Export_Helpdesk_Cases.TypedPollingResultSet0" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="b865ef51-9a11-454d-9e7d-179a32e899bb" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="biz_Global_Fetch_Case_DataSet_Type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="0dd65603-cad6-4ba0-9119-70a0ef1b79d4" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="biz_Global_Fetch_Case_DataSet" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="18149d5c-46ae-42e0-98ce-a4695d4af73f" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.89">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Fetch_Case_DataSet" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="cbfa58c5-99fb-4b44-b721-b4b6be403ec5" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="15.91" HigherBound="15.175">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Fetch_Case_DataSetResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="343e70b6-2da9-4a3a-bbf8-a501109901e6" ParentLink="Module_PortType" LowerBound="18.1" HigherBound="25.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Send_To_Distributor_Type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="9f81c562-3ec9-46bb-b301-39bc6a4f9ec6" ParentLink="PortType_OperationDeclaration" LowerBound="20.1" HigherBound="24.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="2204b4ab-34ce-45e2-b476-f059a405b631" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="22.13" HigherBound="22.97">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Fetch_Case_DataSetResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="5a1e9ca6-4c85-488a-a1f0-ee8ea11afa25" ParentLink="Module_PortType" LowerBound="25.1" HigherBound="32.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Port_biz_Global_Remove_Case_From_Queue_Type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="aab05c9b-e258-4317-8a56-bbc8c4a14449" ParentLink="PortType_OperationDeclaration" LowerBound="27.1" HigherBound="31.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="biz_Global_Remove_Case_From_Queue" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="0baec561-9c9e-4cca-af61-98f1bfd6996c" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="29.13" HigherBound="29.93">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Remove_Case_From_Queue" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="87adbcfd-248d-40f3-8f39-78c65ecc8f06" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="29.95" HigherBound="29.183">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Remove_Case_From_QueueResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="64463aa6-ecc8-4eae-961a-fb521bd8df35" ParentLink="Module_ServiceDeclaration" LowerBound="32.1" HigherBound="72.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="o_VisionFM_Case_Extractor" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="MessageDeclaration" OID="4638e38f-bac2-4e0a-8108-ce1b4b8fd3e2" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="41.1" HigherBound="42.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.PollingTypedPolling_biz_Global_Export_Helpdesk_Cases.TypedPollingResultSet0" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CaseId" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="29fdcd55-bb28-4842-a238-e2e16c1129eb" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="42.1" HigherBound="43.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Fetch_Case_DataSet" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="biz_Global_Fetch_Case_DataSet" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="db693a0d-b4e7-4bbb-ac6d-266ab03baa0b" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="43.1" HigherBound="44.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Fetch_Case_DataSetResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="biz_Global_Fetch_Case_DataSet_Response" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="08232068-9c22-4108-8594-52e0b18d2969" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="44.1" HigherBound="45.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Fetch_Case_DataSetResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Case_details" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="2db0dfc9-f139-459e-a349-ce0084cc60aa" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="45.1" HigherBound="46.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Remove_Case_From_Queue" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="biz_Global_Remove_Case_From_Queue" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="bb23df3f-635a-46a8-a8c1-f89d5a5abb95" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="46.1" HigherBound="47.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Remove_Case_From_QueueResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="biz_Global_Remove_Case_From_Queue_Response" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="4044aedf-143e-4b21-96b2-f34f29a151d8" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Task" OID="68cf8e81-86c5-457b-bbaa-836066a4ecba" ParentLink="ServiceBody_Statement" LowerBound="49.1" HigherBound="51.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="Orchestration initiates when polling cycle identifies a pending cases.  Receive pipeline debatches case from pending cases." />
+                    <om:Property Name="Name" Value="Extracted Pending Case Id" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Receive" OID="efbe0368-96b4-4d79-a6ea-9201b1a6e5d2" ParentLink="ComplexStatement_Statement" LowerBound="49.1" HigherBound="51.1">
+                        <om:Property Name="Activate" Value="True" />
+                        <om:Property Name="PortName" Value="Receive_Polled_Case_Port" />
+                        <om:Property Name="MessageName" Value="CaseId" />
+                        <om:Property Name="OperationName" Value="Operation_1" />
+                        <om:Property Name="OperationMessageName" Value="Request" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Receive_Case" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Task" OID="f65c2840-631b-43d8-84c5-cd900b8d7f43" ParentLink="ServiceBody_Statement" LowerBound="51.1" HigherBound="61.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="Only the pending case id was extracted from the polling cycle, now fetch the case details with a specific fetch on that case id.  Construct the messge for submitting and handling the response to the stored procedure." />
+                    <om:Property Name="Name" Value="Fetch Case Details" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Construct" OID="0e2f53e2-13fe-41c1-9524-0c1047a1c721" ParentLink="ComplexStatement_Statement" LowerBound="51.1" HigherBound="57.1">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Construct_Fetch_Details" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Transform" OID="3d8b3e02-7740-4e49-a25f-54171b1c143e" ParentLink="ComplexStatement_Statement" LowerBound="54.1" HigherBound="56.1">
+                            <om:Property Name="ClassName" Value="MFM.Lbg.Maps.ExtractedCaseId_To_GetCaseDetails" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="x_Fetch_Details" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="MessagePartRef" OID="cea3525a-f54b-4c81-a051-dee24fb466e6" ParentLink="Transform_InputMessagePartRef" LowerBound="55.109" HigherBound="55.115">
+                                <om:Property Name="MessageRef" Value="CaseId" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="MessagePartReference_1" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="MessagePartRef" OID="ab2722d3-348f-43b8-bdf8-935793a764e6" ParentLink="Transform_OutputMessagePartRef" LowerBound="55.28" HigherBound="55.57">
+                                <om:Property Name="MessageRef" Value="biz_Global_Fetch_Case_DataSet" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="MessagePartReference_2" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="MessageRef" OID="6ac64cac-f48f-43e3-9c7a-9250c3922f83" ParentLink="Construct_MessageRef" LowerBound="52.23" HigherBound="52.52">
+                            <om:Property Name="Ref" Value="biz_Global_Fetch_Case_DataSet" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="Send" OID="d0d08bd6-80f5-4043-97c1-5780dc0982d4" ParentLink="ComplexStatement_Statement" LowerBound="57.1" HigherBound="59.1">
+                        <om:Property Name="PortName" Value="Port_biz_Global_Fetch_Case_DataSet" />
+                        <om:Property Name="MessageName" Value="biz_Global_Fetch_Case_DataSet" />
+                        <om:Property Name="OperationName" Value="biz_Global_Fetch_Case_DataSet" />
+                        <om:Property Name="OperationMessageName" Value="Request" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Send_Fetch_Details" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="Receive" OID="45bfa188-24b7-424f-b142-06299b6f16da" ParentLink="ComplexStatement_Statement" LowerBound="59.1" HigherBound="61.1">
+                        <om:Property Name="Activate" Value="False" />
+                        <om:Property Name="PortName" Value="Port_biz_Global_Fetch_Case_DataSet" />
+                        <om:Property Name="MessageName" Value="biz_Global_Fetch_Case_DataSet_Response" />
+                        <om:Property Name="OperationName" Value="biz_Global_Fetch_Case_DataSet" />
+                        <om:Property Name="OperationMessageName" Value="Response" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Rec_Details" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Task" OID="afc5db2e-04eb-4dd5-9339-f1551046d5c9" ParentLink="ServiceBody_Statement" LowerBound="61.1" HigherBound="70.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="Create a copy of the case message in message assignment, renaming to something sensible for support purposes" />
+                    <om:Property Name="Name" Value="Output" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Construct" OID="2bbd8299-8905-495c-b784-bcf609df5c04" ParentLink="ComplexStatement_Statement" LowerBound="61.1" HigherBound="68.1">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Construct_Case_Copy" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessageAssignment" OID="45b2bb1e-1e2f-43da-9d56-b733d9c19ca6" ParentLink="ComplexStatement_Statement" LowerBound="64.1" HigherBound="67.1">
+                            <om:Property Name="Expression" Value="Case_details = biz_Global_Fetch_Case_DataSet_Response;&#xD;&#xA;Case_details(FILE.ReceivedFileName) = System.String.Format(&quot;Target={3} Type=Extract Vendor={0} CaseRef={2} CaseId={1} ExtractTS={4}.xml&quot;,System.Convert.ToString(CaseId.VENDORID),System.Convert.ToString(CaseId.CASEID),biz_Global_Fetch_Case_DataSet_Response.StoredProcedureResultSet0.StoredProcedureResultSet0.Case_ReferenceId,biz_Global_Fetch_Case_DataSet_Response.StoredProcedureResultSet0.StoredProcedureResultSet0.case_foreignsysname,System.DateTime.Now.ToString(&quot;{yyyyMMddTHHmmss.ffff}&quot;));" />
+                            <om:Property Name="ReportToAnalyst" Value="False" />
+                            <om:Property Name="Name" Value="Assign_Case_copy" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="MessageRef" OID="a6f06ef5-7d5f-417c-acdc-f8d2e879f61c" ParentLink="Construct_MessageRef" LowerBound="62.23" HigherBound="62.35">
+                            <om:Property Name="Ref" Value="Case_details" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="Send" OID="d207473e-b009-4216-abc1-38b84ae41aa3" ParentLink="ComplexStatement_Statement" LowerBound="68.1" HigherBound="70.1">
+                        <om:Property Name="PortName" Value="Send_To_Distributor" />
+                        <om:Property Name="MessageName" Value="Case_details" />
+                        <om:Property Name="OperationName" Value="Operation_1" />
+                        <om:Property Name="OperationMessageName" Value="Request" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Send_to_Distributor" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="a5cf1ef9-8f44-43cd-a17c-507aff028356" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="35.1" HigherBound="37.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.Receive_Polled_Case_Port_Type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Receive_Polled_Case_Port" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="30115006-d923-4c65-a7a3-c390bd907a40" ParentLink="PortDeclaration_CLRAttribute" LowerBound="35.1" HigherBound="36.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="4abce34d-b5d6-41b9-8f1c-741b2635d35c" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="37.1" HigherBound="39.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="13" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.biz_Global_Fetch_Case_DataSet_Type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_biz_Global_Fetch_Case_DataSet" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="b357c6a1-7eda-4cc4-9477-c5195e98c732" ParentLink="PortDeclaration_CLRAttribute" LowerBound="37.1" HigherBound="38.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="b12324bf-c349-419a-bebc-675497bf45da" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="39.1" HigherBound="41.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="54" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.Send_To_Distributor_Type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Send_To_Distributor" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="edf62bb0-a724-4d3e-98c7-e24268630a29" ParentLink="PortDeclaration_CLRAttribute" LowerBound="39.1" HigherBound="40.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MFM.Lbg.Orcs
+{
+    internal porttype Receive_Polled_Case_Port_Type
+    {
+        oneway Operation_1
+        {
+            MFM.Lbg.Schemas.PollingTypedPolling_biz_Global_Export_Helpdesk_Cases.TypedPollingResultSet0
+        };
+    };
+    internal porttype biz_Global_Fetch_Case_DataSet_Type
+    {
+        requestresponse biz_Global_Fetch_Case_DataSet
+        {
+            MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Fetch_Case_DataSet, MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Fetch_Case_DataSetResponse
+        };
+    };
+    internal porttype Send_To_Distributor_Type
+    {
+        oneway Operation_1
+        {
+            MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Fetch_Case_DataSetResponse
+        };
+    };
+    internal porttype Port_biz_Global_Remove_Case_From_Queue_Type
+    {
+        requestresponse biz_Global_Remove_Case_From_Queue
+        {
+            MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Remove_Case_From_Queue, MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Remove_Case_From_QueueResponse
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service o_VisionFM_Case_Extractor
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements Receive_Polled_Case_Port_Type Receive_Polled_Case_Port;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses biz_Global_Fetch_Case_DataSet_Type Port_biz_Global_Fetch_Case_DataSet;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses Send_To_Distributor_Type Send_To_Distributor;
+        message MFM.Lbg.Schemas.PollingTypedPolling_biz_Global_Export_Helpdesk_Cases.TypedPollingResultSet0 CaseId;
+        message MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Fetch_Case_DataSet biz_Global_Fetch_Case_DataSet;
+        message MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Fetch_Case_DataSetResponse biz_Global_Fetch_Case_DataSet_Response;
+        message MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Fetch_Case_DataSetResponse Case_details;
+        message MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Remove_Case_From_Queue biz_Global_Remove_Case_From_Queue;
+        message MFM.Lbg.Schemas.VFM_Extract_TypedProcedure_dbo.biz_Global_Remove_Case_From_QueueResponse biz_Global_Remove_Case_From_Queue_Response;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("efbe0368-96b4-4d79-a6ea-9201b1a6e5d2")]
+            activate receive (Receive_Polled_Case_Port.Operation_1, CaseId);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("0e2f53e2-13fe-41c1-9524-0c1047a1c721")]
+            construct biz_Global_Fetch_Case_DataSet
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("3d8b3e02-7740-4e49-a25f-54171b1c143e")]
+                transform (biz_Global_Fetch_Case_DataSet) = MFM.Lbg.Maps.ExtractedCaseId_To_GetCaseDetails (CaseId);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("d0d08bd6-80f5-4043-97c1-5780dc0982d4")]
+            send (Port_biz_Global_Fetch_Case_DataSet.biz_Global_Fetch_Case_DataSet, biz_Global_Fetch_Case_DataSet);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("45bfa188-24b7-424f-b142-06299b6f16da")]
+            receive (Port_biz_Global_Fetch_Case_DataSet.biz_Global_Fetch_Case_DataSet, biz_Global_Fetch_Case_DataSet_Response);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("2bbd8299-8905-495c-b784-bcf609df5c04")]
+            construct Case_details
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("45b2bb1e-1e2f-43da-9d56-b733d9c19ca6")]
+                Case_details = biz_Global_Fetch_Case_DataSet_Response;
+                Case_details(FILE.ReceivedFileName) = System.String.Format("Target={3} Type=Extract Vendor={0} CaseRef={2} CaseId={1} ExtractTS={4}.xml",System.Convert.ToString(CaseId.VENDORID),System.Convert.ToString(CaseId.CASEID),biz_Global_Fetch_Case_DataSet_Response.StoredProcedureResultSet0.StoredProcedureResultSet0.Case_ReferenceId,biz_Global_Fetch_Case_DataSet_Response.StoredProcedureResultSet0.StoredProcedureResultSet0.case_foreignsysname,System.DateTime.Now.ToString("{yyyyMMddTHHmmss.ffff}"));
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("d207473e-b009-4216-abc1-38b84ae41aa3")]
+            send (Send_To_Distributor.Operation_1, Case_details);
+        }
+    }
+}
+

@@ -1,0 +1,229 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="a8b05e16-9553-40bf-b4e5-8edf28b8a1c2" LowerBound="1.1" HigherBound="47.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MFM.Lbg.Orcs" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="6639b336-d6ea-4bde-9eda-76eb42f07d3b" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Port_SET_PO_NUM_Type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="cdf675d6-cbc1-4212-beaf-ed61992d3d8e" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="biz_PO_Set_PO_Number" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="e5fe5726-5913-4ffe-849e-470ac8eee6f0" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.75">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.VFM_POTypedProcedure_dbo1.biz_PO_Set_PO_Number" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="6a7ec950-c70b-4f6e-9dbd-9c7b6f69b26e" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="8.77" HigherBound="8.147">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.VFM_POTypedProcedure_dbo1.biz_PO_Set_PO_NumberResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="b3893b19-e894-4273-994c-347a53bb3873" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Port_Get_SAP_Outbound_PO_Type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="97c30839-a964-44cf-8f96-bbfe44365f24" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="1bbc1573-28a5-4423-9438-1c9b25b26b7a" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.50">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.ORDERS05_ZMM158ORDERS" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="ac7236fc-6760-4dae-beb9-e08279e2820f" ParentLink="Module_ServiceDeclaration" LowerBound="18.1" HigherBound="46.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="o_IB_PO" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="MessageDeclaration" OID="24ec55e3-49a8-4aff-8091-7c04fcefae1c" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="25.1" HigherBound="26.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.ORDERS05_ZMM158ORDERS" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ZMM158ORDERS" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="c84257ad-e995-44cb-9f4b-84cec8901d42" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="26.1" HigherBound="27.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.VFM_POTypedProcedure_dbo1.biz_PO_Set_PO_Number" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SET_PO_NUM" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="db888214-c9f2-4b6c-bef1-6a825a80d9e7" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="27.1" HigherBound="28.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.VFM_POTypedProcedure_dbo1.biz_PO_Set_PO_NumberResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SET_PO_NUM_RESULT" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="69d665f6-9928-4e6e-857c-69528b95081b" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="0e0119b2-314c-43a0-a577-a3c3fd83b3e1" ParentLink="ServiceBody_Statement" LowerBound="30.1" HigherBound="32.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="Port_Get_SAP_Outbound_PO" />
+                    <om:Property Name="MessageName" Value="ZMM158ORDERS" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_ZMM158ORDERS" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="caa46d7a-19a9-4ecd-8e80-d1afb6a791f2" ParentLink="ServiceBody_Statement" LowerBound="32.1" HigherBound="38.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Construct_SET_PO_NUM" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="5fcd8050-2b30-48cc-8be2-76f20f7732f1" ParentLink="ComplexStatement_Statement" LowerBound="35.1" HigherBound="37.1">
+                        <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.map_to_SET_PO_NUM" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="x_to_SET_PO_NUM" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessagePartRef" OID="96e862eb-c3d2-47ac-9909-65d584c26c89" ParentLink="Transform_InputMessagePartRef" LowerBound="36.74" HigherBound="36.86">
+                            <om:Property Name="MessageRef" Value="ZMM158ORDERS" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="191db7f1-a73a-43fb-a550-6d0d9157d166" ParentLink="Transform_OutputMessagePartRef" LowerBound="36.28" HigherBound="36.38">
+                            <om:Property Name="MessageRef" Value="SET_PO_NUM" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="d5d79c8e-a5bf-45b4-b946-c726c9918d23" ParentLink="Construct_MessageRef" LowerBound="33.23" HigherBound="33.33">
+                        <om:Property Name="Ref" Value="SET_PO_NUM" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="6f74e042-6de5-49f4-9e76-c6b63b17eafd" ParentLink="ServiceBody_Statement" LowerBound="38.1" HigherBound="40.1">
+                    <om:Property Name="PortName" Value="Port_SET_PO_NUM" />
+                    <om:Property Name="MessageName" Value="SET_PO_NUM" />
+                    <om:Property Name="OperationName" Value="biz_PO_Set_PO_Number" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_PO_NUM" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Receive" OID="a2e20994-b8a7-4957-8750-ff43683eeaf4" ParentLink="ServiceBody_Statement" LowerBound="40.1" HigherBound="42.1">
+                    <om:Property Name="Activate" Value="False" />
+                    <om:Property Name="PortName" Value="Port_SET_PO_NUM" />
+                    <om:Property Name="MessageName" Value="SET_PO_NUM_RESULT" />
+                    <om:Property Name="OperationName" Value="biz_PO_Set_PO_Number" />
+                    <om:Property Name="OperationMessageName" Value="Response" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_PO_NUM_RESULT" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Terminate" OID="8c27c45a-f892-493a-aef4-af75d597a7e0" ParentLink="ServiceBody_Statement" LowerBound="42.1" HigherBound="44.1">
+                    <om:Property Name="ErrorMessage" Value="&quot;VisionFM has now stored the PO Number from SAP&quot;;" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Terminate_PO_Num_Import" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="a71f427c-2545-4857-8683-03c5d065d67b" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="21.1" HigherBound="23.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="16" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.Port_SET_PO_NUM_Type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_SET_PO_NUM" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="e90e89af-375f-4a59-9e77-b24766454e91" ParentLink="PortDeclaration_CLRAttribute" LowerBound="21.1" HigherBound="22.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="c4963554-a3b7-463b-9907-33fb3ffc029e" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="23.1" HigherBound="25.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.Port_Get_SAP_Outbound_PO_Type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_Get_SAP_Outbound_PO" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="67a06db1-5435-46ae-93ee-2182ea5aa801" ParentLink="PortDeclaration_CLRAttribute" LowerBound="23.1" HigherBound="24.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MFM.Lbg.Orcs
+{
+    internal porttype Port_SET_PO_NUM_Type
+    {
+        requestresponse biz_PO_Set_PO_Number
+        {
+            MFM.Lbg.Schemas.VFM_POTypedProcedure_dbo1.biz_PO_Set_PO_Number, MFM.Lbg.Schemas.VFM_POTypedProcedure_dbo1.biz_PO_Set_PO_NumberResponse
+        };
+    };
+    internal porttype Port_Get_SAP_Outbound_PO_Type
+    {
+        oneway Operation_1
+        {
+            MFM.Lbg.Schemas.ORDERS05_ZMM158ORDERS
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service o_IB_PO
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses Port_SET_PO_NUM_Type Port_SET_PO_NUM;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements Port_Get_SAP_Outbound_PO_Type Port_Get_SAP_Outbound_PO;
+        message MFM.Lbg.Schemas.ORDERS05_ZMM158ORDERS ZMM158ORDERS;
+        message MFM.Lbg.Schemas.VFM_POTypedProcedure_dbo1.biz_PO_Set_PO_Number SET_PO_NUM;
+        message MFM.Lbg.Schemas.VFM_POTypedProcedure_dbo1.biz_PO_Set_PO_NumberResponse SET_PO_NUM_RESULT;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("0e0119b2-314c-43a0-a577-a3c3fd83b3e1")]
+            activate receive (Port_Get_SAP_Outbound_PO.Operation_1, ZMM158ORDERS);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("caa46d7a-19a9-4ecd-8e80-d1afb6a791f2")]
+            construct SET_PO_NUM
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("5fcd8050-2b30-48cc-8be2-76f20f7732f1")]
+                transform (SET_PO_NUM) = MFM.Lbg.Orcs.map_to_SET_PO_NUM (ZMM158ORDERS);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("6f74e042-6de5-49f4-9e76-c6b63b17eafd")]
+            send (Port_SET_PO_NUM.biz_PO_Set_PO_Number, SET_PO_NUM);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("a2e20994-b8a7-4957-8750-ff43683eeaf4")]
+            receive (Port_SET_PO_NUM.biz_PO_Set_PO_Number, SET_PO_NUM_RESULT);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("8c27c45a-f892-493a-aef4-af75d597a7e0")]
+            terminate "VisionFM has now stored the PO Number from SAP";;
+        }
+    }
+}
+

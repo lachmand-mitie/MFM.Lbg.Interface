@@ -1,0 +1,310 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="ca30669f-a786-49e0-b4ec-b68395b6d52f" LowerBound="1.1" HigherBound="66.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MFM.Lbg.Orcs" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="ServiceDeclaration" OID="431e670b-0dc2-4fbf-8181-dbb482d25287" ParentLink="Module_ServiceDeclaration" LowerBound="4.1" HigherBound="65.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="o_Miami_Ws_Query_Loc" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="MessageDeclaration" OID="d7fa8d59-37db-44a2-b289-3f12ebb08a9b" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="9.1" HigherBound="10.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.MiamiSoapError" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MiamiSoapBuildingFriendly" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="2395b53f-fa0b-4b94-938b-fb652ac610b0" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="10.1" HigherBound="11.1">
+                <om:Property Name="Type" Value="BTS.soap_envelope_1__1.Fault" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Soap_Fault_BuildingCheck" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="8c6aec84-9db9-4847-a09f-b3a4dbafbe68" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="11.1" HigherBound="12.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.QueryMXVISIONLOCQUERYResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Ws_Response" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="3d29690f-519b-4168-a45e-8c91e5f6e8aa" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="12.1" HigherBound="13.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.QueryMXVISIONLOCQUERYRequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Ws_Request" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="ce3d4a08-eb10-4c8e-973b-80a3bad0b9c6" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageDeclaration" OID="7db02802-7bd0-4774-95d9-74a5a3cb286a" ParentLink="ServiceBody_Declaration" LowerBound="13.15" HigherBound="13.86">
+                    <om:Property Name="Type" Value="MFM.Lbg.Schemas.MiamiWsQueryLoc.MiamiWsQueryLocRequest" />
+                    <om:Property Name="ParamDirection" Value="In" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="QueryLoc" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="MessageDeclaration" OID="89e3997d-b5d1-4b8a-9202-d2ba6c64fb46" ParentLink="ServiceBody_Declaration" LowerBound="13.88" HigherBound="13.167">
+                    <om:Property Name="Type" Value="MFM.Lbg.Schemas.MiamiWsQueryLoc.MiamiWsQueryLocResponse" />
+                    <om:Property Name="ParamDirection" Value="Out" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="QueryResult" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="43816c99-15f2-4e17-8ae6-298cf570a8a3" ParentLink="ServiceBody_Statement" LowerBound="15.1" HigherBound="21.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Build_Ws_Request" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="9ebb7fba-f66e-4159-8b35-a5c98fba3b62" ParentLink="ComplexStatement_Statement" LowerBound="18.1" HigherBound="20.1">
+                        <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.Map_Miami_Ws_Loc_Query" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Map_Miami_Ws_Loc_Query" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="MessagePartRef" OID="d4494c64-23ca-4ac3-b9c2-d8e97ba048bd" ParentLink="Transform_InputMessagePartRef" LowerBound="19.90" HigherBound="19.98">
+                            <om:Property Name="MessageRef" Value="QueryLoc" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="4c7334c7-b334-4419-9c2c-6474b11d75a7" ParentLink="Transform_OutputMessagePartRef" LowerBound="19.28" HigherBound="19.49">
+                            <om:Property Name="MessageRef" Value="Ws_Request" />
+                            <om:Property Name="PartRef" Value="parameters" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="b9d0d2b4-3cd6-43af-bc0b-dc8fba040082" ParentLink="Construct_MessageRef" LowerBound="16.23" HigherBound="16.33">
+                        <om:Property Name="Ref" Value="Ws_Request" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Scope" OID="5493b139-08b7-4c7c-97df-cf06fe86bcbf" ParentLink="ServiceBody_Statement" LowerBound="21.1" HigherBound="63.1">
+                    <om:Property Name="InitializedTransactionType" Value="True" />
+                    <om:Property Name="IsSynchronized" Value="True" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Tx_QueryLocation" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Send" OID="e9c192d5-c7f4-4e55-b992-5d95a1ca1cff" ParentLink="ComplexStatement_Statement" LowerBound="26.1" HigherBound="28.1">
+                        <om:Property Name="PortName" Value="Miami_Ws_Query_Loc" />
+                        <om:Property Name="MessageName" Value="Ws_Request" />
+                        <om:Property Name="OperationName" Value="QueryMXVISIONLOCQUERY" />
+                        <om:Property Name="OperationMessageName" Value="Request" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Query_Loc" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="Receive" OID="4105ff2b-5278-47e0-9d8b-2e18417eaa0e" ParentLink="ComplexStatement_Statement" LowerBound="28.1" HigherBound="30.1">
+                        <om:Property Name="Activate" Value="False" />
+                        <om:Property Name="PortName" Value="Miami_Ws_Query_Loc" />
+                        <om:Property Name="MessageName" Value="Ws_Response" />
+                        <om:Property Name="OperationName" Value="QueryMXVISIONLOCQUERY" />
+                        <om:Property Name="OperationMessageName" Value="Response" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Ws_Response" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="Construct" OID="9e56296b-ce67-43f3-9f27-36b284847295" ParentLink="ComplexStatement_Statement" LowerBound="30.1" HigherBound="36.1">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Build_Loc_Result" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Transform" OID="1ba23746-1388-40bf-8971-a1c7315f7fe5" ParentLink="ComplexStatement_Statement" LowerBound="33.1" HigherBound="35.1">
+                            <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.Map_Loc_Query_Result" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Map_Loc_Query_Result" />
+                            <om:Property Name="Signal" Value="False" />
+                            <om:Element Type="MessagePartRef" OID="7462fcf8-ea06-42f1-8d99-427d014ab61d" ParentLink="Transform_InputMessagePartRef" LowerBound="34.86" HigherBound="34.108">
+                                <om:Property Name="MessageRef" Value="Ws_Response" />
+                                <om:Property Name="PartRef" Value="parameters" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="MessagePartReference_3" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="MessagePartRef" OID="a84624f1-d734-4f35-a211-28a51bde5158" ParentLink="Transform_OutputMessagePartRef" LowerBound="34.36" HigherBound="34.47">
+                                <om:Property Name="MessageRef" Value="QueryResult" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="MessagePartReference_4" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="MessageRef" OID="436c4ae8-8098-4c32-9d68-60df5debfa39" ParentLink="Construct_MessageRef" LowerBound="31.31" HigherBound="31.42">
+                            <om:Property Name="Ref" Value="QueryResult" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="Catch" OID="d8d779e9-a78f-4b67-9443-93feb0bf4b5c" ParentLink="Scope_Catch" LowerBound="39.1" HigherBound="61.1">
+                        <om:Property Name="ExceptionName" Value="SOAPFAULTEX" />
+                        <om:Property Name="ExceptionType" Value="Miami_Ws_Query_Loc.QueryMXVISIONLOCQUERY.SoapBuildingFault" />
+                        <om:Property Name="IsFaultMessage" Value="False" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Catch_Soap_Error" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Construct" OID="91fc3574-0176-4201-8660-34100620feab" ParentLink="Catch_Statement" LowerBound="42.1" HigherBound="48.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="ConstructBuildingFault" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="MessageAssignment" OID="46f58ef4-ef85-4e3c-bfcc-bbf60090fc38" ParentLink="ComplexStatement_Statement" LowerBound="45.1" HigherBound="47.1">
+                                <om:Property Name="Expression" Value="Soap_Fault_BuildingCheck = SOAPFAULTEX;" />
+                                <om:Property Name="ReportToAnalyst" Value="False" />
+                                <om:Property Name="Name" Value="AssignFault" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                            <om:Element Type="MessageRef" OID="0a32221c-bec5-4738-8832-980393b15b11" ParentLink="Construct_MessageRef" LowerBound="43.35" HigherBound="43.59">
+                                <om:Property Name="Ref" Value="Soap_Fault_BuildingCheck" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Construct" OID="958453fa-79a5-46b7-9c0c-8343ff3e1325" ParentLink="Catch_Statement" LowerBound="48.1" HigherBound="54.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="ConstructMessage_3" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="MessageRef" OID="cb13e451-bc76-4b2d-a0db-bd11d9eb5061" ParentLink="Construct_MessageRef" LowerBound="49.35" HigherBound="49.60">
+                                <om:Property Name="Ref" Value="MiamiSoapBuildingFriendly" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Transform" OID="21e15732-3dcb-4cad-9e56-441150ae3b42" ParentLink="ComplexStatement_Statement" LowerBound="51.1" HigherBound="53.1">
+                                <om:Property Name="ClassName" Value="MFM.Lbg.Maps.m_Soap_1_1_To_MiamiSoap_1_1" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="x_to_friendlysoap" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="MessagePartRef" OID="6e770803-e962-4a3c-be0f-9e2db839c181" ParentLink="Transform_OutputMessagePartRef" LowerBound="52.40" HigherBound="52.65">
+                                    <om:Property Name="MessageRef" Value="MiamiSoapBuildingFriendly" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_11" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="MessagePartRef" OID="bd01ad08-85a9-411b-bc25-aee1ac0992f4" ParentLink="Transform_InputMessagePartRef" LowerBound="52.111" HigherBound="52.135">
+                                    <om:Property Name="MessageRef" Value="Soap_Fault_BuildingCheck" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_10" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Construct" OID="4f9090da-049c-47b7-bd06-656ed53824ec" ParentLink="Catch_Statement" LowerBound="54.1" HigherBound="60.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Build_Query_Error_Result" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="MessageRef" OID="ca2665eb-e5d6-4671-8ff9-f1641daaca6f" ParentLink="Construct_MessageRef" LowerBound="55.35" HigherBound="55.46">
+                                <om:Property Name="Ref" Value="QueryResult" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Transform" OID="4de164fc-c3e2-49dd-a6e0-f7ce4d8600e1" ParentLink="ComplexStatement_Statement" LowerBound="57.1" HigherBound="59.1">
+                                <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.Loc_Err_Response" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Loc_Err_Response" />
+                                <om:Property Name="Signal" Value="False" />
+                                <om:Element Type="MessagePartRef" OID="22454c2c-28a2-4824-ba36-9bfedfe43573" ParentLink="Transform_InputMessagePartRef" LowerBound="58.86" HigherBound="58.111">
+                                    <om:Property Name="MessageRef" Value="MiamiSoapBuildingFriendly" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_5" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="MessagePartRef" OID="eaf618cc-ec67-4426-bb9a-0fd625f4a260" ParentLink="Transform_OutputMessagePartRef" LowerBound="58.40" HigherBound="58.51">
+                                    <om:Property Name="MessageRef" Value="QueryResult" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_6" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="8cd128e9-2932-4729-b145-b8ea91407640" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="7.1" HigherBound="9.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="16" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.MTFMVISIONFM_MTFMVISIONLOCQUERYPortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Miami_Ws_Query_Loc" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="f02fb56c-c30f-4a7a-acf0-83c2a6626b11" ParentLink="PortDeclaration_CLRAttribute" LowerBound="7.1" HigherBound="8.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MFM.Lbg.Orcs
+{
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service o_Miami_Ws_Query_Loc
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses MTFMVISIONFM_MTFMVISIONLOCQUERYPortType Miami_Ws_Query_Loc;
+        message MFM.Lbg.Schemas.MiamiSoapError MiamiSoapBuildingFriendly;
+        message BTS.soap_envelope_1__1.Fault Soap_Fault_BuildingCheck;
+        message QueryMXVISIONLOCQUERYResponse Ws_Response;
+        message QueryMXVISIONLOCQUERYRequest Ws_Request;
+        body (message MFM.Lbg.Schemas.MiamiWsQueryLoc.MiamiWsQueryLocRequest QueryLoc, out message MFM.Lbg.Schemas.MiamiWsQueryLoc.MiamiWsQueryLocResponse QueryResult)
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("43816c99-15f2-4e17-8ae6-298cf570a8a3")]
+            construct Ws_Request
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("9ebb7fba-f66e-4159-8b35-a5c98fba3b62")]
+                transform (Ws_Request.parameters) = MFM.Lbg.Orcs.Map_Miami_Ws_Loc_Query (QueryLoc);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("5493b139-08b7-4c7c-97df-cf06fe86bcbf")]
+            scope synchronized
+            {
+                body
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("e9c192d5-c7f4-4e55-b992-5d95a1ca1cff")]
+                    send (Miami_Ws_Query_Loc.QueryMXVISIONLOCQUERY, Ws_Request);
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("4105ff2b-5278-47e0-9d8b-2e18417eaa0e")]
+                    receive (Miami_Ws_Query_Loc.QueryMXVISIONLOCQUERY, Ws_Response);
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("9e56296b-ce67-43f3-9f27-36b284847295")]
+                    construct QueryResult
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("1ba23746-1388-40bf-8971-a1c7315f7fe5")]
+                        transform (QueryResult) = MFM.Lbg.Orcs.Map_Loc_Query_Result (Ws_Response.parameters);
+                    }
+                }
+                exceptions
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("d8d779e9-a78f-4b67-9443-93feb0bf4b5c")]
+                    catch (Miami_Ws_Query_Loc.QueryMXVISIONLOCQUERY.SoapBuildingFault SOAPFAULTEX)
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("91fc3574-0176-4201-8660-34100620feab")]
+                        construct Soap_Fault_BuildingCheck
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("46f58ef4-ef85-4e3c-bfcc-bbf60090fc38")]
+                            Soap_Fault_BuildingCheck = SOAPFAULTEX;
+                        }
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("958453fa-79a5-46b7-9c0c-8343ff3e1325")]
+                        construct MiamiSoapBuildingFriendly
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("21e15732-3dcb-4cad-9e56-441150ae3b42")]
+                            transform (MiamiSoapBuildingFriendly) = MFM.Lbg.Maps.m_Soap_1_1_To_MiamiSoap_1_1 (Soap_Fault_BuildingCheck);
+                        }
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("4f9090da-049c-47b7-bd06-656ed53824ec")]
+                        construct QueryResult
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("4de164fc-c3e2-49dd-a6e0-f7ce4d8600e1")]
+                            transform (QueryResult) = MFM.Lbg.Orcs.Loc_Err_Response (MiamiSoapBuildingFriendly);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

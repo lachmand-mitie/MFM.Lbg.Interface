@@ -1,0 +1,632 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="53cfa7ae-f83b-4793-b10f-0bb6a2282ae1" LowerBound="1.1" HigherBound="166.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MFM.Lbg.Orcs" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="ServiceDeclaration" OID="372e8971-922b-48ed-bd5f-cdb8abcb52ed" ParentLink="Module_ServiceDeclaration" LowerBound="18.1" HigherBound="165.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="o_Rr_AddUpdate" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="9213b1ff-496e-4068-9deb-7701fda09318" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="32.1" HigherBound="33.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="AlertPara1" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="2fa36aad-6c18-45cd-931f-e9fbdbb8531d" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="33.1" HigherBound="34.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="AlertSubject" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="23a4b1ed-f82c-48e7-8b49-423e93fb7355" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="34.1" HigherBound="35.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="AlertBcc" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="6fac614a-c278-41ea-994d-b943b92311e7" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="35.1" HigherBound="36.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="MFM.Lbg.Helper.Misc" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SoapHelper" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="136c2300-e63b-4b77-b74b-786842d962ef" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="36.1" HigherBound="37.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="updStatus" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="b40ec926-9e31-4959-97d1-d1b21f421461" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="37.1" HigherBound="38.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="updRrWonum" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="815a8ace-2aec-41c1-8934-ce3d2ed82645" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="38.1" HigherBound="39.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="AlertTo" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="68f42c00-bc36-4500-a071-f3dce3fc5394" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="39.1" HigherBound="40.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="AlertXmlMsg" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="94aad0f0-67ce-4c02-af4e-77afb243987f" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="40.1" HigherBound="41.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Attachment" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="90e8ebe7-0545-4619-84e3-3663f93bdcd4" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="26.1" HigherBound="27.1">
+                <om:Property Name="Type" Value="MSS.Notification.Service.MSSNotifyEmail" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="NotifySoapAlert" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="67194baa-1363-4a1f-b96b-f03fea36bed1" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="27.1" HigherBound="28.1">
+                <om:Property Name="Type" Value="MSS.Notification.Service.MSSNotifyEmail" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="NotifyEmailParent" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="80acf1ce-660f-42a2-b25d-8e8b0c3eedb0" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="28.1" HigherBound="29.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.MSSWebServiceAlertEmail" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SOAPAlertEmail" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="16c49fe2-e4df-481d-8c27-c6b2cb13b89b" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="29.1" HigherBound="30.1">
+                <om:Property Name="Type" Value="MTFM.Maximo.RR.UpdateRRMIAMIWOUPDATERequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Rr_Update_Wo_Request_Copy" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="45c8fbc6-0a0a-40df-ae8e-a2b8c65c2d8a" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="30.1" HigherBound="31.1">
+                <om:Property Name="Type" Value="MTFM.Maximo.RR.UpdateRRMIAMIWOUPDATEResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Rr_Update_Wo_Response" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="fac163ee-02cf-448b-9c48-92b69e1da070" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="31.1" HigherBound="32.1">
+                <om:Property Name="Type" Value="BTS.soap_envelope_1__2.Fault" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="RR_UPD_Fault" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="dd082a2e-462d-470a-a0e1-461639c1605f" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageDeclaration" OID="315cd14e-6410-425f-86b5-29de8becab3e" ParentLink="ServiceBody_Declaration" LowerBound="41.15" HigherBound="41.87">
+                    <om:Property Name="Type" Value="MTFM.Maximo.RR.UpdateRRMIAMIWOUPDATERequest" />
+                    <om:Property Name="ParamDirection" Value="In" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Rr_Update_Wo_Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableDeclaration" OID="af424080-74e0-4b8a-93f7-b73f3f69aac7" ParentLink="ServiceBody_Declaration" LowerBound="41.89" HigherBound="41.120">
+                    <om:Property Name="InitialValue" Value="true" />
+                    <om:Property Name="UseDefaultConstructor" Value="False" />
+                    <om:Property Name="Type" Value="System.Boolean" />
+                    <om:Property Name="ParamDirection" Value="Out" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="RequestRetry" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="58647689-4fd2-4e97-9906-2699fba0f3a7" ParentLink="ServiceBody_Statement" LowerBound="52.1" HigherBound="55.1">
+                    <om:Property Name="Expression" Value="updStatus = xpath(Rr_Update_Wo_Request.parameters, &quot;string(/*[local-name()='UpdateRRMIAMIWOUPDATE' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='RRMIAMIWOUPDATESet' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='WORKORDER' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='STATUS' and namespace-uri()='http://www.ibm.com/maximo'])&quot;);&#xD;&#xA;updRrWonum = xpath(Rr_Update_Wo_Request.parameters,&quot;string(/*[local-name()='UpdateRRMIAMIWOUPDATE' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='RRMIAMIWOUPDATESet' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='WORKORDER' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='WONUM' and namespace-uri()='http://www.ibm.com/maximo'])&quot;);" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="GET MESSAGE VARIABLES" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="c81b0d8a-92c2-4d7a-a191-302b08f38dd6" ParentLink="ServiceBody_Statement" LowerBound="55.1" HigherBound="57.1">
+                    <om:Property Name="Expression" Value="RequestRetry = false;" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Initiate Retry Behaviour" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="Construct" OID="a0ad8cec-38c5-4386-888c-a6e127134a31" ParentLink="ServiceBody_Statement" LowerBound="57.1" HigherBound="64.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Construct_Request_Copy" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageAssignment" OID="1329b1fb-5d54-47d7-8d7f-80a335691681" ParentLink="ComplexStatement_Statement" LowerBound="60.1" HigherBound="63.1">
+                        <om:Property Name="Expression" Value="Rr_Update_Wo_Request_Copy = Rr_Update_Wo_Request;&#xD;&#xA;Rr_Update_Wo_Request_Copy(FILE.ReceivedFileName) = System.String.Format(&quot;RRMIAMIWOUPDATE_REQUEST_{0}_{1}_{2}.xml&quot;,updRrWonum,updStatus,System.DateTime.Now.ToString(&quot;yyyyMMddTHHmmss.ffff&quot;));" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="Assign_Copy" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="6b88a430-e9cc-41a3-979b-df85f3f22a26" ParentLink="Construct_MessageRef" LowerBound="58.23" HigherBound="58.48">
+                        <om:Property Name="Ref" Value="Rr_Update_Wo_Request_Copy" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Scope" OID="343b6a5f-91cb-4670-868b-9b68f041278e" ParentLink="ServiceBody_Statement" LowerBound="64.1" HigherBound="163.1">
+                    <om:Property Name="InitializedTransactionType" Value="True" />
+                    <om:Property Name="IsSynchronized" Value="False" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Scope_1" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="VariableDeclaration" OID="324d90bb-7c27-4f3b-b812-250e6fad61c0" ParentLink="Scope_VariableDeclaration" LowerBound="67.1" HigherBound="68.1">
+                        <om:Property Name="UseDefaultConstructor" Value="True" />
+                        <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                        <om:Property Name="ParamDirection" Value="In" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="XmlObj" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="Send" OID="5949b62f-be97-49d0-8575-7c7c33724e0c" ParentLink="ComplexStatement_Statement" LowerBound="71.1" HigherBound="73.1">
+                        <om:Property Name="PortName" Value="RR_UpdateWo" />
+                        <om:Property Name="MessageName" Value="Rr_Update_Wo_Request_Copy" />
+                        <om:Property Name="OperationName" Value="UpdateRRMIAMIWOUPDATE" />
+                        <om:Property Name="OperationMessageName" Value="request" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Submit Rr Update" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="Receive" OID="e4123116-15a9-4c77-95c3-2df38fe3023b" ParentLink="ComplexStatement_Statement" LowerBound="73.1" HigherBound="75.1">
+                        <om:Property Name="Activate" Value="False" />
+                        <om:Property Name="PortName" Value="RR_UpdateWo" />
+                        <om:Property Name="MessageName" Value="Rr_Update_Wo_Response" />
+                        <om:Property Name="OperationName" Value="UpdateRRMIAMIWOUPDATE" />
+                        <om:Property Name="OperationMessageName" Value="response" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Ws Response" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="VariableAssignment" OID="3b2f10de-a91d-464b-ad54-923556437e84" ParentLink="ComplexStatement_Statement" LowerBound="75.1" HigherBound="77.1">
+                        <om:Property Name="Expression" Value="RequestRetry = false;" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="WS was consumed" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="Catch" OID="f5573099-a85b-4d31-8b35-e7c0cc892122" ParentLink="Scope_Catch" LowerBound="80.1" HigherBound="161.1">
+                        <om:Property Name="ExceptionName" Value="RR_UPD_SOAP" />
+                        <om:Property Name="ExceptionType" Value="RR_UpdateWo.UpdateRRMIAMIWOUPDATE.Fault_1" />
+                        <om:Property Name="IsFaultMessage" Value="False" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Catch_SOAP" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Construct" OID="0be1f687-9654-40e0-bd87-fd6129173a6f" ParentLink="Catch_Statement" LowerBound="83.1" HigherBound="90.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Soap_Fault" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="MessageRef" OID="06507a50-c6aa-4835-9808-6acc13a9e86d" ParentLink="Construct_MessageRef" LowerBound="84.35" HigherBound="84.47">
+                                <om:Property Name="Ref" Value="RR_UPD_Fault" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="MessageAssignment" OID="c5fd5bc2-2ba4-4936-a0b0-c1bf5120d8c9" ParentLink="ComplexStatement_Statement" LowerBound="86.1" HigherBound="89.1">
+                                <om:Property Name="Expression" Value="RR_UPD_Fault = RR_UPD_SOAP;&#xD;&#xA;RR_UPD_Fault(FILE.ReceivedFileName) = System.String.Format(&quot;{0}_{1}&quot;,updRrWonum,updStatus);" />
+                                <om:Property Name="ReportToAnalyst" Value="False" />
+                                <om:Property Name="Name" Value="MessageAssignment_1" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="VariableAssignment" OID="9c414452-918a-478f-bc39-9717c2b97020" ParentLink="Catch_Statement" LowerBound="90.1" HigherBound="93.1">
+                            <om:Property Name="Expression" Value="XmlObj = RR_UPD_Fault;&#xD;&#xA;RequestRetry = SoapHelper.ApacheWsNotAvailable(RR_UPD_Fault);" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Skip Retry if Data Issue" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="Task" OID="e6523581-f162-4f35-83bb-cbda210fb0c9" ParentLink="Catch_Statement" LowerBound="93.1" HigherBound="160.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Retry Message" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Decision" OID="3bb1c120-6797-4704-bcd0-4ed267865ae8" ParentLink="ComplexStatement_Statement" LowerBound="93.1" HigherBound="136.1">
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Set Retry Email" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="DecisionBranch" OID="a9d605e6-c45d-4566-a79e-83328b535735" ParentLink="ReallyComplexStatement_Branch" LowerBound="94.25" HigherBound="106.1">
+                                    <om:Property Name="Expression" Value="RequestRetry == true" />
+                                    <om:Property Name="IsGhostBranch" Value="True" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="AnalystComments" Value="Web service is NOT available (method returned true).  This message must be retried" />
+                                    <om:Property Name="Name" Value="Yes" />
+                                    <om:Property Name="Signal" Value="False" />
+                                    <om:Element Type="VariableAssignment" OID="91ca6589-4f3a-4c1d-accf-86be37b45a7c" ParentLink="ComplexStatement_Statement" LowerBound="96.1" HigherBound="105.1">
+                                        <om:Property Name="Expression" Value="AlertTo = &quot;tony.arrighi@mitie.com&quot;;&#xD;&#xA;AlertBcc = &quot;&quot;;&#xD;&#xA;AlertSubject = &quot;RRMIAMIWOUPDATE (1TEAM MAXIMO) Error &quot; + updRrWonum;&#xD;&#xA;AlertPara1 = &quot;The 1TEAM inbound workorder update interface refused an update from MiAMI: The web service is reporting unavailable\r\n&quot;;&#xD;&#xA;AlertPara1 = AlertPara1 + &quot;Type: SOAP Web Service\r\n&quot;;&#xD;&#xA;AlertPara1 = AlertPara1 + System.String.Format(&quot;Workorder number: {0}\r\n&quot;,updRrWonum);&#xD;&#xA;AlertPara1 = AlertPara1 + &quot;The update will be resubmitted automatically&quot;;&#xD;&#xA;AlertPara1 = AlertPara1 + &quot;see error details below.\r\n&quot;;" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="AnalystComments" Value="The web service WAS available, error may be supported - check with lookup below." />
+                                        <om:Property Name="Name" Value="Setup Email for retry (WS)" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                </om:Element>
+                                <om:Element Type="DecisionBranch" OID="c46461d7-842d-41e0-a94b-af3d7cc9e146" ParentLink="ReallyComplexStatement_Branch">
+                                    <om:Property Name="IsGhostBranch" Value="True" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Else" />
+                                    <om:Property Name="Signal" Value="False" />
+                                    <om:Element Type="VariableAssignment" OID="7369fa8d-3c5a-429f-864d-a70ad677865d" ParentLink="ComplexStatement_Statement" LowerBound="108.1" HigherBound="110.1">
+                                        <om:Property Name="Expression" Value="RequestRetry = SoapHelper.RetryOnErrors(RR_UPD_Fault);" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="AnalystComments" Value="Lookup allowed errors, return true if to be retired or false if not to be retrieed/suspended" />
+                                        <om:Property Name="Name" Value="Test Maximo Error" />
+                                        <om:Property Name="Signal" Value="True" />
+                                    </om:Element>
+                                    <om:Element Type="Decision" OID="9a95935c-a509-444d-8e2f-3391e2cf6247" ParentLink="ComplexStatement_Statement" LowerBound="110.1" HigherBound="135.1">
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="Decide_1" />
+                                        <om:Property Name="Signal" Value="False" />
+                                        <om:Element Type="DecisionBranch" OID="d07475fd-0f87-4bd1-ae09-cfb32d4e6717" ParentLink="ReallyComplexStatement_Branch" LowerBound="111.29" HigherBound="123.1">
+                                            <om:Property Name="Expression" Value="RequestRetry == true" />
+                                            <om:Property Name="IsGhostBranch" Value="True" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="AnalystComments" Value="Erro code was identified in allowed list, set for a retry alert" />
+                                            <om:Property Name="Name" Value="Yes" />
+                                            <om:Property Name="Signal" Value="False" />
+                                            <om:Element Type="VariableAssignment" OID="b465db15-adf6-4e8a-8e0c-4d7da9a96461" ParentLink="ComplexStatement_Statement" LowerBound="113.1" HigherBound="122.1">
+                                                <om:Property Name="Expression" Value="AlertTo = &quot;tony.arrighi@mitie.com&quot;;&#xD;&#xA;AlertBcc = &quot;&quot;;&#xD;&#xA;AlertSubject = &quot;RRMIAMIWOUPDATE (1TEAM MAXIMO) Error &quot; + updRrWonum;&#xD;&#xA;AlertPara1 = &quot;The 1TEAM inbound workorder update interface refused an update from MiAMI: The error was in the allowed list\r\n&quot;;&#xD;&#xA;AlertPara1 = AlertPara1 + &quot;Type: SOAP Web Service\r\n&quot;;&#xD;&#xA;AlertPara1 = AlertPara1 + System.String.Format(&quot;Workorder number: {0}\r\n&quot;,updRrWonum);&#xD;&#xA;AlertPara1 = AlertPara1 + &quot;The update will be resubmitted automatically&quot;;&#xD;&#xA;AlertPara1 = AlertPara1 + &quot;see error details below.\r\n&quot;;" />
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="AnalystComments" Value="WS was not available, issue may be temporary, lets retry it - result was true" />
+                                                <om:Property Name="Name" Value="Setup Email for retry (WS)" />
+                                                <om:Property Name="Signal" Value="True" />
+                                            </om:Element>
+                                        </om:Element>
+                                        <om:Element Type="DecisionBranch" OID="4951d355-6b16-4f45-938f-e8522de0cf0c" ParentLink="ReallyComplexStatement_Branch">
+                                            <om:Property Name="IsGhostBranch" Value="True" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="Else" />
+                                            <om:Property Name="Signal" Value="False" />
+                                            <om:Element Type="VariableAssignment" OID="b497e416-766c-490e-8b79-5eadcd6da27e" ParentLink="ComplexStatement_Statement" LowerBound="125.1" HigherBound="134.1">
+                                                <om:Property Name="Expression" Value="AlertTo = SoapHelper.rrSupportEmail(&quot;1TEAM&quot;);&#xD;&#xA;AlertBcc = &quot;&quot;;&#xD;&#xA;AlertSubject = &quot;RRMIAMIWOUPDATE (1TEAM MAXIMO) Error &quot; + updRrWonum;&#xD;&#xA;AlertPara1 = &quot;The 1TEAM inbound workorder update interface refused an update from MiAMI and the error is NOT in the supported list.\r\nThe error code is not supported for retries.\r\n&quot;;&#xD;&#xA;AlertPara1 = AlertPara1 + &quot;Type: SOAP Web Service\r\n&quot;;&#xD;&#xA;AlertPara1 = AlertPara1 + System.String.Format(&quot;Workorder number: {0}\r\n&quot;,updRrWonum);&#xD;&#xA;AlertPara1 = AlertPara1 + &quot;The update will NOT be resubmitted automatically - &quot;;&#xD;&#xA;AlertPara1 = AlertPara1 + &quot;see error details below.\r\n&quot;;" />
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="Name" Value="Setup Email No Retry" />
+                                                <om:Property Name="Signal" Value="True" />
+                                            </om:Element>
+                                        </om:Element>
+                                    </om:Element>
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="Construct" OID="b86dd4e1-a928-40d0-9ac7-364feb008fbd" ParentLink="ComplexStatement_Statement" LowerBound="136.1" HigherBound="142.1">
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="ConstructAlert" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="MessageRef" OID="f354f5aa-7f37-4a98-9c3a-5fcfd6fd1011" ParentLink="Construct_MessageRef" LowerBound="137.35" HigherBound="137.49">
+                                    <om:Property Name="Ref" Value="SOAPAlertEmail" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="MessageAssignment" OID="fe42eb83-c2cf-4968-96de-9587d562b7da" ParentLink="ComplexStatement_Statement" LowerBound="139.1" HigherBound="141.1">
+                                    <om:Property Name="Expression" Value="SOAPAlertEmail = SoapHelper.GetMssWebServiceEmailAlert(AlertTo,&quot;&quot;,&quot;&quot;,AlertSubject,AlertPara1,RR_UPD_Fault);" />
+                                    <om:Property Name="ReportToAnalyst" Value="False" />
+                                    <om:Property Name="Name" Value="MessageAssignment_2" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="VariableAssignment" OID="db849d62-3067-44c4-93c8-30715d6f32c4" ParentLink="ComplexStatement_Statement" LowerBound="142.1" HigherBound="144.1">
+                                <om:Property Name="Expression" Value="Attachment = Rr_Update_Wo_Request.parameters;" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="GetAttchment" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Construct" OID="6a2996e8-5737-4ac4-8c6a-a9e30bea2494" ParentLink="ComplexStatement_Statement" LowerBound="144.1" HigherBound="150.1">
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Constructt_Notify" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="MessageRef" OID="40d38a9b-ba88-4d5f-bcc1-3b91292c78db" ParentLink="Construct_MessageRef" LowerBound="145.35" HigherBound="145.52">
+                                    <om:Property Name="Ref" Value="NotifyEmailParent" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="Transform" OID="b392cd4f-00d5-4085-82c9-761d9bf661ac" ParentLink="ComplexStatement_Statement" LowerBound="147.1" HigherBound="149.1">
+                                    <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.LegacyWsEmail_To_NotifyEMail" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="LegacyWsEmail_To_NotifyEMail" />
+                                    <om:Property Name="Signal" Value="False" />
+                                    <om:Element Type="MessagePartRef" OID="eaa54e03-30db-49e1-8692-165830d66ed1" ParentLink="Transform_InputMessagePartRef" LowerBound="148.104" HigherBound="148.118">
+                                        <om:Property Name="MessageRef" Value="SOAPAlertEmail" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="MessagePartReference_1" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                    <om:Element Type="MessagePartRef" OID="70ca4fec-926d-46cd-8930-28cb072a4fa8" ParentLink="Transform_OutputMessagePartRef" LowerBound="148.40" HigherBound="148.57">
+                                        <om:Property Name="MessageRef" Value="NotifyEmailParent" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="MessagePartReference_2" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="Construct" OID="0dfdd15e-537d-40c0-a854-093ceb10786c" ParentLink="ComplexStatement_Statement" LowerBound="150.1" HigherBound="158.1">
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="ConstructMessage_1" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="MessageAssignment" OID="7f88bdbd-9b29-4b3d-82b9-6cbdf56bfda8" ParentLink="ComplexStatement_Statement" LowerBound="153.1" HigherBound="157.1">
+                                    <om:Property Name="Expression" Value="NotifySoapAlert = NotifyEmailParent;&#xD;&#xA;xpath(NotifySoapAlert,&quot;/*[local-name()='MSSNotifyEmail' and namespace-uri()='http://MSS.Notification.Service.NotifyEmail/v1']/*[local-name()='Attachments' and namespace-uri()='']/*[local-name()='Attachment' and namespace-uri()='']/*[local-name()='AttachmentName' and namespace-uri()='']&quot;) = Rr_Update_Wo_Request_Copy(FILE.ReceivedFileName) + &quot;.xml&quot;;&#xD;&#xA;xpath(NotifySoapAlert,&quot;/*[local-name()='MSSNotifyEmail' and namespace-uri()='http://MSS.Notification.Service.NotifyEmail/v1']/*[local-name()='Attachments' and namespace-uri()='']/*[local-name()='Attachment' and namespace-uri()='']/*[local-name()='Base64String' and namespace-uri()='']&quot;) = MFM.Lbg.Helper.Misc.XmlDocToBase64String(Attachment);" />
+                                    <om:Property Name="ReportToAnalyst" Value="False" />
+                                    <om:Property Name="Name" Value="MessageAssignment_3" />
+                                    <om:Property Name="Signal" Value="True" />
+                                </om:Element>
+                                <om:Element Type="MessageRef" OID="b85d2457-9721-4eb3-ac95-3e40d2db13c8" ParentLink="Construct_MessageRef" LowerBound="151.35" HigherBound="151.50">
+                                    <om:Property Name="Ref" Value="NotifySoapAlert" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="Send" OID="81aa6b52-f331-44d5-b7a7-7f09f293eecd" ParentLink="ComplexStatement_Statement" LowerBound="158.1" HigherBound="160.1">
+                                <om:Property Name="PortName" Value="PublishSoapErrorRR" />
+                                <om:Property Name="MessageName" Value="NotifySoapAlert" />
+                                <om:Property Name="OperationName" Value="Operation_1" />
+                                <om:Property Name="OperationMessageName" Value="Request" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Send_1" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="5ebdc20f-8b32-4260-95b0-3f124198b123" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="21.1" HigherBound="24.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="28" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="Transmitted" />
+                <om:Property Name="Type" Value="MTFM.Maximo.RR.RRMIAMI_RRMIAMIWOUPDATEIFACEPortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="RR_UpdateWo" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="LogicalBindingAttribute" OID="9ffd842d-33ec-4a34-b422-4c3075abe3e8" ParentLink="PortDeclaration_CLRAttribute" LowerBound="21.1" HigherBound="22.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="3cd23e8c-c800-4988-a7a7-619531a40365" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="24.1" HigherBound="26.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="136" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.PublishSoapErrorRRType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PublishSoapErrorRR" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="DirectBindingAttribute" OID="ca025ba3-5e60-4605-925b-74bf18ca13fc" ParentLink="PortDeclaration_CLRAttribute" LowerBound="24.1" HigherBound="25.1">
+                    <om:Property Name="DirectBindingType" Value="MessageBox" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="b7a09ab4-666e-40eb-ad94-b75bd24196da" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Send_Soap_Fault_Email_Type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="2763e3f8-40e6-473d-9e1e-217f05c62871" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="c89ab78b-1c69-4ef3-9b56-bbf1371d6d85" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.41">
+                    <om:Property Name="Ref" Value="BTS.soap_envelope_1__2.Fault" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="9573d638-cfe1-42f5-ba9b-e12f36d471d1" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PublishSoapErrorRRType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="94137830-3764-4111-9ed5-116fe30bcbef" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="e12c9ddd-b6f1-4879-9140-4ad9f45266f7" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.52">
+                    <om:Property Name="Ref" Value="MSS.Notification.Service.MSSNotifyEmail" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MFM.Lbg.Orcs
+{
+    internal porttype Send_Soap_Fault_Email_Type
+    {
+        oneway Operation_1
+        {
+            BTS.soap_envelope_1__2.Fault
+        };
+    };
+    internal porttype PublishSoapErrorRRType
+    {
+        oneway Operation_1
+        {
+            MSS.Notification.Service.MSSNotifyEmail
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service o_Rr_AddUpdate
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        [Microsoft.XLANGs.BaseTypes.DeliveryNotification(Microsoft.XLANGs.BaseTypes.DeliveryNotification.NotificationLevel.Transmitted)]
+        port uses MTFM.Maximo.RR.RRMIAMI_RRMIAMIWOUPDATEIFACEPortType RR_UpdateWo;
+        [Microsoft.XLANGs.BaseTypes.DirectBinding()]
+        port uses PublishSoapErrorRRType PublishSoapErrorRR;
+        message MSS.Notification.Service.MSSNotifyEmail NotifySoapAlert;
+        message MSS.Notification.Service.MSSNotifyEmail NotifyEmailParent;
+        message MFM.Lbg.Schemas.MSSWebServiceAlertEmail SOAPAlertEmail;
+        message MTFM.Maximo.RR.UpdateRRMIAMIWOUPDATERequest Rr_Update_Wo_Request_Copy;
+        message MTFM.Maximo.RR.UpdateRRMIAMIWOUPDATEResponse Rr_Update_Wo_Response;
+        message BTS.soap_envelope_1__2.Fault RR_UPD_Fault;
+        System.String AlertPara1;
+        System.String AlertSubject;
+        System.String AlertBcc;
+        MFM.Lbg.Helper.Misc SoapHelper;
+        System.String updStatus;
+        System.String updRrWonum;
+        System.String AlertTo;
+        System.Xml.XmlDocument AlertXmlMsg;
+        System.Xml.XmlDocument Attachment;
+        body (message MTFM.Maximo.RR.UpdateRRMIAMIWOUPDATERequest Rr_Update_Wo_Request, out System.Boolean RequestRetry)
+        {
+            AlertPara1 = "";
+            AlertSubject = "";
+            AlertBcc = "";
+            SoapHelper = new MFM.Lbg.Helper.Misc();
+            updStatus = "";
+            updRrWonum = "";
+            AlertTo = "";
+            AlertXmlMsg = new System.Xml.XmlDocument();
+            Attachment = new System.Xml.XmlDocument();
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("58647689-4fd2-4e97-9906-2699fba0f3a7")]
+            updStatus = xpath(Rr_Update_Wo_Request.parameters, "string(/*[local-name()='UpdateRRMIAMIWOUPDATE' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='RRMIAMIWOUPDATESet' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='WORKORDER' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='STATUS' and namespace-uri()='http://www.ibm.com/maximo'])");
+            updRrWonum = xpath(Rr_Update_Wo_Request.parameters,"string(/*[local-name()='UpdateRRMIAMIWOUPDATE' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='RRMIAMIWOUPDATESet' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='WORKORDER' and namespace-uri()='http://www.ibm.com/maximo']/*[local-name()='WONUM' and namespace-uri()='http://www.ibm.com/maximo'])");
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("c81b0d8a-92c2-4d7a-a191-302b08f38dd6")]
+            RequestRetry = false;
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("a0ad8cec-38c5-4386-888c-a6e127134a31")]
+            construct Rr_Update_Wo_Request_Copy
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("1329b1fb-5d54-47d7-8d7f-80a335691681")]
+                Rr_Update_Wo_Request_Copy = Rr_Update_Wo_Request;
+                Rr_Update_Wo_Request_Copy(FILE.ReceivedFileName) = System.String.Format("RRMIAMIWOUPDATE_REQUEST_{0}_{1}_{2}.xml",updRrWonum,updStatus,System.DateTime.Now.ToString("yyyyMMddTHHmmss.ffff"));
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("343b6a5f-91cb-4670-868b-9b68f041278e")]
+            scope
+            {
+                System.Xml.XmlDocument XmlObj;
+                body
+                {
+                    XmlObj = new System.Xml.XmlDocument();
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("5949b62f-be97-49d0-8575-7c7c33724e0c")]
+                    send (RR_UpdateWo.UpdateRRMIAMIWOUPDATE, Rr_Update_Wo_Request_Copy);
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("e4123116-15a9-4c77-95c3-2df38fe3023b")]
+                    receive (RR_UpdateWo.UpdateRRMIAMIWOUPDATE, Rr_Update_Wo_Response);
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("3b2f10de-a91d-464b-ad54-923556437e84")]
+                    RequestRetry = false;
+                }
+                exceptions
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("f5573099-a85b-4d31-8b35-e7c0cc892122")]
+                    catch (RR_UpdateWo.UpdateRRMIAMIWOUPDATE.Fault_1 RR_UPD_SOAP)
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("0be1f687-9654-40e0-bd87-fd6129173a6f")]
+                        construct RR_UPD_Fault
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("c5fd5bc2-2ba4-4936-a0b0-c1bf5120d8c9")]
+                            RR_UPD_Fault = RR_UPD_SOAP;
+                            RR_UPD_Fault(FILE.ReceivedFileName) = System.String.Format("{0}_{1}",updRrWonum,updStatus);
+                        }
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("9c414452-918a-478f-bc39-9717c2b97020")]
+                        XmlObj = RR_UPD_Fault;
+                        RequestRetry = SoapHelper.ApacheWsNotAvailable(RR_UPD_Fault);
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("3bb1c120-6797-4704-bcd0-4ed267865ae8")]
+                        if (RequestRetry == true)
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("91ca6589-4f3a-4c1d-accf-86be37b45a7c")]
+                            AlertTo = "tony.arrighi@mitie.com";
+                            AlertBcc = "";
+                            AlertSubject = "RRMIAMIWOUPDATE (1TEAM MAXIMO) Error " + updRrWonum;
+                            AlertPara1 = "The 1TEAM inbound workorder update interface refused an update from MiAMI: The web service is reporting unavailable\r\n";
+                            AlertPara1 = AlertPara1 + "Type: SOAP Web Service\r\n";
+                            AlertPara1 = AlertPara1 + System.String.Format("Workorder number: {0}\r\n",updRrWonum);
+                            AlertPara1 = AlertPara1 + "The update will be resubmitted automatically";
+                            AlertPara1 = AlertPara1 + "see error details below.\r\n";
+                        }
+                        else 
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("7369fa8d-3c5a-429f-864d-a70ad677865d")]
+                            RequestRetry = SoapHelper.RetryOnErrors(RR_UPD_Fault);
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("9a95935c-a509-444d-8e2f-3391e2cf6247")]
+                            if (RequestRetry == true)
+                            {
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("b465db15-adf6-4e8a-8e0c-4d7da9a96461")]
+                                AlertTo = "tony.arrighi@mitie.com";
+                                AlertBcc = "";
+                                AlertSubject = "RRMIAMIWOUPDATE (1TEAM MAXIMO) Error " + updRrWonum;
+                                AlertPara1 = "The 1TEAM inbound workorder update interface refused an update from MiAMI: The error was in the allowed list\r\n";
+                                AlertPara1 = AlertPara1 + "Type: SOAP Web Service\r\n";
+                                AlertPara1 = AlertPara1 + System.String.Format("Workorder number: {0}\r\n",updRrWonum);
+                                AlertPara1 = AlertPara1 + "The update will be resubmitted automatically";
+                                AlertPara1 = AlertPara1 + "see error details below.\r\n";
+                            }
+                            else 
+                            {
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("b497e416-766c-490e-8b79-5eadcd6da27e")]
+                                AlertTo = SoapHelper.rrSupportEmail("1TEAM");
+                                AlertBcc = "";
+                                AlertSubject = "RRMIAMIWOUPDATE (1TEAM MAXIMO) Error " + updRrWonum;
+                                AlertPara1 = "The 1TEAM inbound workorder update interface refused an update from MiAMI and the error is NOT in the supported list.\r\nThe error code is not supported for retries.\r\n";
+                                AlertPara1 = AlertPara1 + "Type: SOAP Web Service\r\n";
+                                AlertPara1 = AlertPara1 + System.String.Format("Workorder number: {0}\r\n",updRrWonum);
+                                AlertPara1 = AlertPara1 + "The update will NOT be resubmitted automatically - ";
+                                AlertPara1 = AlertPara1 + "see error details below.\r\n";
+                            }
+                        }
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("b86dd4e1-a928-40d0-9ac7-364feb008fbd")]
+                        construct SOAPAlertEmail
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("fe42eb83-c2cf-4968-96de-9587d562b7da")]
+                            SOAPAlertEmail = SoapHelper.GetMssWebServiceEmailAlert(AlertTo,"","",AlertSubject,AlertPara1,RR_UPD_Fault);
+                        }
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("db849d62-3067-44c4-93c8-30715d6f32c4")]
+                        Attachment = Rr_Update_Wo_Request.parameters;
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("6a2996e8-5737-4ac4-8c6a-a9e30bea2494")]
+                        construct NotifyEmailParent
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("b392cd4f-00d5-4085-82c9-761d9bf661ac")]
+                            transform (NotifyEmailParent) = MFM.Lbg.Orcs.LegacyWsEmail_To_NotifyEMail (SOAPAlertEmail);
+                        }
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("0dfdd15e-537d-40c0-a854-093ceb10786c")]
+                        construct NotifySoapAlert
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("7f88bdbd-9b29-4b3d-82b9-6cbdf56bfda8")]
+                            NotifySoapAlert = NotifyEmailParent;
+                            xpath(NotifySoapAlert,"/*[local-name()='MSSNotifyEmail' and namespace-uri()='http://MSS.Notification.Service.NotifyEmail/v1']/*[local-name()='Attachments' and namespace-uri()='']/*[local-name()='Attachment' and namespace-uri()='']/*[local-name()='AttachmentName' and namespace-uri()='']") = Rr_Update_Wo_Request_Copy(FILE.ReceivedFileName) + ".xml";
+                            xpath(NotifySoapAlert,"/*[local-name()='MSSNotifyEmail' and namespace-uri()='http://MSS.Notification.Service.NotifyEmail/v1']/*[local-name()='Attachments' and namespace-uri()='']/*[local-name()='Attachment' and namespace-uri()='']/*[local-name()='Base64String' and namespace-uri()='']") = MFM.Lbg.Helper.Misc.XmlDocToBase64String(Attachment);
+                        }
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("81aa6b52-f331-44d5-b7a7-7f09f293eecd")]
+                        send (PublishSoapErrorRR.Operation_1, NotifySoapAlert);
+                    }
+                }
+            }
+        }
+    }
+}
+

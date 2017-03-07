@@ -1,0 +1,723 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21107</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{53C0CC76-68BF-4A7F-B6F2-7848023E2182}</ProjectGuid>
+    <ProjectTypeGuids>{EF7E3281-CD33-11D4-8326-00C04FA0CE8D};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>library</OutputType>
+    <GenericProcessing>true</GenericProcessing>
+    <RootNamespace>MFM.Lbg.Orcs</RootNamespace>
+    <AssemblyName>MFM.Lbg.Orcs</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <BpelCompliance>True</BpelCompliance>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>MFM.Helpdesk.Distributer.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MFM.SharedResources, Version=1.0.0.1, Culture=neutral, PublicKeyToken=5eddf694e275119c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MFM.SharedResources\MFM.SharedResources\bin\Debug\MFM.SharedResources.dll</HintPath>
+    </Reference>
+    <Reference Include="MFM.XLST.Transform">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft BizTalk Server 2013\Pipeline Components\MFM.XLST.Transform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.Pipeline.Components, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="MSS.Notification.Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=14a168aa350e34f1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MSS.Notification.Service\MSS.Notification.Service\bin\Debug\MSS.Notification.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="MTFM.Maximo.RR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5eddf694e275119c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MFM.SharedResources\MTFM.Maximo.RR\bin\Debug\MTFM.Maximo.RR.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Name>System.Configuration</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.Pipeline">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.DefaultPipelines">
+      <Name>Microsoft.BizTalk.DefaultPipelines</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.GlobalPropertySchemas">
+      <Name>Microsoft.BizTalk.GlobalPropertySchemas</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.TestTools">
+      <Name>Microsoft.BizTalk.TestTools</Name>
+    </Reference>
+    <Reference Include="Microsoft.XLANGs.BaseTypes">
+      <Name>Microsoft.XLANGs.BaseTypes</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <Schema Include="LocQuery\PortalLocationQuery.xsd">
+      <TypeName>PortalLocationQuery</TypeName>
+      <Namespace>MFM.Lbg.Orcs.LocQuery</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="GenItems\MTFMVISIONFM_MTFMVISIONLOCQUERY_www_ibm_com_maximo.xsd">
+      <TypeName>MTFMVISIONFM_MTFMVISIONLOCQUERY_www_ibm_com_maximo</TypeName>
+      <Namespace>MFM.Lbg.Orcs.GenItems</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <None Include="MFM.Helpdesk.Distributer.snk" />
+    <Schema Include="MTFMVISIONFM_MTFMCOMMQUERY_www_ibm_com_maximo.xsd">
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+      <TypeName>MTFMVISIONFM_MTFMCOMMQUERY_www_ibm_com_maximo</TypeName>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="o_Distribute_TFM_MXO75.odx">
+      <TypeName>o_Distribute_TFM_MXO75</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="o_OB_PO.odx">
+      <TypeName>o_OB_PO</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MFM.Lbg.Helper\MFM.Lbg.Helper.csproj">
+      <Project>{6074C94C-F7B5-489F-9586-C5D99EBDDE04}</Project>
+      <Name>MFM.Lbg.Helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MFM.Lbg.Maps\MFM.Lbg.Maps.btproj">
+      <Project>{1D7CE001-8CBB-4A67-911C-F0C579E09EAA}</Project>
+      <Name>MFM.Lbg.Maps</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MFM.Lbg.Schemas\MFM.Lbg.Schemas.btproj">
+      <Project>{9AC5A7AC-15FE-474C-A502-2167BAD19934}</Project>
+      <Name>MFM.Lbg.Schemas</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="amp_x_PO_GET.btm">
+      <TypeName>amp_x_PO_GET</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+    <Map Include="Base_Email_Notification.btm">
+      <SubType>Task</SubType>
+      <TypeName>Base_Email_Notification</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+    <Map Include="LegacyWsEmail_To_NotifyEMail.btm">
+      <SubType>Task</SubType>
+      <TypeName>LegacyWsEmail_To_NotifyEMail</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+    <Map Include="Maps\map_getSimplePop3Audit.btm">
+      <SubType>Task</SubType>
+      <TypeName>map_getSimplePop3Audit</TypeName>
+      <Namespace>MFM.Lbg.Orcs.Maps</Namespace>
+    </Map>
+    <Map Include="Map_Miami_RR_Upd.btm">
+      <TypeName>Map_Miami_RR_Upd</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="map_to_biz_import_case_update.btm">
+      <TypeName>map_to_biz_import_case_update</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="map_to_mitigating_Evnts.btm">
+      <TypeName>map_to_mitigating_Evnts</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="map_to_note_loader.btm">
+      <TypeName>map_to_note_loader</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="map_Update_To_Notify.btm">
+      <SubType>Task</SubType>
+      <TypeName>map_Update_To_Notify</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+    <Map Include="x_to_Add_WL_RR.btm">
+      <SubType>Task</SubType>
+      <TypeName>x_to_Add_WL_RR</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+    <Map Include="x_to_Query.btm">
+      <TypeName>x_to_Query</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="x_to_rr_Status_only.btm">
+      <SubType>Task</SubType>
+      <TypeName>x_to_rr_Status_only</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+    <Map Include="x_to_rr_worklog_only.btm">
+      <SubType>Task</SubType>
+      <TypeName>x_to_rr_worklog_only</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+    <Map Include="x_To_rr_worklog_only1.btm">
+      <SubType>Task</SubType>
+      <TypeName>x_To_rr_worklog_only1</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+    <Map Include="x_to_WO_F.btm">
+      <TypeName>x_to_WO_F</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="map_to_location_match.btm">
+      <TypeName>map_to_location_match</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="map_to_safe_LMA_wappr..btm">
+      <SubType>Task</SubType>
+      <TypeName>map_to_safe_LMA_wappr</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+    <Map Include="map_to_safe_wappr.btm">
+      <TypeName>map_to_safe_wappr</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="map_x_to_PORDCR102.btm">
+      <TypeName>map_x_to_PORDCR102</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="x_To_DEQUEUE.btm">
+      <TypeName>x_To_DEQUEUE</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="o_IB_PO.odx">
+      <TypeName>o_IB_PO</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="map_to_SET_PO_NUM.btm">
+      <TypeName>map_to_SET_PO_NUM</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="o_Merge_Materials.odx">
+      <TypeName>o_Merge_Materials</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="map_x_Material_Merge.btm">
+      <TypeName>map_x_Material_Merge</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="o_Merge_Pir.odx">
+      <TypeName>o_Merge_Pir</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="map_x_to_Merge_pir.btm">
+      <TypeName>map_x_to_Merge_pir</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="map_x_To_Z139ORDERS.btm">
+      <TypeName>map_x_To_Z139ORDERS</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="o_OB_SO.odx">
+      <TypeName>o_OB_SO</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="map_to_get_so_items.btm">
+      <TypeName>map_to_get_so_items</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="map_to_so_hdr.btm">
+      <TypeName>map_to_so_hdr</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="map_to_Z139ORDERS.btm">
+      <TypeName>map_to_Z139ORDERS</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="map_To_Dequeue.btm">
+      <TypeName>map_To_Dequeue</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="map_to_Z139ORDERS_R.btm">
+      <TypeName>map_to_Z139ORDERS_R</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="o_IB_SO.odx">
+      <TypeName>o_IB_SO</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="x_to_new_visit.btm">
+      <TypeName>x_to_new_visit</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="x_to_sonum.btm">
+      <TypeName>x_to_sonum</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="o_VisionFM_Case_Extractor.odx">
+      <TypeName>o_VisionFM_Case_Extractor</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="o_Distribute_MPC_Safe.odx">
+      <TypeName>o_Distribute_TFM_Maximo75</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="o_Distribute_MLA_Safe.odx">
+      <TypeName>o_Distribute_MLA_Safe</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="o_Consume_CAFM_Updates.odx">
+      <TypeName>o_Consume_CAFM_Updates</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="o_Fetch_SAFE_Updates.odx">
+      <TypeName>o_Fetch_MPC_Updates</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="map_to_standard_Safe_msg.btm">
+      <TypeName>map_to_standard_Safe_msg</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="map_to_complete.btm">
+      <TypeName>map_to_complete</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="map_to_standard_Safe_mla_msg.btm">
+      <TypeName>map_to_standard_Safe_mla_msg</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Pipeline Include="Unencode_Email.btp">
+      <TypeName>Unencode_Email</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Pipeline>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="o_Cafm_To_Email_Sender.odx">
+      <TypeName>o_Cafm_To_Email_Sender</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <Pipeline Include="plMiTSM.btp">
+      <TypeName>plMiTSM</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Pipeline>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="map_to_emailto.btm">
+      <TypeName>map_to_emailto</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="o_ErrorHandler.odx">
+      <TypeName>ErrorHandler</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <Pipeline Include="plFeeds.btp">
+      <TypeName>plFeeds</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Pipeline>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="o_Feed_Bulk_Loader.odx">
+      <TypeName>o_Feed_Bulk_Loader</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="x_to_feed.btm">
+      <TypeName>x_to_feed</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="x_to_Rejected_feeds.btm">
+      <TypeName>x_to_Rejected_feeds</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Pipeline Include="plFeedAssembly.btp">
+      <TypeName>plFeedAssembly</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Pipeline>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="x_to_biz_Process_Feed_Wrapper.btm">
+      <TypeName>x_to_biz_Process_Feed_Wrapper</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="o_Extract_PO.odx">
+      <TypeName>orc_Sap_Extract</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="map_to_PO_Extract.btm">
+      <TypeName>map_to_PO_Extract</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="map_To_Legacy_POIN.btm">
+      <TypeName>map_To_Legacy_POIN</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="o_Extract_SO.odx">
+      <TypeName>o_Extract_SO</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="map_to_SO_Extract.btm">
+      <TypeName>map_to_SO_Extract</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="map_To_Legacy_SO.btm">
+      <TypeName>map_To_Legacy_SO</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="o_MiAMI_Rejects.odx">
+      <TypeName>o_MiAMI_Rejects</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="o_LoadStandardComm.odx">
+      <TypeName>o_LoadStandardComm</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="o_CreateAsset.odx">
+      <TypeName>o_CreateAsset</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="o_CheckVisionFMLocation.odx">
+      <TypeName>o_CheckVisionFMLocation</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="o_ProcessSimpleWorkflow.odx">
+      <TypeName>o_ProcessSimpleWorkflow</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <Map Include="x_to_1team_wl_ref_exists.btm">
+      <TypeName>x_to_1team_wl_ref_exists</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="x_to_miami_exists_ref_upd.btm">
+      <TypeName>x_to_miami_exists_ref_upd</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="x_to_upd_attributes.btm">
+      <TypeName>x_to_upd_attributes</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="x_to_closePendingUpd.btm">
+      <TypeName>x_to_closePendingUpd</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="x_to_fetch.btm">
+      <TypeName>x_to_fetch</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="x_WL_to_WIUpd.btm">
+      <TypeName>x_WL_to_WIUpd</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <XLang Include="o_MiAMI_WorklogLoader.odx">
+      <TypeName>o_MiAMI_Worklog_Loader</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="o_rr_WorklogLoader.odx">
+      <TypeName>o_rr_WorklogLoader</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <Map Include="x_to_MiAMI_Upd_Temp.btm">
+      <TypeName>x_to_MiAMI_Upd_Temp</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <XLang Include="o_Miami_Update_Parser_RR_Retry_Soap.odx">
+      <TypeName>o_Miami_Update_Parser_RR_Retry_Soap</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="o_rrAlertEmailer.odx">
+      <TypeName>o_rrAlertEmailer</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </XLang>
+    <XLang Include="o_Miami_Ws_Query_Loc.odx">
+      <TypeName>o_Miami_Ws_Query_Loc</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </XLang>
+    <XLang Include="o_Miami_Update_Parser_RR.odx">
+      <TypeName>o_Miami_Update_Parser_RR</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </XLang>
+    <XLang Include="o_Rr_AddUpdate.odx">
+      <TypeName>o_Rr_AddUpdate</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </XLang>
+    <XLang Include="o_Rr_Outbound.odx">
+      <TypeName>o_Rr_Outbound</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </XLang>
+    <Map Include="m_DistributedWorkItem_To_CommodityCheck.btm">
+      <TypeName>m_DistributedWorkItem_To_CommodityCheck</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+    <XLang Include="CheckMiamiCommodity.odx">
+      <TypeName>CheckMiamiCommodity</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </XLang>
+    <Map Include="Map_RR_Err_Update.btm">
+      <TypeName>Map_RR_Err_Update</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+    <Map Include="Map_Loc_Query.btm">
+      <TypeName>Map_Loc_Query</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+    <Map Include="Map_Loc_Query_Result.btm">
+      <TypeName>Map_Loc_Query_Result</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+    <Map Include="Map_Miami_Ws_Loc_Query.btm">
+      <TypeName>Map_Miami_Ws_Loc_Query</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+    <Map Include="Map_RR_DataFail.btm">
+      <TypeName>Map_RR_DataFail</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+    <Map Include="Map_Sent_update.btm">
+      <TypeName>Map_Sent_update</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+    <Map Include="Loc_Err_Response.btm">
+      <TypeName>Loc_Err_Response</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+    <Map Include="LegacyWsEmail_To_NotifyEMaiHtml.btm">
+      <SubType>Task</SubType>
+      <TypeName>LegacyWsEmail_To_NotifyEMaiHtml</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+    <XLang Include="o_Rr_AddUpdateAsync.odx">
+      <TypeName>Copy_of_o_Rr_AddUpdate</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <Map Include="x_to_upd_loc_Query.btm">
+      <SubType>Task</SubType>
+      <TypeName>x_to_upd_loc_Query</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </Map>
+    <Pipeline Include="GetSimpleWorkflowReplies.btp">
+      <TypeName>GetSimpleWorkflowReplies</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </Pipeline>
+    <XLang Include="MTFMVISIONFM_MTFMCOMMQUERY.odx">
+      <TypeName>MTFMVISIONFM_MTFMCOMMQUERY</TypeName>
+      <Namespace>MFM.Lbg.Orcs</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="LocQuery\CreatePrtlLocQuery.btm">
+      <TypeName>CreatePrtlLocQuery</TypeName>
+      <Namespace>MFM.Lbg.Orcs.LocQuery</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="LocQuery\getPrtlQueryResponse.btm">
+      <TypeName>getPrtlQueryResponse</TypeName>
+      <Namespace>MFM.Lbg.Orcs.LocQuery</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="LocQuery\InvalidProviderResponse.btm">
+      <TypeName>InvalidProviderResponse</TypeName>
+      <Namespace>MFM.Lbg.Orcs.LocQuery</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="LocQuery\BadQueryResponse.btm">
+      <TypeName>BadQueryResponse</TypeName>
+      <Namespace>MFM.Lbg.Orcs.LocQuery</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GenItems\MTFMVISIONFM_MTFMVISIONLOCQUERY.BindingInfo.xml" />
+    <XLang Include="GenItems\MTFMVISIONFM_MTFMVISIONLOCQUERY.odx">
+      <TypeName>MTFMVISIONFM_MTFMVISIONLOCQUERY</TypeName>
+      <Namespace>MFM.Lbg.Orcs.GenItems</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />
+</Project>

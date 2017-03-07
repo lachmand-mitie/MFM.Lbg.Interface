@@ -1,0 +1,5 @@
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Beacon\MFM.Lbg.Interface\MFM.Lbg.Helper\bin\Debug\MFM.Lbg.Helper.dll
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Beacon\MFM.Lbg.Interface\MFM.Lbg.Helper\bin\Debug\MFM.Lbg.Helper.pdb
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Beacon\MFM.Lbg.Interface\MFM.Lbg.Helper\obj\Debug\MFM.Lbg.Helper.csprojResolveAssemblyReference.cache
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Beacon\MFM.Lbg.Interface\MFM.Lbg.Helper\obj\Debug\MFM.Lbg.Helper.dll
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Beacon\MFM.Lbg.Interface\MFM.Lbg.Helper\obj\Debug\MFM.Lbg.Helper.pdb

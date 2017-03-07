@@ -1,0 +1,338 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="16ca6695-0519-4cb4-a0dd-6d73bf942ade" LowerBound="1.1" HigherBound="72.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MFM.Lbg.Orcs" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="5f7b240c-91a5-41c9-af01-aef422c01d9b" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Update_Sales_Order_Type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="03c87eb1-7684-4923-b482-2646b0b0eddb" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="biz_SO_Set_SO_Number" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="aab646a5-abd6-483d-9e3b-a5f65a8fd630" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.74">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.VFM_SOTypedProcedure_dbo.biz_SO_Set_SO_Number" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="d991249f-7a77-408d-a53d-22e68147406a" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="8.76" HigherBound="8.145">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.VFM_SOTypedProcedure_dbo.biz_SO_Set_SO_NumberResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="a14b3af8-487e-45d2-b2e6-a705d3e17093" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Receive_Billing_Doc_Type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="bed3bbbb-53e3-428b-aceb-7fd63da5052e" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="fc0730d8-50ec-49e8-92d5-a027732e426f" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.37">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.INVOIC02" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="1f0e11ea-0621-4ff6-a8bf-978dacfeb7ae" ParentLink="Module_PortType" LowerBound="18.1" HigherBound="25.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Send_Illegal_Bill_Docs_Type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="830d6b8e-9776-4191-a27f-6fd8cbbd3899" ParentLink="PortType_OperationDeclaration" LowerBound="20.1" HigherBound="24.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="a540a0ee-4581-4f34-9637-e0f0f37ddcc4" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="22.13" HigherBound="22.37">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.INVOIC02" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="05ad8a09-94d3-4d92-8eb4-57753332f5c0" ParentLink="Module_ServiceDeclaration" LowerBound="25.1" HigherBound="71.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="o_IB_SO" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="71386936-7915-44e9-8dda-7fe1e4c3b7eb" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="37.1" HigherBound="38.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="MFM.Lbg.Helper.Misc" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="obj" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="1da6ed80-7c95-436d-9dbc-0b9663c8e131" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="38.1" HigherBound="39.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="BillDocFile" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="f09ca3a8-c5ed-42e4-9b4b-2ac2743829cb" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="34.1" HigherBound="35.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.INVOIC02" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="INVOIC02" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="24ad3df8-49f9-4cb9-87a4-cb328e3be21e" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="35.1" HigherBound="36.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.VFM_SOTypedProcedure_dbo.biz_SO_Set_SO_Number" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="UpdateSoNum" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="2795e116-dfd2-445c-8fc8-82e9aeafd788" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="36.1" HigherBound="37.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.VFM_SOTypedProcedure_dbo.biz_SO_Set_SO_NumberResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="UpdateSoNumResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="2152492d-f56d-4ebf-859d-d0ffcce67922" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="6f23fc4a-45b4-45c8-b249-c166006429cb" ParentLink="ServiceBody_Statement" LowerBound="41.1" HigherBound="45.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="Receive_billing_Doc" />
+                    <om:Property Name="MessageName" Value="INVOIC02" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_INVOIC02" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="3dea9e1f-cf09-43b0-b8a6-b456424ff099" ParentLink="ServiceBody_Statement" LowerBound="45.1" HigherBound="51.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Construct_ SONUM" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="37ab9fa0-4c1b-4ccb-96c7-b3fc85010efa" ParentLink="ComplexStatement_Statement" LowerBound="48.1" HigherBound="50.1">
+                        <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.x_to_sonum" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="x_to_sonum" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessagePartRef" OID="4141c755-483f-4824-8f4d-a369bb070261" ParentLink="Transform_InputMessagePartRef" LowerBound="49.68" HigherBound="49.76">
+                            <om:Property Name="MessageRef" Value="INVOIC02" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="ac67d6df-10c5-44d8-9a7d-5c5c5b6060b0" ParentLink="Transform_OutputMessagePartRef" LowerBound="49.28" HigherBound="49.39">
+                            <om:Property Name="MessageRef" Value="UpdateSoNum" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="5865b443-f843-4c55-89bd-feedef57256b" ParentLink="Construct_MessageRef" LowerBound="46.23" HigherBound="46.34">
+                        <om:Property Name="Ref" Value="UpdateSoNum" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Decision" OID="ecf96140-91bb-4f1c-a423-3d516721ef6e" ParentLink="ServiceBody_Statement" LowerBound="51.1" HigherBound="69.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Is_VisionFM_Sales_Order?" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DecisionBranch" OID="e60a4b28-29be-4c9a-bb31-ed3bfe9b0671" ParentLink="ReallyComplexStatement_Branch" LowerBound="52.13" HigherBound="60.1">
+                        <om:Property Name="Expression" Value="System.Convert.ToInt32(xpath(UpdateSoNum, &quot;count(/*[local-name()='biz_SO_Set_SO_Number' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/dbo']/*[local-name()='SOREF' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/dbo'])&quot;)) &gt; 0" />
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Has VisionFM Ref" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Send" OID="150446d8-e800-4bec-8ebb-d4aa38018ebe" ParentLink="ComplexStatement_Statement" LowerBound="55.1" HigherBound="57.1">
+                            <om:Property Name="PortName" Value="Update_Sales_Order_" />
+                            <om:Property Name="MessageName" Value="UpdateSoNum" />
+                            <om:Property Name="OperationName" Value="biz_SO_Set_SO_Number" />
+                            <om:Property Name="OperationMessageName" Value="Request" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Send_to_update_sonum" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="Receive" OID="4cb888db-ba78-4047-8b23-fec397497896" ParentLink="ComplexStatement_Statement" LowerBound="57.1" HigherBound="59.1">
+                            <om:Property Name="Activate" Value="False" />
+                            <om:Property Name="PortName" Value="Update_Sales_Order_" />
+                            <om:Property Name="MessageName" Value="UpdateSoNumResponse" />
+                            <om:Property Name="OperationName" Value="biz_SO_Set_SO_Number" />
+                            <om:Property Name="OperationMessageName" Value="Response" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Updte_result" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="DecisionBranch" OID="9af80699-e7be-46e3-916b-fe2774e1a776" ParentLink="ReallyComplexStatement_Branch">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Else" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="Send" OID="57fcdf50-1809-40dd-a948-e4cdf723b506" ParentLink="ComplexStatement_Statement" LowerBound="62.1" HigherBound="64.1">
+                            <om:Property Name="PortName" Value="Send_Illegal_Bill_Docs" />
+                            <om:Property Name="MessageName" Value="INVOIC02" />
+                            <om:Property Name="OperationName" Value="Operation_1" />
+                            <om:Property Name="OperationMessageName" Value="Request" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Send_Illegal_Bill_Docs" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="VariableAssignment" OID="47b77076-2ee1-4149-b69e-9341a848cbb4" ParentLink="ComplexStatement_Statement" LowerBound="64.1" HigherBound="66.1">
+                            <om:Property Name="Expression" Value="BillDocFile = obj.GetFileName(INVOIC02(FILE.ReceivedFileName));" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Get_Bill_Doc_FileName" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="Terminate" OID="3e9c27b3-5fe5-4bb1-913f-9b2ef0b23253" ParentLink="ComplexStatement_Statement" LowerBound="66.1" HigherBound="68.1">
+                            <om:Property Name="ErrorMessage" Value="&quot;SAP Billing doc &quot; + UpdateSoNum.SONUM + &quot; rejected, no VisionFM reference present (&quot; + BillDocFile +&quot;).&quot;;" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Kill Orc" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="6117fca5-81df-4104-9951-9dfd8e0656b9" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="28.1" HigherBound="30.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.Receive_Billing_Doc_Type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Receive_billing_Doc" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="6a49e640-f4fb-4b92-8e4a-fdb57a3d451f" ParentLink="PortDeclaration_CLRAttribute" LowerBound="28.1" HigherBound="29.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="790122b5-9ea8-405d-a347-538179f153cc" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="30.1" HigherBound="32.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="25" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.Update_Sales_Order_Type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Update_Sales_Order_" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="d611c945-f02d-4944-9c8d-46b61c79e635" ParentLink="PortDeclaration_CLRAttribute" LowerBound="30.1" HigherBound="31.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="d61071fe-f043-4a19-9944-be92d5359a17" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="32.1" HigherBound="34.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="25" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.Send_Illegal_Bill_Docs_Type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Send_Illegal_Bill_Docs" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="621de0c0-4e63-4fb8-a08c-5cc01f882555" ParentLink="PortDeclaration_CLRAttribute" LowerBound="32.1" HigherBound="33.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MFM.Lbg.Orcs
+{
+    internal porttype Update_Sales_Order_Type
+    {
+        requestresponse biz_SO_Set_SO_Number
+        {
+            MFM.Lbg.Schemas.VFM_SOTypedProcedure_dbo.biz_SO_Set_SO_Number, MFM.Lbg.Schemas.VFM_SOTypedProcedure_dbo.biz_SO_Set_SO_NumberResponse
+        };
+    };
+    internal porttype Receive_Billing_Doc_Type
+    {
+        oneway Operation_1
+        {
+            MFM.Lbg.Schemas.INVOIC02
+        };
+    };
+    internal porttype Send_Illegal_Bill_Docs_Type
+    {
+        oneway Operation_1
+        {
+            MFM.Lbg.Schemas.INVOIC02
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service o_IB_SO
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements Receive_Billing_Doc_Type Receive_billing_Doc;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses Update_Sales_Order_Type Update_Sales_Order_;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses Send_Illegal_Bill_Docs_Type Send_Illegal_Bill_Docs;
+        message MFM.Lbg.Schemas.INVOIC02 INVOIC02;
+        message MFM.Lbg.Schemas.VFM_SOTypedProcedure_dbo.biz_SO_Set_SO_Number UpdateSoNum;
+        message MFM.Lbg.Schemas.VFM_SOTypedProcedure_dbo.biz_SO_Set_SO_NumberResponse UpdateSoNumResponse;
+        MFM.Lbg.Helper.Misc obj;
+        System.String BillDocFile;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("6f23fc4a-45b4-45c8-b249-c166006429cb")]
+            activate receive (Receive_billing_Doc.Operation_1, INVOIC02);
+            obj = new MFM.Lbg.Helper.Misc();
+            BillDocFile = "";
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("3dea9e1f-cf09-43b0-b8a6-b456424ff099")]
+            construct UpdateSoNum
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("37ab9fa0-4c1b-4ccb-96c7-b3fc85010efa")]
+                transform (UpdateSoNum) = MFM.Lbg.Orcs.x_to_sonum (INVOIC02);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("ecf96140-91bb-4f1c-a423-3d516721ef6e")]
+            if (System.Convert.ToInt32(xpath(UpdateSoNum, "count(/*[local-name()='biz_SO_Set_SO_Number' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/dbo']/*[local-name()='SOREF' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/dbo'])")) > 0
+                )
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("150446d8-e800-4bec-8ebb-d4aa38018ebe")]
+                send (Update_Sales_Order_.biz_SO_Set_SO_Number, UpdateSoNum);
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("4cb888db-ba78-4047-8b23-fec397497896")]
+                receive (Update_Sales_Order_.biz_SO_Set_SO_Number, UpdateSoNumResponse);
+            }
+            else 
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("57fcdf50-1809-40dd-a948-e4cdf723b506")]
+                send (Send_Illegal_Bill_Docs.Operation_1, INVOIC02);
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("47b77076-2ee1-4149-b69e-9341a848cbb4")]
+                BillDocFile = obj.GetFileName(INVOIC02(FILE.ReceivedFileName));
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("3e9c27b3-5fe5-4bb1-913f-9b2ef0b23253")]
+                terminate "SAP Billing doc " + UpdateSoNum.SONUM + " rejected, no VisionFM reference present (" + BillDocFile +").";;
+            }
+        }
+    }
+}
+

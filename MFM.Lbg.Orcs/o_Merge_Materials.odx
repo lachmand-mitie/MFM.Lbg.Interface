@@ -1,0 +1,341 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="6c5f7384-9190-481b-a898-ce1127242cef" LowerBound="1.1" HigherBound="73.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MFM.Lbg.Orcs" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="52a5b7f6-f819-4b82-83e9-bb1883b2686e" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Port_import_Materials_from_sap_type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="455fd49a-796d-426e-95a8-4569f613637b" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Op_Polling_materials" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="e3ac2111-389e-4411-bfb7-2ea9574a53f4" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.37">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.MATMAS04" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="87f82f2d-91c4-4aa9-9d11-9031d5253541" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Port_test_merge_material_map" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="098b581c-1deb-4d1a-b25b-46c769602a93" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="031f564c-8c40-4688-81f0-ff3ff13ff050" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.67">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.SAPM_TypedProcedure_dbo.Merge_Material" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="b5ea18bb-a4bb-41d4-927f-418d733132de" ParentLink="Module_PortType" LowerBound="18.1" HigherBound="25.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Port_Do_Merge_type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="6c1c2322-fd29-4b08-baf4-2cfd3fcdf1f4" ParentLink="PortType_OperationDeclaration" LowerBound="20.1" HigherBound="24.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Merge_Material" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="90eae98c-e54c-495f-a58f-26947ef19585" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="22.13" HigherBound="22.67">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.SAPM_TypedProcedure_dbo.Merge_Material" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="92ae240e-f67f-4fca-bb80-7f3cff19f073" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="22.69" HigherBound="22.131">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.SAPM_TypedProcedure_dbo.Merge_MaterialResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="2a057566-bcf6-4a7f-9dab-67798f37f672" ParentLink="Module_PortType" LowerBound="25.1" HigherBound="32.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Port_Send_merge_result_type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="a8c3acdc-ea15-4675-bac7-b982db923027" ParentLink="PortType_OperationDeclaration" LowerBound="27.1" HigherBound="31.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="f992a41b-16e4-4a20-87dd-a6e575ecd1b1" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="29.13" HigherBound="29.75">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.SAPM_TypedProcedure_dbo.Merge_MaterialResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="2c06581f-c1d8-4636-95ee-e79bf36fa36d" ParentLink="Module_ServiceDeclaration" LowerBound="32.1" HigherBound="72.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="o_Merge_Materials" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="MessageDeclaration" OID="d6e57eea-98f6-43da-94d5-f950bf8c125a" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="41.1" HigherBound="42.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.SAPM_TypedProcedure_dbo.Merge_MaterialResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Merge_materials_response_copy" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="c780517c-4f1f-4cb4-b68d-6eff9b52f286" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="42.1" HigherBound="43.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.MATMAS04" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Materials_from_Sap" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="ce0cd108-9ab1-4800-afda-539df9efa799" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="43.1" HigherBound="44.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.SAPM_TypedProcedure_dbo.Merge_Material" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Merge_materials" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="410d0390-c4ec-41be-a742-e1aec15bc62b" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="44.1" HigherBound="45.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.SAPM_TypedProcedure_dbo.Merge_MaterialResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Merge_materials_response" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="08ec672e-0cb4-4929-8d48-2570c8b22f42" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="a40eb5c6-4ba8-4fd8-a888-5ce76c9bba44" ParentLink="ServiceBody_Statement" LowerBound="47.1" HigherBound="49.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="Port_import_Materials_from_sap" />
+                    <om:Property Name="MessageName" Value="Materials_from_Sap" />
+                    <om:Property Name="OperationName" Value="Op_Polling_materials" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_Materials" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="3cddc08c-1e3d-4a5d-b6f9-55846de11a2c" ParentLink="ServiceBody_Statement" LowerBound="49.1" HigherBound="55.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Construct_Material_Merge" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="9151898b-c7e9-4a1f-b6dc-23c875fa6b07" ParentLink="ComplexStatement_Statement" LowerBound="52.1" HigherBound="54.1">
+                        <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.map_x_Material_Merge" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="x_Material_Merge" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="MessagePartRef" OID="539c9c56-f3b5-462c-82a2-b1324e515cee" ParentLink="Transform_InputMessagePartRef" LowerBound="53.82" HigherBound="53.100">
+                            <om:Property Name="MessageRef" Value="Materials_from_Sap" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="fc87786e-ae39-4b27-8c27-28080764840b" ParentLink="Transform_OutputMessagePartRef" LowerBound="53.28" HigherBound="53.43">
+                            <om:Property Name="MessageRef" Value="Merge_materials" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="65230610-67fe-483b-93a6-8fc369c6b50a" ParentLink="Construct_MessageRef" LowerBound="50.23" HigherBound="50.38">
+                        <om:Property Name="Ref" Value="Merge_materials" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="becd3951-9840-43d7-98b8-8520fcc7e381" ParentLink="ServiceBody_Statement" LowerBound="55.1" HigherBound="57.1">
+                    <om:Property Name="PortName" Value="Port_Do_Merge_materials" />
+                    <om:Property Name="MessageName" Value="Merge_materials" />
+                    <om:Property Name="OperationName" Value="Merge_Material" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_Material_merge" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Receive" OID="94ce1392-f15d-4bf2-ace7-e9ee57f51419" ParentLink="ServiceBody_Statement" LowerBound="57.1" HigherBound="59.1">
+                    <om:Property Name="Activate" Value="False" />
+                    <om:Property Name="PortName" Value="Port_Do_Merge_materials" />
+                    <om:Property Name="MessageName" Value="Merge_materials_response" />
+                    <om:Property Name="OperationName" Value="Merge_Material" />
+                    <om:Property Name="OperationMessageName" Value="Response" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_Merge_response" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="7f32e550-8a5b-42b1-8e16-744367968e41" ParentLink="ServiceBody_Statement" LowerBound="59.1" HigherBound="66.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Construct_Material_Merge_Output" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageRef" OID="83718601-a1fa-469e-947a-9c00b161a42c" ParentLink="Construct_MessageRef" LowerBound="60.23" HigherBound="60.52">
+                        <om:Property Name="Ref" Value="Merge_materials_response_copy" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="MessageAssignment" OID="979f4abb-937d-46ed-9e72-7e94238f58e8" ParentLink="ComplexStatement_Statement" LowerBound="62.1" HigherBound="65.1">
+                        <om:Property Name="Expression" Value="Merge_materials_response_copy = Merge_materials_response;&#xD;&#xA;Merge_materials_response_copy(FILE.ReceivedFileName) = System.String.Format(&quot;{0}&quot;,Materials_from_Sap(FILE.ReceivedFileName));" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="MessageAssignment_1" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="cf505826-4115-48da-8e81-a9192e92902e" ParentLink="ServiceBody_Statement" LowerBound="66.1" HigherBound="68.1">
+                    <om:Property Name="PortName" Value="Port_Send_merge_result" />
+                    <om:Property Name="MessageName" Value="Merge_materials_response_copy" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_Output" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Terminate" OID="3844b31d-777a-40d5-9dfd-928ee56194b0" ParentLink="ServiceBody_Statement" LowerBound="68.1" HigherBound="70.1">
+                    <om:Property Name="ErrorMessage" Value="&quot;Merge completed&quot;;" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Terminate_1" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="20a719bf-ade4-4bfa-9213-e28fe04a17fb" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="35.1" HigherBound="37.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.Port_import_Materials_from_sap_type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_import_Materials_from_sap" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="c4895f61-7317-4678-86cd-2b5995d411dd" ParentLink="PortDeclaration_CLRAttribute" LowerBound="35.1" HigherBound="36.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="6bfb8f47-b835-4a9d-af4f-11d5f4e11211" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="37.1" HigherBound="39.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="38" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.Port_Send_merge_result_type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_Send_merge_result" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="1899f809-3776-4b00-a9ed-84bb1391d7d8" ParentLink="PortDeclaration_CLRAttribute" LowerBound="37.1" HigherBound="38.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="59967e10-0c40-4bb4-bfa8-058fb795b922" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="39.1" HigherBound="41.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="16" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.Port_Do_Merge_type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_Do_Merge_materials" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="acd78959-364c-4b30-9f38-7862f5149752" ParentLink="PortDeclaration_CLRAttribute" LowerBound="39.1" HigherBound="40.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MFM.Lbg.Orcs
+{
+    internal porttype Port_import_Materials_from_sap_type
+    {
+        oneway Op_Polling_materials
+        {
+            MFM.Lbg.Schemas.MATMAS04
+        };
+    };
+    internal porttype Port_test_merge_material_map
+    {
+        oneway Operation_1
+        {
+            MFM.Lbg.Schemas.SAPM_TypedProcedure_dbo.Merge_Material
+        };
+    };
+    internal porttype Port_Do_Merge_type
+    {
+        requestresponse Merge_Material
+        {
+            MFM.Lbg.Schemas.SAPM_TypedProcedure_dbo.Merge_Material, MFM.Lbg.Schemas.SAPM_TypedProcedure_dbo.Merge_MaterialResponse
+        };
+    };
+    internal porttype Port_Send_merge_result_type
+    {
+        oneway Operation_1
+        {
+            MFM.Lbg.Schemas.SAPM_TypedProcedure_dbo.Merge_MaterialResponse
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service o_Merge_Materials
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements Port_import_Materials_from_sap_type Port_import_Materials_from_sap;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses Port_Send_merge_result_type Port_Send_merge_result;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses Port_Do_Merge_type Port_Do_Merge_materials;
+        message MFM.Lbg.Schemas.SAPM_TypedProcedure_dbo.Merge_MaterialResponse Merge_materials_response_copy;
+        message MFM.Lbg.Schemas.MATMAS04 Materials_from_Sap;
+        message MFM.Lbg.Schemas.SAPM_TypedProcedure_dbo.Merge_Material Merge_materials;
+        message MFM.Lbg.Schemas.SAPM_TypedProcedure_dbo.Merge_MaterialResponse Merge_materials_response;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("a40eb5c6-4ba8-4fd8-a888-5ce76c9bba44")]
+            activate receive (Port_import_Materials_from_sap.Op_Polling_materials, Materials_from_Sap);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("3cddc08c-1e3d-4a5d-b6f9-55846de11a2c")]
+            construct Merge_materials
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("9151898b-c7e9-4a1f-b6dc-23c875fa6b07")]
+                transform (Merge_materials) = MFM.Lbg.Orcs.map_x_Material_Merge (Materials_from_Sap);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("becd3951-9840-43d7-98b8-8520fcc7e381")]
+            send (Port_Do_Merge_materials.Merge_Material, Merge_materials);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("94ce1392-f15d-4bf2-ace7-e9ee57f51419")]
+            receive (Port_Do_Merge_materials.Merge_Material, Merge_materials_response);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("7f32e550-8a5b-42b1-8e16-744367968e41")]
+            construct Merge_materials_response_copy
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("979f4abb-937d-46ed-9e72-7e94238f58e8")]
+                Merge_materials_response_copy = Merge_materials_response;
+                Merge_materials_response_copy(FILE.ReceivedFileName) = System.String.Format("{0}",Materials_from_Sap(FILE.ReceivedFileName));
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("cf505826-4115-48da-8e81-a9192e92902e")]
+            send (Port_Send_merge_result.Operation_1, Merge_materials_response_copy);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("3844b31d-777a-40d5-9dfd-928ee56194b0")]
+            terminate "Merge completed";;
+        }
+    }
+}
+

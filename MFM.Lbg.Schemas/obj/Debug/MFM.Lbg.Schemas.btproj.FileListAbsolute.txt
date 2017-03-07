@@ -1,0 +1,4 @@
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Beacon\MFM.Lbg.Interface\MFM.Lbg.Schemas\bin\Debug\MFM.Lbg.Schemas.dll
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Beacon\MFM.Lbg.Interface\MFM.Lbg.Schemas\bin\Debug\MFM.Lbg.Schemas.pdb
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Beacon\MFM.Lbg.Interface\MFM.Lbg.Schemas\obj\Debug\MFM.Lbg.Schemas.dll
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Beacon\MFM.Lbg.Interface\MFM.Lbg.Schemas\obj\Debug\MFM.Lbg.Schemas.pdb

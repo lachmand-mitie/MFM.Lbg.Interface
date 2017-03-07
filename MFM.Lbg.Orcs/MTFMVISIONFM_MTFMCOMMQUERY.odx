@@ -1,0 +1,115 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="b23cae1b-17d2-4c51-9589-ce6d8920d15d" LowerBound="1.1" HigherBound="27.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MFM.Lbg.Orcs" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="9078298c-ebf5-4387-bcf1-3c9b74b3b120" ParentLink="Module_PortType" LowerBound="12.1" HigherBound="19.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:portType name=&quot;MTFMVISIONFM_MTFMCOMMQUERYPortType&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="MTFMVISIONFM_MTFMCOMMQUERYPortType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="29e7a705-b096-454d-a219-04faacb99de3" ParentLink="PortType_OperationDeclaration" LowerBound="14.1" HigherBound="18.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:operation name=&quot;QueryMTFMCOMMODITY_QUERY&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="QueryMTFMCOMMODITY_QUERY" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="e5080403-04a5-46fb-88ca-f406ebf354fb" ParentLink="OperationDeclaration_FaultMessageRef" LowerBound="16.80" HigherBound="16.140">
+                    <om:Property Name="Ref" Value="BTS.soap_envelope_1__1.Fault" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Fault_WebQuery_Commodity_Soap" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="d01a04b5-d151-4676-8f37-746a0e13ad73" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="16.46" HigherBound="16.78">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Orcs.QueryMTFMCOMMODITY_QUERYResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:output message=&quot;http://www.ibm.com/maximo/wsdl/MTFMVISIONFM_MTFMCOMMQUERY:QueryMTFMCOMMODITY_QUERYResponse&quot;/&gt;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="5ed89d2a-87f3-4056-a5ce-3a8cc9189f3a" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="16.13" HigherBound="16.44">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Orcs.QueryMTFMCOMMODITY_QUERYRequest" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:input message=&quot;http://www.ibm.com/maximo/wsdl/MTFMVISIONFM_MTFMCOMMQUERY:QueryMTFMCOMMODITY_QUERYRequest&quot;/&gt;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="e901d205-ec20-4c33-aeb1-7a67cfd1f6aa" ParentLink="Module_MessageType" LowerBound="4.1" HigherBound="8.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;QueryMTFMCOMMODITY_QUERYRequest&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="QueryMTFMCOMMODITY_QUERYRequest" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="faf50ccf-8bf8-4182-b0f0-bb9fd264f5c7" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="6.1" HigherBound="7.1">
+                <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.MTFMVISIONFM_MTFMCOMMQUERY_www_ibm_com_maximo.QueryMTFMCOMMODITY_QUERY" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="9934f10e-af04-4d0b-94a7-35513e79970d" ParentLink="Module_MessageType" LowerBound="8.1" HigherBound="12.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;QueryMTFMCOMMODITY_QUERYResponse&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="QueryMTFMCOMMODITY_QUERYResponse" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="15a9c53c-63fd-4075-a23b-cebd114a38ce" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="10.1" HigherBound="11.1">
+                <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.MTFMVISIONFM_MTFMCOMMQUERY_www_ibm_com_maximo.QueryMTFMCOMMODITY_QUERYResponse" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="b7a95d9d-d347-4c24-8d7d-16cdd9bab436" ParentLink="Module_ServiceDeclaration" LowerBound="19.1" HigherBound="26.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:service name=&quot;MTFMVISIONFM_MTFMCOMMQUERY&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="MTFMVISIONFM_MTFMCOMMQUERYClient" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="ServiceBody" OID="ee2a309f-7523-4faf-80c0-a3bfe62ccfa0" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MFM.Lbg.Orcs
+{
+    internal messagetype QueryMTFMCOMMODITY_QUERYRequest
+    {
+        body MTFMVISIONFM_MTFMCOMMQUERY_www_ibm_com_maximo.QueryMTFMCOMMODITY_QUERY parameters;
+    };
+    internal messagetype QueryMTFMCOMMODITY_QUERYResponse
+    {
+        body MTFMVISIONFM_MTFMCOMMQUERY_www_ibm_com_maximo.QueryMTFMCOMMODITY_QUERYResponse parameters;
+    };
+    internal porttype MTFMVISIONFM_MTFMCOMMQUERYPortType
+    {
+        requestresponse QueryMTFMCOMMODITY_QUERY
+        {
+            QueryMTFMCOMMODITY_QUERYRequest, QueryMTFMCOMMODITY_QUERYResponse, Fault_WebQuery_Commodity_Soap = BTS.soap_envelope_1__1.Fault
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service MTFMVISIONFM_MTFMCOMMQUERYClient
+    {
+        body ()
+        {
+        }
+    }
+}
+

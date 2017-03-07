@@ -1,0 +1,671 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="5b495a02-dbdc-44b4-b92c-bc5104531b90" LowerBound="1.1" HigherBound="170.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MFM.Lbg.Orcs" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="d77433dd-32f8-444c-9814-adad043c6411" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Swf_Pop3_Mailbox_Sub_Type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="f5287678-446d-4995-a1d2-09b6e795f741" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="1c88fb0e-95ef-4d62-8f90-e5ec1354e854" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.51">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.SimpleEmailWorkflowFFS" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="00c509e7-e191-49d5-9a0c-b74d403b1d7b" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ArchiveRawPop3Type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="e9009a55-0252-4b97-80a2-748f7a981ecf" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="968a4754-f113-41fb-8841-f449cf51b51e" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.57">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.SimpleEmailWorkFlowPop3Audit" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="b26ff177-1167-41ea-90d3-5a3c823ffba6" ParentLink="Module_PortType" LowerBound="18.1" HigherBound="25.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ArchiveRawPop3CopyType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="448f9798-fd71-4728-91e7-8ae2c80bd912" ParentLink="PortType_OperationDeclaration" LowerBound="20.1" HigherBound="24.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="ad492f95-f960-4629-9253-f1d177bccf73" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="22.13" HigherBound="22.51">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.SimpleEmailWorkflowFFS" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="137143fe-f1e7-412d-9e5c-5085b298a1a7" ParentLink="Module_ServiceDeclaration" LowerBound="25.1" HigherBound="169.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="o_ProcessSimpleWorkflow" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="73af05ab-94b2-47cf-83c2-870f5cdef375" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="38.1" HigherBound="39.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="To" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="1d3cc22c-2d2b-4950-9d6d-46b48687784c" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="39.1" HigherBound="40.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Headers" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="f307e662-ce25-4cdd-aa10-156ce90712f1" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="40.1" HigherBound="41.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="From" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="3c022127-431d-45dc-af02-e679fc953c40" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="41.1" HigherBound="42.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Pop3Xml" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="0b204841-b57c-4da6-b87d-c1d4006abeac" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="42.1" HigherBound="43.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Subject" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="35147c00-a775-4425-82b7-99471a076d88" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="43.1" HigherBound="44.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.DateTime" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SuppliedDate" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="251d58c4-7abb-4c6b-9123-03d0fc368bed" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="44.1" HigherBound="45.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="MFM.Lbg.Helper.Misc" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SwfHelper" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="c50251c1-fe57-48ca-b111-39f0b6bd7b4c" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="45.1" HigherBound="46.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ArchiveBaseString" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="bb5776ed-d425-4fe2-a06d-d364f7df55a8" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="46.1" HigherBound="47.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="MFM.Lbg.Helper.HelpdeskSqlClient" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SwfSqlObject" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="c7351be7-a6b0-42fb-9dc0-b65edf29d464" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="47.1" HigherBound="48.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="MFM.Lbg.Helper.SimpleWorkflowRequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SwfRequest" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="eb712da1-0be4-4083-9111-6fbe684091cc" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="48.1" HigherBound="49.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Int32" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SQLClientResult" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="61eaae35-49c7-4d20-bd56-7461e0456e49" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="49.1" HigherBound="50.1">
+                <om:Property Name="InitialValue" Value="true" />
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Boolean" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="RetrySqlRequest" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="90dca9ac-6fbf-4c63-9a77-4b412aa8fa6d" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="34.1" HigherBound="35.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.SimpleEmailWorkFlowPop3Audit" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Pop3AuditBadSubject" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="df87c9a4-8653-471e-b7ea-336a7c3931f1" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="35.1" HigherBound="36.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.SimpleEmailWorkflowFFS" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Pop3RawCopy" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="e9c60af0-077b-4d68-91f3-058cfb3f09d1" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="36.1" HigherBound="37.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.SimpleEmailWorkflowFFS" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Pop3Raw" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="60ea1328-173d-48d8-b4aa-7880f2ccb263" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="37.1" HigherBound="38.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.SimpleEmailWorkFlowPop3Audit" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Pop3Audit" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="a433bcc3-3972-47bc-b428-952a48636bea" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="bdaaef2d-8ce7-4850-9a5c-b3571ef729fd" ParentLink="ServiceBody_Statement" LowerBound="52.1" HigherBound="64.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="Swf_Pop3_Mailbox_Sub" />
+                    <om:Property Name="MessageName" Value="Pop3Raw" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_Pop3" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DNFPredicate" OID="6a627334-8b54-4792-94b4-e046fbf37e56" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="BTS.ReceivePortName" />
+                        <om:Property Name="RHS" Value="&quot;Get SimpleWorkflow&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="aa4d58c7-3597-40e6-b858-2eb0e1e22df8" ParentLink="ServiceBody_Statement" LowerBound="64.1" HigherBound="72.1">
+                    <om:Property Name="Expression" Value="Subject = Pop3Raw(POP3.Subject);&#xD;&#xA;From = Pop3Raw(POP3.From);&#xD;&#xA;To = Pop3Raw(POP3.To);&#xD;&#xA;SuppliedDate = System.Convert.ToDateTime(Pop3Raw(POP3.Date));&#xD;&#xA;Headers = Pop3Raw(POP3.Headers);&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Init Vars" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="552bb25a-6f4c-493f-91e5-f449cf27eede" ParentLink="ServiceBody_Statement" LowerBound="72.1" HigherBound="74.1">
+                    <om:Property Name="Expression" Value="SwfRequest = SwfHelper.ParseSimpleWorkflowSubject(Subject);" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Parse Subject" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="54a053f2-fbf7-4457-8f4d-12506bda3015" ParentLink="ServiceBody_Statement" LowerBound="74.1" HigherBound="76.1">
+                    <om:Property Name="Expression" Value="ArchiveBaseString = System.String.Format(&quot;{0}_{1}&quot;,SwfHelper.RemoveUnsupportedFilePathCharacters(From),SuppliedDate.ToString(&quot;yyyyMMddTTHHmmss.fff&quot;));" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Set base archive filename" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="a83eca9d-b20e-423e-a32f-e0e47418d69c" ParentLink="ServiceBody_Statement" LowerBound="76.1" HigherBound="83.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructRawCopy" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageAssignment" OID="739faad3-911c-4cdc-86b7-078931ce6a81" ParentLink="ComplexStatement_Statement" LowerBound="79.1" HigherBound="82.1">
+                        <om:Property Name="Expression" Value="Pop3RawCopy = Pop3Raw;&#xD;&#xA;Pop3RawCopy(FILE.ReceivedFileName) = ArchiveBaseString; //adapter will add _alpha.xml" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="MessageAssignment_2" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="9051f393-159e-44b3-87b5-7927cdf957be" ParentLink="Construct_MessageRef" LowerBound="77.23" HigherBound="77.34">
+                        <om:Property Name="Ref" Value="Pop3RawCopy" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="31b155e1-1871-48a0-8485-11b3f15f70ad" ParentLink="ServiceBody_Statement" LowerBound="83.1" HigherBound="85.1">
+                    <om:Property Name="PortName" Value="ArchiveRawPop3Copy" />
+                    <om:Property Name="MessageName" Value="Pop3RawCopy" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_Raw" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Decision" OID="85a4fb4b-2deb-499c-af9d-5b228c13379e" ParentLink="ServiceBody_Statement" LowerBound="85.1" HigherBound="138.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Valid Subject" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DecisionBranch" OID="60cae01f-5c0b-4ed8-a39f-895e011a9736" ParentLink="ReallyComplexStatement_Branch" LowerBound="86.13" HigherBound="113.1">
+                        <om:Property Name="Expression" Value="SwfRequest.IsValid == false" />
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="AnalystComments" Value="Reject Subject" />
+                        <om:Property Name="Name" Value="No" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="Construct" OID="654fcacb-bece-47ed-9f21-9a0b8e6c67fa" ParentLink="ComplexStatement_Statement" LowerBound="88.1" HigherBound="106.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="ConstructAuditErr" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Transform" OID="049fa53c-a7b1-4d5c-b09c-ade6aec2ea12" ParentLink="ComplexStatement_Statement" LowerBound="91.1" HigherBound="93.1">
+                                <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.Maps.map_getSimplePop3Audit" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Transform_Subject_Bad" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="MessagePartRef" OID="f5d76b34-253c-487f-80a3-545a33c9f18b" ParentLink="Transform_InputMessagePartRef" LowerBound="92.97" HigherBound="92.104">
+                                    <om:Property Name="MessageRef" Value="Pop3Raw" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_3" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="MessagePartRef" OID="f1e7c79b-82cb-4a74-9a30-12fd261b62e5" ParentLink="Transform_OutputMessagePartRef" LowerBound="92.32" HigherBound="92.51">
+                                    <om:Property Name="MessageRef" Value="Pop3AuditBadSubject" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_4" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="MessageAssignment" OID="abec828c-2995-4493-adfb-692902ba3532" ParentLink="ComplexStatement_Statement" LowerBound="93.1" HigherBound="105.1">
+                                <om:Property Name="Expression" Value="xpath(Pop3AuditBadSubject,&quot;/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='Subject' and namespace-uri()='']&quot;) = Subject;&#xD;&#xA;xpath(Pop3AuditBadSubject,&quot;/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='To' and namespace-uri()='']&quot;) = To;&#xD;&#xA;xpath(Pop3AuditBadSubject,&quot;/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='From' and namespace-uri()='']&quot;) = From;&#xD;&#xA;xpath(Pop3AuditBadSubject,&quot;/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='RawHeaders' and namespace-uri()='']&quot;) = Headers;&#xD;&#xA;xpath(Pop3AuditBadSubject,&quot;/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='SentDt' and namespace-uri()='']&quot;) = SuppliedDate;&#xD;&#xA;xpath(Pop3AuditBadSubject,&quot;/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='VisionData' and namespace-uri()='']/*[local-name()='ValidSubject' and namespace-uri()='']&quot;)  = SwfRequest.IsValid;&#xD;&#xA;xpath(Pop3AuditBadSubject,&quot;/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='VisionData' and namespace-uri()='']/*[local-name()='Action' and namespace-uri()='']&quot;)  = &quot;&quot;;&#xD;&#xA;xpath(Pop3AuditBadSubject,&quot;/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='VisionData' and namespace-uri()='']/*[local-name()='Ref' and namespace-uri()='']&quot;)  = &quot;&quot;;&#xD;&#xA;xpath(Pop3AuditBadSubject,&quot;/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='VisionData' and namespace-uri()='']/*[local-name()='Workflow' and namespace-uri()='']&quot;) =&quot;&quot;;&#xD;&#xA;&#xD;&#xA;Pop3AuditBadSubject(FILE.ReceivedFileName) = System.String.Format(&quot;{0}_Err_Subject_&quot;,ArchiveBaseString); //adapter will add _beta.xml&#xD;&#xA;" />
+                                <om:Property Name="ReportToAnalyst" Value="False" />
+                                <om:Property Name="Name" Value="AssignErr" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                            <om:Element Type="MessageRef" OID="3026beb3-452d-41f4-a433-ab184c8566b8" ParentLink="Construct_MessageRef" LowerBound="89.27" HigherBound="89.46">
+                                <om:Property Name="Ref" Value="Pop3AuditBadSubject" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Send" OID="bc8ad94b-3dbc-4e73-95d0-23510e9460e0" ParentLink="ComplexStatement_Statement" LowerBound="106.1" HigherBound="108.1">
+                            <om:Property Name="PortName" Value="ArchiveRawPop3" />
+                            <om:Property Name="MessageName" Value="Pop3AuditBadSubject" />
+                            <om:Property Name="OperationName" Value="Operation_1" />
+                            <om:Property Name="OperationMessageName" Value="Request" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Send_Err_Subject" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="Suspend" OID="70542f4d-d6d3-4689-b2ce-31c2b72c27a5" ParentLink="ComplexStatement_Statement" LowerBound="108.1" HigherBound="110.1">
+                            <om:Property Name="ErrorMessage" Value="System.String.Format(&quot;A unrecognised subject pattern was submitted to SimpleWorkflow from {0}.  Message is suspened, on resumption this will be terminated.  Review support folder content&quot;,From);" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Suspend_Bad_Subject" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="Terminate" OID="e6f305af-f6cc-4a8a-9201-3bee453bae40" ParentLink="ComplexStatement_Statement" LowerBound="110.1" HigherBound="112.1">
+                            <om:Property Name="ErrorMessage" Value="&quot;Terminated due to unsupported subject&quot;;" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Terminate_Request" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="DecisionBranch" OID="c6503129-35d5-409a-8464-199b807b666d" ParentLink="ReallyComplexStatement_Branch">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="AnalystComments" Value="Process valid subject" />
+                        <om:Property Name="Name" Value="Else" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Construct" OID="3e4c03eb-0d3e-4893-ab72-94134f37ecf0" ParentLink="ComplexStatement_Statement" LowerBound="115.1" HigherBound="135.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="ConstructAudit" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Transform" OID="399f4a43-471a-45e1-b209-25b0332c5554" ParentLink="ComplexStatement_Statement" LowerBound="118.1" HigherBound="120.1">
+                                <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.Maps.map_getSimplePop3Audit" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Transform_Subject_OK" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="MessagePartRef" OID="a5c7fd0d-b094-4d82-b8b0-29b1cb53bdbd" ParentLink="Transform_InputMessagePartRef" LowerBound="119.87" HigherBound="119.94">
+                                    <om:Property Name="MessageRef" Value="Pop3Raw" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_1" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="MessagePartRef" OID="07c24b26-a9e7-442a-a996-53446b3ef67d" ParentLink="Transform_OutputMessagePartRef" LowerBound="119.32" HigherBound="119.41">
+                                    <om:Property Name="MessageRef" Value="Pop3Audit" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_2" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="MessageAssignment" OID="7ed89226-f7d4-4289-bce5-584c71f76124" ParentLink="ComplexStatement_Statement" LowerBound="120.1" HigherBound="134.1">
+                                <om:Property Name="Expression" Value="xpath(Pop3Audit,&quot;/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='Subject' and namespace-uri()='']&quot;) = Subject;&#xD;&#xA;xpath(Pop3Audit,&quot;/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='To' and namespace-uri()='']&quot;) = To;&#xD;&#xA;xpath(Pop3Audit,&quot;/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='From' and namespace-uri()='']&quot;) = From;&#xD;&#xA;xpath(Pop3Audit,&quot;/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='RawHeaders' and namespace-uri()='']&quot;) = Headers;&#xD;&#xA;xpath(Pop3Audit,&quot;/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='SentDt' and namespace-uri()='']&quot;) = SuppliedDate;&#xD;&#xA;xpath(Pop3Audit,&quot;/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='VisionData' and namespace-uri()='']/*[local-name()='ValidSubject' and namespace-uri()='']&quot;)  = SwfRequest.IsValid;&#xD;&#xA;xpath(Pop3Audit,&quot;/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='VisionData' and namespace-uri()='']/*[local-name()='Action' and namespace-uri()='']&quot;)  = SwfRequest.Action;&#xD;&#xA;xpath(Pop3Audit,&quot;/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='VisionData' and namespace-uri()='']/*[local-name()='Ref' and namespace-uri()='']&quot;)  = SwfRequest.Ref;&#xD;&#xA;xpath(Pop3Audit,&quot;/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='VisionData' and namespace-uri()='']/*[local-name()='Workflow' and namespace-uri()='']&quot;) = SwfRequest.Workflow;&#xD;&#xA;xpath(Pop3Audit,&quot;/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='VisionData' and namespace-uri()='']/*[local-name()='Id' and namespace-uri()='']&quot;) = SwfRequest.id;&#xD;&#xA;xpath(Pop3Audit,&quot;/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='VisionData' and namespace-uri()='']/*[local-name()='Guid' and namespace-uri()='']&quot;) = SwfRequest.guid;&#xD;&#xA;&#xD;&#xA;Pop3Audit(FILE.ReceivedFileName) = ArchiveBaseString; //adapter will add _beta.xml&#xD;&#xA;" />
+                                <om:Property Name="ReportToAnalyst" Value="False" />
+                                <om:Property Name="Name" Value="AssignOK" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                            <om:Element Type="MessageRef" OID="157b08d2-b227-4ce7-8e7f-26be68fcb460" ParentLink="Construct_MessageRef" LowerBound="116.27" HigherBound="116.36">
+                                <om:Property Name="Ref" Value="Pop3Audit" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Send" OID="05809a07-7432-4cc0-b3d4-19f4b24a36fc" ParentLink="ComplexStatement_Statement" LowerBound="135.1" HigherBound="137.1">
+                            <om:Property Name="PortName" Value="ArchiveRawPop3" />
+                            <om:Property Name="MessageName" Value="Pop3Audit" />
+                            <om:Property Name="OperationName" Value="Operation_1" />
+                            <om:Property Name="OperationMessageName" Value="Request" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Send_Audit" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Task" OID="1eb0eba1-0dc1-449e-8c62-aeb18dc92f23" ParentLink="ServiceBody_Statement" LowerBound="138.1" HigherBound="167.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Continue_SQL_Connection" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="VariableAssignment" OID="0de9df4b-d1cd-479b-932c-fc2a0cabfc18" ParentLink="ComplexStatement_Statement" LowerBound="138.1" HigherBound="141.1">
+                        <om:Property Name="Expression" Value="Pop3Xml = Pop3Audit;&#xD;&#xA;RetrySqlRequest = true;" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Assign Sql Parameter" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="While" OID="e4a1d27b-23e6-4cf6-b911-fa094931cd97" ParentLink="ComplexStatement_Statement" LowerBound="141.1" HigherBound="167.1">
+                        <om:Property Name="Expression" Value="RetrySqlRequest == true" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Retry" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="VariableAssignment" OID="1085c499-34de-4089-adf8-fec73ed7372f" ParentLink="ComplexStatement_Statement" LowerBound="144.1" HigherBound="150.1">
+                            <om:Property Name="Expression" Value="SQLClientResult = SwfSqlObject.LoadSimpleWorkflowRequest(Pop3Xml);&#xD;&#xA;if(SQLClientResult != -100)&#xD;&#xA;{&#xD;&#xA;    RetrySqlRequest = false;&#xD;&#xA;}" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="AnalystComments" Value="SQLClientResult , 0 = OK, -100 = SQL Exception to be retried, -101 = SQL Exception to be suspended, -200 class exception, -1 to -99 = procedure exception" />
+                            <om:Property Name="Name" Value="Load Request" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="Decision" OID="59fd990e-1116-4ffb-bd10-b4974101b5d1" ParentLink="ComplexStatement_Statement" LowerBound="150.1" HigherBound="166.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Success?" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="DecisionBranch" OID="ff1abf18-e2f5-40df-96c3-836fd57b4b2e" ParentLink="ReallyComplexStatement_Branch" LowerBound="151.17" HigherBound="156.1">
+                                <om:Property Name="Expression" Value="SQLClientResult == 0" />
+                                <om:Property Name="IsGhostBranch" Value="True" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="AnalystComments" Value="Success, so break the retry condition" />
+                                <om:Property Name="Name" Value="Result == 0" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="VariableAssignment" OID="2040e5dc-4624-4d03-b281-02cfd258f861" ParentLink="ComplexStatement_Statement" LowerBound="153.1" HigherBound="155.1">
+                                    <om:Property Name="Expression" Value="RetrySqlRequest = false;" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Exit Loop" />
+                                    <om:Property Name="Signal" Value="True" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="DecisionBranch" OID="21deec17-504a-41f8-a06b-997f87bf9935" ParentLink="ReallyComplexStatement_Branch" LowerBound="156.22" HigherBound="161.1">
+                                <om:Property Name="Expression" Value="SQLClientResult == -100" />
+                                <om:Property Name="IsGhostBranch" Value="True" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="AnalystComments" Value="SQL Exception considered temorary so RETRY" />
+                                <om:Property Name="Name" Value="Result == -100" />
+                                <om:Property Name="Signal" Value="False" />
+                                <om:Element Type="VariableAssignment" OID="47e16909-fc14-4c30-a564-8a258edcbe49" ParentLink="ComplexStatement_Statement" LowerBound="158.1" HigherBound="160.1">
+                                    <om:Property Name="Expression" Value="RetrySqlRequest = true;" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Retry" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="DecisionBranch" OID="539dcc95-b44c-4dd5-a43b-5179e961b5c1" ParentLink="ReallyComplexStatement_Branch">
+                                <om:Property Name="IsGhostBranch" Value="True" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="AnalystComments" Value="These errors are considered non resumable so no point retrying" />
+                                <om:Property Name="Name" Value="Else" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="VariableAssignment" OID="3347cfb9-e9e5-4012-b9be-c84aeddfcaf6" ParentLink="ComplexStatement_Statement" LowerBound="163.1" HigherBound="165.1">
+                                    <om:Property Name="Expression" Value="RetrySqlRequest = false;" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Exit Loop as Fatal Error" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="371cf30e-e7ac-4ecb-bb4e-1d199b90f187" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="28.1" HigherBound="30.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.Swf_Pop3_Mailbox_Sub_Type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Swf_Pop3_Mailbox_Sub" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="DirectBindingAttribute" OID="6c6117b0-978f-4ea3-a796-420567e5b5c0" ParentLink="PortDeclaration_CLRAttribute" LowerBound="28.1" HigherBound="29.1">
+                    <om:Property Name="DirectBindingType" Value="MessageBox" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="8b59959d-5187-4e3b-b1eb-2edb9416ab19" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="30.1" HigherBound="32.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="34" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.ArchiveRawPop3CopyType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ArchiveRawPop3Copy" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="5dc0e79d-90e3-4601-afd6-2fc53e5b5ea4" ParentLink="PortDeclaration_CLRAttribute" LowerBound="30.1" HigherBound="31.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="2b7813e5-b6e4-4ba7-9654-ed622d7bea0c" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="32.1" HigherBound="34.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="59" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.ArchiveRawPop3Type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ArchiveRawPop3" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="1cfed691-50a0-4634-aa11-2c189ac9d554" ParentLink="PortDeclaration_CLRAttribute" LowerBound="32.1" HigherBound="33.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MFM.Lbg.Orcs
+{
+    internal porttype Swf_Pop3_Mailbox_Sub_Type
+    {
+        oneway Operation_1
+        {
+            MFM.Lbg.Schemas.SimpleEmailWorkflowFFS
+        };
+    };
+    internal porttype ArchiveRawPop3Type
+    {
+        oneway Operation_1
+        {
+            MFM.Lbg.Schemas.SimpleEmailWorkFlowPop3Audit
+        };
+    };
+    internal porttype ArchiveRawPop3CopyType
+    {
+        oneway Operation_1
+        {
+            MFM.Lbg.Schemas.SimpleEmailWorkflowFFS
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service o_ProcessSimpleWorkflow
+    {
+        [Microsoft.XLANGs.BaseTypes.DirectBinding()]
+        port implements Swf_Pop3_Mailbox_Sub_Type Swf_Pop3_Mailbox_Sub;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses ArchiveRawPop3CopyType ArchiveRawPop3Copy;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses ArchiveRawPop3Type ArchiveRawPop3;
+        message MFM.Lbg.Schemas.SimpleEmailWorkFlowPop3Audit Pop3AuditBadSubject;
+        message MFM.Lbg.Schemas.SimpleEmailWorkflowFFS Pop3RawCopy;
+        message MFM.Lbg.Schemas.SimpleEmailWorkflowFFS Pop3Raw;
+        message MFM.Lbg.Schemas.SimpleEmailWorkFlowPop3Audit Pop3Audit;
+        System.String To;
+        System.String Headers;
+        System.String From;
+        System.Xml.XmlDocument Pop3Xml;
+        System.String Subject;
+        System.DateTime SuppliedDate;
+        MFM.Lbg.Helper.Misc SwfHelper;
+        System.String ArchiveBaseString;
+        MFM.Lbg.Helper.HelpdeskSqlClient SwfSqlObject;
+        MFM.Lbg.Helper.SimpleWorkflowRequest SwfRequest;
+        System.Int32 SQLClientResult;
+        System.Boolean RetrySqlRequest;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("bdaaef2d-8ce7-4850-9a5c-b3571ef729fd")]
+            activate ((BTS.ReceivePortName == "Get SimpleWorkflow"))receive (Swf_Pop3_Mailbox_Sub.Operation_1, Pop3Raw);
+            To = "";
+            Headers = "";
+            From = "";
+            Pop3Xml = new System.Xml.XmlDocument();
+            Subject = "";
+            SwfHelper = new MFM.Lbg.Helper.Misc();
+            ArchiveBaseString = "";
+            SwfSqlObject = new MFM.Lbg.Helper.HelpdeskSqlClient();
+            SwfRequest = new MFM.Lbg.Helper.SimpleWorkflowRequest();
+            RetrySqlRequest = true;
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("aa4d58c7-3597-40e6-b858-2eb0e1e22df8")]
+            Subject = Pop3Raw(POP3.Subject);
+            From = Pop3Raw(POP3.From);
+            To = Pop3Raw(POP3.To);
+            SuppliedDate = System.Convert.ToDateTime(Pop3Raw(POP3.Date));
+            Headers = Pop3Raw(POP3.Headers);
+            
+            
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("552bb25a-6f4c-493f-91e5-f449cf27eede")]
+            SwfRequest = SwfHelper.ParseSimpleWorkflowSubject(Subject);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("54a053f2-fbf7-4457-8f4d-12506bda3015")]
+            ArchiveBaseString = System.String.Format("{0}_{1}",SwfHelper.RemoveUnsupportedFilePathCharacters(From),SuppliedDate.ToString("yyyyMMddTTHHmmss.fff"));
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("a83eca9d-b20e-423e-a32f-e0e47418d69c")]
+            construct Pop3RawCopy
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("739faad3-911c-4cdc-86b7-078931ce6a81")]
+                Pop3RawCopy = Pop3Raw;
+                Pop3RawCopy(FILE.ReceivedFileName) = ArchiveBaseString; //adapter will add _alpha.xml
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("31b155e1-1871-48a0-8485-11b3f15f70ad")]
+            send (ArchiveRawPop3Copy.Operation_1, Pop3RawCopy);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("85a4fb4b-2deb-499c-af9d-5b228c13379e")]
+            if (SwfRequest.IsValid == false)
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("654fcacb-bece-47ed-9f21-9a0b8e6c67fa")]
+                construct Pop3AuditBadSubject
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("049fa53c-a7b1-4d5c-b09c-ade6aec2ea12")]
+                    transform (Pop3AuditBadSubject) = MFM.Lbg.Orcs.Maps.map_getSimplePop3Audit (Pop3Raw);
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("abec828c-2995-4493-adfb-692902ba3532")]
+                    xpath(Pop3AuditBadSubject,"/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='Subject' and namespace-uri()='']") = Subject;
+                    xpath(Pop3AuditBadSubject,"/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='To' and namespace-uri()='']") = To;
+                    xpath(Pop3AuditBadSubject,"/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='From' and namespace-uri()='']") = From;
+                    xpath(Pop3AuditBadSubject,"/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='RawHeaders' and namespace-uri()='']") = Headers;
+                    xpath(Pop3AuditBadSubject,"/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='SentDt' and namespace-uri()='']") = SuppliedDate;
+                    xpath(Pop3AuditBadSubject,"/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='VisionData' and namespace-uri()='']/*[local-name()='ValidSubject' and namespace-uri()='']")  = SwfRequest.IsValid;
+                    xpath(Pop3AuditBadSubject,"/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='VisionData' and namespace-uri()='']/*[local-name()='Action' and namespace-uri()='']")  = "";
+                    xpath(Pop3AuditBadSubject,"/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='VisionData' and namespace-uri()='']/*[local-name()='Ref' and namespace-uri()='']")  = "";
+                    xpath(Pop3AuditBadSubject,"/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='VisionData' and namespace-uri()='']/*[local-name()='Workflow' and namespace-uri()='']") ="";
+                    
+                    Pop3AuditBadSubject(FILE.ReceivedFileName) = System.String.Format("{0}_Err_Subject_",ArchiveBaseString); //adapter will add _beta.xml
+                }
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("bc8ad94b-3dbc-4e73-95d0-23510e9460e0")]
+                send (ArchiveRawPop3.Operation_1, Pop3AuditBadSubject);
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("70542f4d-d6d3-4689-b2ce-31c2b72c27a5")]
+                suspend System.String.Format("A unrecognised subject pattern was submitted to SimpleWorkflow from {0}.  Message is suspened, on resumption this will be terminated.  Review support folder content",From);
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("e6f305af-f6cc-4a8a-9201-3bee453bae40")]
+                terminate "Terminated due to unsupported subject";;
+            }
+            else 
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("3e4c03eb-0d3e-4893-ab72-94134f37ecf0")]
+                construct Pop3Audit
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("399f4a43-471a-45e1-b209-25b0332c5554")]
+                    transform (Pop3Audit) = MFM.Lbg.Orcs.Maps.map_getSimplePop3Audit (Pop3Raw);
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("7ed89226-f7d4-4289-bce5-584c71f76124")]
+                    xpath(Pop3Audit,"/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='Subject' and namespace-uri()='']") = Subject;
+                    xpath(Pop3Audit,"/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='To' and namespace-uri()='']") = To;
+                    xpath(Pop3Audit,"/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='From' and namespace-uri()='']") = From;
+                    xpath(Pop3Audit,"/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='RawHeaders' and namespace-uri()='']") = Headers;
+                    xpath(Pop3Audit,"/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='SentDt' and namespace-uri()='']") = SuppliedDate;
+                    xpath(Pop3Audit,"/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='VisionData' and namespace-uri()='']/*[local-name()='ValidSubject' and namespace-uri()='']")  = SwfRequest.IsValid;
+                    xpath(Pop3Audit,"/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='VisionData' and namespace-uri()='']/*[local-name()='Action' and namespace-uri()='']")  = SwfRequest.Action;
+                    xpath(Pop3Audit,"/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='VisionData' and namespace-uri()='']/*[local-name()='Ref' and namespace-uri()='']")  = SwfRequest.Ref;
+                    xpath(Pop3Audit,"/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='VisionData' and namespace-uri()='']/*[local-name()='Workflow' and namespace-uri()='']") = SwfRequest.Workflow;
+                    xpath(Pop3Audit,"/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='VisionData' and namespace-uri()='']/*[local-name()='Id' and namespace-uri()='']") = SwfRequest.id;
+                    xpath(Pop3Audit,"/*[local-name()='SimpleEmailWorkFlowPop3Audit' and namespace-uri()='']/*[local-name()='VisionData' and namespace-uri()='']/*[local-name()='Guid' and namespace-uri()='']") = SwfRequest.guid;
+                    
+                    Pop3Audit(FILE.ReceivedFileName) = ArchiveBaseString; //adapter will add _beta.xml
+                }
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("05809a07-7432-4cc0-b3d4-19f4b24a36fc")]
+                send (ArchiveRawPop3.Operation_1, Pop3Audit);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("0de9df4b-d1cd-479b-932c-fc2a0cabfc18")]
+            Pop3Xml = Pop3Audit;
+            RetrySqlRequest = true;
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("e4a1d27b-23e6-4cf6-b911-fa094931cd97")]
+            while (RetrySqlRequest == true)
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("1085c499-34de-4089-adf8-fec73ed7372f")]
+                SQLClientResult = SwfSqlObject.LoadSimpleWorkflowRequest(Pop3Xml);
+                if(SQLClientResult != -100)
+                {
+                    RetrySqlRequest = false;
+                }
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("59fd990e-1116-4ffb-bd10-b4974101b5d1")]
+                if (SQLClientResult == 0)
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("2040e5dc-4624-4d03-b281-02cfd258f861")]
+                    RetrySqlRequest = false;
+                }
+                else if (SQLClientResult == -100)
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("47e16909-fc14-4c30-a564-8a258edcbe49")]
+                    RetrySqlRequest = true;
+                }
+                else 
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("3347cfb9-e9e5-4012-b9be-c84aeddfcaf6")]
+                    RetrySqlRequest = false;
+                }
+            }
+        }
+    }
+}
+

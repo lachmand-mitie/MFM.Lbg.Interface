@@ -1,0 +1,883 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="70761029-c48b-45a0-9328-ebffc6c5dab9" LowerBound="1.1" HigherBound="190.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MFM.Lbg.Orcs" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="da6f03d0-1ffd-40c3-b689-61c6c89d9e00" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ReceiveCaseUpdsType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="79081d21-b074-4ab8-bc0d-77440f358176" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="871bca7e-65a6-4b1c-8cc2-46d06d2325d4" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.105">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.Biz_GetCaseUpdatesPollingTypedPolling_Biz_GetCaseUpdatesPolling.TypedPolling" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="2c5f8a94-4083-4177-aa58-4727ec081ba0" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="FetchUpdsFromVisionType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="cb459c4d-a7ba-4273-a550-9174c498612b" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Biz_FetchPendingCaseUpdates" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="4f244a66-c51d-4125-bae8-4b3980107376" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.102">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.Biz_FetchPendingCaseUpdatesTypedProcedure_ops.Biz_FetchPendingCaseUpdates" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="62dd1c2c-60eb-4455-a81d-e4d54eb0cd00" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="15.104" HigherBound="15.201">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.Biz_FetchPendingCaseUpdatesTypedProcedure_ops.Biz_FetchPendingCaseUpdatesResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="5ab6b3e8-945d-4f79-a8a8-f8c0a09a4d1a" ParentLink="Module_PortType" LowerBound="18.1" HigherBound="25.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Debug_Raw_Upd_Type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="2f1d302a-050f-4361-90b0-30edfdbdf191" ParentLink="PortType_OperationDeclaration" LowerBound="20.1" HigherBound="24.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="bdf3b6ea-7c06-439c-831a-480a31730e36" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="22.13" HigherBound="22.132">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.Biz_FetchPendingCaseUpdatesProcedureResultSet_ops_Biz_FetchPendingCaseUpdates.StoredProcedureResultSet0" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="e9bb923b-49f1-46c3-9040-8041fea33ed2" ParentLink="Module_PortType" LowerBound="25.1" HigherBound="32.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ClosePendingSqlClientType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="52e2c0c0-7fde-4475-9571-7dfd94ddb844" ParentLink="PortType_OperationDeclaration" LowerBound="27.1" HigherBound="31.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Biz_ClosePendingCaseUpdate" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="89e36207-bb87-4ea8-89ea-f7965864df55" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="29.13" HigherBound="29.100">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.Biz_ClosePendingCaseUpdateTypedProcedure_ops.Biz_ClosePendingCaseUpdate" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="e32fad74-f283-4a5b-a763-12fcc48f8b15" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="29.102" HigherBound="29.197">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.Biz_ClosePendingCaseUpdateTypedProcedure_ops.Biz_ClosePendingCaseUpdateResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="a6d41e9a-ea53-4c15-9680-51b42e450599" ParentLink="Module_ServiceDeclaration" LowerBound="32.1" HigherBound="189.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="o_Distribute_TFM_MXO75_Upd" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="3db78f75-5430-4482-9394-6e56ec4acffe" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="55.1" HigherBound="56.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Int32" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Counter" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="f4c1a89a-baba-4e53-bb4e-8ebf5e8b19f6" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="56.1" HigherBound="57.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Int32" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CountUpds" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="536b91b2-5d15-4074-8170-c5c24ffa4949" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="57.1" HigherBound="58.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="IterationStringXpath" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="ebd8c28e-4ab0-4dc3-b535-d44de0d067b7" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="58.1" HigherBound="59.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="MFM.Lbg.Helper.MiAMIWorkorderUpdateResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="WsUpdResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="024ddae6-4430-4153-8391-771432103bda" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="59.1" HigherBound="60.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="MFM.Lbg.Helper.MaximoHelper" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MxoUpdHelper" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="372d983e-0af7-4155-9162-b5577957f232" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="60.1" HigherBound="61.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="UpdXml" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="791b6d82-1983-4607-9695-a3ac9ad23484" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="45.1" HigherBound="46.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.Biz_ClosePendingCaseUpdateTypedProcedure_ops.Biz_ClosePendingCaseUpdate" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CloseSoapErr" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="8c143dc4-a7ec-4cec-aeb9-2b9d796bc97c" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="46.1" HigherBound="47.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.QueryMXVISIONLOCQUERYResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="GetSiteIdQueryResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="b7bced37-31df-4e35-afc7-dc6b6c4f1fcd" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="47.1" HigherBound="48.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.QueryMXVISIONLOCQUERYRequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="GetSiteIdQuery" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="b5f8ec35-e31c-43d6-882d-91c78f7428af" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="48.1" HigherBound="49.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.Biz_GetCaseUpdatesPollingTypedPolling_Biz_GetCaseUpdatesPolling.TypedPolling" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PollingResult" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="65fc65fe-f8c3-400d-80b2-df0087712321" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="49.1" HigherBound="50.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.Biz_FetchPendingCaseUpdatesTypedProcedure_ops.Biz_FetchPendingCaseUpdates" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="FetchPendingUpds" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="39fe1aa8-9734-48f0-ae6b-93b5d5566ee2" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="50.1" HigherBound="51.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.Biz_FetchPendingCaseUpdatesTypedProcedure_ops.Biz_FetchPendingCaseUpdatesResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PendingUpds" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="1c996b0e-2cc6-4019-9f7d-ad95ad32d441" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="51.1" HigherBound="52.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.Biz_FetchPendingCaseUpdatesProcedureResultSet_ops_Biz_FetchPendingCaseUpdates.StoredProcedureResultSet0" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="UpdRaw" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="fb6b4ebf-7fcb-4811-8be0-957a5cc13ccf" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="52.1" HigherBound="53.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.Biz_ClosePendingCaseUpdateTypedProcedure_ops.Biz_ClosePendingCaseUpdate" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CloseUpd" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="7399d3e8-9e84-41c3-9385-94d4e36951c1" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="53.1" HigherBound="54.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.Biz_ClosePendingCaseUpdateTypedProcedure_ops.Biz_ClosePendingCaseUpdateResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CloseUpdResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="150e707f-a6c1-4507-adf2-b1260562db57" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="54.1" HigherBound="55.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.TempMiamiWoUpd" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="UpdAttributtes" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="9b9f7f7e-690a-4f4c-8c8c-5d5f4f0c9c9a" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="3fba55d2-cbd7-48de-b18d-3490894e2318" ParentLink="ServiceBody_Statement" LowerBound="63.1" HigherBound="69.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="ReceiveCaseUpds" />
+                    <om:Property Name="MessageName" Value="PollingResult" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_Polling_Req" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="005a5fbe-55e9-49fb-aa5d-48a75367ea41" ParentLink="ServiceBody_Statement" LowerBound="69.1" HigherBound="75.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Construct_Fetch_Upds" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="7befef03-95f9-4990-a04a-49a31244b6a7" ParentLink="ComplexStatement_Statement" LowerBound="72.1" HigherBound="74.1">
+                        <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.x_to_fetch" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="x_to_fetch" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="MessagePartRef" OID="5b419da5-d56c-4fca-99d1-add43c7c3af2" ParentLink="Transform_InputMessagePartRef" LowerBound="73.73" HigherBound="73.86">
+                            <om:Property Name="MessageRef" Value="PollingResult" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="4fe46cc9-1c35-47f8-aedd-e2381b7fcc8e" ParentLink="Transform_OutputMessagePartRef" LowerBound="73.28" HigherBound="73.44">
+                            <om:Property Name="MessageRef" Value="FetchPendingUpds" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="e6814a19-da48-4211-bd56-64eee14b46a4" ParentLink="Construct_MessageRef" LowerBound="70.23" HigherBound="70.39">
+                        <om:Property Name="Ref" Value="FetchPendingUpds" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="78c8d6f5-3ad6-4637-98bd-c2c74b93af0f" ParentLink="ServiceBody_Statement" LowerBound="75.1" HigherBound="77.1">
+                    <om:Property Name="PortName" Value="FetchUpdsFromVision" />
+                    <om:Property Name="MessageName" Value="FetchPendingUpds" />
+                    <om:Property Name="OperationName" Value="Biz_FetchPendingCaseUpdates" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Fetch_Upds" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Receive" OID="c37d6d3a-229e-4298-a57a-fd2e55c58283" ParentLink="ServiceBody_Statement" LowerBound="77.1" HigherBound="79.1">
+                    <om:Property Name="Activate" Value="False" />
+                    <om:Property Name="PortName" Value="FetchUpdsFromVision" />
+                    <om:Property Name="MessageName" Value="PendingUpds" />
+                    <om:Property Name="OperationName" Value="Biz_FetchPendingCaseUpdates" />
+                    <om:Property Name="OperationMessageName" Value="Response" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Get_Upds" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="c39e4bc8-0510-4feb-a628-5d94ceef99f0" ParentLink="ServiceBody_Statement" LowerBound="79.1" HigherBound="82.1">
+                    <om:Property Name="Expression" Value="CountUpds = System.Convert.ToInt32(xpath(PendingUpds,&quot;count(/*[local-name()='Biz_FetchPendingCaseUpdatesResponse' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/ops']/*[local-name()='StoredProcedureResultSet0' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/ops']/*[local-name()='StoredProcedureResultSet0' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/ProceduresResultSets/ops/Biz_FetchPendingCaseUpdates'])&quot;));&#xD;&#xA;Counter = 0;" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Check Total" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Decision" OID="43d8d00f-3bc6-4d94-b01f-cdcb7a95a3e2" ParentLink="ServiceBody_Statement" LowerBound="82.1" HigherBound="187.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Any Pending Upds?" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DecisionBranch" OID="bbefb322-6d36-4307-93b9-cdc99f0fe229" ParentLink="ReallyComplexStatement_Branch" LowerBound="83.13" HigherBound="182.1">
+                        <om:Property Name="Expression" Value="CountUpds &gt; 0" />
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Yes" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="While" OID="50cf6fbd-6c24-434e-a904-6c251a3e1a29" ParentLink="ComplexStatement_Statement" LowerBound="85.1" HigherBound="181.1">
+                            <om:Property Name="Expression" Value="Counter &lt; CountUpds" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Debatch" />
+                            <om:Property Name="Signal" Value="False" />
+                            <om:Element Type="VariableAssignment" OID="9370c051-42d8-493f-a2ca-d302b16823eb" ParentLink="ComplexStatement_Statement" LowerBound="88.1" HigherBound="91.1">
+                                <om:Property Name="Expression" Value="Counter = Counter + 1;&#xD;&#xA;IterationStringXpath = System.String.Format(&quot;/*[local-name()='Biz_FetchPendingCaseUpdatesResponse' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/ops']/*[local-name()='StoredProcedureResultSet0' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/ops']/*[local-name()='StoredProcedureResultSet0' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/ProceduresResultSets/ops/Biz_FetchPendingCaseUpdates'][{0}]&quot;,Counter.ToString());" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Set_Iteration" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Construct" OID="981bd4b5-3e4a-4adf-8e9c-02d9639bf4a6" ParentLink="ComplexStatement_Statement" LowerBound="91.1" HigherBound="97.1">
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="ConstructSingleUpd" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="MessageAssignment" OID="ad5ec03f-762e-463d-8de2-ab67c1ae759e" ParentLink="ComplexStatement_Statement" LowerBound="94.1" HigherBound="96.1">
+                                    <om:Property Name="Expression" Value="UpdRaw = xpath(PendingUpds,IterationStringXpath);" />
+                                    <om:Property Name="ReportToAnalyst" Value="False" />
+                                    <om:Property Name="Name" Value="Assign_fragment" />
+                                    <om:Property Name="Signal" Value="True" />
+                                </om:Element>
+                                <om:Element Type="MessageRef" OID="d3df30e6-750f-41a4-9a4c-b421a444965a" ParentLink="Construct_MessageRef" LowerBound="92.31" HigherBound="92.37">
+                                    <om:Property Name="Ref" Value="UpdRaw" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="Decision" OID="72e547a7-3da0-483e-b90a-5f73471289fd" ParentLink="ComplexStatement_Statement" LowerBound="97.1" HigherBound="180.1">
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Decide_1" />
+                                <om:Property Name="Signal" Value="False" />
+                                <om:Element Type="DecisionBranch" OID="1294bdfd-3b9b-445c-ab60-1b9082cbea3c" ParentLink="ReallyComplexStatement_Branch" LowerBound="98.21" HigherBound="180.1">
+                                    <om:Property Name="Expression" Value="UpdRaw.case_foreignsysid != &quot;&quot;" />
+                                    <om:Property Name="IsGhostBranch" Value="True" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Rule_1" />
+                                    <om:Property Name="Signal" Value="True" />
+                                    <om:Element Type="Construct" OID="9dad5666-6499-47c5-8a18-877d4d79d868" ParentLink="ComplexStatement_Statement" LowerBound="100.1" HigherBound="106.1">
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="ConstructMessage_1" />
+                                        <om:Property Name="Signal" Value="True" />
+                                        <om:Element Type="Transform" OID="cd4071d2-4af3-466f-bfb5-f6bdfad795ca" ParentLink="ComplexStatement_Statement" LowerBound="103.1" HigherBound="105.1">
+                                            <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.x_to_closePendingUpd" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="x_to_closePendingUpd" />
+                                            <om:Property Name="Signal" Value="True" />
+                                            <om:Element Type="MessagePartRef" OID="9f4acfda-cd1e-4e7d-b1a9-d642a7145166" ParentLink="Transform_InputMessagePartRef" LowerBound="104.87" HigherBound="104.93">
+                                                <om:Property Name="MessageRef" Value="UpdRaw" />
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="Name" Value="MessagePartReference_3" />
+                                                <om:Property Name="Signal" Value="False" />
+                                            </om:Element>
+                                            <om:Element Type="MessagePartRef" OID="77cf96cb-f029-4718-890a-85c05e6102a0" ParentLink="Transform_OutputMessagePartRef" LowerBound="104.40" HigherBound="104.48">
+                                                <om:Property Name="MessageRef" Value="CloseUpd" />
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="Name" Value="MessagePartReference_4" />
+                                                <om:Property Name="Signal" Value="False" />
+                                            </om:Element>
+                                        </om:Element>
+                                        <om:Element Type="MessageRef" OID="1d1da8df-f47e-410d-b1d3-8b431a425757" ParentLink="Construct_MessageRef" LowerBound="101.35" HigherBound="101.43">
+                                            <om:Property Name="Ref" Value="CloseUpd" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Signal" Value="False" />
+                                        </om:Element>
+                                    </om:Element>
+                                    <om:Element Type="Construct" OID="8d287f61-c47f-459f-82ba-66340c85975d" ParentLink="ComplexStatement_Statement" LowerBound="106.1" HigherBound="112.1">
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="ConstructSiteIdQuery" />
+                                        <om:Property Name="Signal" Value="True" />
+                                        <om:Element Type="Transform" OID="aa5c953a-c9d9-4f93-a31d-6fd4e6e4b517" ParentLink="ComplexStatement_Statement" LowerBound="109.1" HigherBound="111.1">
+                                            <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.x_to_upd_loc_Query" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="Get_siteIdMsg" />
+                                            <om:Property Name="Signal" Value="False" />
+                                            <om:Element Type="MessagePartRef" OID="5dcb365f-5494-45d4-aa7e-1edd7d2645f2" ParentLink="Transform_InputMessagePartRef" LowerBound="110.102" HigherBound="110.108">
+                                                <om:Property Name="MessageRef" Value="UpdRaw" />
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="Name" Value="MessagePartReference_5" />
+                                                <om:Property Name="Signal" Value="False" />
+                                            </om:Element>
+                                            <om:Element Type="MessagePartRef" OID="97fe6b8e-129c-40e4-9cd0-45e9d04e11c8" ParentLink="Transform_OutputMessagePartRef" LowerBound="110.40" HigherBound="110.65">
+                                                <om:Property Name="MessageRef" Value="GetSiteIdQuery" />
+                                                <om:Property Name="PartRef" Value="parameters" />
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="Name" Value="MessagePartReference_6" />
+                                                <om:Property Name="Signal" Value="False" />
+                                            </om:Element>
+                                        </om:Element>
+                                        <om:Element Type="MessageRef" OID="c4437dfd-641f-49eb-861d-72900c66371e" ParentLink="Construct_MessageRef" LowerBound="107.35" HigherBound="107.49">
+                                            <om:Property Name="Ref" Value="GetSiteIdQuery" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Signal" Value="False" />
+                                        </om:Element>
+                                    </om:Element>
+                                    <om:Element Type="Scope" OID="ab339376-8a2a-4499-9378-5d4c29885cc3" ParentLink="ComplexStatement_Statement" LowerBound="112.1" HigherBound="179.1">
+                                        <om:Property Name="InitializedTransactionType" Value="True" />
+                                        <om:Property Name="IsSynchronized" Value="False" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="Scope_1" />
+                                        <om:Property Name="Signal" Value="True" />
+                                        <om:Element Type="Send" OID="e596802e-b4e1-48b0-a74f-c5f491292612" ParentLink="ComplexStatement_Statement" LowerBound="117.1" HigherBound="119.1">
+                                            <om:Property Name="PortName" Value="QueryLoc" />
+                                            <om:Property Name="MessageName" Value="GetSiteIdQuery" />
+                                            <om:Property Name="OperationName" Value="QueryMXVISIONLOCQUERY" />
+                                            <om:Property Name="OperationMessageName" Value="Request" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="Send_Loc_query" />
+                                            <om:Property Name="Signal" Value="True" />
+                                        </om:Element>
+                                        <om:Element Type="Receive" OID="7acbd2be-af8b-45e5-af07-e083f396a8b9" ParentLink="ComplexStatement_Statement" LowerBound="119.1" HigherBound="121.1">
+                                            <om:Property Name="Activate" Value="False" />
+                                            <om:Property Name="PortName" Value="QueryLoc" />
+                                            <om:Property Name="MessageName" Value="GetSiteIdQueryResponse" />
+                                            <om:Property Name="OperationName" Value="QueryMXVISIONLOCQUERY" />
+                                            <om:Property Name="OperationMessageName" Value="Response" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="get_Loc_query_ans" />
+                                            <om:Property Name="Signal" Value="True" />
+                                        </om:Element>
+                                        <om:Element Type="Construct" OID="bd04d4d0-0351-4ee6-b6e8-361bc7a75b5d" ParentLink="ComplexStatement_Statement" LowerBound="121.1" HigherBound="127.1">
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="Construct_Upd_attr" />
+                                            <om:Property Name="Signal" Value="True" />
+                                            <om:Element Type="Transform" OID="de0a4cbf-6d97-4053-8341-249362c1dbd0" ParentLink="ComplexStatement_Statement" LowerBound="124.1" HigherBound="126.1">
+                                                <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.x_to_upd_attributes" />
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="Name" Value="Transform_1" />
+                                                <om:Property Name="Signal" Value="True" />
+                                                <om:Element Type="MessagePartRef" OID="c7f157df-8a9d-4f40-b3da-8f896c26fda7" ParentLink="Transform_InputMessagePartRef" LowerBound="125.100" HigherBound="125.133">
+                                                    <om:Property Name="MessageRef" Value="GetSiteIdQueryResponse" />
+                                                    <om:Property Name="PartRef" Value="parameters" />
+                                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                                    <om:Property Name="Name" Value="MessagePartReference_7" />
+                                                    <om:Property Name="Signal" Value="False" />
+                                                </om:Element>
+                                                <om:Element Type="MessagePartRef" OID="3f960006-9945-4d32-84b0-048e1b8b2dd7" ParentLink="Transform_InputMessagePartRef" LowerBound="125.135" HigherBound="125.141">
+                                                    <om:Property Name="MessageRef" Value="UpdRaw" />
+                                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                                    <om:Property Name="Name" Value="MessagePartReference_8" />
+                                                    <om:Property Name="Signal" Value="False" />
+                                                </om:Element>
+                                                <om:Element Type="MessagePartRef" OID="10002125-a395-4ed8-982c-694de07062f3" ParentLink="Transform_OutputMessagePartRef" LowerBound="125.48" HigherBound="125.62">
+                                                    <om:Property Name="MessageRef" Value="UpdAttributtes" />
+                                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                                    <om:Property Name="Name" Value="MessagePartReference_9" />
+                                                    <om:Property Name="Signal" Value="False" />
+                                                </om:Element>
+                                            </om:Element>
+                                            <om:Element Type="MessageRef" OID="4d51b31b-1671-4be2-a582-627b89d0233e" ParentLink="Construct_MessageRef" LowerBound="122.43" HigherBound="122.57">
+                                                <om:Property Name="Ref" Value="UpdAttributtes" />
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="Signal" Value="False" />
+                                            </om:Element>
+                                        </om:Element>
+                                        <om:Element Type="Send" OID="1b827daa-42de-4415-a788-eb4a5c6a4a71" ParentLink="ComplexStatement_Statement" LowerBound="127.1" HigherBound="129.1">
+                                            <om:Property Name="PortName" Value="Debug_Raw_Upd" />
+                                            <om:Property Name="MessageName" Value="UpdRaw" />
+                                            <om:Property Name="OperationName" Value="Operation_1" />
+                                            <om:Property Name="OperationMessageName" Value="Request" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="Send_reaw_debug" />
+                                            <om:Property Name="Signal" Value="True" />
+                                        </om:Element>
+                                        <om:Element Type="VariableAssignment" OID="d4835c63-8a5b-4b03-863b-5fed5686293d" ParentLink="ComplexStatement_Statement" LowerBound="129.1" HigherBound="132.1">
+                                            <om:Property Name="Expression" Value="UpdXml = MxoUpdHelper.CreateSoapEnvelopeForUpdate(UpdAttributtes.attribute01,UpdAttributtes.attribute02,UpdAttributtes.attribute03,UpdAttributtes.attribute04);&#xD;&#xA;WsUpdResponse = MxoUpdHelper.UpdateMaximoWorkOrder(UpdXml);" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="Call Web Service" />
+                                            <om:Property Name="Signal" Value="False" />
+                                        </om:Element>
+                                        <om:Element Type="Decision" OID="d51c9427-132d-4878-8f74-01fc90b1c8fb" ParentLink="ComplexStatement_Statement" LowerBound="132.1" HigherBound="145.1">
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="Decide_2" />
+                                            <om:Property Name="Signal" Value="False" />
+                                            <om:Element Type="DecisionBranch" OID="220e8dd2-8795-4810-89c4-797066f9bc2e" ParentLink="ReallyComplexStatement_Branch" LowerBound="133.33" HigherBound="140.1">
+                                                <om:Property Name="Expression" Value="WsUpdResponse.complete == true" />
+                                                <om:Property Name="IsGhostBranch" Value="True" />
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="Name" Value="Rule_1" />
+                                                <om:Property Name="Signal" Value="True" />
+                                                <om:Element Type="Send" OID="84d98ce0-9a86-462d-a1a3-1f04f63ad7f1" ParentLink="ComplexStatement_Statement" LowerBound="135.1" HigherBound="137.1">
+                                                    <om:Property Name="PortName" Value="ClosePendingSqlClient" />
+                                                    <om:Property Name="MessageName" Value="CloseUpd" />
+                                                    <om:Property Name="OperationName" Value="Biz_ClosePendingCaseUpdate" />
+                                                    <om:Property Name="OperationMessageName" Value="Request" />
+                                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                                    <om:Property Name="Name" Value="Close_pending" />
+                                                    <om:Property Name="Signal" Value="True" />
+                                                </om:Element>
+                                                <om:Element Type="Receive" OID="7729b9e1-6bff-45d8-911e-fefeafd46b44" ParentLink="ComplexStatement_Statement" LowerBound="137.1" HigherBound="139.1">
+                                                    <om:Property Name="Activate" Value="False" />
+                                                    <om:Property Name="PortName" Value="ClosePendingSqlClient" />
+                                                    <om:Property Name="MessageName" Value="CloseUpdResponse" />
+                                                    <om:Property Name="OperationName" Value="Biz_ClosePendingCaseUpdate" />
+                                                    <om:Property Name="OperationMessageName" Value="Response" />
+                                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                                    <om:Property Name="Name" Value="Close_response" />
+                                                    <om:Property Name="Signal" Value="True" />
+                                                </om:Element>
+                                            </om:Element>
+                                            <om:Element Type="DecisionBranch" OID="6ae95da4-1c0e-47d1-aed2-dd5157effe00" ParentLink="ReallyComplexStatement_Branch">
+                                                <om:Property Name="IsGhostBranch" Value="True" />
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="Name" Value="Else" />
+                                                <om:Property Name="Signal" Value="False" />
+                                                <om:Element Type="Suspend" OID="6ae60508-16b3-42f3-89c3-af0fc196337c" ParentLink="ComplexStatement_Statement" LowerBound="142.1" HigherBound="144.1">
+                                                    <om:Property Name="ErrorMessage" Value="&quot;Miami WO update service returned false&quot;;" />
+                                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                                    <om:Property Name="Name" Value="Suspend_1" />
+                                                    <om:Property Name="Signal" Value="True" />
+                                                </om:Element>
+                                            </om:Element>
+                                        </om:Element>
+                                        <om:Element Type="Catch" OID="d1e495a1-35a4-4fbb-9924-c64b0ddfee4e" ParentLink="Scope_Catch" LowerBound="148.1" HigherBound="165.1">
+                                            <om:Property Name="ExceptionName" Value="SOAPFAULTEX" />
+                                            <om:Property Name="ExceptionType" Value="QueryLoc.QueryMXVISIONLOCQUERY.SoapBuildingFault" />
+                                            <om:Property Name="IsFaultMessage" Value="False" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="Catch_Soap" />
+                                            <om:Property Name="Signal" Value="True" />
+                                            <om:Element Type="Construct" OID="3bb11d1b-cc7f-4d0b-a19f-e461f3b1b7b2" ParentLink="Catch_Statement" LowerBound="151.1" HigherBound="158.1">
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="Name" Value="ConstructMessage_2" />
+                                                <om:Property Name="Signal" Value="True" />
+                                                <om:Element Type="MessageAssignment" OID="358375c9-9ed1-4c4c-a02c-8c54bd8c6ee5" ParentLink="ComplexStatement_Statement" LowerBound="154.1" HigherBound="157.1">
+                                                    <om:Property Name="Expression" Value="CloseSoapErr = CloseUpd;&#xD;&#xA;xpath(CloseSoapErr,&quot;/*[local-name()='Biz_ClosePendingCaseUpdate' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/ops']/*[local-name()='status' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/ops']&quot;) = -1;" />
+                                                    <om:Property Name="ReportToAnalyst" Value="False" />
+                                                    <om:Property Name="Name" Value="MessageAssignment_1" />
+                                                    <om:Property Name="Signal" Value="False" />
+                                                </om:Element>
+                                                <om:Element Type="MessageRef" OID="fe224ea1-885a-4329-b99f-fc5cca418288" ParentLink="Construct_MessageRef" LowerBound="152.47" HigherBound="152.59">
+                                                    <om:Property Name="Ref" Value="CloseSoapErr" />
+                                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                                    <om:Property Name="Signal" Value="False" />
+                                                </om:Element>
+                                            </om:Element>
+                                            <om:Element Type="Send" OID="30696de0-0c16-4d65-9772-56a3855b10c1" ParentLink="Catch_Statement" LowerBound="158.1" HigherBound="160.1">
+                                                <om:Property Name="PortName" Value="ClosePendingSqlClient" />
+                                                <om:Property Name="MessageName" Value="CloseSoapErr" />
+                                                <om:Property Name="OperationName" Value="Biz_ClosePendingCaseUpdate" />
+                                                <om:Property Name="OperationMessageName" Value="Request" />
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="Name" Value="Send_Close_SoapEx" />
+                                                <om:Property Name="Signal" Value="True" />
+                                            </om:Element>
+                                            <om:Element Type="Receive" OID="a81c4b6f-5392-4059-a7a2-0679edc9307e" ParentLink="Catch_Statement" LowerBound="160.1" HigherBound="162.1">
+                                                <om:Property Name="Activate" Value="False" />
+                                                <om:Property Name="PortName" Value="ClosePendingSqlClient" />
+                                                <om:Property Name="MessageName" Value="CloseUpdResponse" />
+                                                <om:Property Name="OperationName" Value="Biz_ClosePendingCaseUpdate" />
+                                                <om:Property Name="OperationMessageName" Value="Response" />
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="Name" Value="Receive_1" />
+                                                <om:Property Name="Signal" Value="True" />
+                                            </om:Element>
+                                            <om:Element Type="VariableAssignment" OID="8a8027da-a0e8-4270-888d-ea9f6e99386c" ParentLink="Catch_Statement" LowerBound="162.1" HigherBound="164.1">
+                                                <om:Property Name="Expression" Value="System.Diagnostics.EventLog.WriteEntry(&quot;MFM.Helpdesk.Distributor&quot;,&quot;I got a soap error&quot;,System.Diagnostics.EventLogEntryType.Warning);" />
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="Name" Value="Expression_1" />
+                                                <om:Property Name="Signal" Value="False" />
+                                            </om:Element>
+                                        </om:Element>
+                                        <om:Element Type="Catch" OID="bbf94398-de27-4d83-82d6-5232d3e71c18" ParentLink="Scope_Catch" LowerBound="165.1" HigherBound="171.1">
+                                            <om:Property Name="ExceptionName" Value="CatchHTTP" />
+                                            <om:Property Name="ExceptionType" Value="System.Web.HttpException" />
+                                            <om:Property Name="IsFaultMessage" Value="False" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="CatchException_1" />
+                                            <om:Property Name="Signal" Value="True" />
+                                            <om:Element Type="VariableAssignment" OID="3740b4a3-853a-45e6-936a-6f0b0b7bced0" ParentLink="Catch_Statement" LowerBound="168.1" HigherBound="170.1">
+                                                <om:Property Name="Expression" Value="System.Diagnostics.EventLog.WriteEntry(&quot;MFM.Helpdesk.Distributor&quot;,&quot;I got a http error&quot;,System.Diagnostics.EventLogEntryType.Warning);" />
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="Name" Value="Expression_2" />
+                                                <om:Property Name="Signal" Value="True" />
+                                            </om:Element>
+                                        </om:Element>
+                                        <om:Element Type="Catch" OID="35bed0ae-c381-4032-9327-eb5c86c164fd" ParentLink="Scope_Catch" LowerBound="171.1" HigherBound="177.1">
+                                            <om:Property Name="ExceptionType" Value="General Exception" />
+                                            <om:Property Name="IsFaultMessage" Value="False" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="CatchException_2" />
+                                            <om:Property Name="Signal" Value="True" />
+                                            <om:Element Type="VariableAssignment" OID="f1e5f418-4f94-4278-a352-858d86ba2779" ParentLink="Catch_Statement" LowerBound="174.1" HigherBound="176.1">
+                                                <om:Property Name="Expression" Value="System.Diagnostics.EventLog.WriteEntry(&quot;MFM.Helpdesk.Distributor&quot;,&quot;I got a general error&quot;,System.Diagnostics.EventLogEntryType.Warning);" />
+                                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                                <om:Property Name="Name" Value="Expression_3" />
+                                                <om:Property Name="Signal" Value="True" />
+                                            </om:Element>
+                                        </om:Element>
+                                    </om:Element>
+                                </om:Element>
+                                <om:Element Type="DecisionBranch" OID="b3552a87-50d7-439c-b405-e49dd316f82f" ParentLink="ReallyComplexStatement_Branch">
+                                    <om:Property Name="IsGhostBranch" Value="True" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Else" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="DecisionBranch" OID="9d6a6914-24b3-4e89-bcba-6db1d7126fef" ParentLink="ReallyComplexStatement_Branch">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Else" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="Terminate" OID="b20295b8-72e3-4328-a483-0d9365be8e1c" ParentLink="ComplexStatement_Statement" LowerBound="184.1" HigherBound="186.1">
+                            <om:Property Name="ErrorMessage" Value="&quot;No pending updates&quot;;" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Terminate_1" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="643a1ac6-43ac-4882-94fb-9cf290488d32" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="35.1" HigherBound="37.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.ReceiveCaseUpdsType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ReceiveCaseUpds" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="b61ce8b8-de90-4e8a-9612-312c96422724" ParentLink="PortDeclaration_CLRAttribute" LowerBound="35.1" HigherBound="36.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="f0dc0d9f-3560-4f1a-8b90-763f4dd9b125" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="37.1" HigherBound="39.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="8" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.FetchUpdsFromVisionType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="FetchUpdsFromVision" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="0c5d3b6c-aaae-4b85-93b1-9fcb6e50d52b" ParentLink="PortDeclaration_CLRAttribute" LowerBound="37.1" HigherBound="38.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="6c70793d-1e90-42db-9219-85dd551156c5" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="39.1" HigherBound="41.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="90" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.Debug_Raw_Upd_Type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Debug_Raw_Upd" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="3e3fcc37-9a02-4ab2-bf13-0813214abc8c" ParentLink="PortDeclaration_CLRAttribute" LowerBound="39.1" HigherBound="40.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="04fa21b5-7367-4b35-bb70-88f682cccc26" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="41.1" HigherBound="43.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="76" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.MTFMVISIONFM_MTFMVISIONLOCQUERYPortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="QueryLoc" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="767bd273-086b-43c3-bec7-3232cd525941" ParentLink="PortDeclaration_CLRAttribute" LowerBound="41.1" HigherBound="42.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="9b075726-34ad-4d6a-a665-388550bc8419" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="43.1" HigherBound="45.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="121" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.ClosePendingSqlClientType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ClosePendingSqlClient" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="0cc3a8f8-f658-4fa9-b37c-8dc98d20ee71" ParentLink="PortDeclaration_CLRAttribute" LowerBound="43.1" HigherBound="44.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MFM.Lbg.Orcs
+{
+    internal porttype ReceiveCaseUpdsType
+    {
+        oneway Operation_1
+        {
+            MFM.Lbg.Schemas.Biz_GetCaseUpdatesPollingTypedPolling_Biz_GetCaseUpdatesPolling.TypedPolling
+        };
+    };
+    internal porttype FetchUpdsFromVisionType
+    {
+        requestresponse Biz_FetchPendingCaseUpdates
+        {
+            MFM.Lbg.Schemas.Biz_FetchPendingCaseUpdatesTypedProcedure_ops.Biz_FetchPendingCaseUpdates, MFM.Lbg.Schemas.Biz_FetchPendingCaseUpdatesTypedProcedure_ops.Biz_FetchPendingCaseUpdatesResponse
+        };
+    };
+    internal porttype Debug_Raw_Upd_Type
+    {
+        oneway Operation_1
+        {
+            MFM.Lbg.Schemas.Biz_FetchPendingCaseUpdatesProcedureResultSet_ops_Biz_FetchPendingCaseUpdates.StoredProcedureResultSet0
+        };
+    };
+    internal porttype ClosePendingSqlClientType
+    {
+        requestresponse Biz_ClosePendingCaseUpdate
+        {
+            MFM.Lbg.Schemas.Biz_ClosePendingCaseUpdateTypedProcedure_ops.Biz_ClosePendingCaseUpdate, MFM.Lbg.Schemas.Biz_ClosePendingCaseUpdateTypedProcedure_ops.Biz_ClosePendingCaseUpdateResponse
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service o_Distribute_TFM_MXO75_Upd
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements ReceiveCaseUpdsType ReceiveCaseUpds;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses FetchUpdsFromVisionType FetchUpdsFromVision;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses Debug_Raw_Upd_Type Debug_Raw_Upd;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses MTFMVISIONFM_MTFMVISIONLOCQUERYPortType QueryLoc;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses ClosePendingSqlClientType ClosePendingSqlClient;
+        message MFM.Lbg.Schemas.Biz_ClosePendingCaseUpdateTypedProcedure_ops.Biz_ClosePendingCaseUpdate CloseSoapErr;
+        message QueryMXVISIONLOCQUERYResponse GetSiteIdQueryResponse;
+        message QueryMXVISIONLOCQUERYRequest GetSiteIdQuery;
+        message MFM.Lbg.Schemas.Biz_GetCaseUpdatesPollingTypedPolling_Biz_GetCaseUpdatesPolling.TypedPolling PollingResult;
+        message MFM.Lbg.Schemas.Biz_FetchPendingCaseUpdatesTypedProcedure_ops.Biz_FetchPendingCaseUpdates FetchPendingUpds;
+        message MFM.Lbg.Schemas.Biz_FetchPendingCaseUpdatesTypedProcedure_ops.Biz_FetchPendingCaseUpdatesResponse PendingUpds;
+        message MFM.Lbg.Schemas.Biz_FetchPendingCaseUpdatesProcedureResultSet_ops_Biz_FetchPendingCaseUpdates.StoredProcedureResultSet0 UpdRaw;
+        message MFM.Lbg.Schemas.Biz_ClosePendingCaseUpdateTypedProcedure_ops.Biz_ClosePendingCaseUpdate CloseUpd;
+        message MFM.Lbg.Schemas.Biz_ClosePendingCaseUpdateTypedProcedure_ops.Biz_ClosePendingCaseUpdateResponse CloseUpdResponse;
+        message MFM.Lbg.Schemas.TempMiamiWoUpd UpdAttributtes;
+        System.Int32 Counter;
+        System.Int32 CountUpds;
+        System.String IterationStringXpath;
+        MFM.Lbg.Helper.MiAMIWorkorderUpdateResponse WsUpdResponse;
+        MFM.Lbg.Helper.MaximoHelper MxoUpdHelper;
+        System.String UpdXml;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("3fba55d2-cbd7-48de-b18d-3490894e2318")]
+            activate receive (ReceiveCaseUpds.Operation_1, PollingResult);
+            IterationStringXpath = "";
+            WsUpdResponse = new MFM.Lbg.Helper.MiAMIWorkorderUpdateResponse();
+            MxoUpdHelper = new MFM.Lbg.Helper.MaximoHelper();
+            UpdXml = "";
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("005a5fbe-55e9-49fb-aa5d-48a75367ea41")]
+            construct FetchPendingUpds
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("7befef03-95f9-4990-a04a-49a31244b6a7")]
+                transform (FetchPendingUpds) = MFM.Lbg.Orcs.x_to_fetch (PollingResult);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("78c8d6f5-3ad6-4637-98bd-c2c74b93af0f")]
+            send (FetchUpdsFromVision.Biz_FetchPendingCaseUpdates, FetchPendingUpds);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("c37d6d3a-229e-4298-a57a-fd2e55c58283")]
+            receive (FetchUpdsFromVision.Biz_FetchPendingCaseUpdates, PendingUpds);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("c39e4bc8-0510-4feb-a628-5d94ceef99f0")]
+            CountUpds = System.Convert.ToInt32(xpath(PendingUpds,"count(/*[local-name()='Biz_FetchPendingCaseUpdatesResponse' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/ops']/*[local-name()='StoredProcedureResultSet0' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/ops']/*[local-name()='StoredProcedureResultSet0' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/ProceduresResultSets/ops/Biz_FetchPendingCaseUpdates'])"));
+            Counter = 0;
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("43d8d00f-3bc6-4d94-b01f-cdcb7a95a3e2")]
+            if (CountUpds > 0)
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("50cf6fbd-6c24-434e-a904-6c251a3e1a29")]
+                while (Counter < CountUpds)
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("9370c051-42d8-493f-a2ca-d302b16823eb")]
+                    Counter = Counter + 1;
+                    IterationStringXpath = System.String.Format("/*[local-name()='Biz_FetchPendingCaseUpdatesResponse' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/ops']/*[local-name()='StoredProcedureResultSet0' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/ops']/*[local-name()='StoredProcedureResultSet0' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/ProceduresResultSets/ops/Biz_FetchPendingCaseUpdates'][{0}]",Counter.ToString());
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("981bd4b5-3e4a-4adf-8e9c-02d9639bf4a6")]
+                    construct UpdRaw
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("ad5ec03f-762e-463d-8de2-ab67c1ae759e")]
+                        UpdRaw = xpath(PendingUpds,IterationStringXpath);
+                    }
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("72e547a7-3da0-483e-b90a-5f73471289fd")]
+                    if (UpdRaw.case_foreignsysid != "")
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("9dad5666-6499-47c5-8a18-877d4d79d868")]
+                        construct CloseUpd
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("cd4071d2-4af3-466f-bfb5-f6bdfad795ca")]
+                            transform (CloseUpd) = MFM.Lbg.Orcs.x_to_closePendingUpd (UpdRaw);
+                        }
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("8d287f61-c47f-459f-82ba-66340c85975d")]
+                        construct GetSiteIdQuery
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("aa5c953a-c9d9-4f93-a31d-6fd4e6e4b517")]
+                            transform (GetSiteIdQuery.parameters) = MFM.Lbg.Orcs.x_to_upd_loc_Query (UpdRaw);
+                        }
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("ab339376-8a2a-4499-9378-5d4c29885cc3")]
+                        scope
+                        {
+                            body
+                            {
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("e596802e-b4e1-48b0-a74f-c5f491292612")]
+                                send (QueryLoc.QueryMXVISIONLOCQUERY, GetSiteIdQuery);
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("7acbd2be-af8b-45e5-af07-e083f396a8b9")]
+                                receive (QueryLoc.QueryMXVISIONLOCQUERY, GetSiteIdQueryResponse);
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("bd04d4d0-0351-4ee6-b6e8-361bc7a75b5d")]
+                                construct UpdAttributtes
+                                {
+                                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("de0a4cbf-6d97-4053-8341-249362c1dbd0")]
+                                    transform (UpdAttributtes) = MFM.Lbg.Orcs.x_to_upd_attributes (GetSiteIdQueryResponse.parameters, UpdRaw);
+                                }
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("1b827daa-42de-4415-a788-eb4a5c6a4a71")]
+                                send (Debug_Raw_Upd.Operation_1, UpdRaw);
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("d4835c63-8a5b-4b03-863b-5fed5686293d")]
+                                UpdXml = MxoUpdHelper.CreateSoapEnvelopeForUpdate(UpdAttributtes.attribute01,UpdAttributtes.attribute02,UpdAttributtes.attribute03,UpdAttributtes.attribute04);
+                                WsUpdResponse = MxoUpdHelper.UpdateMaximoWorkOrder(UpdXml);
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("d51c9427-132d-4878-8f74-01fc90b1c8fb")]
+                                if (WsUpdResponse.complete == true)
+                                {
+                                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("84d98ce0-9a86-462d-a1a3-1f04f63ad7f1")]
+                                    send (ClosePendingSqlClient.Biz_ClosePendingCaseUpdate, CloseUpd);
+                                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("7729b9e1-6bff-45d8-911e-fefeafd46b44")]
+                                    receive (ClosePendingSqlClient.Biz_ClosePendingCaseUpdate, CloseUpdResponse);
+                                }
+                                else 
+                                {
+                                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("6ae60508-16b3-42f3-89c3-af0fc196337c")]
+                                    suspend "Miami WO update service returned false";
+                                }
+                            }
+                            exceptions
+                            {
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("d1e495a1-35a4-4fbb-9924-c64b0ddfee4e")]
+                                catch (QueryLoc.QueryMXVISIONLOCQUERY.SoapBuildingFault SOAPFAULTEX)
+                                {
+                                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("3bb11d1b-cc7f-4d0b-a19f-e461f3b1b7b2")]
+                                    construct CloseSoapErr
+                                    {
+                                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("358375c9-9ed1-4c4c-a02c-8c54bd8c6ee5")]
+                                        CloseSoapErr = CloseUpd;
+                                        xpath(CloseSoapErr,"/*[local-name()='Biz_ClosePendingCaseUpdate' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/ops']/*[local-name()='status' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/ops']") = -1;
+                                    }
+                                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("30696de0-0c16-4d65-9772-56a3855b10c1")]
+                                    send (ClosePendingSqlClient.Biz_ClosePendingCaseUpdate, CloseSoapErr);
+                                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("a81c4b6f-5392-4059-a7a2-0679edc9307e")]
+                                    receive (ClosePendingSqlClient.Biz_ClosePendingCaseUpdate, CloseUpdResponse);
+                                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("8a8027da-a0e8-4270-888d-ea9f6e99386c")]
+                                    System.Diagnostics.EventLog.WriteEntry("MFM.Helpdesk.Distributor","I got a soap error",System.Diagnostics.EventLogEntryType.Warning);
+                                }
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("bbf94398-de27-4d83-82d6-5232d3e71c18")]
+                                catch (System.Web.HttpException CatchHTTP)
+                                {
+                                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("3740b4a3-853a-45e6-936a-6f0b0b7bced0")]
+                                    System.Diagnostics.EventLog.WriteEntry("MFM.Helpdesk.Distributor","I got a http error",System.Diagnostics.EventLogEntryType.Warning);
+                                }
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("35bed0ae-c381-4032-9327-eb5c86c164fd")]
+                                catch
+                                {
+                                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("f1e5f418-4f94-4278-a352-858d86ba2779")]
+                                    System.Diagnostics.EventLog.WriteEntry("MFM.Helpdesk.Distributor","I got a general error",System.Diagnostics.EventLogEntryType.Warning);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else 
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("b20295b8-72e3-4328-a483-0d9365be8e1c")]
+                terminate "No pending updates";;
+            }
+        }
+    }
+}
+

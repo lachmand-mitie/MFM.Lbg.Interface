@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21107</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9AC5A7AC-15FE-474C-A502-2167BAD19934}</ProjectGuid>
+    <ProjectTypeGuids>{EF7E3281-CD33-11D4-8326-00C04FA0CE8D};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>library</OutputType>
+    <GenericProcessing>true</GenericProcessing>
+    <RootNamespace>MFM.Lbg.Schemas</RootNamespace>
+    <AssemblyName>MFM.Lbg.Schemas</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <BpelCompliance>True</BpelCompliance>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>MFM.Helpdesk.Distributer.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MFM.SharedResources, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5eddf694e275119c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MFM.SharedResources\MFM.SharedResources\bin\Debug\MFM.SharedResources.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Name>System.Configuration</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.Pipeline">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.DefaultPipelines">
+      <Name>Microsoft.BizTalk.DefaultPipelines</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.GlobalPropertySchemas">
+      <Name>Microsoft.BizTalk.GlobalPropertySchemas</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.TestTools">
+      <Name>Microsoft.BizTalk.TestTools</Name>
+    </Reference>
+    <Reference Include="Microsoft.XLANGs.BaseTypes">
+      <Name>Microsoft.XLANGs.BaseTypes</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ChangePolling\" />
+    <Folder Include="Samples\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="PollingTypedPolling.biz_Global_Export_Helpdesk_Cases.xsd">
+      <TypeName>PollingTypedPolling_biz_Global_Export_Helpdesk_Cases</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="VFM_Extract.ProcedureResultSet.dbo.biz_Global_Fetch_Case_DataSet.xsd">
+      <TypeName>VFM_Extract_ProcedureResultSet_dbo_biz_Global_Fetch_Case_DataSet</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="VFM_Extract.ProcedureResultSet.dbo.biz_Global_Remove_Case_From_Queue.xsd">
+      <TypeName>VFM_Extract_ProcedureResultSet_dbo_biz_Global_Remove_Case_From_Queue</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="VFM_Extract.ProcedureResultSet.dbo.biz_Global_Reset_Case_Extract.xsd">
+      <TypeName>VFM_Extract_ProcedureResultSet_dbo_biz_Global_Reset_Case_Extract</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="VFM_Extract.TypedProcedure.dbo.xsd">
+      <TypeName>VFM_Extract_TypedProcedure_dbo</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="DistibutedWorkItems.xsd">
+      <TypeName>DistibutedWorkItems</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="SimpleEmailWorkFlowPop3Audit.xsd">
+      <TypeName>SimpleEmailWorkFlowPop3Audit</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="SimpleEmailWorkflowFFS.xsd">
+      <TypeName>SimpleEmailWorkflowFFS</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="MiAMIWOQueryResponse.xsd">
+      <TypeName>MiAMIWOQueryResponse</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="TempMiamiWoUpd.xsd">
+      <TypeName>TempMiamiWoUpd</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="PS_PublishMTFMWOLOGS.xsd">
+      <TypeName>PS_PublishMTFMWOLOGS</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="MTFMWOLOGSService.xsd">
+      <TypeName>MTFMWOLOGSService</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="MSSWebServiceAlertEmail.xsd">
+      <TypeName>MSSWebServiceAlertEmail</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="MiamiWsQueryLoc.xsd">
+      <TypeName>MiamiWsQueryLoc</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="PS_MTFMWODETAILService.xsd">
+      <TypeName>PS_MTFMWODETAILService</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="schUdttAssetPreLoadCheck.xsd">
+      <TypeName>schUdttAssetPreLoadCheck</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="MiamiSoapError.xsd">
+      <TypeName>MiamiSoapError</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="Norlands_Update_Msg.xsd">
+      <TypeName>Norlands_Update_Msg</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="schPropertyPolling1001.xsd">
+      <TypeName>schPropertyPolling1001</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="MFMFeedFF.xsd">
+      <TypeName>MFMFeedFF</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="TFMAlertAddress.xsd">
+      <TypeName>TFMAlertAddress</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="VisionFMProcPropSch.xsd">
+      <TypeName>VisionFMProcPropSch</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="MiTsmAlert.xsd">
+      <TypeName>MiTsmAlert</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="SAFEUPDPOLLMLATypedPolling.biz_poll_visit_updates_MLA.xsd">
+      <TypeName>SAFEUPDPOLLMLATypedPolling_biz_poll_visit_updates_MLA</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="SAFEUPDCLIENTProcedureResultSet.dbo.biz_Visit_Outbound_Completed.xsd">
+      <TypeName>SAFEUPDCLIENTProcedureResultSet_dbo_biz_Visit_Outbound_Completed</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="SAFEUPDCLIENTTypedProcedure.dbo.xsd">
+      <TypeName>SAFEUPDCLIENTTypedProcedure_dbo</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="SAFEUPDPOLLTypedPolling.biz_Poll_Visit_Updates_MPC.xsd">
+      <TypeName>SAFEUPDPOLLTypedPolling_biz_Poll_Visit_Updates_MPC</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="SAFE_Update_Message.xsd">
+      <TypeName>SAFE_Update_Message</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="VFM_MPCIProcedureResultSet.dbo.biz_Beacon_Fetch_Property_Match.xsd">
+      <TypeName>VFM_MPCIProcedureResultSet_dbo_biz_Beacon_Fetch_Property_Match</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="VFM_MPCIProcedureResultSet.dbo.biz_create_safe_visit.xsd">
+      <TypeName>VFM_MPCIProcedureResultSet_dbo_biz_create_safe_visit</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="VFM_MPCITypedProcedure.dbo.xsd">
+      <TypeName>VFM_MPCITypedProcedure_dbo</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="VFM_UPDProcedureResultSet.dbo.Biz_Import_Case_Note.xsd">
+      <TypeName>VFM_UPDProcedureResultSet_dbo_Biz_Import_Case_Note</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="VFM_UPDProcedureResultSet.dbo.Biz_Import_Case_Update.xsd">
+      <TypeName>VFM_UPDProcedureResultSet_dbo_Biz_Import_Case_Update</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="VFM_UPDTypedProcedure.dbo.xsd">
+      <TypeName>VFM_UPDTypedProcedure_dbo</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="MFMWorkItemUpdate.xsd">
+      <TypeName>MFMWorkItemUpdate</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="MTFMWODETAILService.xsd">
+      <TypeName>MTFMWODETAILService</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="PropertySchema.xsd">
+      <TypeName>PropertySchema</TypeName>
+      <Namespace>MFM.Lbg.Schemas.PropertySchema</Namespace>
+    </Schema>
+    <Schema Include="PollingTypedPolling.biz_SO_Get_Pending.xsd">
+      <TypeName>TypedPollingTypedPolling_biz_SO_Get_Pending</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="VFM_SOProcedureResultSet.dbo.biz_SO_Get_DataSet.xsd">
+      <TypeName>VFM_SOProcedureResultSet_dbo_biz_SO_Get_DataSet</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="VFM_SOProcedureResultSet.dbo.biz_SO_Get_Header.xsd">
+      <TypeName>VFM_SOProcedureResultSet_dbo_biz_SO_Get_Header</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="VFM_SOTypedProcedure.dbo.xsd">
+      <TypeName>VFM_SOTypedProcedure_dbo</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="VfmDummyStarter.xsd">
+      <TypeName>VfmDummyStarter</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="SAPM_ProcedureResultSet.dbo.Merge_Material.xsd">
+      <TypeName>SAPM_ProcedureResultSet_dbo_Merge_Material</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="SAPM_ProcedureResultSet.dbo.Merge_Pricing.xsd">
+      <TypeName>SAPM_ProcedureResultSet_dbo_Merge_Pricing</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="SAPM_TableType.dbo.xsd">
+      <TypeName>SAPM_TableType_dbo</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="SAPM_TypedProcedure.dbo.xsd">
+      <TypeName>SAPM_TypedProcedure_dbo</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="MTFMWOINService.xsd">
+      <TypeName>MTFMWOINService</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="INFREC01_ZMM229_INFREC.xsd">
+      <TypeName>INFREC01_ZMM229_INFREC</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="MATMAS04.xsd">
+      <TypeName>MATMAS04</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="INVOIC02.xsd">
+      <TypeName>INVOIC02</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="Load_many_notes.xsd">
+      <TypeName>Load_many_notes</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="LBG_SAFE_EMAIL.xsd">
+      <TypeName>LBG_SAFE_EMAIL</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="BizTalk_Comm.xsd">
+      <TypeName>BizTalk_Comm</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="ImportFeed_ProcedureResultSet.dbo.biz_import_standard_feed.xsd">
+      <TypeName>ImportFeed_ProcedureResultSet_dbo_biz_import_standard_feed</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="ImportFeed_TableType.dbo.xsd">
+      <TypeName>ImportFeed_TableType_dbo</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="ImportFeed_TypedProcedure.dbo.xsd">
+      <TypeName>ImportFeed_TypedProcedure_dbo</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="Import_Feed2_ProcedureResultSet.dbo.biz_Process_Feed_Wrapper.xsd">
+      <TypeName>Import_Feed2_ProcedureResultSet_dbo_biz_Process_Feed_Wrapper</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="Import_Feed2_TypedProcedure.dbo.xsd">
+      <TypeName>Import_Feed2_TypedProcedure_dbo</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="biz_PO_Get_PollingTypedPolling.biz_PO_Get_Polling.xsd">
+      <TypeName>biz_PO_Get_PollingTypedPolling_biz_PO_Get_Polling</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="biz_SO_Get_PollingTypedPolling.biz_SO_Get_Polling.xsd">
+      <TypeName>biz_SO_Get_PollingTypedPolling_biz_SO_Get_Polling</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="biz_Order_get_PendingProcedureResultSet.dbo.biz_PO_Get_Pending.xsd">
+      <TypeName>biz_Order_get_PendingProcedureResultSet_dbo_biz_PO_Get_Pending</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="biz_Order_get_PendingProcedureResultSet.dbo.biz_SO_Get_Pending.xsd">
+      <TypeName>biz_Order_get_PendingProcedureResultSet_dbo_biz_SO_Get_Pending</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="biz_Order_get_PendingTypedProcedure.dbo.xsd">
+      <TypeName>biz_Order_get_PendingTypedProcedure_dbo</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="biz_Get_Questions_ProcedureResultSet.dbo.biz_Get_Questions.xsd">
+      <TypeName>biz_Get_Questions_ProcedureResultSet_dbo_biz_Get_Questions</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="biz_Get_Questions_TypedProcedure.dbo.xsd">
+      <TypeName>biz_Get_Questions_TypedProcedure_dbo</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="Add_Asset_UdttTableType.ops.xsd">
+      <TypeName>Add_Asset_UdttTableType_ops</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="BeaconXslIndexer.xsd">
+      <TypeName>BeaconXslIndexer</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="Biz_GetCaseUpdatesPollingTypedPolling.Biz_GetCaseUpdatesPolling.xsd">
+      <TypeName>Biz_GetCaseUpdatesPollingTypedPolling_Biz_GetCaseUpdatesPolling</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="Biz_FetchPendingCaseUpdatesProcedureResultSet.ops.Biz_FetchPendingCaseUpdates.xsd">
+      <TypeName>Biz_FetchPendingCaseUpdatesProcedureResultSet_ops_Biz_FetchPendingCaseUpdates</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="Biz_FetchPendingCaseUpdatesTypedProcedure.ops.xsd">
+      <TypeName>Biz_FetchPendingCaseUpdatesTypedProcedure_ops</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="Biz_ClosePendingCaseUpdateTypedProcedure.ops.xsd">
+      <TypeName>Biz_ClosePendingCaseUpdateTypedProcedure_ops</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <None Include="MFM.Helpdesk.Distributer.snk" />
+    <Schema Include="ORDERS_Z139ORDERS.xsd">
+      <TypeName>ORDERS_Z139ORDERS</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="VFM_POTypedProcedure.dbo1.xsd">
+      <TypeName>VFM_POTypedProcedure_dbo1</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="VFM_POProcedureResultSet.dbo.biz_PO_Get_DataSet.xsd">
+      <TypeName>VFM_POProcedureResultSet_dbo_biz_PO_Get_DataSet</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="VFM_POTypedProcedure.dbo.xsd">
+      <TypeName>VFM_POTypedProcedure_dbo</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="PollingTypedPolling.dbo.biz_PO_Get_Pending.xsd">
+      <TypeName>PollingTypedPolling_dbo_biz_PO_Get_Pending</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="ORDERS05_ZMM158ORDERS.xsd">
+      <TypeName>ORDERS05_ZMM158ORDERS</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="PORDCR102.xsd">
+      <TypeName>PORDCR102</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+    <Schema Include="PropertySchema_2.xsd">
+      <TypeName>PropertySchema_2</TypeName>
+      <Namespace>MFM.Lbg.Schemas</Namespace>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="WcfReceivePort_SqlAdapterBinding_Custom.bindinginfo.xml" />
+    <Content Include="WcfReceivePort_SqlAdapterBinding_Custom.bindinginfo1.xml" />
+    <Content Include="WcfReceivePort_SqlAdapterBinding_Custom.bindinginfo2.xml" />
+    <Content Include="WcfReceivePort_SqlAdapterBinding_Custom.bindinginfo3.xml" />
+    <Content Include="WcfReceivePort_SqlAdapterBinding_Custom.bindinginfo4.xml" />
+    <Content Include="WcfSendPort_SqlAdapterBinding_Custom.bindinginfo.xml" />
+    <Content Include="WcfSendPort_SqlAdapterBinding_Custom.bindinginfo1.xml" />
+    <Content Include="WcfSendPort_SqlAdapterBinding_Custom.bindinginfo2.xml" />
+    <Content Include="WcfSendPort_SqlAdapterBinding_Custom.bindinginfo3.xml" />
+    <Content Include="WcfSendPort_SqlAdapterBinding_Custom.bindinginfo4.xml" />
+    <Content Include="WcfSendPort_SqlAdapterBinding_Custom.bindinginfo5.xml" />
+    <Content Include="WcfSendPort_SqlAdapterBinding_Custom.bindinginfo6.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />
+</Project>

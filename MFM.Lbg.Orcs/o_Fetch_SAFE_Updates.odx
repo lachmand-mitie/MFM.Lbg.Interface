@@ -1,0 +1,586 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="b01f19c0-b5a0-4ceb-a5a9-2a446475bfd7" LowerBound="1.1" HigherBound="122.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MFM.Lbg.Orcs" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="47f32bdb-5f80-4abd-9a16-521415889ded" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Port_Polled_SAFE_Updates_Type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="51315702-9243-4cec-afe8-bd126326b71d" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="2a20cb43-f62b-4f9c-b4cd-f33bb6574517" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.102">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.SAFEUPDPOLLTypedPolling_biz_Poll_Visit_Updates_MPC.TypedPollingResultSet0" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="39a3d283-4c7e-41d5-b7bc-5ed3a1a31068" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Port_Take_Oubound_Update_Out_Of_Queue_type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="c1e29340-510a-4a20-af61-5786cb5c62c8" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="biz_Visit_Outbound_Completed" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="81b14957-6779-4a39-9790-0e12cf089487" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.89">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.SAFEUPDCLIENTTypedProcedure_dbo.biz_Visit_Outbound_Completed" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="a591acf5-e984-43af-b892-41bdc2a99a5c" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="15.91" HigherBound="15.175">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.SAFEUPDCLIENTTypedProcedure_dbo.biz_Visit_Outbound_CompletedResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="ec56f73a-ba4e-4d68-80ed-3c01a64235b8" ParentLink="Module_PortType" LowerBound="18.1" HigherBound="25.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Port_Polled_MLA_SAFE_Type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="4756c7de-c69a-48f5-a985-829e6c92d265" ParentLink="PortType_OperationDeclaration" LowerBound="20.1" HigherBound="24.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="80739b29-cfa5-4674-9504-e2ae9c4a3218" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="22.13" HigherBound="22.102">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.SAFEUPDPOLLTypedPolling_biz_Poll_Visit_Updates_MPC.TypedPollingResultSet0" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="366eae9f-5a2c-454a-ba3a-f7547fe9e308" ParentLink="Module_PortType" LowerBound="25.1" HigherBound="32.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Port_get_safe_mla_Update_type" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="9ec3dd63-e103-4988-8957-e132a9cf7b0f" ParentLink="PortType_OperationDeclaration" LowerBound="27.1" HigherBound="31.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="a6435c80-09c6-4854-80da-2b878639b2f9" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="29.13" HigherBound="29.105">
+                    <om:Property Name="Ref" Value="MFM.Lbg.Schemas.SAFEUPDPOLLMLATypedPolling_biz_poll_visit_updates_MLA.TypedPollingResultSet0" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="793e0e41-d44a-4cf4-b26d-da656095f370" ParentLink="Module_ServiceDeclaration" LowerBound="32.1" HigherBound="121.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="o_Fetch_SAFE_Updates" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="MessageDeclaration" OID="a328f1a9-1f6f-4db9-8326-e7ffd9af350e" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="45.1" HigherBound="46.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.SAFEUPDPOLLTypedPolling_biz_Poll_Visit_Updates_MPC.TypedPollingResultSet0" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="UPD_Message_MPC" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="ee87b463-1177-46e8-8929-429cdc1759d8" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="46.1" HigherBound="47.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.SAFEUPDPOLLMLATypedPolling_biz_poll_visit_updates_MLA.TypedPollingResultSet0" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="UPD_Message_MLA" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="89814d21-6135-4b9a-bdff-ae7cce811f14" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="47.1" HigherBound="48.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.SAFE_Update_Message" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SAFE_UPD_Standard_2" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="dc0e74e5-8101-4b40-b45c-1fde61becab8" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="48.1" HigherBound="49.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.SAFEUPDPOLLTypedPolling_biz_Poll_Visit_Updates_MPC.TypedPollingResultSet0" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="UPD_Message" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="10445a1a-38c4-482d-8638-008f77263cd0" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="49.1" HigherBound="50.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.SAFE_Update_Message" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SAFE_UPD_Standard" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="7671d85b-6808-4d38-8bc1-607a87f9273f" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="50.1" HigherBound="51.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.SAFEUPDCLIENTTypedProcedure_dbo.biz_Visit_Outbound_Completed" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Outbound_processed" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="12129530-9d4c-4237-b1c3-1dddc4afdc5b" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="51.1" HigherBound="52.1">
+                <om:Property Name="Type" Value="MFM.Lbg.Schemas.SAFEUPDCLIENTTypedProcedure_dbo.biz_Visit_Outbound_CompletedResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Outbound_processed_response" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="5b807171-58dd-4c99-b11a-fc6678044d4b" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Listen" OID="4abb4a1b-63d4-4d46-95e8-adf8dcacc5c8" ParentLink="ServiceBody_Statement" LowerBound="54.1" HigherBound="78.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Listen_SAFE_Upd" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="ListenBranch" OID="8959d8df-f26c-4182-a7b2-fccef533c3ba" ParentLink="ReallyComplexStatement_Branch" LowerBound="54.1" HigherBound="54.1">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="ListenBranch_1" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="Construct" OID="8f967a12-af7e-40f1-8249-d8e8abb0c60d" ParentLink="ComplexStatement_Statement" LowerBound="60.1" HigherBound="66.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Construc_Std_From_MPC" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="MessageRef" OID="fe95438d-25c4-4a3e-8533-6826e2cf32e2" ParentLink="Construct_MessageRef" LowerBound="61.31" HigherBound="61.42">
+                                <om:Property Name="Ref" Value="UPD_Message" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="MessageAssignment" OID="8bc08a91-a22f-42bc-8330-73194de2e78d" ParentLink="ComplexStatement_Statement" LowerBound="63.1" HigherBound="65.1">
+                                <om:Property Name="Expression" Value="UPD_Message=UPD_Message_MPC;" />
+                                <om:Property Name="ReportToAnalyst" Value="False" />
+                                <om:Property Name="Name" Value="MessageAssignment_2" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Receive" OID="61d952c5-464c-40ab-8ff0-bdbaf30ea314" ParentLink="ListenBranch_Statement" LowerBound="57.1" HigherBound="58.95">
+                            <om:Property Name="Activate" Value="True" />
+                            <om:Property Name="PortName" Value="Port_Polled_SAFE_Updates" />
+                            <om:Property Name="MessageName" Value="UPD_Message_MPC" />
+                            <om:Property Name="OperationName" Value="Operation_1" />
+                            <om:Property Name="OperationMessageName" Value="Request" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Receive_MPC" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="ListenBranch" OID="4f21285e-5b3e-422f-bdb0-b6223a131096" ParentLink="ReallyComplexStatement_Branch" LowerBound="54.1" HigherBound="54.1">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="ListenBranch_2" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Construct" OID="62836642-8774-4baf-90f9-06d9be85bbda" ParentLink="ComplexStatement_Statement" LowerBound="70.1" HigherBound="76.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Construct_Std_from_MLA" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Transform" OID="e7ee779c-cf09-4ac6-b7df-0ccd99a92922" ParentLink="ComplexStatement_Statement" LowerBound="73.1" HigherBound="75.1">
+                                <om:Property Name="ClassName" Value="MFM.Lbg.Maps.map_SafeMLA_To_SafeMPC" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="x_to_Std_Upd" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="MessagePartRef" OID="6854869a-82c5-4596-a08a-af599f2d4863" ParentLink="Transform_InputMessagePartRef" LowerBound="74.88" HigherBound="74.103">
+                                    <om:Property Name="MessageRef" Value="UPD_Message_MLA" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_5" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="MessagePartRef" OID="f34ad7b6-16e9-43e0-be50-545492ee7263" ParentLink="Transform_OutputMessagePartRef" LowerBound="74.36" HigherBound="74.47">
+                                    <om:Property Name="MessageRef" Value="UPD_Message" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_6" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="MessageRef" OID="fbb97a83-51a9-4d01-a91f-fc85cad37ea3" ParentLink="Construct_MessageRef" LowerBound="71.31" HigherBound="71.42">
+                                <om:Property Name="Ref" Value="UPD_Message" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Receive" OID="a872be7d-f321-4c32-9dbf-f13568a05807" ParentLink="ListenBranch_Statement" LowerBound="67.1" HigherBound="68.95">
+                            <om:Property Name="Activate" Value="True" />
+                            <om:Property Name="PortName" Value="Port_get_safe_mla_Update" />
+                            <om:Property Name="MessageName" Value="UPD_Message_MLA" />
+                            <om:Property Name="OperationName" Value="Operation_1" />
+                            <om:Property Name="OperationMessageName" Value="Request" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Receive_MLA" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Construct" OID="c0617b05-5834-44db-b16e-b3f3d7bdab3d" ParentLink="ServiceBody_Statement" LowerBound="78.1" HigherBound="84.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Construct_Standard_Safe_message" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageRef" OID="b88e40a0-5a96-4bff-9826-e4ccaa9bd3a8" ParentLink="Construct_MessageRef" LowerBound="79.23" HigherBound="79.40">
+                        <om:Property Name="Ref" Value="SAFE_UPD_Standard" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="Transform" OID="c6a56bd0-2cc4-4a59-a12f-654f4e704337" ParentLink="ComplexStatement_Statement" LowerBound="81.1" HigherBound="83.1">
+                        <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.map_to_standard_Safe_msg" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="x_to_standard_Safe_msg" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessagePartRef" OID="55b3fa18-5dd6-46f9-98a9-0e4035e7dc27" ParentLink="Transform_InputMessagePartRef" LowerBound="82.88" HigherBound="82.99">
+                            <om:Property Name="MessageRef" Value="UPD_Message" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="eefdbb06-16eb-4ce6-ace4-c4be1086ef78" ParentLink="Transform_OutputMessagePartRef" LowerBound="82.28" HigherBound="82.45">
+                            <om:Property Name="MessageRef" Value="SAFE_UPD_Standard" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Construct" OID="b4b8eb2c-6392-4da7-9e82-1690e42181c6" ParentLink="ServiceBody_Statement" LowerBound="84.1" HigherBound="91.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructMessage_1" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageAssignment" OID="7b6245c4-2aac-4c0c-981b-b6ed3222da31" ParentLink="ComplexStatement_Statement" LowerBound="87.1" HigherBound="90.1">
+                        <om:Property Name="Expression" Value="SAFE_UPD_Standard_2=SAFE_UPD_Standard;&#xD;&#xA;SAFE_UPD_Standard_2(FILE.ReceivedFileName) = System.String.Format(&quot;{2} Case={0} Visit={1}&quot; ,SAFE_UPD_Standard.CustomerReference,SAFE_UPD_Standard.VisitId,SAFE_UPD_Standard.Business);" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="MessageAssignment_1" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="b34d669f-ace7-497c-81cb-973138da22d7" ParentLink="Construct_MessageRef" LowerBound="85.23" HigherBound="85.42">
+                        <om:Property Name="Ref" Value="SAFE_UPD_Standard_2" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="77e80be1-7af0-419c-81ad-4723c3fab6f1" ParentLink="ServiceBody_Statement" LowerBound="91.1" HigherBound="93.1">
+                    <om:Property Name="PortName" Value="Port_safe_drop_off" />
+                    <om:Property Name="MessageName" Value="SAFE_UPD_Standard" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_to_loader" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="2ba15b8d-e900-4b05-895b-a9a02e23e749" ParentLink="ServiceBody_Statement" LowerBound="93.1" HigherBound="99.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructMessage_2" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="b0a45282-a22b-4597-a21c-b61277c6535a" ParentLink="ComplexStatement_Statement" LowerBound="96.1" HigherBound="98.1">
+                        <om:Property Name="ClassName" Value="MFM.Lbg.Orcs.map_to_complete" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="x_to_complete" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessagePartRef" OID="a3047166-a23d-4292-81e2-2c63a833a357" ParentLink="Transform_InputMessagePartRef" LowerBound="97.80" HigherBound="97.91">
+                            <om:Property Name="MessageRef" Value="UPD_Message" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_3" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="f6758e01-ffa9-419e-949d-03dc02409f07" ParentLink="Transform_OutputMessagePartRef" LowerBound="97.28" HigherBound="97.46">
+                            <om:Property Name="MessageRef" Value="Outbound_processed" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_4" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="d7ca9070-4aeb-4958-9e51-a960eccb67c6" ParentLink="Construct_MessageRef" LowerBound="94.23" HigherBound="94.41">
+                        <om:Property Name="Ref" Value="Outbound_processed" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Decision" OID="551f864a-2276-4058-9c4c-85a3a37be351" ParentLink="ServiceBody_Statement" LowerBound="99.1" HigherBound="119.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Which SAFE?" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DecisionBranch" OID="c7a08d9c-afa6-4245-bc4d-1c022b54ebb4" ParentLink="ReallyComplexStatement_Branch" LowerBound="100.13" HigherBound="107.1">
+                        <om:Property Name="Expression" Value="SAFE_UPD_Standard.Business == &quot;MPC&quot;" />
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="MPC" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Send" OID="2f8a9e62-8bbe-475f-88f1-d88a74667f1a" ParentLink="ComplexStatement_Statement" LowerBound="102.1" HigherBound="104.1">
+                            <om:Property Name="PortName" Value="Port_Take_Oubound_Update_Out_Of_Queue" />
+                            <om:Property Name="MessageName" Value="Outbound_processed" />
+                            <om:Property Name="OperationName" Value="biz_Visit_Outbound_Completed" />
+                            <om:Property Name="OperationMessageName" Value="Request" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Send_MPC_Done" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="Receive" OID="bf6fe5db-3d2d-4623-b869-df0c9c840510" ParentLink="ComplexStatement_Statement" LowerBound="104.1" HigherBound="106.1">
+                            <om:Property Name="Activate" Value="False" />
+                            <om:Property Name="PortName" Value="Port_Take_Oubound_Update_Out_Of_Queue" />
+                            <om:Property Name="MessageName" Value="Outbound_processed_response" />
+                            <om:Property Name="OperationName" Value="biz_Visit_Outbound_Completed" />
+                            <om:Property Name="OperationMessageName" Value="Response" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Receive_Complete_response_MPC" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="DecisionBranch" OID="32d958e9-d082-4653-83ff-94f6b4719fbd" ParentLink="ReallyComplexStatement_Branch" LowerBound="107.18" HigherBound="114.1">
+                        <om:Property Name="Expression" Value="SAFE_UPD_Standard.Business == &quot;MLA&quot;" />
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="MLA" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Send" OID="2ae6c983-72d6-47b4-ac9d-bbaa1200ef1c" ParentLink="ComplexStatement_Statement" LowerBound="109.1" HigherBound="111.1">
+                            <om:Property Name="PortName" Value="Port_Take_Oubound_MLA_Update_Out_Of_Queue" />
+                            <om:Property Name="MessageName" Value="Outbound_processed" />
+                            <om:Property Name="OperationName" Value="biz_Visit_Outbound_Completed" />
+                            <om:Property Name="OperationMessageName" Value="Request" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Send_MLA_Done" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="Receive" OID="97bbbb66-704c-4fa1-8349-30c4c6632a0a" ParentLink="ComplexStatement_Statement" LowerBound="111.1" HigherBound="113.1">
+                            <om:Property Name="Activate" Value="False" />
+                            <om:Property Name="PortName" Value="Port_Take_Oubound_MLA_Update_Out_Of_Queue" />
+                            <om:Property Name="MessageName" Value="Outbound_processed_response" />
+                            <om:Property Name="OperationName" Value="biz_Visit_Outbound_Completed" />
+                            <om:Property Name="OperationMessageName" Value="Response" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Receive_Complete_response_MLA" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="DecisionBranch" OID="f8b7d54b-0e15-45e6-8842-a035885e0639" ParentLink="ReallyComplexStatement_Branch">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Else" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="Terminate" OID="c28c95e8-137c-4355-b675-26cca7975b5d" ParentLink="ComplexStatement_Statement" LowerBound="116.1" HigherBound="118.1">
+                            <om:Property Name="ErrorMessage" Value="&quot;An unexpected SAFE business field was located in orchestration o_Fetch_SAFE_Updates&quot;;" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Terminate_Bad_business" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="0ca8be02-ec44-47ec-b6e9-4b85518b003d" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="35.1" HigherBound="37.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="0" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.Port_Polled_SAFE_Updates_Type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_Polled_SAFE_Updates" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="03bf3368-020c-4e6a-b839-26a2434eb144" ParentLink="PortDeclaration_CLRAttribute" LowerBound="35.1" HigherBound="36.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="91ab8c33-bf8e-47b6-8c15-51c1dd89fa2d" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="37.1" HigherBound="39.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="7" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.Port_get_safe_mla_Update_type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_get_safe_mla_Update" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="LogicalBindingAttribute" OID="879b6408-0961-47f2-9840-d1f6c89b6aea" ParentLink="PortDeclaration_CLRAttribute" LowerBound="37.1" HigherBound="38.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="1670b61f-fe4e-445c-beb7-b26f82ebff76" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="39.1" HigherBound="41.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="74" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.Port_Take_Oubound_Update_Out_Of_Queue_type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_Take_Oubound_MLA_Update_Out_Of_Queue" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="6f8bc4a1-e906-42d5-89aa-8aa1b5fd8955" ParentLink="PortDeclaration_CLRAttribute" LowerBound="39.1" HigherBound="40.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="3136e253-0593-4c7b-a6ee-771c331fe3c1" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="41.1" HigherBound="43.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="48" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.Port_Safe_Update_Drop_off_type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_safe_drop_off" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="e8f5faa7-1c4d-4320-a9f8-bcffc8280b82" ParentLink="PortDeclaration_CLRAttribute" LowerBound="41.1" HigherBound="42.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="1de26b21-aa54-42ab-be15-07f4e5ad96da" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="43.1" HigherBound="45.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="75" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Lbg.Orcs.Port_Take_Oubound_Update_Out_Of_Queue_type" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_Take_Oubound_Update_Out_Of_Queue" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="c7624364-65ee-4561-8f6f-bcb5b6c58a7e" ParentLink="PortDeclaration_CLRAttribute" LowerBound="43.1" HigherBound="44.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MFM.Lbg.Orcs
+{
+    internal porttype Port_Polled_SAFE_Updates_Type
+    {
+        oneway Operation_1
+        {
+            MFM.Lbg.Schemas.SAFEUPDPOLLTypedPolling_biz_Poll_Visit_Updates_MPC.TypedPollingResultSet0
+        };
+    };
+    internal porttype Port_Take_Oubound_Update_Out_Of_Queue_type
+    {
+        requestresponse biz_Visit_Outbound_Completed
+        {
+            MFM.Lbg.Schemas.SAFEUPDCLIENTTypedProcedure_dbo.biz_Visit_Outbound_Completed, MFM.Lbg.Schemas.SAFEUPDCLIENTTypedProcedure_dbo.biz_Visit_Outbound_CompletedResponse
+        };
+    };
+    internal porttype Port_Polled_MLA_SAFE_Type
+    {
+        oneway Operation_1
+        {
+            MFM.Lbg.Schemas.SAFEUPDPOLLTypedPolling_biz_Poll_Visit_Updates_MPC.TypedPollingResultSet0
+        };
+    };
+    internal porttype Port_get_safe_mla_Update_type
+    {
+        oneway Operation_1
+        {
+            MFM.Lbg.Schemas.SAFEUPDPOLLMLATypedPolling_biz_poll_visit_updates_MLA.TypedPollingResultSet0
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service o_Fetch_SAFE_Updates
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements Port_Polled_SAFE_Updates_Type Port_Polled_SAFE_Updates;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements Port_get_safe_mla_Update_type Port_get_safe_mla_Update;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses Port_Take_Oubound_Update_Out_Of_Queue_type Port_Take_Oubound_MLA_Update_Out_Of_Queue;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses Port_Safe_Update_Drop_off_type Port_safe_drop_off;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses Port_Take_Oubound_Update_Out_Of_Queue_type Port_Take_Oubound_Update_Out_Of_Queue;
+        message MFM.Lbg.Schemas.SAFEUPDPOLLTypedPolling_biz_Poll_Visit_Updates_MPC.TypedPollingResultSet0 UPD_Message_MPC;
+        message MFM.Lbg.Schemas.SAFEUPDPOLLMLATypedPolling_biz_poll_visit_updates_MLA.TypedPollingResultSet0 UPD_Message_MLA;
+        message MFM.Lbg.Schemas.SAFE_Update_Message SAFE_UPD_Standard_2;
+        message MFM.Lbg.Schemas.SAFEUPDPOLLTypedPolling_biz_Poll_Visit_Updates_MPC.TypedPollingResultSet0 UPD_Message;
+        message MFM.Lbg.Schemas.SAFE_Update_Message SAFE_UPD_Standard;
+        message MFM.Lbg.Schemas.SAFEUPDCLIENTTypedProcedure_dbo.biz_Visit_Outbound_Completed Outbound_processed;
+        message MFM.Lbg.Schemas.SAFEUPDCLIENTTypedProcedure_dbo.biz_Visit_Outbound_CompletedResponse Outbound_processed_response;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("4abb4a1b-63d4-4d46-95e8-adf8dcacc5c8")]
+            listen
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("61d952c5-464c-40ab-8ff0-bdbaf30ea314")]
+                until activate receive (Port_Polled_SAFE_Updates.Operation_1, UPD_Message_MPC)
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("8f967a12-af7e-40f1-8249-d8e8abb0c60d")]
+                    construct UPD_Message
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("8bc08a91-a22f-42bc-8330-73194de2e78d")]
+                        UPD_Message=UPD_Message_MPC;
+                    }
+                }
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("a872be7d-f321-4c32-9dbf-f13568a05807")]
+                until activate receive (Port_get_safe_mla_Update.Operation_1, UPD_Message_MLA)
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("62836642-8774-4baf-90f9-06d9be85bbda")]
+                    construct UPD_Message
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("e7ee779c-cf09-4ac6-b7df-0ccd99a92922")]
+                        transform (UPD_Message) = MFM.Lbg.Maps.map_SafeMLA_To_SafeMPC (UPD_Message_MLA);
+                    }
+                }
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("c0617b05-5834-44db-b16e-b3f3d7bdab3d")]
+            construct SAFE_UPD_Standard
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("c6a56bd0-2cc4-4a59-a12f-654f4e704337")]
+                transform (SAFE_UPD_Standard) = MFM.Lbg.Orcs.map_to_standard_Safe_msg (UPD_Message);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("b4b8eb2c-6392-4da7-9e82-1690e42181c6")]
+            construct SAFE_UPD_Standard_2
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("7b6245c4-2aac-4c0c-981b-b6ed3222da31")]
+                SAFE_UPD_Standard_2=SAFE_UPD_Standard;
+                SAFE_UPD_Standard_2(FILE.ReceivedFileName) = System.String.Format("{2} Case={0} Visit={1}" ,SAFE_UPD_Standard.CustomerReference,SAFE_UPD_Standard.VisitId,SAFE_UPD_Standard.Business);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("77e80be1-7af0-419c-81ad-4723c3fab6f1")]
+            send (Port_safe_drop_off.Operation_1, SAFE_UPD_Standard);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("2ba15b8d-e900-4b05-895b-a9a02e23e749")]
+            construct Outbound_processed
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("b0a45282-a22b-4597-a21c-b61277c6535a")]
+                transform (Outbound_processed) = MFM.Lbg.Orcs.map_to_complete (UPD_Message);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("551f864a-2276-4058-9c4c-85a3a37be351")]
+            if (SAFE_UPD_Standard.Business == "MPC")
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("2f8a9e62-8bbe-475f-88f1-d88a74667f1a")]
+                send (Port_Take_Oubound_Update_Out_Of_Queue.biz_Visit_Outbound_Completed, Outbound_processed);
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("bf6fe5db-3d2d-4623-b869-df0c9c840510")]
+                receive (Port_Take_Oubound_Update_Out_Of_Queue.biz_Visit_Outbound_Completed, Outbound_processed_response);
+            }
+            else if (SAFE_UPD_Standard.Business == "MLA")
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("2ae6c983-72d6-47b4-ac9d-bbaa1200ef1c")]
+                send (Port_Take_Oubound_MLA_Update_Out_Of_Queue.biz_Visit_Outbound_Completed, Outbound_processed);
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("97bbbb66-704c-4fa1-8349-30c4c6632a0a")]
+                receive (Port_Take_Oubound_MLA_Update_Out_Of_Queue.biz_Visit_Outbound_Completed, Outbound_processed_response);
+            }
+            else 
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("c28c95e8-137c-4355-b675-26cca7975b5d")]
+                terminate "An unexpected SAFE business field was located in orchestration o_Fetch_SAFE_Updates";;
+            }
+        }
+    }
+}
+
